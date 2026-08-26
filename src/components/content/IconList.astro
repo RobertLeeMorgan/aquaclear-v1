@@ -1,0 +1,30 @@
+---
+import * as Lucide from "lucide-astro";
+import { featureIconMap } from "../../utils/featureIcon";
+
+const { items, className = "" } = Astro.props;
+---
+
+<ul
+  class:list={[
+    "mt-2xl grid grid-cols-1 gap-x-xl gap-y-md sm:grid-cols-2",
+    className,
+  ]}
+>
+  {items.map((item: any) => {
+    const Icon = featureIconMap[item.icon] ?? Lucide.Check;
+
+    return (
+      <li class="cluster-sm items-start">
+        <Icon
+          class="mt-2xs icon-md shrink-0 text-primary"
+          aria-hidden="true"
+        />
+
+        <span class="body">
+          {item.title}
+        </span>
+      </li>
+    );
+  })}
+</ul>

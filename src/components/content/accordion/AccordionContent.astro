@@ -1,0 +1,45 @@
+---
+import RichText from "../RichText.astro";
+import MediaFrame from "../../media/MediaFrame.astro";
+import IconList from "../IconList.astro";
+
+import type { AccordionBlockUnion } from "../../../lib/types";
+
+interface Props {
+  blocks: AccordionBlockUnion[];
+}
+
+const { blocks } = Astro.props as Props;
+---
+
+<div class="accordion-body stack-lg">
+  {blocks.map((block) => (
+    <div class="stack-md">
+      {block.heading && (
+        <h3 class="heading pb-sm">{block.heading}</h3>
+      )}
+
+      {block.type === "text" && (
+        <RichText
+          content={block.content}
+          media={block.media}
+          editorial={false}
+          responsive="small"
+        />
+      )}
+
+      {block.type === "media" && (
+        <MediaFrame
+          media={block.media}
+          responsive="small"
+        />
+      )}
+
+      {block.type === "icons" && (
+        <IconList
+          items={block.items}
+        />
+      )}
+    </div>
+  ))}
+</div>

@@ -1,0 +1,250 @@
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-heading: "IBM Plex Sans", sans-serif;
+  --font-display: var(--font-heading);
+
+  /* ===========================
+     Brand
+     =========================== */
+
+  --color-primary: #0b5fa5;
+  --color-primary-hover: #084878;
+  --color-accent: #b88632;
+
+  /* ===========================
+     Surfaces
+     =========================== */
+
+  --color-surface: #fcfcfb;
+  --color-surface-alt: #f6f5f2;
+  --color-surface-dark: #e9eaec;
+  --color-overlay: rgb(0 0 0 / 0.6);
+  --color-dark: #050914;
+
+  /* ===========================
+     Cards
+     =========================== */
+
+  --color-card: #ffffff;
+  --color-card-alt: #faf8f4;
+
+  /* ===========================
+     Navigation
+     =========================== */
+
+  --color-nav: #f8f6f1;
+
+  /* ===========================
+     Text
+     =========================== */
+
+  --color-body: #1f2933;
+  --color-soft: #55616a;
+  --color-muted: #64707a;
+  --color-heading: #101820;
+  --color-inverse: #ffffff;
+  --color-inverse-muted: rgb(255 255 255 / 0.7);
+
+  /* ===========================
+     Borders
+     =========================== */
+
+  --color-border: #ddd8d0;
+  --color-border-strong: #cfc8be;
+
+  --border-width: 1px;
+  --border-thick: 2px;
+
+  /* ===========================
+     Status
+     =========================== */
+
+  --color-success: #3f7d5c;
+  --color-warning: #c58b18;
+  --color-error: #c74646;
+  --color-info: #2d7dd2;
+
+  /* ===========================
+     Layout
+     =========================== */
+
+  --container-max: 80rem;
+
+  --container-p-sm: 1rem;
+  --container-p-md: 1.5rem;
+  --container-p-lg: 2rem;
+
+  --section-p-sm: 3.5rem;
+  --section-p-md: 4.5rem;
+  --section-p-lg: 5rem;
+
+  /* ===========================
+     Widths
+     =========================== */
+
+  --width-xs: 42rem;
+  --width-sm: 48rem;
+  --width-md: 64rem;
+  --width-lg: 80rem;
+  --width-xl: 96rem;
+
+  /* ===========================
+     Spacing
+     =========================== */
+
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+
+  /* ===========================
+   Typography
+   =========================== */
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.05em;
+
+  --leading-tight: 1.1;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+
+  /* ===========================
+   Motion
+   =========================== */
+
+  --transition-fast: 150ms;
+  --transition-normal: 300ms;
+  --transition-slow: 500ms;
+
+  --ease-standard: ease;
+  --ease-emphasized: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  --scale-sm: 0.98;
+  --scale-md: 1.03;
+  --scale-lg: 1.05;
+
+  --slide-sm: 0.25rem;
+  --slide-md: 0.5rem;
+  --slide-lg: 1rem;
+
+  --rotate-sm: 2deg;
+  --rotate-md: 45deg;
+  --rotate-lg: 180deg;
+
+  /* ===========================
+    Radius
+    =========================== */
+
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-pill: 9999px;
+
+  /* ===========================
+     Shadows
+     =========================== */
+
+  --shadow-0: none;
+  --shadow-1: 0 2px 8px rgb(0 0 0 / 0.06);
+  --shadow-2: 0 10px 24px rgb(0 0 0 / 0.12);
+  --shadow-3: 0 20px 40px rgb(0 0 0 / 0.18);
+
+  /* ===========================
+     Opacity
+     =========================== */
+
+  --opacity-hidden: 0;
+  --opacity-subtle: 0.05;
+  --opacity-disabled: 0.4;
+  --opacity-faded: 0.5;
+  --opacity-overlay: 0.6;
+  --opacity-muted: 0.75;
+  --opacity-soft: 0.9;
+  --opacity-visible: 1;
+
+  /* ===========================
+   Blur
+   =========================== */
+
+  --blur-sm: 4px;
+  --blur-md: 8px;
+  --blur-lg: 16px;
+
+  /* ===========================
+   Focus
+   =========================== */
+
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 2px;
+  --focus-ring-color: var(--color-primary);
+
+  /* ===========================
+   Icons
+   =========================== */
+
+  --icon-size-sm: 1rem;
+  --icon-size-md: 1.5rem;
+  --icon-size-lg: 2rem;
+
+  /* ===========================
+     Z index
+     =========================== */
+
+  --z-nav: 100;
+  --z-dropdown: 200;
+  --z-modal: 500;
+  --z-toast: 1000;
+
+  /* ===========================
+     Surface Pattern
+     =========================== */
+
+  --surface-pattern: none;
+}
+
+/* ==========================================================
+   DARK THEME
+   ========================================================== */
+
+[data-theme="dark"] {
+  --color-surface: #12161c;
+  --color-surface-alt: #1a2027;
+  --color-surface-dark: #0f1318;
+
+  --color-card: #1e242c;
+  --color-card-alt: #252c35;
+
+  --color-nav: #171c22;
+
+  --color-text: #f3f4f6;
+  --color-text-soft: #d0d6dd;
+  --color-text-muted: #a8b2be;
+  --color-text-inverse: #0f1318;
+
+  --color-border: #2f3844;
+  --color-border-strong: #434e5c;
+}

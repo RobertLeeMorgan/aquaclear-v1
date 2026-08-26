@@ -1,0 +1,44 @@
+---
+import FooterBottom from "./FooterBottom.astro";
+import FooterBrand from "./FooterBrand.astro";
+import FooterContact from "./FooterContact.astro";
+import { getNavItems } from "../../../lib/navigation";
+
+const navItems = await getNavItems();
+---
+
+<footer class="bg-dark text-inverse">
+  <div class=" container grid gap-3xl py-3xl px-sm sm:px-md md:px-lg md:grid-cols-4" >
+
+    <FooterBrand />
+
+    <!-- Navigation -->
+    {navItems
+      .filter((item) => item.dropdown)
+      .map((item) => (
+        <div>
+
+          <h3 class="subheading text-inverse mb-md">
+            {item.label}
+          </h3>
+
+          <ul class="stack-sm">
+            {item.dropdown?.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class="link link-inverse"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+
+    <FooterContact/>
+  </div>
+
+  <FooterBottom/>
+</footer>

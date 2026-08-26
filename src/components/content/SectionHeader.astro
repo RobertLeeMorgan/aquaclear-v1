@@ -1,0 +1,66 @@
+---
+interface Props {
+  eyebrow?: string;
+  title: string;
+  description?: string;
+  className?: string;
+  as?: "h1" | "h2" | "h3";
+  align?: "start" | "center" | "end";
+}
+
+const {
+  eyebrow,
+  title,
+  description,
+  className = "",
+  as = "h2",
+  align = "start",
+} = Astro.props as Props;
+
+const Heading = as;
+
+const alignment = {
+  start: {
+    container: "",
+    description: "",
+  },
+
+  center: {
+    container: "text-center",
+    description: "mx-auto",
+  },
+
+  end: {
+    container: "text-right",
+    description: "ml-auto",
+  },
+}[align];
+---
+
+<div
+  class:list={[
+    className,
+    alignment.container,
+  ]}
+>
+  {eyebrow && (
+    <p class="eyebrow">
+      {eyebrow}
+    </p>
+  )}
+
+  <Heading class="display mt-xs">
+    {title}
+  </Heading>
+
+  {description && (
+    <p
+      class:list={[
+        "body reading mt-md whitespace-pre-line",
+        alignment.description,
+      ]}
+    >
+      {description}
+    </p>
+  )}
+</div>

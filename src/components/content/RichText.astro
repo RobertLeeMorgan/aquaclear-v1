@@ -1,0 +1,55 @@
+---
+import TwoColumns from "../layout/TwoColumns.astro";
+import SectionHeader from "../content/SectionHeader.astro";
+import Link from "../actions/Link.astro";
+import MediaFrame from "../media/MediaFrame.astro";
+
+import type { RichTextSection, ResponsiveProfileEnum } from "../../lib/types";
+
+interface Props extends RichTextSection {
+  imagePosition?: "left" | "right";
+  responsive?: ResponsiveProfileEnum;
+  editorial?: boolean;
+
+  readMore?: {
+    title: string;
+    href: string;
+  };
+}
+
+const {
+  eyebrow,
+  title,
+  content,
+  media,
+  responsive,
+  imagePosition,
+  readMore,
+  editorial
+} = Astro.props as Props;
+---
+
+<TwoColumns reverse={imagePosition === "left"} >
+  <div>
+    {!editorial && title &&
+      <SectionHeader
+        eyebrow={eyebrow}
+        title={title}
+      />
+    }
+    <div class="prose prose-neutral mt-xl max-w-none whitespace-pre-line">
+      <Fragment set:html={content} />
+    </div>
+
+    {readMore && (
+      <Link href={readMore.href} title={readMore.title}  />
+    )}
+  </div>
+
+  {media && (
+    <MediaFrame
+      media={media}
+      responsive={responsive}
+    />
+  )}
+</TwoColumns>

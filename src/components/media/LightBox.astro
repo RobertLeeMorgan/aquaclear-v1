@@ -1,0 +1,37 @@
+---
+import { ChevronLeft, ChevronRight } from "lucide-astro";
+---
+
+<div class="lightbox contents">
+    <div class="modal-content modal-motion">
+        <img
+            class="lightbox-image max-w-[90vw] max-h-[80vh] object-contain motion"
+            alt=""
+            draggable="false"
+        />
+    </div>
+
+    <div class="absolute inset-x-0 bottom-xl flex items-center justify-center gap-md pointer-events-none">
+        <button
+        class="lightbox-prev pointer-events-auto flex items-center justify-center rounded-full bg-card p-sm shadow-3 motion hover:scale"
+        aria-label="Previous image"
+        >
+            <ChevronLeft class="icon-md" />
+        </button>
+
+        <span
+            class="lightbox-counter pointer-events-auto card px-md py-xs shadow-1 motion"
+        ></span>
+
+        <button
+        class="lightbox-next pointer-events-auto flex items-center justify-center rounded-full bg-card p-sm shadow-3 motion hover:scale"
+        aria-label="Next image"
+        >
+            <ChevronRight class="icon-md" />
+        </button>
+    </div>
+</div>
+
+<script>
+  import "../../scripts/lightbox.ts";
+</script>

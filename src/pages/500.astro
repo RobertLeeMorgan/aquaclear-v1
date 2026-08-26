@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/layout/Container.astro";
+import Section from "../components/layout/Section.astro";
+import SectionHeader from "../components/content/SectionHeader.astro";
+import Button from "../components/actions/Button.astro";
+---
+
+<Layout
+  title="Server Error"
+  description="Something went wrong while processing your request."
+  noindex={true}
+>
+  <Section>
+    <Container>
+      <div class="flex min-h-[50vh] flex-col items-center justify-center text-center">
+        <p class="display-lg text-primary">
+          500
+        </p>
+
+        <SectionHeader
+          title="Something Went Wrong"
+          description="We're sorry, but something went wrong on our end. Please try again in a few moments."
+          as="h1"
+          align="center"
+        />
+
+        <Button
+          href="/"
+          class="mt-lg"
+          title="Return Home"
+        />
+      </div>
+    </Container>
+  </Section>
+</Layout>

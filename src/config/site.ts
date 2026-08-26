@@ -1,0 +1,26 @@
+export const site = {
+  name: "Truxor UK",
+  url: "https://truxoruk.co.uk",
+  email: "info@truxoruk.co.uk",
+  mobile: "07775 672567",
+  phone: "01646 641560",
+  street: "16 Angle Village",
+  town: "Pembrokeshire", 
+  country: "Wales",
+  countryCode: "GB",
+  postCode: "SA71 5AT",
+  theme: "#0A5A99",
+  tagline: "Official Truxor distributor for the United Kingdom and Republic of Ireland.",
+  short: "Amphibious Machines & Waterway Management",
+  emailTemplate: "enquiry-template",
+  language: "en-GB",
+  repo: "truxor",
+
+  social: {
+    facebook: "",
+    instagram: "",
+    linkedin: "",
+    youtube: "",
+    x: "",
+  },
+}

@@ -1,0 +1,31 @@
+---
+import { getNavItems } from "../../../lib/navigation";
+
+import NavBrand from "./NavBrand.astro";
+import NavDesktop from "./NavDesktop.astro";
+import NavMobile from "./NavMobile.astro";
+
+const navItems = await getNavItems();
+const currentPath = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-nav border-b border-border-strong shadow-1 bg-gradient-to-br from-card to-nav">
+  <div class="container flex items-center justify-between py-sm px-sm sm:px-md md:px-lg">
+
+    <NavBrand />
+
+    <NavDesktop
+      navItems={navItems}
+      currentPath={currentPath}
+    />
+
+    <NavMobile
+      navItems={navItems}
+      currentPath={currentPath}
+    />
+  </div>
+</header>
+
+<script>
+  import "../../../scripts/nav";
+</script>

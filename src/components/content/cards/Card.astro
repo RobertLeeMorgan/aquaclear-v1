@@ -1,0 +1,84 @@
+---
+import AppImage from "../../media/AppImage.astro";
+import CardContent from "./CardContent.astro";
+import CardFooter from "./CardFooter.astro";
+
+import type { CardType } from "../../../lib/types";
+
+interface Props extends CardType {
+  layout?: "vertical" | "horizontal" | "compact";
+  ellipsis?: 2 | 3 | 4;
+}
+
+const {
+  href,
+  image,
+  eyebrow,
+  title,
+  description,
+  layout = "vertical",
+  ellipsis,
+} = Astro.props as Props;
+
+const lineClamp = {
+  2: "line-clamp-2",
+  3: "line-clamp-3",
+  4: "line-clamp-4",
+} as const;
+
+const Wrapper = href ? "a" : "div";
+const wrapperProps = href ? { href } : {};
+
+const layouts = {
+  vertical: {
+    wrapper: "flex flex-col h-full",
+    imageWrapper: "overflow-hidden",
+    image: "card-img",
+  },
+  horizontal: {
+    wrapper: "grid md:grid-cols-[1fr_2fr]",
+    imageWrapper: "relative overflow-hidden max-h-64",
+    image: "card-img h-full",
+  },
+  compact: {
+    wrapper: "grid md:grid-cols-[180px_1fr]",
+    imageWrapper: "min-h-full",
+    image: "card-img",
+  },
+} as const;
+
+const classes = layouts[layout];
+---
+
+<Wrapper
+  {...wrapperProps}
+  class:list={[
+    "card card-motion group relative pb-lg",
+    classes.wrapper,
+  ]}
+>
+  {image && (
+    <div class={classes.imageWrapper}>
+      <AppImage
+        src={image}
+        alt={title}
+        responsive="small"
+        class={classes.image}
+      />
+    </div>
+  )}
+
+  <div class="card-padding flex flex-col flex-1">
+    <CardContent
+      eyebrow={eyebrow}
+      title={title}
+      description={description}
+      layout={layout}
+      lineClamp={ellipsis ? lineClamp[ellipsis] : undefined}
+    />
+
+    {layout !== "compact" && href && (
+      <CardFooter href={href} />
+    )}
+  </div>
+</Wrapper>

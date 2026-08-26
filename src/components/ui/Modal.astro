@@ -1,0 +1,29 @@
+---
+interface Props {
+  id: string;
+  closeOnBackdrop?: boolean;
+  closeOnEscape?: boolean;
+}
+
+const {
+  id,
+  closeOnBackdrop = true,
+  closeOnEscape = true,
+} = Astro.props;
+---
+
+<div
+  id={id}
+  class="modal z-modal"
+  data-modal
+  data-close-backdrop={closeOnBackdrop}
+  data-close-escape={closeOnEscape}
+  aria-hidden="true"
+>
+  <div
+    class="modal-backdrop bg-overlay relative w-full h-full"
+    data-modal-close
+  >
+    <slot />
+  </div>
+</div>

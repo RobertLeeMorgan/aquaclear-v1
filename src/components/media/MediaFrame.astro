@@ -1,0 +1,50 @@
+---
+import MediaRenderer from "./MediaRenderer.astro";
+
+import type { MediaUnion, ResponsiveProfileEnum } from "../../lib/types";
+
+interface Props {
+  ratio?:
+    | "auto"
+    | "square"
+    | "portrait"
+    | "landscape"
+    | "video";
+
+  responsive?: ResponsiveProfileEnum;
+
+  media: MediaUnion;
+  gallery?: string;
+  class?: string;
+};
+
+const {
+  ratio = "auto",
+  responsive = "medium",
+  gallery,
+  class: className = "",
+  media
+} = Astro.props as Props;
+
+const ratioClass = {
+  auto: "",
+  square: "aspect-square",
+  portrait: "aspect-[3/4]",
+  landscape: "aspect-[4/3]",
+  video: "aspect-video",
+}[ratio];
+---
+
+<div
+  class:list={[
+    "relative w-full overflow-hidden card",
+    ratioClass,
+    className,
+  ]}
+>
+  <MediaRenderer
+    media={media}
+    responsive={responsive}
+    gallery={gallery}
+  />
+</div>

@@ -1,0 +1,120 @@
+---
+import "../styles/global.css";
+import Nav from "../components/ui/nav/Nav.astro";
+import Footer from "../components/ui/footer/Footer.astro";
+import ModalRoot from "../components/ui/ModalRoot.astro";
+import { ClientRouter } from "astro:transitions";
+import type { ImageMetadata } from "astro";
+import placeholder from "../assets/images/hero/placeholder.jpeg";
+import { site } from "../config/site";
+import { siteSchemas } from "../lib/schema";
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: ImageMetadata;
+  canonical?: string;
+  noindex?: boolean;
+  schema?: object[];
+  ogType?: "website" | "article";
+}
+
+const {
+  title = `${site.name} | ${site.short}`,
+  description = site.tagline,
+  image = placeholder,
+  canonical,
+  noindex = false,
+  schema = [],
+  ogType = "website"
+} = Astro.props;
+
+const pageTitle =
+  title === site.name
+    ? title
+    : `${title} | ${site.name}`;
+
+const url = new URL(
+  canonical ?? Astro.url.pathname,
+  Astro.site
+);
+
+const imageUrl = new URL(image.src, Astro.site);
+
+const schemas = [
+  ...siteSchemas(),
+  ...schema,
+];
+---
+
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <ClientRouter />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary -->
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={url} />
+
+    <!-- Robots -->
+    <meta
+      name="robots"
+      content={noindex ? "noindex,nofollow" : "index,follow"}
+    />
+
+    <!-- Theme -->
+    <meta name="theme-color" content={site.theme} />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" />
+    <link rel="icon" href="/favicon-16.png" sizes="16x16" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={url} />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:image:alt" content={pageTitle} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
+    {site.social.x && (
+      <meta name="twitter:site" content={site.social.x} />
+    )}
+
+    <!-- Structured Data -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(schemas)}
+    />
+  </head>
+
+  <body class="relative min-h-screen">
+    <Nav transition:persist />
+
+    <main
+      id="main-content"
+      transition:animate="fade"
+    >
+      <slot />
+    </main>
+
+    <Footer transition:persist />
+
+    <ModalRoot/>
+  </body>
+</html>

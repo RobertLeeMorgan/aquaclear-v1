@@ -1,0 +1,105 @@
+---
+import { Image } from "astro:assets";
+import type { MediaImageType, ResponsiveProfileEnum } from "../../lib/types";
+
+interface Props extends MediaImageType {
+  priority?: boolean;
+  loading?: "lazy" | "eager";
+  decoding?: "async" | "sync" | "auto";
+  quality?: number;
+
+  responsive?: ResponsiveProfileEnum;
+
+  widths?: number[];
+  sizes?: string;
+
+  layout?: "constrained" | "fixed" | "full-width";
+
+  gallery?: string;
+  class?: string;
+}
+
+const {
+  src,
+  alt = "",
+
+  priority = false,
+  loading,
+  decoding,
+  quality = 75,
+
+  responsive,
+
+  widths,
+  sizes,
+
+  layout = "constrained",
+  gallery,
+  class: className = "",
+} = Astro.props as Props;
+
+const profiles = {
+  large: {
+    widths: [640, 960, 1280, 1600, 1920],
+    sizes: "100vw",
+  },
+
+  medium: {
+    widths: [320, 460, 540, 600, 700],
+    sizes: `
+      (max-width: 1024px) 100vw,
+      (max-width: 1344px) 50vw,
+      672px
+    `,
+  },
+
+  small: {
+    widths: [300, 420, 500, 620, 700],
+    sizes: "(max-width:768px) 100vw, 390px",
+  },
+
+  thumbnail: {
+    widths: [120, 240],
+    sizes: "120px",
+  },
+} as const;
+
+const imageProfile = responsive ? profiles[responsive] : undefined;
+
+const finalWidths =
+  widths ??
+  (imageProfile ? [...imageProfile.widths] : undefined);
+
+const finalSizes =
+  sizes ??
+  imageProfile?.sizes;
+
+const finalLoading =
+  loading ??
+  (priority ? "eager" : "lazy");
+
+const finalDecoding =
+  decoding ??
+  (priority ? "sync" : "async");
+
+const imageClasses = [
+  className,
+]
+  .filter(Boolean)
+  .join(" ");
+---
+
+<Image
+  src={src}
+  alt={alt}
+  class={imageClasses}
+  layout={layout}
+  loading={finalLoading}
+  decoding={finalDecoding}
+  fetchpriority={priority ? "high" : "auto"}
+  quality={quality}
+  widths={finalWidths}
+  sizes={finalSizes}
+
+  data-gallery={gallery}
+/>

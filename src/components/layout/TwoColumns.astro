@@ -1,0 +1,21 @@
+---
+interface Props {
+  class?: string;
+  wide?: boolean;
+  reverse?: boolean;
+}
+
+const {
+  class: className = "",
+  wide = false,
+  reverse = false,
+} = Astro.props;
+---
+
+<div class:list={["grid grid-cols-1 md:grid-cols-2 gap-2xl items-stretch",
+    wide && "lg:grid-cols-[1.2fr_1fr]",
+    reverse && "lg:[&>*:first-child]:order-2 lg:[&>*:last-child]:order-1",
+    className,
+]}>
+  <slot />
+</div>

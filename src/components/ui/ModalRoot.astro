@@ -1,0 +1,16 @@
+---
+import Modal from "./Modal.astro";
+import Lightbox from "../media/LightBox.astro";
+---
+
+<div id="modal-root">
+  <Modal
+    id="lightbox"
+  >
+    <Lightbox />
+  </Modal>
+</div>
+
+<script>
+  import "../../scripts/modal.ts";
+</script>

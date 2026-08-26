@@ -1,0 +1,73 @@
+---
+import type { NavItem } from "../../../lib/navigation";
+
+interface Props {
+  navItems: NavItem[];
+  currentPath: string;
+}
+
+const {
+  navItems,
+  currentPath,
+} = Astro.props;
+
+const isActive = (item: NavItem) => {
+  if (item.href === "/") {
+    return currentPath === "/";
+  }
+
+  return currentPath.startsWith(item.href);
+};
+---
+
+<nav class="hidden lg:flex items-center gap-xl tracking-wide text-lg">
+  {navItems.map((item) => (
+    <div class="group relative">
+      {!item.dropdown ? (
+        <a
+          href={item.href}
+          class:list={[
+            "link-motion",
+            isActive(item)
+              ? "text-primary font-semibold"
+              : "text-body",
+          ]}
+        >
+          {item.label}
+        </a>
+      ) : (
+        <>
+          <a
+            href={item.href}
+            class:list={[
+              "link-motion py-xs",
+              isActive(item)
+                ? "text-primary font-semibold"
+                : "text-body",
+            ]}
+          >
+            {item.label}
+          </a>
+
+          <div class="absolute left-0 top-full hidden z-50 group-hover:block">
+            <div class="card stack-xs min-w-56 py-xs">
+              {item.dropdown.map((link) => (
+                <a
+                  href={link.href}
+                  class:list={[
+                    "motion px-sm py-xs hover:bg-surface",
+                    currentPath === link.href
+                      ? "text-primary font-semibold"
+                      : "text-body",
+                  ]}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </>
+      )}
+    </div>
+  ))}
+</nav>

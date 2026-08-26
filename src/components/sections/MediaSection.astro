@@ -1,0 +1,45 @@
+---
+import Section from "../layout/Section.astro";
+import Container from "../layout/Container.astro";
+import SectionHeader from "../content/SectionHeader.astro";
+import MediaFrame from "../media/MediaFrame.astro";
+import Link from "../actions/Link.astro";
+
+import type { MediaSection } from "../../lib/types";
+
+interface Props extends MediaSection {
+  readMore?: {
+    href: string;
+    title: string;
+  };
+}
+
+const {
+  eyebrow,
+  title,
+  description,
+  media,
+  readMore,
+} = Astro.props as Props;
+---
+
+<Section id={title}>
+  <Container>
+    {title && (
+      <SectionHeader
+        eyebrow={eyebrow}
+        title={title}
+        description={description}
+      />
+    )}
+
+    <MediaFrame media={media} />
+
+    {readMore && (
+      <Link
+        href={readMore.href}
+        title={readMore.title}
+      />
+    )}
+  </Container>
+</Section>

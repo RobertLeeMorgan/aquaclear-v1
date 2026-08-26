@@ -1,0 +1,57 @@
+---
+import MediaRenderer from "../media/MediaRenderer.astro";
+
+import type { MediaUnion, ResponsiveProfileEnum } from "../../lib/types";
+
+interface Props {
+  media: MediaUnion[];
+
+  responsive?: ResponsiveProfileEnum;
+
+  layout?: "auto" | "landscape" | "portrait" | "square";
+
+  gallery?: string;
+}
+
+const {
+  media,
+  layout = "auto",
+  gallery = crypto.randomUUID(),
+  responsive
+} = Astro.props as Props;
+
+function getOrientation(item: MediaUnion) {
+  if (layout !== "auto") {
+    return layout;
+  }
+
+  switch (item.type) {
+    case "image":
+      if (item.src.width === item.src.height) {
+        return "square";
+      }
+
+      return item.src.width > item.src.height
+        ? "landscape"
+        : "portrait";
+
+    case "video":
+    case "beforeAfter":
+      return "landscape";
+  }
+}
+---
+
+<div class={`gallery gallery-${media.length}`}>
+  {media.map((item) => (
+    <div
+      class={`gallery-item gallery-${getOrientation(item)}`}
+    >
+      <MediaRenderer
+        media={item}
+        gallery={gallery}
+        responsive={responsive}
+      />
+    </div>
+  ))}
+</div>

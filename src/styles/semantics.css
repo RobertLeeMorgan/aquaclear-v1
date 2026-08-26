@@ -1,0 +1,667 @@
+/* ==========================================================
+   Typography
+   ========================================================== */
+
+.display-lg {
+  @apply text-4xl md:text-5xl lg:text-6xl;
+  @apply font-bold leading-tight tracking-tight font-display text-heading;
+}
+
+.display {
+  @apply text-3xl md:text-4xl lg:text-5xl;
+  @apply font-bold leading-tight font-display text-heading;
+}
+
+@utility heading {
+  @apply text-2xl md:text-3xl lg:text-4xl;
+  @apply font-bold leading-tight font-heading text-heading;
+}
+
+.subheading {
+  @apply text-xl md:text-2xl;
+  @apply font-semibold leading-normal font-heading text-heading;
+}
+
+@utility body {
+  @apply text-md md:text-lg;
+  @apply font-regular leading-normal text-body;
+}
+
+.caption {
+  @apply text-sm md:text-md;
+  @apply font-regular leading-normal text-muted;
+}
+
+.eyebrow {
+  @apply text-xs md:text-sm;
+  @apply font-semibold tracking-wide text-primary;
+  text-transform: uppercase;
+}
+
+/* ==========================================================
+   Layout
+   ========================================================== */
+
+.container {
+  width: 100%;
+  margin-inline: auto;
+  @apply container-max container-p-sm md:container-p-md lg:container-p-lg;
+}
+
+.section {
+  @apply section-p-sm md:section-p-md lg:section-p-lg;
+}
+
+.section-pt {
+  @apply section-pt-sm md:section-pt-md lg:section-pt-lg;
+}
+
+/* ---------- Content Widths ---------- */
+
+.container-sm {
+  width: 100%;
+  @apply max-w-sm;
+}
+
+.container-md {
+  width: 100%;
+  @apply max-w-md;
+}
+
+.container-lg {
+  width: 100%;
+  @apply max-w-lg;
+}
+
+.container-full {
+  width: 100%;
+  @apply max-w-xl;
+}
+
+/* ---------- Divider ---------- */
+
+.divider {
+  width: 100%;
+  @apply my-lg border-t border-w border-solid border-border;
+}
+
+/* ==========================================================
+   Buttons
+   ========================================================== */
+
+.btn {
+  @apply inline-flex items-center justify-center gap-xs radius-sm font-semibold leading-normal tracking-wide;
+
+  appearance: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* ---------- Variants ---------- */
+
+.btn-primary {
+  @apply bg-primary text-inverse;
+}
+
+.btn-primary:hover {
+  @apply bg-primary-hover;
+}
+
+.btn-dark {
+  @apply bg-surface-dark text-inverse;
+}
+
+.btn-dark:hover {
+  @apply bg-primary;
+}
+
+.btn-outline {
+  @apply text-heading border-w border-solid border-border;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  @apply bg-surface-dark border-border-strong;
+}
+
+.btn-ghost {
+  @apply text-primary;
+  background: transparent;
+}
+
+.btn-ghost:hover {
+  background: rgb(0 0 0 / var(--opacity-subtle));
+}
+
+/* ---------- Sizes ---------- */
+
+.btn-sm {
+  @apply py-xs px-md text-sm;
+}
+
+.btn-md {
+  @apply py-sm px-lg text-md;
+}
+
+.btn-lg {
+  @apply py-md px-xl text-lg;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/* ---------- State ---------- */
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  @apply disabled;
+}
+
+.btn:focus-visible {
+  @apply focus;
+}
+
+/* ---------- Motion ---------- */
+
+.btn-motion {
+  @apply motion;
+}
+.btn-motion:hover {
+  @apply lift-sm;
+}
+.btn-motion:active {
+  @apply scale-sm;
+}
+
+/* ==========================================================
+   Links
+   ========================================================== */
+
+.link {
+  @apply inline-flex items-center gap-xs;
+
+  @apply text-sm font-medium leading-normal;
+  @apply text-primary;
+
+  text-decoration: none;
+}
+
+/* ---------- Variants ---------- */
+
+.link-muted {
+  @apply text-body;
+}
+
+.link-inverse {
+  @apply text-inverse-muted;
+}
+
+/* ---------- Motion ---------- */
+
+.link-motion {
+  @apply motion;
+}
+
+.link-motion:hover {
+  @apply text-primary-hover;
+}
+
+.link-motion:hover .icon-sm {
+  @apply slide-sm;
+  @apply motion-snappy;
+}
+
+/* ---------- States ---------- */
+
+.link-disabled {
+  @apply disabled;
+}
+
+/* ==========================================================
+   Cards
+   ========================================================== */
+
+@utility card {
+  @apply overflow-hidden radius-lg;
+  @apply border-w border-border;
+  @apply bg-card;
+  @apply shadow-sm;
+}
+
+@utility card-padding-sm {
+  @apply p-md;
+}
+
+@utility card-padding {
+  @apply p-lg;
+}
+
+@utility card-px {
+  @apply px-lg;
+}
+
+@utility card-py {
+  @apply py-lg;
+}
+
+@utility card-pb {
+  @apply pb-lg;
+}
+
+@utility card-pt {
+  @apply pt-lg;
+}
+
+.card-motion {
+  @apply motion;
+}
+
+.card-motion:hover {
+  @apply float;
+}
+
+.card:hover .card-img {
+  @apply scale;
+}
+
+/* ==========================================================
+   Images
+   ========================================================== */
+
+.hero-img,
+.section-img {
+  @apply img-bg img-cover;
+  width: 100%;
+  height: 100%;
+}
+
+.card-img {
+  @apply img-cover img-motion;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-img {
+  @apply img-cover img-motion;
+}
+
+.thumbnail-img {
+  @apply img-cover;
+}
+
+.logo-img {
+  @apply img-contain;
+}
+
+.avatar-img {
+  @apply img-cover rounded-full;
+}
+
+/* ==========================================================
+   Forms
+   ========================================================== */
+
+.contact-form {
+  @apply stack-xl;
+}
+
+.field {
+  @apply stack-xs;
+}
+
+.label {
+  @apply body font-medium;
+}
+
+.input,
+.select,
+.textarea {
+  @apply w-full;
+  @apply px-md py-sm;
+  @apply radius-md;
+  @apply border border-border-strong;
+  @apply bg-surface;
+  @apply text-body;
+
+  appearance: none;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  @apply border-primary;
+  outline: none;
+}
+
+.textarea {
+  resize: vertical;
+}
+
+/* ==========================================================
+   Accordion
+   ========================================================== */
+
+.accordion-item {
+  @apply border-b border-border;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-trigger {
+  @apply cluster-md w-full;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.accordion-icon {
+  @apply motion-snappy;
+}
+
+.accordion-item.is-open .accordion-icon {
+  @apply rotate-md;
+}
+
+.accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  @apply motion;
+}
+
+.accordion-content > * {
+  overflow: hidden;
+}
+
+.accordion-item.is-open .accordion-content {
+  grid-template-rows: 1fr;
+}
+
+.accordion-inner {
+  overflow: hidden;
+  @apply motion-slow opacity-0;
+}
+
+.accordion-item.is-open .accordion-inner {
+  @apply card-pb fade-in;
+}
+
+/* ==========================================================
+   Modal
+   ========================================================== */
+
+@utility modal {
+  @apply fixed inset-0 flex items-center justify-center;
+
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@utility modal-open {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+@utility modal-backdrop {
+  @apply img-bg motion flex items-center justify-center;
+
+  opacity: 0;
+}
+
+/* ==========================================================
+   Motion
+   ========================================================== */
+
+@utility modal-motion {
+  @apply motion scale-sm;
+
+  opacity: 0;
+}
+
+.modal-visible .modal-backdrop {
+  @apply fade-in;
+}
+
+.modal-visible .modal-motion {
+  @apply fade-in;
+  transform: scale(1);
+}
+
+/* ==========================================================
+   Lightbox
+   ========================================================== */
+
+@utility lightbox-image {
+  @apply motion;
+}
+
+.lightbox-image-changing {
+  @apply scale-sm;
+}
+
+/* ==========================================================
+   Before / After
+   ========================================================== */
+
+.before-after {
+  --position: 50%;
+
+  @apply relative overflow-hidden select-none;
+}
+
+.before-after-before,
+.before-after-after {
+  @apply absolute inset-0;
+}
+
+.before-after-after {
+  @apply relative;
+}
+
+.before-after-before {
+  clip-path: inset(0 calc(100% - var(--position)) 0 0);
+}
+
+.before-after-image {
+  @apply w-full h-full object-cover;
+}
+
+/* ==========================================================
+   Handle
+   ========================================================== */
+
+.before-after-handle {
+  @apply absolute inset-y-0 cursor-ew-resize;
+
+  left: var(--position);
+  transform: translateX(-50%);
+}
+
+.before-after-divider {
+  @apply absolute top-0 bottom-0 left-1/2 w-[2px] bg-white shadow-2;
+
+  transform: translateX(-50%);
+}
+
+.before-after-thumb {
+  @apply absolute top-1/2 left-1/2 rounded-full bg-card shadow-2 motion;
+
+  width: 1.2rem;
+  height: 2rem;
+
+  transform: translate(-50%, -50%);
+}
+
+.before-after-thumb::before {
+  content: "";
+
+  @apply absolute rounded-full border border-border;
+
+  inset: 3px;
+}
+
+.before-after:hover .before-after-thumb,
+.before-after:active .before-after-thumb,
+.before-after.dragging .before-after-thumb {
+  height: 3rem;
+}
+
+/* ==========================================================
+   Gallery
+   ========================================================== */
+
+.gallery {
+  @apply grid gap-md;
+}
+
+/* ==========================================================
+   Layouts
+   ========================================================== */
+
+.gallery-1 {
+  @apply grid-cols-1;
+}
+
+.gallery-2,
+.gallery-4 {
+  @apply grid-cols-2;
+}
+
+.gallery-3,
+.gallery-5,
+.gallery-6 {
+  @apply grid-cols-3;
+}
+
+/* ==========================================================
+   Images
+   ========================================================== */
+
+.gallery-item {
+  @apply overflow-hidden rounded-lg;
+}
+
+.gallery-image {
+  @apply w-full h-full object-cover motion hover:scale;
+  aspect-ratio: 1;
+}
+
+/* ==========================================================
+   Orientation
+   ========================================================== */
+
+.gallery-landscape {
+  @apply col-span-2;
+}
+
+.gallery-portrait {
+  @apply row-span-2;
+}
+
+.gallery-square {
+}
+
+/* ==========================================================
+   Carousel
+   ========================================================== */
+
+.carousel-viewport {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.carousel-item {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.carousel-btn {
+  overflow: hidden;
+  width: auto;
+  opacity: 1;
+  @apply motion-snappy;
+
+  transition-property: width, padding, opacity;
+}
+
+.carousel-btn-prev {
+  @apply pr-md;
+}
+
+.carousel-btn-next {
+  @apply pl-md;
+}
+
+.carousel-btn.is-collapsing {
+  opacity: 0;
+}
+
+/* ==========================================================
+   Banner
+   ========================================================== */
+
+.banner {
+  overflow: hidden;
+  width: 100%;
+}
+
+.banner-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.banner-track {
+  display: flex;
+  width: max-content;
+  animation: banner-scroll 30s linear infinite;
+  will-change: transform;
+}
+
+.banner-group {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 3rem;
+  padding-right: 3rem;
+}
+
+.banner-item {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+/* Speed variants */
+
+.banner-slow .banner-track {
+  animation-duration: 45s;
+}
+
+.banner-normal .banner-track {
+  animation-duration: 30s;
+}
+
+.banner-fast .banner-track {
+  animation-duration: 20s;
+}
+
+@keyframes banner-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner-track {
+    animation: none;
+  }
+}

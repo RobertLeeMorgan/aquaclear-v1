@@ -1,0 +1,38 @@
+---
+import Section from "../layout/Section.astro";
+import Container from "../layout/Container.astro";
+import SectionHeader from "../content/SectionHeader.astro";
+import Carousel from "../content/carousel/Carousel.astro";
+import Link from "../actions/Link.astro";
+import type { CarouselSection } from "../../lib/types";
+
+interface Props extends CarouselSection {
+  readMore?: {
+    href: string;
+    title: string;
+  };
+}
+
+const {
+  eyebrow,
+  title,
+  description,
+  carousel,
+  readMore
+} = Astro.props as Props;
+---
+
+<Section id={title}>
+    <Container>
+        <SectionHeader
+            eyebrow={eyebrow}
+            title={title}
+            description={description}
+        />
+
+        <Carousel carousel={carousel} />
+        {readMore && (
+            <Link href={readMore.href} title={readMore.title}  />
+        )}
+    </Container>
+</Section>

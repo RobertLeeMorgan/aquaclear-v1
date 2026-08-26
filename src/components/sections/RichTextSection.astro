@@ -1,0 +1,33 @@
+---
+import Section from "../layout/Section.astro";
+import Container from "../layout/Container.astro";
+import RichText from "../content/RichText.astro";
+import SectionHeader from "../content/SectionHeader.astro";
+import type { RichTextSection, ResponsiveProfileEnum } from "../../lib/types";
+
+interface Props extends RichTextSection {
+  imagePosition?: "left" | "right";
+  responsive?: ResponsiveProfileEnum;
+
+  editorial?: boolean;
+
+  readMore?: {
+    title: string;
+    href: string;
+  };
+}
+
+const props = Astro.props as Props;
+---
+
+<Section id={props.title}>
+  <Container>
+    {props.editorial &&
+      <SectionHeader
+        eyebrow={props.eyebrow}
+        title={props.title}
+      />
+    }
+    <RichText {...props}/>
+  </Container>
+</Section>

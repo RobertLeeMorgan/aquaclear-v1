@@ -1,0 +1,15 @@
+---
+import AppImage from "../../media/AppImage.astro";
+import logo from "../../../assets/images/logo.svg";
+import { site } from "../../../config/site";
+---
+
+<a href="/" aria-label={`${site.name} home`}>
+  <AppImage
+    src={logo}
+    alt={`${site.name} logo`}
+    priority
+    responsive="thumbnail"
+    class="logo-img max-h-8 w-auto"
+  />
+</a>

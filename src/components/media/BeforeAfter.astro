@@ -1,0 +1,49 @@
+---
+import AppImage from "../media/AppImage.astro";
+import type { MediaBeforeAfterType, ResponsiveProfileEnum } from "../../lib/types";
+
+interface Props extends MediaBeforeAfterType {
+    responsive?: ResponsiveProfileEnum;
+}
+
+const {
+  before,
+  after,
+  beforeAlt = "",
+  afterAlt = "",
+  responsive = "medium",
+} = Astro.props as Props;
+---
+
+<div class="before-after">
+  <div class="before-after-after">
+    <AppImage
+      src={after}
+      alt={afterAlt}
+      responsive={responsive}
+      class="before-after-image"
+    />
+  </div>
+
+  <div class="before-after-before">
+    <AppImage
+      src={before}
+      alt={beforeAlt}
+      responsive={responsive}
+      class="before-after-image"
+    />
+  </div>
+
+  <button
+    class="before-after-handle"
+    type="button"
+    aria-label="Compare before and after image"
+  >
+    <span class="before-after-divider"></span>
+    <span class="before-after-thumb"></span>
+  </button>
+</div>
+
+<script>
+  import "../../scripts/beforeAfter.ts";
+</script>

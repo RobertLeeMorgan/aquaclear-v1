@@ -1,0 +1,40 @@
+---
+import AccordionItem from "./AccordionItem.astro";
+import type { AccordionItemType } from "../../../lib/types";
+
+interface Props {
+  items: AccordionItemType[];
+  single?: boolean;
+  grouped?: boolean;
+  class?: string;
+}
+
+const {
+  items,
+  single = false,
+  grouped = true,
+  class: className = "",
+} = Astro.props;
+---
+
+<div
+  class:list={[
+    grouped ? "card card-px" : "stack-lg",
+    className,
+  ]}
+  data-accordion
+  data-single={single}
+>
+  {items.map((item, index) => (
+    <div class:list={[!grouped && "card card-px"]}>
+      <AccordionItem
+        item={item}
+        open={index === 0}
+      />
+    </div>
+  ))}
+</div>
+
+<script>
+  import "../../../scripts/accordion";
+</script>

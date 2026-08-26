@@ -1,0 +1,40 @@
+---
+import Section from "../layout/Section.astro";
+import SectionHeader from "../content/SectionHeader.astro";
+import Container from "../layout/Container.astro";
+import Accordion from "../content/accordion/Accordion.astro";
+import type { AccordionSection } from "../../lib/types";
+
+interface Props extends AccordionSection{}
+
+const {
+  title,
+  description,
+  eyebrow,
+  groups,
+} = Astro.props as Props;
+---
+
+<Section id={title}>
+  <Container>
+    <SectionHeader
+      eyebrow={eyebrow}
+      title={title}
+      description={description}
+    />
+    <div class="section-pt stack-3xl">
+      {groups.map((group) => (
+        <section>
+          {group.title &&
+            <h2 class="display border-l-4 border-primary pl-md">
+              {group.title}
+            </h2>
+          }
+          <div class="mt-2xl">
+            <Accordion items={group.items} />
+          </div>
+        </section>
+      ))}
+    </div>
+  </Container>
+</Section>

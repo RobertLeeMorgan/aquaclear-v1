@@ -1,0 +1,58 @@
+---
+import type { TestimonialType } from '../../../lib/types';
+import AppImage from '../../media/AppImage.astro';
+
+interface Props extends TestimonialType{}
+
+const {
+  quote,
+  author,
+  role,
+  company,
+  avatar,
+  rating,
+} = Astro.props as Props;
+---
+
+<div class="card card-motion h-full">
+  <div class="card-padding flex h-full flex-col">
+
+    {rating && (
+      <div class="flex gap-1 mb-md">
+        {Array.from({ length: rating }).map(() => (
+          <span class="text-primary">★</span>
+        ))}
+      </div>
+    )}
+
+    <blockquote class="body flex-1 italic">
+      "{quote}"
+    </blockquote>
+
+    <footer class="mt-xl flex items-center gap-md">
+
+      {avatar && (
+        <AppImage
+          src={avatar}
+          alt={author}
+          responsive="thumbnail"
+          class="rounded-full size-12"
+        />
+      )}
+
+      <div class="stack-xs">
+        <p class="subheading">
+          {author}
+        </p>
+
+        {(role || company) && (
+          <p class="caption text-muted">
+            {[role, company].filter(Boolean).join(", ")}
+          </p>
+        )}
+      </div>
+
+    </footer>
+
+  </div>
+</div>

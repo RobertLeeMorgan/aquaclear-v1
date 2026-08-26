@@ -1,0 +1,48 @@
+---
+import * as Lucide from "lucide-astro";
+import AccordionContent from "./AccordionContent.astro";
+import type { AccordionItemType } from "../../../lib/types";
+
+interface Props {
+  item: AccordionItemType;
+  open?: boolean;
+  icon?: "plus" | "chevron";
+}
+
+const {
+  item,
+  open = false,
+  icon = "plus",
+} = Astro.props;
+
+const Icon =
+  icon === "plus"
+    ? Lucide.Plus
+    : Lucide.ChevronDown;
+---
+
+<div
+  class:list={[
+    "accordion-item",
+    open && "is-open",
+  ]}
+>
+  <button
+    type="button"
+    class="accordion-trigger card-py"
+  >
+    <span class="heading">
+      {item.title}
+    </span>
+
+    <Icon class="icon-md accordion-icon text-primary" />
+  </button>
+
+  <div class="accordion-content">
+    <div class="accordion-inner motion">
+      <AccordionContent
+        blocks={item.blocks}
+      />
+    </div>
+  </div>
+</div>

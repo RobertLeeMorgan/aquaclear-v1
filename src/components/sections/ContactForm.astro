@@ -1,0 +1,139 @@
+---
+import Section from "../layout/Section.astro";
+import Container from "../layout/Container.astro";
+import SectionHeader from "../content/SectionHeader.astro";
+import Button from "../actions/Button.astro";
+import type { ContactFormSection } from "../../lib/types";
+
+interface Props extends ContactFormSection {}
+
+const {
+  eyebrow,
+  title,
+  description,
+} = Astro.props as Props;
+---
+
+<Section id={title}>
+  <Container>
+    <SectionHeader
+      eyebrow={eyebrow}
+      title={title}
+      description={description}
+      as="h1"
+    />
+
+    <form
+      class="contact-form stack-xl section-pt"
+      method="POST"
+      action="/api/contact"
+    >
+      <div class="field">
+        <label class="label" for="name">
+          Full Name
+        </label>
+
+        <input
+          id="name"
+          class="input"
+          type="text"
+          name="name"
+          minlength="2"
+          maxlength="100"
+          required
+        />
+      </div>
+
+      <div class="field">
+        <label class="label" for="email">
+          Email
+        </label>
+
+        <input
+          id="email"
+          class="input"
+          type="email"
+          name="email"
+          minlength="6"
+          maxlength="100"
+          required
+        />
+      </div>
+
+      <div class="field">
+        <label class="label" for="phone">
+          Telephone
+        </label>
+
+        <input
+          id="phone"
+          class="input"
+          type="tel"
+          name="phone"
+          minlength="8"
+          maxlength="20"
+        />
+      </div>
+
+      <div class="field">
+        <label class="label" for="source">
+          How did you find us?
+        </label>
+
+        <select
+          id="source"
+          name="source"
+          class="select"
+        >
+          <option value="">Please Select</option>
+          <option>Google</option>
+          <option>Social Media</option>
+          <option>AI</option>
+          <option>Referral</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label class="label" for="message">
+          Message
+        </label>
+
+        <textarea
+          id="message"
+          class="textarea"
+          name="message"
+          rows="7"
+          minlength="10"
+          maxlength="2000"
+          required
+        ></textarea>
+      </div>
+
+      {import.meta.env.PUBLIC_ENVIRONMENT === "production" && (
+        <>
+          <script
+            src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+            async
+            defer
+          ></script>
+
+          <div
+            class="cf-turnstile"
+            data-sitekey={import.meta.env.DATA_SITEKEY}
+          />
+        </>
+      )}
+
+      <Button
+        variant="primary"
+        type="submit"
+        title="Send Message"
+      />
+    </form>
+  </Container>
+</Section>
+
+<script>
+  import "../../scripts/contact";
+</script>

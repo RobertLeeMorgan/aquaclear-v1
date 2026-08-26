@@ -1,0 +1,83 @@
+---
+import type { ButtonType } from "../../lib/types";
+
+interface Props extends ButtonType {
+  variant?: "primary" | "dark" | "outline" | "ghost";
+  size?: "sm" | "md" | "lg";
+  fullWidth?: boolean;
+
+  target?: "_self" | "_blank";
+  rel?: string;
+
+  motion?: boolean;
+
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
+
+  class?: string;
+}
+
+const {
+  title,
+  href,
+
+  variant = "primary",
+  size = "md",
+  fullWidth = false,
+  motion = true,
+
+  target = "_self",
+  rel,
+
+  type = "button",
+  disabled = false,
+
+  class: className = "",
+} = Astro.props as Props;
+
+const classes = [
+  "btn",
+  `btn-${variant}`,
+  size && `btn-${size}`,
+  fullWidth && "btn-full",
+  motion && "btn-motion",
+  className,
+]
+.filter(Boolean)
+.join(" ");
+
+const anchorRel =
+  rel ??
+  (target === "_blank"
+    ? "noopener noreferrer"
+    : undefined);
+---
+
+{
+  href ? (
+    <a
+      href={href}
+      target={target}
+      rel={anchorRel}
+      class={classes}
+    >
+      {title}
+    </a>
+  ) : (
+    <button
+      type={type}
+      disabled={disabled}
+      class={classes}
+    >
+      <span class="btn-text">
+        {title}
+      </span>
+
+      <svg
+        class="hidden ml-xs icon-sm animate-spin"
+        viewBox="0 0 24 24"
+        fill="none"
+      />
+    </button>
+  )
+}

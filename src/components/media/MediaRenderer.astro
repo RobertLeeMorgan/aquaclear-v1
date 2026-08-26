@@ -1,0 +1,48 @@
+---
+import AppImage from "./AppImage.astro";
+import Video from "./Video.astro";
+import BeforeAfter from "./BeforeAfter.astro";
+
+import type { MediaUnion, ResponsiveProfileEnum } from "../../lib/types";
+
+interface Props {
+  media: MediaUnion;
+  responsive?: ResponsiveProfileEnum;
+  gallery?: string;
+}
+
+const {
+  responsive = "medium",
+  gallery,
+  media
+} = Astro.props as Props;
+---
+
+{
+  media.type === "image" && (
+    <AppImage
+      src={media.src}
+      alt={media.alt}
+      responsive={responsive}
+      gallery={gallery}
+    />
+  )
+}
+
+{
+  media.type === "video" && (
+    <Video {...media.video} />
+  )
+}
+
+{
+  media.type === "beforeAfter" && (
+    <BeforeAfter
+      before={media.before}
+      after={media.after}
+      beforeAlt={media.beforeAlt}
+      afterAlt={media.afterAlt}
+      responsive={responsive}
+    />
+  )
+}

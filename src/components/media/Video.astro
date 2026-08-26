@@ -1,0 +1,44 @@
+---
+import type { VideoUnion } from "../../lib/types";
+
+type Props = VideoUnion;
+
+const video = Astro.props as Props;
+
+let videoSrc = "";
+
+switch (video.provider) {
+  case "youtube":
+    videoSrc = `https://www.youtube.com/embed/${video.id}`;
+    break;
+
+  case "vimeo":
+    videoSrc = `https://player.vimeo.com/video/${video.id}`;
+    break;
+
+  case "html":
+    videoSrc = video.src;
+    break;
+}
+---
+
+{
+  video.provider === "html" ? (
+    <video
+      src={videoSrc}
+      class="w-full h-full"
+      controls
+      playsinline
+    />
+  ) : (
+    <iframe
+      src={videoSrc}
+      title={video.title ?? "Video"}
+      class="w-full h-full"
+      loading="lazy"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      referrerpolicy="strict-origin-when-cross-origin"
+    />
+  )
+}

@@ -1,0 +1,102 @@
+---
+import * as Lucide from "lucide-astro";
+import type { NavItem } from "../../../lib/navigation";
+
+interface Props {
+  navItems: NavItem[];
+  currentPath: string;
+}
+
+const {
+  navItems,
+  currentPath,
+} = Astro.props;
+
+const isActive = (item: NavItem) => {
+  if (item.href === "/") {
+    return currentPath === "/";
+  }
+
+  return currentPath.startsWith(item.href);
+};
+---
+
+<>
+  <button
+    id="menuBtn"
+    class="card-hover bg-nav radius-sm p-xs lg:hidden"
+    aria-label="Open menu"
+  >
+    <Lucide.Menu id="menuIcon" class="icon-md" />
+    <Lucide.X id="closeIcon" class="hidden icon-md" />
+  </button>
+
+  <div
+    id="mobileMenu" class=" fixed inset-x-0 top-[57px] bottom-0 z-nav bg-nav lg:hidden opacity-0 -translate-y-6 pointer-events-none motion"
+  >
+    <nav class="h-full overflow-y-auto px-lg py-lg">
+      {navItems.map((item, index) => (
+        <div class="py-lg">
+          {!item.dropdown ? (
+            <a
+              href={item.href}
+              class:list={[
+                "text-3xl motion py-lg",
+                isActive(item)
+                  ? "text-primary"
+                  : "text-body",
+              ]}
+            >
+              {item.label}
+            </a>
+          ) : (
+            <>
+              <div class="cluster-md">
+                <a
+                  href={item.href}
+                  class:list={[
+                    "text-3xl flex-1 motion",
+                    isActive(item)
+                      ? "text-primary"
+                      : "text-body",
+                  ]}
+                >
+                  {item.label}
+                </a>
+
+                <button
+                  class="mobile-toggle p-sm justify-end"
+                  data-target={`mobile-submenu-${index}`}
+                  aria-label={`Expand ${item.label}`}
+                >
+                  <Lucide.ChevronDown
+                    class="icon-md motion justify-self-end"
+                  />
+                </button>
+              </div>
+
+              <div
+                id={`mobile-submenu-${index}`}
+                class="hidden py-md"
+              >
+                {item.dropdown.map((link) => (
+                  <a
+                    href={link.href}
+                    class:list={[
+                      "block py-sm pl-xl motion text-xl",
+                      currentPath === link.href
+                        ? "text-primary font-semibold"
+                        : "text-soft",
+                    ]}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+      ))}
+    </nav>
+  </div>
+</>

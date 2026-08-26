@@ -1,0 +1,103 @@
+---
+import AppImage from "../media/AppImage.astro";
+
+interface BannerLogo {
+  type: "logo";
+  image: ImageMetadata;
+  alt: string;
+  href?: string;
+}
+
+interface BannerText {
+  type: "text";
+  text: string;
+  href?: string;
+}
+
+type BannerItem = BannerLogo | BannerText;
+
+interface Props {
+  items: BannerItem[];
+  speed?: number;
+}
+
+const {
+  items,
+  speed = 30,
+} = Astro.props as Props;
+---
+
+<div class="banner">
+  <div class="banner-viewport">
+    <div
+      class="banner-track"
+      style={`--banner-duration: ${speed}s`}
+    >
+      <div class="banner-group">
+        {items.map((item) => (
+          <div class="banner-item">
+            {item.type === "logo" && (
+              item.href ? (
+                <a href={item.href}>
+                  <AppImage
+                    src={item.image}
+                    alt={item.alt}
+                    responsive="small"
+                    class="banner-logo"
+                  />
+                </a>
+              ) : (
+                <AppImage
+                  src={item.image}
+                  alt={item.alt}
+                  responsive="small"
+                  class="banner-logo"
+                />
+              )
+            )}
+
+            {item.type === "text" && (
+              item.href ? (
+                <a href={item.href} class="banner-text">
+                  {item.text}
+                </a>
+              ) : (
+                <span class="banner-text">
+                  {item.text}
+                </span>
+              )
+            )}
+          </div>
+        ))}
+      </div>
+
+      <div
+        class="banner-group"
+        aria-hidden="true"
+      >
+        {items.map((item) => (
+          <div class="banner-item">
+            {item.type === "logo" && (
+              <AppImage
+                src={item.image}
+                alt=""
+                responsive="small"
+                class="banner-logo"
+              />
+            )}
+
+            {item.type === "text" && (
+              <span class="banner-text">
+                {item.text}
+              </span>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    import "../../scripts/banner";
+</script>

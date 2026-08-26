@@ -1,0 +1,32 @@
+---
+import { site } from "../../../config/site";
+---
+
+<div>
+    <h3 class="subheading text-inverse mb-md">
+        Contact
+    </h3>
+
+    <div class="stack-sm">
+        <a
+            href={`tel:${site.mobile}`}
+            class="link link-inverse link-motion"
+        >
+            {site.mobile}
+        </a>
+
+        <a
+            href={`tel:${site.phone}`}
+            class="link link-inverse link-motion"
+        >
+            {site.phone}
+        </a>
+
+        <a
+            href={`mailto:${site.email}`}
+            class="link link-inverse link-motion"
+        >
+            {site.email}
+        </a>
+    </div>
+</div>

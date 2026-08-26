@@ -1,0 +1,46 @@
+---
+import Section from "../layout/Section.astro";
+import Container from "../layout/Container.astro";
+import SectionHeader from "../content/SectionHeader.astro";
+import type { SplitContentSection } from "../../lib/types";
+
+interface Props extends SplitContentSection {}
+
+const {
+  eyebrow,
+  title,
+  description,
+  items,
+} = Astro.props as Props;
+---
+
+<Section id={title}>
+  <Container>
+    <SectionHeader
+      eyebrow={eyebrow}
+      title={title}
+      description={description}
+    />
+
+    <div class="mt-lg divide-y divide-border sm:mt-2xl">
+      {items.map((item) => (
+        <article class="grid gap-xl py-xl sm:gap-2xl sm:py-2xl lg:grid-cols-[280px_1fr]">
+
+          <div class="stack-md">
+            <h3 class="heading">
+              {item.title}
+            </h3>
+
+            <div class="h-2xs w-container-4xl radius-pill bg-primary" />
+          </div>
+
+          <div>
+            <p class="body reading container-md text-lg">
+              {item.description}
+            </p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </Container>
+</Section>

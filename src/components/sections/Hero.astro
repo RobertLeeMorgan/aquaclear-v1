@@ -1,0 +1,106 @@
+---
+import AppImage from "../media/AppImage.astro";
+import Button from "../actions/Button.astro";
+import type { HeroSection } from "../../lib/types";
+
+interface Props extends HeroSection {
+  height?: "sm" | "md" | "lg";
+
+  align?: "left" | "right";
+  vertical?: "center" | "bottom";
+
+  overlay?: "none" | "light" | "dark";
+}
+
+const {
+  title,
+  description,
+
+  image,
+  alt = "",
+
+  buttons,
+
+  height = "md",
+
+  align = "left",
+  vertical = "center",
+
+  overlay = "dark",
+} = Astro.props as Props;
+
+const heightClass = {
+  sm: "h-[60vh]",
+  md: "h-[70vh]",
+  lg: "h-[80vh]",
+}[height];
+
+const alignmentClass = {
+  left: "justify-start text-start",
+  right: "justify-end text-end",
+}[align];
+
+const verticalClass = {
+  center: "items-center",
+  bottom: "items-end pb-xl lg:pb-0",
+}[vertical];
+
+const overlayClass = {
+  none: "",
+  light: "absolute inset-0 bg-white/20",
+  dark: "absolute inset-0 bg-black/45",
+}[overlay];
+---
+
+<section class:list={["relative overflow-hidden bg-dark", heightClass]}>
+
+  <AppImage
+    src={image}
+    alt={alt}
+    responsive="large"
+    class="hero-img"
+    priority
+  />
+
+  {overlay !== "none" && (
+    <div class={overlayClass} />
+  )}
+
+  <div
+    class:list={[
+      "relative z-10 container flex h-full",
+      alignmentClass,
+      verticalClass,
+    ]}
+  >
+    <div class="container-md">
+      <h1 class="display-lg text-inverse">
+        {title}
+      </h1>
+
+      {description && (
+        <p class="text-2xl container-sm mt-lg text-inverse-muted">
+          {description}
+        </p>
+      )}
+
+      {buttons && (
+        <div
+          class:list={[
+            "cluster-md mt-2xl",
+            align === "right"
+              ? "justify-end"
+              : "justify-start",
+          ]}
+        >
+          {buttons.map((button: any, index: number) => (
+            <Button
+              {...button}
+              variant={index === 1 ? "dark" : "primary"}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  </div>
+</section>

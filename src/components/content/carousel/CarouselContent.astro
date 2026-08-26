@@ -1,0 +1,64 @@
+---
+import Card from "../cards/Card.astro";
+import AppImage from "../../media/AppImage.astro";
+import Video from "../../media/Video.astro";
+import Testimonial from "../cards/Testimonial.astro";
+
+import type { CarouselUnion } from "../../../lib/types";
+
+interface Props {
+  carousel: CarouselUnion;
+}
+
+const { carousel } = Astro.props as Props;
+---
+
+{carousel.type === "card" &&
+  carousel.card.map((card) => (
+    <div class="shrink-0 basis-[240px] sm:basis-[300px] snap-start">
+      <Card
+        layout="vertical"
+        ellipsis={3}
+        title={card.title}
+        description={card.description}
+        image={card.image}
+        href={card.href}
+      />
+    </div>
+  ))
+}
+
+{carousel.type === "image" &&
+  carousel.image.map((image) => (
+    <div class="shrink-0 basis-[320px] sm:basis-[480px] snap-start">
+      <AppImage
+        src={image.src}
+        alt={image.alt}
+        responsive="medium"
+      />
+    </div>
+  ))
+}
+
+{carousel.type === "video" &&
+  carousel.video.map((video) => (
+    <div class="shrink-0 basis-[320px] sm:basis-[480px] aspect-video snap-start">
+      <Video {...video} />
+    </div>
+  ))
+}
+
+{carousel.type === "testimonial" &&
+  carousel.testimonial.map((testimonial) => (
+    <div class="shrink-0 basis-[320px] sm:basis-[420px] snap-start">
+      <Testimonial
+        author={testimonial.author}
+        role={testimonial.role}
+        company={testimonial.company}
+        avatar={testimonial.avatar}
+        rating={testimonial.rating}
+        quote={testimonial.quote}
+      />
+    </div>
+  ))
+}

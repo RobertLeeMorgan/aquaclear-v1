@@ -1,0 +1,45 @@
+---
+import Hero from "./Hero.astro";
+import RichTextSection from "./RichTextSection.astro";
+import Cards from "./Cards.astro";
+import CarouselSection from "./CarouselSection.astro";
+import IconListSection from "./IconListSection.astro";
+import AccordionSection from "./AccordionSection.astro";
+import MediaSection from "./MediaSection.astro";
+import Cta from "./Cta.astro";
+import StickyList from "./StickyList.astro";
+import KeyFeatures from "./KeyFeatures.astro";
+import SplitContent from "./SplitContent.astro";
+import ContactForm from "./ContactForm.astro";
+import Gallery from "./Gallery.astro";
+
+import type { ContentSection } from "../../lib/types";
+
+const components = {
+  hero: Hero,
+  richTextSection: RichTextSection,
+  cards: Cards,
+  carouselSection: CarouselSection,
+  iconListSection: IconListSection,
+  accordionSection: AccordionSection,
+  contactForm: ContactForm,
+  mediaSection: MediaSection,
+  gallery: Gallery,
+  cta: Cta,
+  stickyList: StickyList,
+  keyFeatures: KeyFeatures,
+  splitContent: SplitContent,
+} as const;
+
+interface Props {
+  data: ContentSection[];
+}
+
+const { data } = Astro.props as Props;
+---
+
+{data.map((section) => {
+  const Component = components[section.type] as any;
+
+  return <Component {...section} />;
+})}

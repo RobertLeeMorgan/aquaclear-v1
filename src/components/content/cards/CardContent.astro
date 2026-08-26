@@ -1,0 +1,34 @@
+---
+const {
+  eyebrow,
+  title,
+  description,
+  layout = "vertical",
+  lineClamp,
+} = Astro.props;
+---
+
+{eyebrow && (
+  <p class="eyebrow">
+    {eyebrow}
+  </p>
+)}
+
+{title && (
+  <h3 class={layout === "compact" ? "subheading" : "heading"}>
+    {title}
+  </h3>
+)}
+
+{description && (
+  <p
+    class:list={[
+      "body",
+      "mt-xs",
+      "flex-1",
+      lineClamp,
+    ]}
+  >
+    {description}
+  </p>
+)}

@@ -1,0 +1,70 @@
+---
+import Section from "../layout/Section.astro";
+import Container from "../layout/Container.astro";
+import SectionHeader from "../content/SectionHeader.astro";
+import MediaFrame from "../media/MediaFrame.astro";
+import TwoColumns from "../layout/TwoColumns.astro";
+import IconList from "../content/IconList.astro";
+import Button from "../actions/Button.astro";
+import Link from "../actions/Link.astro";
+
+import type { IconListSection, ResponsiveProfileEnum } from "../../lib/types";
+
+interface Props extends IconListSection {
+  imagePosition?: "left" | "right";
+  responsive?: ResponsiveProfileEnum;
+
+  readMore?: {
+    href: string;
+    title: string;
+  };
+}
+
+const {
+  eyebrow,
+  title,
+  description,
+  items,
+  buttons,
+  media,
+  imagePosition = "right",
+  responsive,
+  readMore,
+} = Astro.props as Props;
+---
+
+<Section id={title}>
+  <Container>
+    <TwoColumns reverse={imagePosition === "left"}>
+      <MediaFrame media={media} responsive={responsive}/>
+
+      <div class="flex flex-col justify-center">
+        <SectionHeader
+          eyebrow={eyebrow}
+          title={title}
+          description={description}
+        />
+
+        <IconList items={items} />
+
+        {(buttons || readMore) && (
+          <div class="mt-8">
+            {buttons?.map((button: any, index: number) => (
+              <Button
+                {...button}
+                variant={index === 1 ? "dark" : "primary"}
+              />
+            ))}
+
+            {readMore && (
+              <Link
+                href={readMore.href}
+                title={readMore.title}
+              />
+            )}
+          </div>
+        )}
+      </div>
+    </TwoColumns>
+  </Container>
+</Section>

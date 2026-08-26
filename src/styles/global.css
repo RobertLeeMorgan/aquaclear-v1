@@ -1,0 +1,56 @@
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+
+@import "@fontsource/ibm-plex-sans/400.css";
+@import "@fontsource/ibm-plex-sans/500.css";
+@import "@fontsource/ibm-plex-sans/600.css";
+@import "@fontsource/ibm-plex-sans/700.css";
+
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@import "./variables";
+@import "./utilities";
+@import "./semantics";
+
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--color-surface);
+  background-image: var(--surface-pattern);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  scrollbar-gutter: stable;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.text-inverse-muted {
+  color: var(--color-inverse-muted);
+}
+
+.text-inverse {
+  color: var(--color-inverse);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}

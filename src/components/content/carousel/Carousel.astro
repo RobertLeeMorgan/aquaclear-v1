@@ -1,0 +1,45 @@
+---
+import { ChevronRight, ChevronLeft } from "lucide-astro";
+import type { CarouselUnion } from "../../../lib/types";
+import CarouselContent from "./CarouselContent.astro";
+
+interface Props {
+  carousel: CarouselUnion;
+}
+
+const { carousel } = Astro.props as Props;
+---
+
+<div class="relative flex">
+  <button
+    id="prevBtn"
+    type="button"
+    class="carousel-btn carousel-btn-prev hidden md:block"
+    aria-label="Scroll to previous items"
+  >
+    <ChevronLeft class="icon-md" />
+  </button>
+
+  <div
+    id="viewport"
+    class="overflow-x-auto scroll-smooth flex-1 no-scrollbar snap-x snap-mandatory"
+  >
+    <div id="track" class="flex gap-xl pt-2xl pb-sm">
+        <CarouselContent carousel={carousel}/>
+    </div>
+
+  </div>
+
+  <button
+    id="nextBtn"
+    type="button"
+    class="carousel-btn carousel-btn-next hidden md:block"
+    aria-label="Scroll to next items"
+  >
+    <ChevronRight class="icon-md" />
+  </button>
+</div>
+
+<script>
+  import "../../../scripts/carousel";
+</script>

@@ -1,0 +1,25 @@
+---
+import { slugify } from "../../utils/slugify";
+
+const {
+  secondary = false,
+  dark = false,
+  class: className = "",
+  id,
+} = Astro.props;
+
+const sectionId = id ? slugify(id) : undefined
+---
+
+<section
+  id={sectionId}
+  class:list={[
+    "section",
+    dark && "bg-surface-dark",
+    !dark && secondary && "bg-surface-alt",
+    !dark && !secondary && "bg-surface",
+    className,
+  ]}
+>
+  <slot />
+</section>

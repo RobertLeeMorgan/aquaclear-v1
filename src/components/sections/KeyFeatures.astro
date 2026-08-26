@@ -1,0 +1,51 @@
+---
+import * as Lucide from "lucide-astro";
+import Container from "../layout/Container.astro";
+import { featureIconMap } from "../../utils/featureIcon";
+import type { KeyFeaturesSection } from "../../lib/types";
+
+interface Props extends KeyFeaturesSection {}
+
+const { items } = Astro.props as Props;
+---
+
+<section class="bg-gradient-to-br from-card to-surface-alt shadow-2">
+  <Container>
+    <div class="grid grid-cols-2 lg:grid-cols-4">
+
+      {items.map((item, index) => {
+        const Icon = featureIconMap[item.icon] ?? Lucide.Circle;
+
+        return (
+          <div
+            class:list={[
+              "card-hover flex flex-col items-center text-center card-padding border-b border-border",
+              index % 2 === 1 && "border-l border-border",
+              "lg:border-l",
+              index % 4 === 0 && "lg:border-l-0",
+            ]}
+          >
+            <div class="cluster-sm mb-sm h-xl w-xl sm:h-2xl sm:w-2xl">
+              <Icon
+                class="h-lg w-lg text-primary sm:h-xl sm:w-xl"
+                aria-hidden="true"
+              />
+            </div>
+
+            <h3 class="subheading">
+              {item.title}
+            </h3>
+
+            {item.description && (
+              <p class="body text-soft container-sm mt-sm hidden sm:block max-w-[220px]">
+                {item.description}
+              </p>
+            )}
+
+          </div>
+        );
+      })}
+
+    </div>
+  </Container>
+</section>
