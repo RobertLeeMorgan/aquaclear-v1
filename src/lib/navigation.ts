@@ -1,6 +1,6 @@
 import { getCollection } from "astro:content";
 
-import { pages } from "../config/pages";
+import { pages } from "../generate/metadata/pages";
 import { navigation } from "../config/navigation";
 
 export type NavLink = {
@@ -69,9 +69,7 @@ async function buildNavigation() {
       const page = pages[item.page];
 
       if (page.type !== "collection") {
-        throw new Error(
-          `Navigation page "${item.page}" is not a collection.`,
-        );
+        throw new Error(`Navigation page "${item.page}" is not a collection.`);
       }
 
       const collectionHref = href(item.page);
