@@ -1,0 +1,50 @@
+---
+import Section from "../layout/Section.astro";
+import SectionHeader from "../content/SectionHeader.astro";
+import Container from "../layout/Container.astro";
+import FlockBirds from "../../assets/images/svg/FlockBirds.svg"
+
+const {
+  title,
+  description,
+  eyebrow,
+  dark,
+  secondary
+} = Astro.props;
+---
+
+<Section id={title} dark class="overflow-hidden">
+    <FlockBirds class={`decorative top-10 -right-[2%] w-100 text-surface/10`} />
+    <Container>
+        <div class="min-h-[32vh] flex items-center justify-center">
+            <SectionHeader
+                eyebrow={eyebrow}
+                title={title}
+                description={description}
+                as="h1"
+                align="center"
+                dark
+            />
+        </div>
+    </Container>
+    <svg
+        class:list={[
+            "absolute bottom-0 left-0 z-20 w-full h-16 md:h-24 pointer-events-none "
+        ]}
+        viewBox="0 0 1440 120"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        >
+        <path
+            fill="var(--color-surface)"
+            d="M0 50
+            C180 72 360 92 540 92
+            C720 92 900 58 1120 50
+            C1230 50 1340 50 1440 50
+            L1440 121
+            L0 121
+            Z"
+        />
+    </svg>
+</Section>
+

@@ -14,8 +14,8 @@ const sectionId = id ? slugify(id) : undefined
 <section
   id={sectionId}
   class:list={[
-    "section",
-    dark && "bg-surface-dark",
+    "section relative overflow-hidden",
+    dark && "bg-dark",
     !dark && secondary && "bg-surface-alt",
     !dark && !secondary && "bg-surface",
     className,

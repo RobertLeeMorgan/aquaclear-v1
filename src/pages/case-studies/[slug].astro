@@ -1,0 +1,63 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CaseStudyLayout from "../../layouts/CaseStudyLayout.astro";
+import { getCollection } from "astro:content";
+import { articleSchema } from "../../lib/schema";
+import { breadcrumbSchema } from "../../lib/breadcrumbs";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("caseStudies");
+
+  return entries.map((entry) => {
+    const services = entry.data.metadata.services;
+
+    const relatedCaseStudies = entries
+      .filter((related) => related.id !== entry.id)
+      .filter((related) =>
+        related.data.metadata.services.some((service) =>
+          services.includes(service),
+        ),
+      )
+      .map((related) => ({
+        eyebrow: related.data.metadata.client,
+        title: related.data.metadata.title,
+        description: related.data.metadata.summary,
+        image: related.data.seo.image,
+        href: `/case-studies/${related.id}`,
+      }));
+
+    return {
+      params: { slug: entry.id },
+      props: {
+        entry,
+        relatedCaseStudies,
+      },
+    };
+  });
+}
+
+const { entry, relatedCaseStudies } = Astro.props;
+
+const schema = [
+  articleSchema({
+    name: entry.data.seo.title,
+    description: entry.data.seo.description,
+    image: entry.data.seo.image?.src,
+    url: Astro.url.pathname,
+  }),
+  await breadcrumbSchema(Astro.url.pathname, entry.data.seo.title),
+];
+---
+
+<Layout
+  title={entry.data.seo.title}
+  description={entry.data.seo.description}
+  image={entry.data.seo.image}
+  schema={schema}
+  ogType="article"
+>
+  <CaseStudyLayout
+    data={entry.data}
+    relatedCaseStudies={relatedCaseStudies}
+  />
+</Layout>

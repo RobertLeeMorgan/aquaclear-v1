@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ContactLayout from "../layouts/ContactLayout.astro";
+import { getEntry } from "astro:content";
+import { contactSchema } from "../lib/schema";
+
+const entry = await getEntry("contact", "contact");
+
+if (!entry) {
+  throw new Error("Contact content not found.");
+}
+
+
+
+
+
+const schema = [
+  contactSchema({
+        name: entry.data.seo.title,
+        description: entry.data.seo.description,
+        image: entry.data.seo.image?.src,
+        url: Astro.url.pathname,
+      }),
+];
+---
+
+<Layout title={entry.data.seo.title} description={entry.data.seo.description} image={entry.data.seo.image} schema={schema} >
+  <ContactLayout
+    data={entry.data}
+    
+  />
+</Layout>

@@ -10,6 +10,13 @@ export interface ButtonType {
   href?: string;
 }
 
+export interface RichTextType {
+  title: string;
+  content: string;
+  media?: MediaUnion;
+  buttons?: ButtonType[];
+}
+
 export interface CardType {
   eyebrow?: string;
   title: string;
@@ -163,16 +170,68 @@ export interface BannerItemTextType {
 }
 
 export type IconEnum =
-  | "boat"
-  | "anchor"
   | "leaf"
-  | "wave"
+  | "gauge"
+  | "wrench"
+  | "cpu"
+  | "link"
+  | "shield"
+  | "waves"
+  | "truck"
+  | "zap"
+  | "cog"
+  | "fuel"
+  | "settings"
+  | "hardHat"
+  | "scissors"
+  | "package"
+  | "pickaxe"
+  | "anchor"
+  | "sprout"
+  | "layers"
+  | "map"
+  | "ship"
+  | "check"
+  | "badgeCheck"
+  | "tractor"
+  | "crown"
+  | "shipWheel"
+  | "bird"
+  | "building2"
+  | "fish"
+  | "treePine"
+  | "trees"
+  | "flag"
+  | "shovel"
+  | "recycle"
+  | "trophy"
+  | "move"
+  | "forklift"
+  | "medal"
+  | "wavesLadder"
+  | "landmark"
+  | "landPlot"
+  | "shieldCheck"
+  | "merge"
+  | "chevronsUp"
 
 export type ResponsiveProfileEnum =
   | "large"
   | "medium"
   | "small"
   | "thumbnail"
+
+export type ServiceEnum =
+  | "weed-cutting"
+  | "bulrush-removal"
+  | "invasive-species-removal"
+  | "blanket-weed-removal"
+  | "water-lily-management"
+  | "reed-bed-management"
+  | "trash-and-debris-removal"
+  | "tree-work"
+  | "silt-pumping"
+  | "excavation-and-ditching"
 
 export interface HeroSection {
   title: string;
@@ -182,11 +241,25 @@ export interface HeroSection {
   buttons?: ButtonType[];
 }
 
+export interface PageHeaderSection {
+  eyebrow?: string;
+  title: string;
+  description?: string;
+}
+
 export interface RichTextSection {
   eyebrow?: string;
   title: string;
   content: string;
   media?: MediaUnion;
+  buttons?: ButtonType[];
+}
+
+export interface RichTextSectionsSection {
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+  items: RichTextType[];
 }
 
 export interface ContactFormSection {
@@ -206,7 +279,7 @@ export interface CarouselSection {
   eyebrow?: string;
   title?: string;
   description?: string;
-  carousel: CarouselUnion;
+  items: CarouselUnion;
 }
 
 export interface IconListSection {
@@ -266,13 +339,24 @@ export interface SplitContentSection {
   items: SplitContentItemType[];
 }
 
+export interface MetadataSection {
+  title: string;
+  client: string;
+  location: string;
+  date: string;
+  services: ServiceEnum[];
+  summary: string;
+}
+
 export interface BannerSection {
   items: BannerItemUnion[];
 }
 
 export type ContentSection =
   | ({ type: "hero" } & HeroSection)
+  | ({ type: "pageHeader" } & PageHeaderSection)
   | ({ type: "richTextSection" } & RichTextSection)
+  | ({ type: "richTextSections" } & RichTextSectionsSection)
   | ({ type: "contactForm" } & ContactFormSection)
   | ({ type: "cards" } & CardsSection)
   | ({ type: "carouselSection" } & CarouselSection)
@@ -284,4 +368,5 @@ export type ContentSection =
   | ({ type: "stickyList" } & StickyListSection)
   | ({ type: "keyFeatures" } & KeyFeaturesSection)
   | ({ type: "splitContent" } & SplitContentSection)
+  | ({ type: "metadata" } & MetadataSection)
   | ({ type: "banner" } & BannerSection)

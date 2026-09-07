@@ -1,0 +1,28 @@
+---
+import CarouselSection from "../components/sections/CarouselSection.astro";
+import Content from "../components/sections/Content.astro";
+import Cta from "../components/sections/Cta.astro";
+
+const { data, relatedCaseStudiesItems } = Astro.props;
+
+---
+<Content
+  data={data.overview}
+/>
+
+{relatedCaseStudiesItems.card.length > 0 && (
+  <CarouselSection
+    eyebrow="Our Work"
+    title="Related Case Studies"
+    description="Explore similar waterway management projects delivered by our team."
+    items={relatedCaseStudiesItems}
+    secondary
+  />
+)}
+
+<Cta
+  eyebrow={data.callToAction.eyebrow}
+  title={data.callToAction.title}
+  description={data.callToAction.description}
+  buttons={data.callToAction.buttons}
+/>

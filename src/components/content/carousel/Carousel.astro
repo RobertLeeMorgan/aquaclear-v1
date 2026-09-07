@@ -5,19 +5,20 @@ import CarouselContent from "./CarouselContent.astro";
 
 interface Props {
   carousel: CarouselUnion;
+  dark?: boolean
 }
 
-const { carousel } = Astro.props as Props;
+const { carousel, dark = false } = Astro.props as Props;
 ---
 
 <div class="relative flex">
   <button
     id="prevBtn"
     type="button"
-    class="carousel-btn carousel-btn-prev hidden md:block"
+    class="carousel-btn carousel-btn-prev hidden md:block "
     aria-label="Scroll to previous items"
   >
-    <ChevronLeft class="icon-md" />
+    <ChevronLeft class:list={["icon-md", dark && "text-inverse"]} />
   </button>
 
   <div
@@ -36,7 +37,7 @@ const { carousel } = Astro.props as Props;
     class="carousel-btn carousel-btn-next hidden md:block"
     aria-label="Scroll to next items"
   >
-    <ChevronRight class="icon-md" />
+    <ChevronRight class:list={["icon-md", dark && "text-inverse"]} />
   </button>
 </div>
 

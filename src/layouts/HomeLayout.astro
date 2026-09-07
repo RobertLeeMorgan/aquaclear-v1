@@ -1,0 +1,53 @@
+---
+import Banner from "../components/sections/Banner.astro";
+import Cards from "../components/sections/Cards.astro";
+import Cta from "../components/sections/Cta.astro";
+import Hero from "../components/sections/Hero.astro";
+import IconListSection from "../components/sections/IconListSection.astro";
+import RichTextSection from "../components/sections/RichTextSection.astro";
+
+const { data, servicesItems, trustedByItems } = Astro.props;
+
+---
+<Hero
+  title={data.hero.title}
+  description={data.hero.description}
+  image={data.hero.image}
+  alt={data.hero.alt}
+  buttons={data.hero.buttons}
+  overlay="light"
+  class=""
+/>
+
+<RichTextSection
+  eyebrow={data.introduction.eyebrow}
+  title={data.introduction.title}
+  content={data.introduction.content}
+  media={data.introduction.media}
+  wide
+  buttons={data.introduction.buttons}
+/>
+
+<Banner/>
+
+<Cards
+  title="Services"
+  items={servicesItems}
+/>
+
+<IconListSection
+  eyebrow={data.whyChooseUs.eyebrow}
+  title={data.whyChooseUs.title}
+  description={data.whyChooseUs.description}
+  media={data.whyChooseUs.media}
+  alt={data.whyChooseUs.alt}
+  items={data.whyChooseUs.items}
+  buttons={data.whyChooseUs.buttons}
+/>
+
+<Cta
+  eyebrow={data.callToAction.eyebrow}
+  title={data.callToAction.title}
+  description={data.callToAction.description}
+  buttons={data.callToAction.buttons}
+/>

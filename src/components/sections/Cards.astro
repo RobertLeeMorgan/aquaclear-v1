@@ -16,10 +16,14 @@ interface Props extends CardsSection {
 
   ellipsis?: 2 | 3 | 4;
 
+  expand?: boolean;
+
   readMore?: {
     href: string;
     title: string;
   };
+  secondary?: boolean;
+  dark?: boolean
 }
 
 const {
@@ -34,7 +38,12 @@ const {
   columns = 3,
   ellipsis,
 
+  expand,
+
   readMore,
+
+  secondary,
+  dark
 } = Astro.props as Props;
 
 const gridClass = {
@@ -45,7 +54,7 @@ const gridClass = {
 }[columns];
 ---
 
-<Section id={title}>
+<Section id={title} secondary={secondary} dark={dark}>
   <Container>
 
     <SectionHeader
@@ -57,7 +66,7 @@ const gridClass = {
     <div
       class:list={[
         layout === "grid"
-          ? ["mt-3xl", "grid", "gap-xl", gridClass]
+          ? ["mt-3xl", "grid", "gap-xl", "items-start", gridClass]
           : ["mt-xl", "stack-lg"],
       ]}
     >
@@ -70,6 +79,7 @@ const gridClass = {
           description={item.description}
           layout={cardLayout}
           ellipsis={ellipsis}
+          expand={expand}
         />
       ))}
     </div>

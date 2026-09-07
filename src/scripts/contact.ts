@@ -14,11 +14,11 @@ if (!button || !text || !spinner) {
 const ui = { button, text, spinner };
 
 const errorBox = document.createElement("p");
-errorBox.className = "text-red-600 text-sm mt-2";
+errorBox.className = "text-red-600 text-sm";
 form.appendChild(errorBox);
 
 const successBox = document.createElement("p");
-successBox.className = "text-green-600 text-sm mt-2";
+successBox.className = "text-green-600 text-sm";
 form.appendChild(successBox);
 
 function setLoading(isLoading: boolean) {

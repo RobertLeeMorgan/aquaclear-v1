@@ -4,6 +4,8 @@ import Container from "../layout/Container.astro";
 import RichText from "../content/RichText.astro";
 import SectionHeader from "../content/SectionHeader.astro";
 import type { RichTextSection, ResponsiveProfileEnum } from "../../lib/types";
+import PlantGroup from "../../assets/images/svg/PlantGroup.svg"
+import Link from "../actions/Link.astro";
 
 interface Props extends RichTextSection {
   imagePosition?: "left" | "right";
@@ -11,16 +13,27 @@ interface Props extends RichTextSection {
 
   editorial?: boolean;
 
+  wide?: boolean;
+
   readMore?: {
     title: string;
     href: string;
   };
+
+  layout?: "two-column" | "three-column";
+
+  dark?: boolean;
+  secondary?: boolean
 }
 
 const props = Astro.props as Props;
+
 ---
 
-<Section id={props.title}>
+<Section id={props.title} dark={props.dark} secondary={props.secondary}>
+  {props.layout === "three-column" && 
+    <PlantGroup class="decorative -bottom-2 left-[4%] w-68 text-dark/10" />
+  }
   <Container>
     {props.editorial &&
       <SectionHeader

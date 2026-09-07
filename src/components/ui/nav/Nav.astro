@@ -1,5 +1,6 @@
 ---
 import { getNavItems } from "../../../lib/navigation";
+import Button from "../../actions/Button.astro";
 
 import NavBrand from "./NavBrand.astro";
 import NavDesktop from "./NavDesktop.astro";
@@ -9,20 +10,27 @@ const navItems = await getNavItems();
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="sticky top-0 z-nav border-b border-border-strong shadow-1 bg-gradient-to-br from-card to-nav">
-  <div class="container flex items-center justify-between py-sm px-sm sm:px-md md:px-lg">
+<header class="fixed top-0 z-nav w-full nav">
+  <div class="flex items-center px-md sm:px-lg lg:px-2xl py-xs">
 
-    <NavBrand />
+    <div class="flex-1">
+      <NavBrand />
+    </div>
 
     <NavDesktop
       navItems={navItems}
       currentPath={currentPath}
     />
 
+    <div class="flex-1 hidden lg:flex justify-end">
+      <Button href="/contact" variant="outline" size="sm" title="Free Quote"/>
+    </div>
+
     <NavMobile
       navItems={navItems}
       currentPath={currentPath}
     />
+
   </div>
 </header>
 

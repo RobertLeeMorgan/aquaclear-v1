@@ -1,0 +1,13 @@
+---
+import Cards from "../components/sections/Cards.astro";
+import PageHeader from "../components/sections/PageHeader.astro";
+
+const { data, caseStudiesItems } = Astro.props;
+
+---
+<PageHeader title={data.hero.title} eyebrow="Projects" description={data.hero.description}/>
+
+<Cards
+  title="Case Studies"
+  items={caseStudiesItems}
+/>

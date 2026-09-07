@@ -1,0 +1,53 @@
+---
+import CarouselSection from "../components/sections/CarouselSection.astro";
+import Cta from "../components/sections/Cta.astro";
+import PageHeader from "../components/sections/PageHeader.astro";
+import RichTextSections from "../components/sections/RichTextSections.astro";
+
+const { data, relatedCaseStudies } = Astro.props;
+
+const service = data.metadata.services[0];
+
+const serviceTitle = service
+  .split("-")
+  .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
+  .join(" ");
+
+---
+<PageHeader
+  eyebrow={`${data.metadata.client} · ${data.metadata.location} · ${data.metadata.date}`}
+  title={data.metadata.title}
+  description={data.metadata.summary}
+/>
+
+<RichTextSections
+  items={data.overview.items}
+  secondary
+  editorial
+/>
+
+{relatedCaseStudies.length > 0 && (
+  <CarouselSection
+    eyebrow="Related Projects"
+    title="Similar Case Studies"
+    description="Explore other projects where we have delivered similar waterway management work."
+    items={relatedCaseStudies}
+    dark
+  />
+)}
+
+<Cta
+  eyebrow="Need Similar Work?"
+  title="Have a Similar Project?"
+  description="If you're dealing with a similar waterway management problem, contact us to discuss your site and the most appropriate approach."
+  buttons={[
+    {
+      title: `View ${serviceTitle}`,
+      href: `/services/${service}`,
+    },
+    {
+      title: "Contact Us",
+      href: "/contact",
+    },
+  ]}
+/>

@@ -1,103 +1,71 @@
 ---
 import AppImage from "../media/AppImage.astro";
 
-interface BannerLogo {
-  type: "logo";
-  image: ImageMetadata;
-  alt: string;
-  href?: string;
-}
 
-interface BannerText {
-  type: "text";
-  text: string;
-  href?: string;
-}
+import CanalRiver from "../../assets/images/logos/canal-river.svg";
+import EnvironmentAgency from "../../assets/images/logos/environment-agency.png";
+import Gleneagles from "../../assets/images/logos/gleneagles.png";
+import NaturalEngland from "../../assets/images/logos/natural-england.png";
+import NRW from "../../assets/images/logos/nrw.svg";
+import OlympicGames from "../../assets/images/logos/olympic-games.png";
+import RSPB from "../../assets/images/logos/rspb.png";
+import Container from "../layout/Container.astro";
+import Plant from "../../assets/images/svg/Plant.svg"
+import Reed1 from "../../assets/images/svg/Reed1.svg"
 
-type BannerItem = BannerLogo | BannerText;
-
-interface Props {
-  items: BannerItem[];
-  speed?: number;
-}
-
-const {
-  items,
-  speed = 30,
-} = Astro.props as Props;
+const logos = [
+  {
+    image: RSPB,
+    alt: "Royal Society for the Protection of Birds",
+  },
+  {
+    image: CanalRiver,
+    alt: "Canal & River Trust",
+  },
+  {
+    image: EnvironmentAgency,
+    alt: "Environment Agency",
+  },
+  {
+    image: NaturalEngland,
+    alt: "Natural England",
+  },
+  {
+    image: NRW,
+    alt: "Natural Resources Wales",
+  },
+  {
+    image: Gleneagles,
+    alt: "Gleneagles",
+  },
+  {
+    image: OlympicGames,
+    alt: "London 2012 Olympic Games",
+  },
+];
 ---
 
-<div class="banner">
-  <div class="banner-viewport">
-    <div
-      class="banner-track"
-      style={`--banner-duration: ${speed}s`}
-    >
+<div class="banner bg-surface-alt py-2xl relative">
+  <Reed1 class="decorative -bottom-10 left-[4%] w-22 text-dark/15 z-0" />
+  <Plant class="decorative -bottom-10 right-[2%] w-34 text-dark/15 z-0" />
+  <Container>
+    <p class="heading text-dark/70 text-center">
+      Leading organisations we've worked with
+    </p>
+
+    <div class="banner-viewport flex justify-center mt-2xl">
       <div class="banner-group">
-        {items.map((item) => (
+        {logos.map((logo) => (
           <div class="banner-item">
-            {item.type === "logo" && (
-              item.href ? (
-                <a href={item.href}>
-                  <AppImage
-                    src={item.image}
-                    alt={item.alt}
-                    responsive="small"
-                    class="banner-logo"
-                  />
-                </a>
-              ) : (
-                <AppImage
-                  src={item.image}
-                  alt={item.alt}
-                  responsive="small"
-                  class="banner-logo"
-                />
-              )
-            )}
-
-            {item.type === "text" && (
-              item.href ? (
-                <a href={item.href} class="banner-text">
-                  {item.text}
-                </a>
-              ) : (
-                <span class="banner-text">
-                  {item.text}
-                </span>
-              )
-            )}
-          </div>
-        ))}
-      </div>
-
-      <div
-        class="banner-group"
-        aria-hidden="true"
-      >
-        {items.map((item) => (
-          <div class="banner-item">
-            {item.type === "logo" && (
-              <AppImage
-                src={item.image}
-                alt=""
-                responsive="small"
-                class="banner-logo"
-              />
-            )}
-
-            {item.type === "text" && (
-              <span class="banner-text">
-                {item.text}
-              </span>
-            )}
+            <AppImage
+              src={logo.image}
+              alt={logo.alt}
+              responsive="small"
+              class="banner-logo"
+            />
           </div>
         ))}
       </div>
     </div>
-  </div>
+  </Container>
 </div>
-
-<script>
-    import "../../scripts/banner";
-</script>

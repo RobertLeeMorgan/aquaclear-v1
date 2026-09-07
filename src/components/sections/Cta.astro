@@ -5,12 +5,17 @@ import Container from "../layout/Container.astro";
 import Link from "../actions/Link.astro";
 import Button from "../actions/Button.astro";
 import type { CtaSection } from "../../lib/types";
+import Heron1 from "../../assets/images/svg/heron1.svg"
+import ReedSmallGroup from "../../assets/images/svg/reedSmallGroup.svg"
 
 interface Props extends CtaSection {
   readMore?: {
     href: string;
     title: string;
   };
+
+  dark?: boolean;
+  secondary?: boolean
 }
 
 const {
@@ -18,13 +23,16 @@ const {
   title,
   description,
   readMore,
-  buttons
+  buttons,
+  dark,
+  secondary
 } = Astro.props as Props;
 ---
 
-<Section id={title}>
-  <Container class="text-center">
-
+<Section id={title} class="relative overflow-hidden" dark={dark} secondary={secondary}>
+  <Heron1 class="decorative -bottom-2 right-[3%] w-28 text-dark/15" />
+  <ReedSmallGroup class="decorative -bottom-2 left-[3%] w-44 text-dark/15" />
+  <Container class="relative z-10 text-center">
     <SectionHeader
       eyebrow={eyebrow}
       title={title}

@@ -1,6 +1,7 @@
 ---
 import Hero from "./Hero.astro";
 import RichTextSection from "./RichTextSection.astro";
+import RichTextSections from "./RichTextSections.astro";
 import Cards from "./Cards.astro";
 import CarouselSection from "./CarouselSection.astro";
 import IconListSection from "./IconListSection.astro";
@@ -12,12 +13,15 @@ import KeyFeatures from "./KeyFeatures.astro";
 import SplitContent from "./SplitContent.astro";
 import ContactForm from "./ContactForm.astro";
 import Gallery from "./Gallery.astro";
+import Banner from "./Banner.astro";
+import PageHeader from "./PageHeader.astro";
 
 import type { ContentSection } from "../../lib/types";
 
 const components = {
   hero: Hero,
   richTextSection: RichTextSection,
+  richTextSections: RichTextSections,
   cards: Cards,
   carouselSection: CarouselSection,
   iconListSection: IconListSection,
@@ -29,6 +33,8 @@ const components = {
   stickyList: StickyList,
   keyFeatures: KeyFeatures,
   splitContent: SplitContent,
+  banner: Banner,
+  pageHeader: PageHeader
 } as const;
 
 interface Props {

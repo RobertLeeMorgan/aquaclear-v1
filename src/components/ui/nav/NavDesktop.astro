@@ -20,7 +20,7 @@ const isActive = (item: NavItem) => {
 };
 ---
 
-<nav class="hidden lg:flex items-center gap-xl tracking-wide text-lg">
+<nav class="hidden lg:flex items-center gap-xl tracking-wide text-md">
   {navItems.map((item) => (
     <div class="group relative">
       {!item.dropdown ? (
@@ -30,7 +30,7 @@ const isActive = (item: NavItem) => {
             "link-motion",
             isActive(item)
               ? "text-primary font-semibold"
-              : "text-body",
+              : "text-inverse",
           ]}
         >
           {item.label}
@@ -43,7 +43,7 @@ const isActive = (item: NavItem) => {
               "link-motion py-xs",
               isActive(item)
                 ? "text-primary font-semibold"
-                : "text-body",
+                : "text-inverse",
             ]}
           >
             {item.label}

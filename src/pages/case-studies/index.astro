@@ -1,0 +1,36 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CSIndexLayout from "../../layouts/CSIndexLayout.astro";
+import { getEntry, getCollection } from "astro:content";
+import { collectionSchema } from "../../lib/schema";
+
+const entry = await getEntry("caseStudiesIndex", "casestudiesindex");
+
+if (!entry) {
+  throw new Error("Case Studies Index content not found.");
+}
+
+const caseStudies = await getCollection("caseStudies");
+
+const caseStudiesItems = [...caseStudies.map((entry) => ({
+        ...entry.data.seo,
+        href: `/case-studies/${entry.id}`,
+      })).flatMap((item) => [{title: item.title, description: item.description, image: item.image, href: item.href }
+    ])];
+
+const schema = [
+  collectionSchema({
+        name: entry.data.seo.title,
+        description: entry.data.seo.description,
+        image: entry.data.seo.image?.src,
+        url: Astro.url.pathname,
+      }),
+];
+---
+
+<Layout title={entry.data.seo.title} description={entry.data.seo.description} image={entry.data.seo.image} schema={schema} >
+  <CSIndexLayout
+    data={entry.data}
+    caseStudiesItems={caseStudiesItems}
+  />
+</Layout>

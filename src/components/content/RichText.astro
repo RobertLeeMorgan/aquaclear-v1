@@ -1,5 +1,6 @@
 ---
 import TwoColumns from "../layout/TwoColumns.astro";
+import ThreeColumns from "../layout/ThreeColumns.astro";
 import SectionHeader from "../content/SectionHeader.astro";
 import Link from "../actions/Link.astro";
 import MediaFrame from "../media/MediaFrame.astro";
@@ -11,10 +12,21 @@ interface Props extends RichTextSection {
   responsive?: ResponsiveProfileEnum;
   editorial?: boolean;
 
+  wide?: boolean;
+
   readMore?: {
     title: string;
     href: string;
   };
+
+  layout?: "two-column" | "three-column";
+
+  ratio?:
+    | "auto"
+    | "square"
+    | "portrait"
+    | "landscape"
+    | "video";
 }
 
 const {
@@ -25,12 +37,16 @@ const {
   responsive,
   imagePosition,
   readMore,
-  editorial
+  editorial,
+  wide = false,
+  layout = "two-column",
+  ratio
 } = Astro.props as Props;
 ---
 
-<TwoColumns reverse={imagePosition === "left"} >
-  <div>
+{layout === "two-column" ? (
+<TwoColumns reverse={imagePosition === "left"} wide={wide} >
+  <div class="flex flex-col justify-center">
     {!editorial && title &&
       <SectionHeader
         eyebrow={eyebrow}
@@ -42,7 +58,9 @@ const {
     </div>
 
     {readMore && (
-      <Link href={readMore.href} title={readMore.title}  />
+        <div class="mt-md"> 
+          <Link href={readMore.href} title={readMore.title} className="text-lg" />
+        </div>
     )}
   </div>
 
@@ -50,6 +68,36 @@ const {
     <MediaFrame
       media={media}
       responsive={responsive}
+      ratio={ratio}
+      class="section-img"
     />
   )}
-</TwoColumns>
+</TwoColumns> 
+) : (
+<ThreeColumns>
+  <div>
+    {eyebrow && title && (
+      <SectionHeader
+        eyebrow={eyebrow}
+        title={title}
+      />
+    )}
+  </div>
+
+  <div class="prose prose-neutral max-w-none whitespace-pre-line">
+    <Fragment set:html={content} />
+
+    {readMore && (
+      <Link href={readMore.href} title={readMore.title} />
+    )}
+  </div>
+
+  {media && (
+    <MediaFrame
+      media={media}
+      responsive={responsive}
+      class="section-img"
+    />
+  )}
+</ThreeColumns>
+)}

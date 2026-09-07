@@ -1,0 +1,37 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ServicesIndexLayout from "../../layouts/ServicesIndexLayout.astro";
+import { getEntry, getCollection } from "astro:content";
+import { collectionSchema } from "../../lib/schema";
+
+const entry = await getEntry("servicesIndex", "servicesindex");
+
+if (!entry) {
+  throw new Error("Services Index content not found.");
+}
+
+const services = await getCollection("services");
+
+const servicesItems = [...services.map((entry) => ({
+        ...entry.data.seo,
+        href: `/services/${entry.id}`,
+      })).flatMap((item) => [{
+      title: item.title, description: item.description, image: item.image, href: item.href
+    }])];
+
+const schema = [
+  collectionSchema({
+        name: entry.data.seo.title,
+        description: entry.data.seo.description,
+        image: entry.data.seo.image?.src,
+        url: Astro.url.pathname,
+      }),
+];
+---
+
+<Layout title={entry.data.seo.title} description={entry.data.seo.description} image={entry.data.seo.image} schema={schema} >
+  <ServicesIndexLayout
+    data={entry.data}
+    servicesItems={servicesItems}
+  />
+</Layout>

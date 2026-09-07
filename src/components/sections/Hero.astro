@@ -10,6 +10,8 @@ interface Props extends HeroSection {
   vertical?: "center" | "bottom";
 
   overlay?: "none" | "light" | "dark";
+
+  class?: string
 }
 
 const {
@@ -26,13 +28,15 @@ const {
   align = "left",
   vertical = "center",
 
-  overlay = "dark",
+  class: className,
+
+  overlay = "light",
 } = Astro.props as Props;
 
 const heightClass = {
-  sm: "h-[60vh]",
-  md: "h-[70vh]",
-  lg: "h-[80vh]",
+  sm: "h-[80vh]",
+  md: "h-[85vh]",
+  lg: "h-[100vh]",
 }[height];
 
 const alignmentClass = {
@@ -47,8 +51,8 @@ const verticalClass = {
 
 const overlayClass = {
   none: "",
-  light: "absolute inset-0 bg-white/20",
-  dark: "absolute inset-0 bg-black/45",
+  light: `absolute inset-0 ${align === "right" ? "bg-gradient-to-tl" : "bg-gradient-to-tr"} from-black/40 to-dark/20`,
+  dark: "absolute inset-0 bg-gradient-to-tr from-black/60 to-black/20",
 }[overlay];
 ---
 
@@ -58,7 +62,7 @@ const overlayClass = {
     src={image}
     alt={alt}
     responsive="large"
-    class="hero-img"
+    class:list={["hero-img", className]}
     priority
   />
 
@@ -68,18 +72,18 @@ const overlayClass = {
 
   <div
     class:list={[
-      "relative z-10 container flex h-full",
+      "relative z-10 container flex h-full hero",
       alignmentClass,
       verticalClass,
     ]}
   >
-    <div class="container-md">
+    <div class="container-lg">
       <h1 class="display-lg text-inverse">
-        {title}
+        {title}<span class="text-accent">.</span>
       </h1>
 
       {description && (
-        <p class="text-2xl container-sm mt-lg text-inverse-muted">
+        <p class="text-xl mt-lg text-inverse-muted">
           {description}
         </p>
       )}
@@ -103,4 +107,26 @@ const overlayClass = {
       )}
     </div>
   </div>
+
+<svg
+  class:list={[
+    "absolute bottom-0 left-0 z-20 w-full h-16 md:h-24 pointer-events-none",
+    { "scale-x-[-1]": align === "right" }
+  ]}
+  viewBox="0 0 1440 120"
+  preserveAspectRatio="none"
+  aria-hidden="true"
+>
+  <path
+    fill="var(--color-surface)"
+    d="M0 50
+       C180 72 360 92 540 92
+       C720 92 900 58 1120 50
+       C1230 50 1340 50 1440 50
+       L1440 121
+       L0 121
+       Z"
+  />
+</svg>
+
 </section>

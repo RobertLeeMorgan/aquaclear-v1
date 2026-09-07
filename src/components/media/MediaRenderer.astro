@@ -9,12 +9,14 @@ interface Props {
   media: MediaUnion;
   responsive?: ResponsiveProfileEnum;
   gallery?: string;
+  class?: string
 }
 
 const {
   responsive = "medium",
   gallery,
-  media
+  media,
+  class: className
 } = Astro.props as Props;
 ---
 
@@ -25,6 +27,7 @@ const {
       alt={media.alt}
       responsive={responsive}
       gallery={gallery}
+      class={className}
     />
   )
 }

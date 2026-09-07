@@ -33,12 +33,20 @@ function initNav() {
 
   btn.replaceWith(btn.cloneNode(true));
   const newBtn = document.getElementById("menuBtn") as HTMLButtonElement;
-  const newMenuIcon = document.getElementById("menuIcon") as unknown as SVGElement;
-  const newCloseIcon = document.getElementById("closeIcon") as unknown as SVGElement;
+  const newMenuIcon = document.getElementById(
+    "menuIcon",
+  ) as unknown as SVGElement;
+  const newCloseIcon = document.getElementById(
+    "closeIcon",
+  ) as unknown as SVGElement;
 
   newBtn.addEventListener("click", () => {
     if (menu.classList.contains("pointer-events-none")) {
-      menu.classList.remove("opacity-0", "-translate-y-6", "pointer-events-none");
+      menu.classList.remove(
+        "opacity-0",
+        "-translate-y-6",
+        "pointer-events-none",
+      );
       document.body.classList.add("overflow-hidden");
 
       newMenuIcon.classList.add("hidden");
@@ -56,26 +64,41 @@ function initNav() {
     }
   });
 
-  document.querySelectorAll<HTMLButtonElement>(".mobile-toggle").forEach((button) => {
-    button.replaceWith(button.cloneNode(true));
-  });
-
-  document.querySelectorAll<HTMLButtonElement>(".mobile-toggle").forEach((button) => {
-    button.addEventListener("click", () => {
-      const id = button.dataset.target;
-      if (!id) return;
-
-      const submenu = document.getElementById(id);
-      submenu?.classList.toggle("hidden");
-
-      button.querySelector("svg")?.classList.toggle("rotate-180");
-      button.querySelector("span")?.classList.toggle("text-primary");
+  document
+    .querySelectorAll<HTMLButtonElement>(".mobile-toggle")
+    .forEach((button) => {
+      button.replaceWith(button.cloneNode(true));
     });
-  });
+
+  document
+    .querySelectorAll<HTMLButtonElement>(".mobile-toggle")
+    .forEach((button) => {
+      button.addEventListener("click", () => {
+        const id = button.dataset.target;
+        if (!id) return;
+
+        const submenu = document.getElementById(id);
+        submenu?.classList.toggle("hidden");
+
+        button.querySelector("svg")?.classList.toggle("rotate-180");
+        button.querySelector("span")?.classList.toggle("text-primary");
+      });
+    });
 
   menu.querySelectorAll<HTMLAnchorElement>("a").forEach((link) => {
     link.addEventListener("click", closeMenu);
   });
 }
+
+const updateNav = () => {
+  const nav = document.querySelector(".nav");
+
+  if (!nav) return;
+
+  nav.classList.toggle("nav-scrolled", window.scrollY > 20);
+};
+
+document.addEventListener("astro:page-load", updateNav);
+window.addEventListener("scroll", updateNav);
 
 document.addEventListener("astro:page-load", initNav);

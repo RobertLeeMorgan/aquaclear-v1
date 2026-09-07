@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AboutLayout from "../layouts/AboutLayout.astro";
+import { getEntry } from "astro:content";
+import { aboutSchema } from "../lib/schema";
+
+const entry = await getEntry("about", "about");
+
+if (!entry) {
+  throw new Error("About content not found.");
+}
+
+const clientsEntry = await getEntry("clients", "clients");
+
+const trustedExperienceItems = (() => {
+    const source = clientsEntry?.data.testimonials;
+      
+      return { eyebrow: source?.eyebrow, quote: source?.title, description: source?.description, carousel: source?.items };
+    })();
+
+const schema = [
+  aboutSchema({
+        name: entry.data.seo.title,
+        description: entry.data.seo.description,
+        image: entry.data.seo.image?.src,
+        url: Astro.url.pathname,
+      }),
+];
+---
+
+<Layout title={entry.data.seo.title} description={entry.data.seo.description} image={entry.data.seo.image} schema={schema} >
+  <AboutLayout
+    data={entry.data}
+    trustedExperienceItems={trustedExperienceItems}
+  />
+</Layout>

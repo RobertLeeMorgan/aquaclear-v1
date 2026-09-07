@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HomeLayout from "../layouts/HomeLayout.astro";
+import { getEntry, getCollection } from "astro:content";
+import { homeSchema } from "../lib/schema";
+
+const entry = await getEntry("home", "index");
+
+if (!entry) {
+  throw new Error("Home content not found.");
+}
+
+const services = await getCollection("services");
+const featured = await getEntry("caseStudies", "canal-and-river-trust-wales");
+
+const servicesItems = [...services.map((entry) => ({
+        ...entry.data.seo,
+        href: `/services/${entry.id}`,
+      })).flatMap((item) => [{ title: item.title, description: item.description, image: item.image, href: item.href }])];
+
+const schema = [
+  homeSchema({
+        name: entry.data.seo.title,
+        description: entry.data.seo.description,
+        image: entry.data.seo.image?.src,
+        url: Astro.url.pathname,
+      }),
+];
+---
+
+<Layout title={entry.data.seo.title} description={entry.data.seo.description} image={entry.data.seo.image} schema={schema} >
+  <HomeLayout
+    data={entry.data}
+    servicesItems={servicesItems}
+  />
+</Layout>

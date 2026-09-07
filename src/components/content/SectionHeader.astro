@@ -6,6 +6,7 @@ interface Props {
   className?: string;
   as?: "h1" | "h2" | "h3";
   align?: "start" | "center" | "end";
+  dark?: boolean
 }
 
 const {
@@ -15,6 +16,7 @@ const {
   className = "",
   as = "h2",
   align = "start",
+  dark = false
 } = Astro.props as Props;
 
 const Heading = as;
@@ -39,8 +41,8 @@ const alignment = {
 
 <div
   class:list={[
-    className,
     alignment.container,
+    className
   ]}
 >
   {eyebrow && (
@@ -49,14 +51,14 @@ const alignment = {
     </p>
   )}
 
-  <Heading class="display mt-xs">
+  <Heading class:list={[dark ? "mt-xs text-inverse" : "mt-xs", as === "h1" ? "display-lg" : "display"]}>
     {title}
   </Heading>
 
   {description && (
     <p
       class:list={[
-        "body reading mt-md whitespace-pre-line",
+        dark ? "body reading mt-md whitespace-pre-line text-inverse-muted" : "body reading mt-md whitespace-pre-line",
         alignment.description,
       ]}
     >

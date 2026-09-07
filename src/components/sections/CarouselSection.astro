@@ -5,32 +5,40 @@ import SectionHeader from "../content/SectionHeader.astro";
 import Carousel from "../content/carousel/Carousel.astro";
 import Link from "../actions/Link.astro";
 import type { CarouselSection } from "../../lib/types";
+import FlockBirds from "../../assets/images/svg/FlockBirds.svg"
 
 interface Props extends CarouselSection {
   readMore?: {
     href: string;
     title: string;
   };
+
+  dark?: boolean;
+  secondary?: boolean
 }
 
 const {
   eyebrow,
   title,
   description,
-  carousel,
-  readMore
+  items,
+  readMore, 
+  dark, 
+  secondary
 } = Astro.props as Props;
 ---
 
-<Section id={title}>
+<Section id={title} dark={dark} secondary={secondary}>
+  <FlockBirds class={`decorative top-10 -right-[2%] w-100 ${dark ? "text-surface/10" : "text-dark/10"}`} />
     <Container>
         <SectionHeader
             eyebrow={eyebrow}
             title={title}
             description={description}
+            dark={dark}
         />
 
-        <Carousel carousel={carousel} />
+        <Carousel carousel={items} dark={dark}/>
         {readMore && (
             <Link href={readMore.href} title={readMore.title}  />
         )}

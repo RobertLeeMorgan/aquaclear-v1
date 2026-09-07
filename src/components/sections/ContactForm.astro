@@ -1,7 +1,6 @@
 ---
 import Section from "../layout/Section.astro";
 import Container from "../layout/Container.astro";
-import SectionHeader from "../content/SectionHeader.astro";
 import Button from "../actions/Button.astro";
 import type { ContactFormSection } from "../../lib/types";
 
@@ -16,15 +15,8 @@ const {
 
 <Section id={title}>
   <Container>
-    <SectionHeader
-      eyebrow={eyebrow}
-      title={title}
-      description={description}
-      as="h1"
-    />
-
     <form
-      class="contact-form stack-xl section-pt"
+      class="contact-form"
       method="POST"
       action="/api/contact"
     >
@@ -124,12 +116,9 @@ const {
           />
         </>
       )}
-
-      <Button
-        variant="primary"
-        type="submit"
-        title="Send Message"
-      />
+      <div class="justify-center flex">
+        <Button variant="primary" type="submit" title="Send Message" />
+      </div>
     </form>
   </Container>
 </Section>

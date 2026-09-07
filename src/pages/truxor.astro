@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TruxorLayout from "../layouts/TruxorLayout.astro";
+import { getEntry } from "astro:content";
+import { webPageSchema } from "../lib/schema";
+
+const entry = await getEntry("truxor", "truxor");
+
+if (!entry) {
+  throw new Error("Truxor content not found.");
+}
+
+const schema = [
+  webPageSchema({
+        name: entry.data.seo.title,
+        description: entry.data.seo.description,
+        image: entry.data.seo.image?.src,
+        url: Astro.url.pathname,
+      }),
+];
+---
+
+<Layout title={entry.data.seo.title} description={entry.data.seo.description} image={entry.data.seo.image} schema={schema} >
+  <TruxorLayout data={entry.data} />
+</Layout>

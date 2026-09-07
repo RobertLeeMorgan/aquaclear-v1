@@ -1,0 +1,65 @@
+---
+import CarouselSection from "../components/sections/CarouselSection.astro";
+import Cta from "../components/sections/Cta.astro";
+import Hero from "../components/sections/Hero.astro";
+import IconListSection from "../components/sections/IconListSection.astro";
+import KeyFeatures from "../components/sections/KeyFeatures.astro";
+import RichTextSection from "../components/sections/RichTextSection.astro";
+
+const { data, trustedExperienceItems } = Astro.props;
+
+---
+<Hero
+  title={data.hero.title}
+  description={data.hero.description}
+  image={data.hero.image}
+  alt={data.hero.alt}
+  buttons={data.hero.buttons}
+  overlay="light"
+  class="object-[center_35%]"
+/>
+
+<RichTextSection
+  eyebrow={data.aboutAquaclear.eyebrow}
+  title={data.aboutAquaclear.title}
+  content={data.aboutAquaclear.content}
+  media={data.aboutAquaclear.media}
+  buttons={data.aboutAquaclear.buttons}
+/>
+
+<KeyFeatures
+  items={data.experienceAndExpertise.items}
+/>
+
+<IconListSection
+  eyebrow={data.truxor.eyebrow}
+  title={data.truxor.title}
+  description={data.truxor.description}
+  media={data.truxor.media}
+  alt={data.truxor.alt}
+  items={data.truxor.items}
+  buttons={data.truxor.buttons}
+/>
+
+<RichTextSection
+  eyebrow={data.howWeWork.eyebrow}
+  title={data.howWeWork.title}
+  content={data.howWeWork.content}
+  media={data.howWeWork.media}
+  secondary
+  layout="three-column"
+/>
+
+<CarouselSection
+  eyebrow={trustedExperienceItems.eyebrow}
+  title="Trusted Experience"
+  items={trustedExperienceItems.carousel}
+  dark
+/>
+
+<Cta
+  eyebrow={data.callToAction.eyebrow}
+  title={data.callToAction.title}
+  description={data.callToAction.description}
+  buttons={data.callToAction.buttons}
+/>

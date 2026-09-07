@@ -1,0 +1,44 @@
+---
+import CarouselSection from "../components/sections/CarouselSection.astro";
+import Cta from "../components/sections/Cta.astro";
+import PageHeader from "../components/sections/PageHeader.astro";
+import IconListSection from "../components/sections/IconListSection.astro";
+import Banner from "../components/sections/Banner.astro";
+
+const { data } = Astro.props;
+
+---
+<PageHeader
+  eyebrow="Our Clients"
+  title={data.hero.title}
+  description={data.hero.description}
+  buttons={data.hero.buttons}
+/>
+
+<IconListSection
+  eyebrow={data.trustedBy.eyebrow}
+  title={data.trustedBy.title}
+  description={data.trustedBy.description}
+  media={data.trustedBy.media}
+  alt={data.trustedBy.alt}
+  items={data.trustedBy.items}
+  buttons={data.trustedBy.buttons}
+  listStyle="client"
+/>
+
+<Banner/>
+
+<CarouselSection
+  eyebrow={data.testimonials.eyebrow}
+  title={data.testimonials.title}
+  description={data.testimonials.description}
+  items={data.testimonials.items}
+  dark
+/>
+
+<Cta
+  eyebrow={data.callToAction.eyebrow}
+  title={data.callToAction.title}
+  description={data.callToAction.description}
+  buttons={data.callToAction.buttons}
+/>

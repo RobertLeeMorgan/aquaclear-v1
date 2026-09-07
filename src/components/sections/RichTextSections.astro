@@ -1,0 +1,53 @@
+---
+import Section from "../layout/Section.astro";
+import Container from "../layout/Container.astro";
+import RichText from "../content/RichText.astro";
+import SectionHeader from "../content/SectionHeader.astro";
+import type { RichTextSectionsSection, ResponsiveProfileEnum } from "../../lib/types";
+
+interface Props extends RichTextSectionsSection {
+  imagePosition?: "left" | "right";
+  responsive?: ResponsiveProfileEnum;
+
+  editorial?: boolean;
+
+  wide?: boolean;
+
+  readMore?: {
+    title: string;
+    href: string;
+  };
+
+  layout?: "two-column" | "three-column";
+
+  dark?: boolean;
+  secondary?: boolean
+}
+
+const props = Astro.props as Props;
+---
+
+<Section id={props.title} dark={props.dark} secondary={props.secondary ? false : true}>
+  <Container>
+    {props.title && (
+      <SectionHeader
+          eyebrow={props.eyebrow}
+          title={props.title}
+          description={props.description}
+          align="center"
+          className="mb-xl"
+      />
+    )}
+    {props.items.map((item, index) => (
+      <div class="py-2xl">
+        <RichText
+          {...item}
+          imagePosition={index % 2 === 0 ? "right" : "left"}
+          responsive={props.responsive}
+          layout={props.layout}
+          ratio="landscape"
+        />
+      </div>
+    ))}
+  </Container>
+</Section>

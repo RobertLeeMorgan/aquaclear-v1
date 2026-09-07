@@ -1,0 +1,38 @@
+---
+import Cards from "../components/sections/Cards.astro";
+import Cta from "../components/sections/Cta.astro";
+import PageHeader from "../components/sections/PageHeader.astro";
+
+const { data } = Astro.props;
+
+---
+<PageHeader
+  title={data.hero.title}
+  description={data.hero.description}
+/>
+
+<Cards
+  eyebrow={data.guide.eyebrow}
+  title={data.guide.title}
+  description={data.guide.description}
+  items={data.guide.items}
+  expand={true}
+  ellipsis={4}
+/>
+
+<Cards
+  eyebrow={data.margins.eyebrow}
+  title={data.margins.title}
+  description={data.margins.description}
+  items={data.margins.items}
+  secondary
+  expand={true}
+  ellipsis={4}
+/>
+
+<Cta
+  eyebrow={data.callToAction.eyebrow}
+  title={data.callToAction.title}
+  description={data.callToAction.description}
+  buttons={data.callToAction.buttons}
+/>

@@ -30,21 +30,21 @@ const ratioClass = {
   auto: "",
   square: "aspect-square",
   portrait: "aspect-[3/4]",
-  landscape: "aspect-[4/3]",
+  landscape: "aspect-[16/9]",
   video: "aspect-video",
 }[ratio];
 ---
 
 <div
   class:list={[
-    "relative w-full overflow-hidden card",
+    "relative w-full h-full overflow-hidden card",
     ratioClass,
-    className,
   ]}
 >
   <MediaRenderer
     media={media}
     responsive={responsive}
     gallery={gallery}
+    class={className}
   />
 </div>

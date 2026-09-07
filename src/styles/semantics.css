@@ -3,41 +3,40 @@
    ========================================================== */
 
 .display-lg {
-  @apply text-4xl md:text-5xl lg:text-6xl;
-  @apply font-bold leading-tight tracking-tight font-display text-heading;
+  @apply text-3xl md:text-4xl lg:text-5xl;
+  @apply font-display font-regular leading-tight tracking-tight text-heading;
 }
 
 .display {
-  @apply text-3xl md:text-4xl lg:text-5xl;
-  @apply font-bold leading-tight font-display text-heading;
+  @apply text-2xl md:text-3xl lg:text-4xl;
+  @apply font-display font-normal leading-tight text-heading;
 }
 
 @utility heading {
-  @apply text-2xl md:text-3xl lg:text-4xl;
-  @apply font-bold leading-tight font-heading text-heading;
+  @apply text-lg md:text-xl lg:text-2xl;
+  @apply font-heading font-semibold leading-tight tracking-tight text-heading;
 }
 
 .subheading {
   @apply text-xl md:text-2xl;
-  @apply font-semibold leading-normal font-heading text-heading;
+  @apply font-heading font-medium leading-normal text-heading;
 }
 
 @utility body {
   @apply text-md md:text-lg;
-  @apply font-regular leading-normal text-body;
+  @apply font-sans font-regular leading-normal text-body;
 }
 
 .caption {
   @apply text-sm md:text-md;
-  @apply font-regular leading-normal text-muted;
+  @apply font-sans font-regular leading-normal text-muted;
 }
 
 .eyebrow {
   @apply text-xs md:text-sm;
-  @apply font-semibold tracking-wide text-primary;
+  @apply font-sans font-semibold tracking-wide text-accent;
   text-transform: uppercase;
 }
-
 /* ==========================================================
    Layout
    ========================================================== */
@@ -90,13 +89,14 @@
    ========================================================== */
 
 .btn {
-  @apply inline-flex items-center justify-center gap-xs radius-sm font-semibold leading-normal tracking-wide;
+  @apply inline-flex items-center justify-center gap-xs;
+  @apply radius-md font-sans font-semibold leading-normal;
+  @apply transition-normal;
 
   appearance: none;
   border: none;
   outline: none;
   cursor: pointer;
-
   text-decoration: none;
   white-space: nowrap;
 }
@@ -112,7 +112,7 @@
 }
 
 .btn-dark {
-  @apply bg-surface-dark text-inverse;
+  @apply bg-dark text-inverse;
 }
 
 .btn-dark:hover {
@@ -120,12 +120,13 @@
 }
 
 .btn-outline {
-  @apply text-heading border-w border-solid border-border;
+  @apply border-w border-solid border-border-strong;
+  @apply text-heading text-inverse;
   background: transparent;
 }
 
 .btn-outline:hover {
-  @apply bg-surface-dark border-border-strong;
+  @apply bg-surface-alt border-primary;
 }
 
 .btn-ghost {
@@ -134,21 +135,21 @@
 }
 
 .btn-ghost:hover {
-  background: rgb(0 0 0 / var(--opacity-subtle));
+  @apply bg-surface-alt;
 }
 
 /* ---------- Sizes ---------- */
 
 .btn-sm {
-  @apply py-xs px-md text-sm;
+  @apply px-md py-xs text-sm;
 }
 
 .btn-md {
-  @apply py-sm px-lg text-md;
+  @apply px-lg py-sm text-md;
 }
 
 .btn-lg {
-  @apply py-md px-xl text-lg;
+  @apply px-xl py-md text-lg;
 }
 
 .btn-full {
@@ -171,11 +172,44 @@
 .btn-motion {
   @apply motion;
 }
+
 .btn-motion:hover {
   @apply lift-sm;
 }
+
 .btn-motion:active {
   @apply scale-sm;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding-top: var(--nav-h);
+}
+
+.nav {
+  position: fixed;
+  z-index: var(--z-nav);
+  isolation: isolate;
+
+  @apply motion;
+  background: transparent;
+}
+
+.nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  @apply glass;
+
+  opacity: 0;
+  transition: opacity var(--transition-normal) var(--ease-standard);
+}
+
+.nav.nav-scrolled::before {
+  opacity: 1;
 }
 
 /* ==========================================================
@@ -300,6 +334,24 @@
 
 .avatar-img {
   @apply img-cover rounded-full;
+}
+
+.decorative {
+  @apply absolute pointer-events-none select-none;
+}
+
+.banner-logo {
+  width: auto;
+  height: 3rem;
+  max-width: 10rem;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+@media (min-width: 768px) {
+  .banner-logo {
+    height: 3.5rem;
+  }
 }
 
 /* ==========================================================
@@ -451,16 +503,11 @@
 .before-after {
   --position: 50%;
 
-  @apply relative overflow-hidden select-none;
+  @apply relative h-full overflow-hidden select-none;
 }
 
-.before-after-before,
-.before-after-after {
+.before-after-before {
   @apply absolute inset-0;
-}
-
-.before-after-after {
-  @apply relative;
 }
 
 .before-after-before {

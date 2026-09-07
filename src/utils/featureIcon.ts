@@ -30,7 +30,19 @@ import {
   Fish,
   TreePine,
   Trees,
-  Flag
+  Flag,
+  Shovel,
+  Recycle,
+  Trophy,
+  Move,
+  Forklift,
+  WavesLadder,
+  LandPlot,
+  Landmark,
+  ShieldCheck,
+  Medal,
+  ChevronsUp,
+  Merge
 } from "lucide-astro";
 
 export const featureIconMap: Record<string, any> = {
@@ -67,4 +79,16 @@ export const featureIconMap: Record<string, any> = {
   fish: Fish,
   flag: Flag,
   hardHat: HardHat,
+  shovel: Shovel,
+  recycle: Recycle,
+  trophy: Trophy,
+  move: Move,
+  forklift: Forklift,
+  wavesLadder: WavesLadder,
+  landPlot: LandPlot,
+  landmark: Landmark,
+  shieldCheck: ShieldCheck,
+  medal: Medal,
+  chevronsUp: ChevronsUp,
+  merge: Merge
 };

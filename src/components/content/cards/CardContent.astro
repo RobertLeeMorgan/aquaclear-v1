@@ -1,10 +1,13 @@
 ---
+import { ArrowRight, ChevronDown, ChevronUp } from "lucide-astro";
+
 const {
   eyebrow,
   title,
   description,
   layout = "vertical",
   lineClamp,
+  expand = false,
 } = Astro.props;
 ---
 
@@ -21,14 +24,92 @@ const {
 )}
 
 {description && (
-  <p
-    class:list={[
-      "body",
-      "mt-xs",
-      "flex-1",
-      lineClamp,
-    ]}
-  >
-    {description}
-  </p>
+  expand ? (
+    <div class="expandable-description mt-lg flex-1">
+      <div
+        class:list={[
+          "description prose prose-neutral max-w-none whitespace-pre-line body",
+          lineClamp,
+        ]}
+      >
+        <Fragment set:html={description} />
+      </div>
+
+      <button
+        type="button"
+        class="expand-toggle link link-motion mt-md"
+        aria-expanded="false"
+      >
+        <span class="read-more">Read more <ChevronDown class="icon-sm inline-flex" aria-hidden="true" /></span>
+        <span class="show-less">Show less <ChevronUp class="icon-sm inline-flex" aria-hidden="true" /></span>
+      </button>
+    </div>
+  ) : (
+    <div
+      class:list={[
+        "prose prose-neutral max-w-none whitespace-pre-line body flex-1 mt-lg",
+        lineClamp,
+      ]}
+    >
+      <Fragment set:html={description} />
+    </div>
+  )
 )}
+
+<style>
+  .expandable-description .show-less {
+    display: none;
+  }
+
+  .expandable-description.expanded .show-less {
+    display: inline;
+  }
+
+  .expandable-description.expanded .read-more {
+    display: none;
+  }
+
+  .expandable-description.expanded .description {
+    display: block;
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+  }
+
+  .expandable-description .description {
+    transition: opacity 200ms ease;
+  }
+
+  .expandable-description.expanded .description {
+    opacity: 1;
+  }
+</style>
+
+<script>
+  document.addEventListener("click", (event) => {
+    const target = event.target as HTMLElement;
+
+    const button = target.closest(".expand-toggle") as HTMLButtonElement | null;
+
+    if (button) {
+      const container = button.closest(".expandable-description");
+      if (!container) return;
+
+      const expanded = container.classList.toggle("expanded");
+      button.setAttribute("aria-expanded", String(expanded));
+      return;
+    }
+
+    if (target.closest("a")) return;
+
+    const card = target.closest(".expandable-card") as HTMLElement | null;
+    if (!card) return;
+
+    const container = card.querySelector(".expandable-description");
+    const toggle = card.querySelector(".expand-toggle") as HTMLButtonElement | null;
+
+    if (!container || !toggle) return;
+
+    const expanded = container.classList.toggle("expanded");
+    toggle.setAttribute("aria-expanded", String(expanded));
+  });
+</script>

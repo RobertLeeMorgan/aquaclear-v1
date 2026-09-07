@@ -1,0 +1,65 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+import { getCollection } from "astro:content";
+import { serviceSchema } from "../../lib/schema";
+import { breadcrumbSchema } from "../../lib/breadcrumbs";
+import type { ServiceEnum } from "../../lib/types";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("services");
+  const caseStudies = await getCollection("caseStudies");
+
+  return entries.map((entry) => {
+    const serviceId = entry.id as ServiceEnum;
+
+    const relatedCaseStudiesItems = {
+      type: "card" as const,
+      card: caseStudies
+        .filter((caseStudy) =>
+          caseStudy.data.metadata.services.includes(serviceId),
+        )
+        .map((caseStudy) => ({
+          title: caseStudy.data.metadata.title,
+          description: caseStudy.data.metadata.summary,
+          image: caseStudy.data.seo.image,
+          href: `/case-studies/${caseStudy.id}`,
+        })),
+    };
+
+    return {
+      params: { slug: entry.id },
+      props: {
+        entry,
+        relatedCaseStudiesItems,
+      },
+    };
+  });
+}
+
+const { entry, relatedCaseStudiesItems } = Astro.props;
+
+console.log(relatedCaseStudiesItems)
+
+const schema = [
+  serviceSchema({
+    name: entry.data.seo.title,
+    description: entry.data.seo.description,
+    image: entry.data.seo.image?.src,
+    url: Astro.url.pathname,
+  }),
+  await breadcrumbSchema(Astro.url.pathname, entry.data.seo.title),
+];
+---
+
+<Layout
+  title={entry.data.seo.title}
+  description={entry.data.seo.description}
+  image={entry.data.seo.image}
+  schema={schema}
+>
+  <ServiceLayout
+    data={entry.data}
+    relatedCaseStudiesItems={relatedCaseStudiesItems}
+  />
+</Layout>

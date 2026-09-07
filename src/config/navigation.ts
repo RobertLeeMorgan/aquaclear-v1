@@ -1,16 +1,13 @@
 export const navigation = [
-  "home",
-
+  "about",
   {
     page: "services",
     children: "collection",
   },
-
   {
-    label: "Insights",
-    href: "/insights",
-    children: ["news", "caseStudies"],
+    page: "caseStudies",
+    children: "collection",
   },
-
-  "featuredInsights",
+  "clients",
+  "truxor",
 ] as const;

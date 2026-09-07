@@ -1,0 +1,33 @@
+---
+import Cards from "../components/sections/Cards.astro";
+import CarouselSection from "../components/sections/CarouselSection.astro";
+import Cta from "../components/sections/Cta.astro";
+import PageHeader from "../components/sections/PageHeader.astro";
+
+const { data, servicesItems } = Astro.props;
+
+---
+<PageHeader title={data.hero.title} eyebrow={data.hero.eyebrow} description={data.hero.description}/>
+
+<Cards
+  eyebrow="What We Do"
+  title="Specialist Waterway Management Services"
+  description="From aquatic vegetation and reed management to dredging, excavation and environmental clean-up, we provide specialist solutions for challenging waterway projects across the UK."
+  items={servicesItems}
+  title="Services"
+/>
+
+<CarouselSection
+  eyebrow={data.siteSpecific.eyebrow}
+  title={data.siteSpecific.title}
+  description={data.siteSpecific.description}
+  items={data.siteSpecific.items}
+  secondary
+/>
+
+<Cta
+  eyebrow={data.callToAction.eyebrow}
+  title={data.callToAction.title}
+  description={data.callToAction.description}
+  buttons={data.callToAction.buttons}
+/>

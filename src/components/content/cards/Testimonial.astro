@@ -1,6 +1,7 @@
 ---
 import type { TestimonialType } from '../../../lib/types';
 import AppImage from '../../media/AppImage.astro';
+import { Quote } from "lucide-astro";
 
 interface Props extends TestimonialType{}
 
@@ -14,20 +15,18 @@ const {
 } = Astro.props as Props;
 ---
 
-<div class="card card-motion h-full">
+<div class="card card-motion h-full bg-surface-dark/5">
   <div class="card-padding flex h-full flex-col">
 
-    {rating && (
-      <div class="flex gap-1 mb-md">
-        {Array.from({ length: rating }).map(() => (
-          <span class="text-primary">★</span>
-        ))}
-      </div>
-    )}
+    <div class="relative flex-1">
+      <span class="absolute -left-3 font-serif text-7xl leading-none text-accent">
+        “
+      </span>
 
-    <blockquote class="body flex-1 italic">
-      "{quote}"
-    </blockquote>
+      <blockquote class="body pl-6 text-inverse">
+        {quote}
+      </blockquote>
+    </div>
 
     <footer class="mt-xl flex items-center gap-md">
 
@@ -36,17 +35,17 @@ const {
           src={avatar}
           alt={author}
           responsive="thumbnail"
-          class="rounded-full size-12"
+          class="size-12 rounded-full"
         />
       )}
 
       <div class="stack-xs">
-        <p class="subheading">
+        <p class="subheading text-inverse">
           {author}
         </p>
 
         {(role || company) && (
-          <p class="caption text-muted">
+          <p class="caption text-inverse-muted">
             {[role, company].filter(Boolean).join(", ")}
           </p>
         )}

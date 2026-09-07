@@ -1345,3 +1345,20 @@
 @utility img-motion {
   @apply motion;
 }
+
+@utility nav-h {
+  height: var(--nav-h);
+}
+
+@utility glass {
+  background: linear-gradient(
+    120deg,
+    rgb(from var(--color-nav) r g b / var(--opacity-soft)),
+    rgb(from var(--color-dark) r g b / var(--opacity-muted))
+  );
+
+  backdrop-filter: blur(var(--blur-md)) saturate(110%);
+  -webkit-backdrop-filter: blur(var(--blur-md)) saturate(110%);
+
+  box-shadow: var(--shadow-2);
+}
