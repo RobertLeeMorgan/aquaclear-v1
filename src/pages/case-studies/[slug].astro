@@ -11,32 +11,36 @@ export async function getStaticPaths() {
   return entries.map((entry) => {
     const services = entry.data.metadata.services;
 
-    const relatedCaseStudies = entries
-      .filter((related) => related.id !== entry.id)
-      .filter((related) =>
-        related.data.metadata.services.some((service) =>
-          services.includes(service),
-        ),
-      )
-      .map((related) => ({
-        eyebrow: related.data.metadata.client,
-        title: related.data.metadata.title,
-        description: related.data.metadata.summary,
-        image: related.data.seo.image,
-        href: `/case-studies/${related.id}`,
-      }));
+    const relatedCaseStudiesItems = {
+      type: "card" as const,
+      card: entries
+        .filter((caseStudy) => caseStudy.id !== entry.id)
+        .filter((caseStudy) =>
+          caseStudy.data.metadata.services.some((service) =>
+            services.includes(service),
+          ),
+        )
+        .map((caseStudy) => ({
+          eyebrow: caseStudy.data.metadata.client,
+          title: caseStudy.data.metadata.title,
+          description: caseStudy.data.metadata.summary,
+          image: caseStudy.data.seo.image,
+          href: `/case-studies/${caseStudy.id}`,
+        })),
+    };
 
     return {
       params: { slug: entry.id },
       props: {
         entry,
-        relatedCaseStudies,
+        relatedCaseStudiesItems,
       },
     };
+
   });
 }
 
-const { entry, relatedCaseStudies } = Astro.props;
+const { entry, relatedCaseStudiesItems } = Astro.props;
 
 const schema = [
   articleSchema({
@@ -58,6 +62,6 @@ const schema = [
 >
   <CaseStudyLayout
     data={entry.data}
-    relatedCaseStudies={relatedCaseStudies}
+    relatedCaseStudies={relatedCaseStudiesItems}
   />
 </Layout>

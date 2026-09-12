@@ -4,6 +4,8 @@ import Container from "../layout/Container.astro";
 import RichText from "../content/RichText.astro";
 import SectionHeader from "../content/SectionHeader.astro";
 import type { RichTextSectionsSection, ResponsiveProfileEnum } from "../../lib/types";
+import FlockBirds from "../../assets/images/svg/FlockBirds.svg"
+import PlantGroup from "../../assets/images/svg/PlantGroup.svg"
 
 interface Props extends RichTextSectionsSection {
   imagePosition?: "left" | "right";
@@ -21,13 +23,18 @@ interface Props extends RichTextSectionsSection {
   layout?: "two-column" | "three-column";
 
   dark?: boolean;
-  secondary?: boolean
+  secondary?: boolean;
+  decoration?: boolean
 }
 
 const props = Astro.props as Props;
 ---
 
 <Section id={props.title} dark={props.dark} secondary={props.secondary ? false : true}>
+  {!props.decoration && (
+    <PlantGroup class="decorative -bottom-2 right-[3%] w-50 sm:w-65 text-dark/10" />
+    <FlockBirds class="decorative top-8  left-[1%] w-90 sm:w-100 text-dark/10" />
+  )}
   <Container>
     {props.title && (
       <SectionHeader
@@ -39,7 +46,7 @@ const props = Astro.props as Props;
       />
     )}
     {props.items.map((item, index) => (
-      <div class="py-2xl">
+      <div class="py-lg sm:py-2xl">
         <RichText
           {...item}
           imagePosition={index % 2 === 0 ? "right" : "left"}

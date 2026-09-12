@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Section from "../components/layout/Section.astro";
 import SectionHeader from "../components/content/SectionHeader.astro";
+import PageHeader from "../components/sections/PageHeader.astro";
 import Container from "../components/layout/Container.astro";
 import {site} from "../config/site"
 import { webPageSchema } from "../lib/schema";
@@ -18,9 +19,9 @@ const schema = [
 ---
 
 <Layout title="Terms and Conditions" schema={schema} description={`Terms and Conditions governing the use of the ${site.name} website and services.`}>
+  <PageHeader title="TERMS AND CONDITIONS" eyebrow="Last updated July 10, 2026" as="h1"/>
   <Section>
     <Container>
-      <SectionHeader title="TERMS AND CONDITIONS" eyebrow="Last updated July 10, 2026" as="h1"/>
       <div class="prose prose-neutral max-w-none space-y-xl mt-xl">  
         <div>
            <SectionHeader title="AGREEMENT TO OUR LEGAL TERMS" />

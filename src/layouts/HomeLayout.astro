@@ -6,7 +6,7 @@ import Hero from "../components/sections/Hero.astro";
 import IconListSection from "../components/sections/IconListSection.astro";
 import RichTextSection from "../components/sections/RichTextSection.astro";
 
-const { data, servicesItems, trustedByItems } = Astro.props;
+const { data, servicesItems } = Astro.props;
 
 ---
 <Hero
@@ -26,13 +26,17 @@ const { data, servicesItems, trustedByItems } = Astro.props;
   media={data.introduction.media}
   wide
   buttons={data.introduction.buttons}
+  readMore={data.introduction.readMore}
 />
 
 <Banner/>
 
 <Cards
+  eyebrow="What We Do"
   title="Services"
+  description="From aquatic weed cutting and reed management to silt removal and difficult on-water works, we provide practical solutions for managing and maintaining waterways across the UK."
   items={servicesItems}
+  readMore={{ title: "Explore All Services", href: "/services" }}
 />
 
 <IconListSection
@@ -43,6 +47,18 @@ const { data, servicesItems, trustedByItems } = Astro.props;
   alt={data.whyChooseUs.alt}
   items={data.whyChooseUs.items}
   buttons={data.whyChooseUs.buttons}
+  secondary
+  readMore={data.whyChooseUs.readMore}
+/>
+
+<RichTextSection
+  eyebrow={data.featuredProject.eyebrow}
+  title={data.featuredProject.title}
+  content={data.featuredProject.content}
+  media={data.featuredProject.media}
+  buttons={data.featuredProject.buttons}
+  dark
+  decoration
 />
 
 <Cta

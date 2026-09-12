@@ -3,12 +3,12 @@ title: Aquatic Weed Cutting
 seo:
   title: Aquatic Weed Cutting
   description: Specialist aquatic weed cutting, removal, and control using Truxor amphibious equipment across the UK.
-  image: ../../assets/images/services/weedCutting.jpg
+  image: ../../assets/images/hero/actionAbout.jpg
 overview:
   - type: hero
     title: Aquatic Weed Control and Removal
     description: Aquaclear specialises in the cutting, removal, and control of aquatic and marginal weed throughout the UK.
-    image: ../../assets/images/services/weedCutting.jpg
+    image: ../../assets/images/hero/actionAbout.jpg
     alt: Truxor carrying out aquatic weed clearance
     buttons:
       - title: Contact Us
@@ -59,8 +59,8 @@ overview:
           Collected vegetation can be transported to a suitable location on or near the site for processing or disposal.
         media:
           type: beforeAfter
-          before: ../../assets/images/before/example2.webp
-          after: ../../assets/images/after/example2.webp
+          before: ../../assets/images/before/example2.jpg
+          after: ../../assets/images/after/example2.jpg
           beforeAlt: Before removing aquatic vegetation
           afterAlt: After removing aquatic vegetation
       - title: Root & Rhizome Removal
@@ -70,8 +70,8 @@ overview:
           Grip rakes and grab buckets can be used to lift root and rhizome material from the watercourse, providing a longer-term approach to controlling persistent growth.
         media:
           type: beforeAfter
-          before: ../../assets/images/before/lilies.jpg
-          after: ../../assets/images/after/lilies.jpg
+          before: ../../assets/images/before/cutting1.jpg
+          after: ../../assets/images/after/cutting1.jpg
           beforeAlt: Before removing water lily roots and rhizomes
           afterAlt: After removing water lily roots and rhizomes
   - type: cards
@@ -91,6 +91,10 @@ overview:
         description: Invasive aquatic plants can spread rapidly and outcompete native vegetation. Effective control requires careful removal and appropriate handling to reduce the risk of further spread.
         image: ../../assets/images/weeds/canadianpondweed.webp
         href: /services/invasive-species-removal
+      - title: Water Lily Management
+        description: Manage excessive water lily growth through targeted cutting and, where appropriate, root and rhizome removal.
+        image: ../../assets/images/weeds/waterlily.webp
+        href: /services/water-lily-management
   - type: richTextSection
     eyebrow: Need Help Identifying a Weed?
     title: Weed Identification Guide
@@ -102,9 +106,10 @@ overview:
       type: image
       src: ../../assets/images/weeds/aquaticweed.jpg
       alt: Aquatic weed identification guide
-    buttons:
-      - title: View Weed Identification Guide
-        href: /weed-identification-guide
+    readMore:
+      title: View Weed Identification Guide
+      href: /weed-identification-guide
+    secondary: true
 callToAction:
   eyebrow: ''
   title: Need Help with Aquatic Weed?

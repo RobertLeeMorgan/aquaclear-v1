@@ -12,7 +12,7 @@ const {
 } = Astro.props;
 ---
 
-<div class:list={["grid grid-cols-1 md:grid-cols-2 gap-2xl items-stretch",
+<div class:list={["grid grid-cols-1 lg:grid-cols-2 gap-xl sm:gap-2xl items-stretch",
     wide && "lg:grid-cols-[1.2fr_1fr]",
     reverse && "lg:[&>*:first-child]:order-2 lg:[&>*:last-child]:order-1",
     className,

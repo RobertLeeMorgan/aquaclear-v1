@@ -1,0 +1,91 @@
+---
+import * as Lucide from "lucide-astro";
+import type { NavItem } from "../../../lib/navigation";
+
+interface Props {
+  navItems: NavItem[];
+  currentPath: string;
+}
+
+const {
+  navItems,
+  currentPath,
+} = Astro.props;
+
+const isActive = (item: NavItem) => {
+  if (item.href === "/") {
+    return currentPath === "/";
+  }
+
+  return currentPath.startsWith(item.href);
+};
+---
+ 
+ <div
+    id="mobileMenu" class="fixed z-20 inset-x-0 top-0 bottom-0 bg-nav lg:hidden opacity-0 -translate-y-6 pointer-events-none motion pt-[var(--nav-h)]"
+  >
+    <nav class="h-full overflow-y-auto px-lg py-lg">
+      {navItems.map((item, index) => (
+        <div class="py-lg">
+          {!item.dropdown ? (
+            <a
+              href={item.href}
+              class:list={[
+                "text-2xl motion py-lg",
+                isActive(item)
+                  ? "text-inverse"
+                  : "text-body text-inverse-muted",
+              ]}
+            >
+              {item.label}
+            </a>
+          ) : (
+            <>
+              <div class="cluster-md">
+                <a
+                  href={item.href}
+                  class:list={[
+                    "text-2xl flex-1 motion",
+                    isActive(item)
+                      ? "text-inverse"
+                      : "text-body text-inverse-muted",
+                  ]}
+                >
+                  {item.label}
+                </a>
+
+                <button
+                  class="mobile-toggle p-sm justify-end text-inverse-muted"
+                  data-target={`mobile-submenu-${index}`}
+                  aria-label={`Expand ${item.label}`}
+                >
+                  <Lucide.ChevronDown
+                    class="icon-md motion justify-self-end"
+                  />
+                </button>
+              </div>
+
+              <div
+                id={`mobile-submenu-${index}`}
+                class="hidden py-md"
+              >
+                {item.dropdown.map((link) => (
+                  <a
+                    href={link.href}
+                    class:list={[
+                      "block py-sm pl-xl motion text-xl",
+                      currentPath === link.href
+                        ? "text-inverse font-semibold"
+                        : "text-soft",
+                    ]}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+      ))}
+    </nav>
+  </div>

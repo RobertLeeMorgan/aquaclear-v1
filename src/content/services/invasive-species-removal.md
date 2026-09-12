@@ -3,21 +3,23 @@ title: Invasive Species Removal
 seo:
   title: Invasive Species Removal
   description: Specialist cutting, removal, and control of invasive aquatic plant species using Truxor amphibious equipment across the UK.
-  image: ../../assets/images/hero/placeholder.jpeg
+  image: ../../assets/images/weeds/aquaticweeds.jpg
 overview:
   - type: hero
     title: Controlling Invasive Aquatic Species
     description: Aquaclear has over 15 years of experience cutting, removing, and controlling invasive aquatic species across the UK. Our approach is tailored to the species and site, with particular care taken to minimise fragmentation and the risk of spreading the infestation.
-    image: ../../assets/images/hero/placeholder.jpeg
+    image: ../../assets/images/weeds/aquaticweeds.jpg
     alt: Invasive aquatic weed removal
     buttons:
       - title: Contact Us
         href: /contact
+      - title: Aquatic Weed Guide
+        href: /weed-identification-guide
   - type: iconListSection
-    eyebrow: ''
+    eyebrow: Why manage invasive weeds?
     title: Problems Caused by Invasive Aquatic Plants
     description: |
-      Once established, invasive aquatic plants can grow rapidly and alter the balance of an entire watercourse.
+      Invasive aquatic plants are non-native species that have been introduced outside their natural range and can spread rapidly once established in UK waterways. They can outcompete native species and alter the balance of an entire watercourse.
     media:
       type: image
       src: ../../assets/images/hero/placeholder.jpeg
@@ -92,7 +94,7 @@ overview:
                   Cutting earlier in the season can help reduce growth during the warmer months, although a second cut may be required where vegetation becomes excessive again later in the season.
                 media:
                   type: image
-                  src: ../../assets/images/hero/placeholder.jpeg
+                  src: ../../assets/images/weeds/canadianpondweed.webp
                   alt: Canadian pond weed and other Elodea species
           - title: Floating Pennywort
             blocks:
@@ -103,7 +105,7 @@ overview:
                   The plant can be cut away from the banks and collected using weed rakes before being moved onto nearby banks. After allowing time for invertebrates to return to the watercourse, the removed material can be taken away from the site to reduce the risk of recontamination.
                 media:
                   type: image
-                  src: ../../assets/images/hero/placeholder.jpeg
+                  src: ../../assets/images/weeds/floatingpennywort.webp
                   alt: Floating pennywort growing along a watercourse
           - title: Crassula - New Zealand Pygmyweed
             blocks:
@@ -114,7 +116,7 @@ overview:
                   Where appropriate, grab buckets can be used to carefully peel layers of the plant from the affected area rather than relying on simple cutting, allowing the material to be removed for processing.
                 media:
                   type: image
-                  src: ../../assets/images/hero/placeholder.jpeg
+                  src: ../../assets/images/weeds/crassula.jpg
                   alt: Crassula or New Zealand pygmyweed growing along a watercourse
           - title: Water Fern - Fairy Fern
             blocks:
@@ -123,7 +125,7 @@ overview:
                   Water fern is less common in the UK but can become problematic once established. It can be peeled from affected areas using grab buckets or cut into larger mats that can then be collected and moved onto the bank for processing.
                 media:
                   type: image
-                  src: ../../assets/images/hero/placeholder.jpeg
+                  src: ../../assets/images/weeds/azolla.jpg
                   alt: Water fern or fairy fern on a watercourse
   - type: richTextSection
     eyebrow: Not Sure What You're Dealing With?
@@ -139,15 +141,12 @@ overview:
     buttons:
       - title: View Weed Identification Guide
         href: /weed-identification-guide
+    secondary: true
   - type: cards
     eyebrow: Related Services
     title: Other Aquatic Weed Control
     description: We provide specialist cutting and removal services for a range of aquatic and marginal weed species.
     items:
-      - title: Aquatic Weed Cutting
-        description: Explore our full range of aquatic weed cutting, removal, and control services.
-        image: ../../assets/images/services/weedCutting.jpg
-        href: ''
       - title: Bulrush & Bur-reed Removal
         description: Specialist cutting and removal of excessive bulrush and bur-reed growth from watercourses.
         image: ../../assets/images/weeds/bulrush.webp
@@ -159,7 +158,10 @@ overview:
       - title: Water Lily Management
         description: Manage excessive water lily growth through targeted cutting and, where appropriate, root and rhizome removal.
         image: ../../assets/images/weeds/waterlily.webp
-        href: ''
+        href: /services/water-lily-management
+    readMore:
+      title: Aquatic Weed Cutting Overview
+      href: /services/weed-cutting
 callToAction:
   eyebrow: Need Help With an Invasive Species?
   title: Take Control of Your Waterway

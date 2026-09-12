@@ -23,6 +23,7 @@ const { data } = Astro.props;
   content={data.truxorExpertise.content}
   media={data.truxorExpertise.media}
   buttons={data.truxorExpertise.buttons}
+  readMore={data.truxorExpertise.readMore}
 />
 
 <IconListSection
@@ -34,6 +35,7 @@ const { data } = Astro.props;
   items={data.capabilities.items}
   buttons={data.capabilities.buttons}
   secondary
+  readMore={data.capabilities.readMore}
 />
 
 <RichTextSection
@@ -41,7 +43,9 @@ const { data } = Astro.props;
   title={data.aquaclearAndTruxor.title}
   content={data.aquaclearAndTruxor.content}
   media={data.aquaclearAndTruxor.media}
-  readMore={data.aquaclearAndTruxor.buttons[0]}
+  readMore={data.aquaclearAndTruxor.readMore}
+  dark
+  decoration
 />
 
 <Cta

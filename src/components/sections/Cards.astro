@@ -5,6 +5,8 @@ import SectionHeader from "../content/SectionHeader.astro";
 import Card from "../content/cards/Card.astro";
 import Link from "../actions/Link.astro";
 
+import WindPlant from "../../assets/images/svg/WindPlant.svg"
+
 import type { CardsSection } from "../../lib/types";
 
 interface Props extends CardsSection {
@@ -23,7 +25,8 @@ interface Props extends CardsSection {
     title: string;
   };
   secondary?: boolean;
-  dark?: boolean
+  dark?: boolean;
+  decoration?: boolean
 }
 
 const {
@@ -43,20 +46,23 @@ const {
   readMore,
 
   secondary,
-  dark
+  dark,
+  decoration = false
 } = Astro.props as Props;
 
 const gridClass = {
   1: "grid-cols-1",
   2: "grid-cols-1 md:grid-cols-2",
-  3: "grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
+  3: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
   4: "grid-cols-1 md:grid-cols-2 xl:grid-cols-4",
 }[columns];
 ---
 
 <Section id={title} secondary={secondary} dark={dark}>
+  {!decoration && (
+    <WindPlant class="decorative -bottom-2 right-[3%] w-60 text-surface-alt sm:block hidden" />
+  )}
   <Container>
-
     <SectionHeader
       eyebrow={eyebrow}
       title={title}
@@ -71,24 +77,32 @@ const gridClass = {
       ]}
     >
       {items.map((item) => (
-        <Card
-          href={item.href}
-          image={item.image}
-          eyebrow={item.eyebrow}
-          title={item.title}
-          description={item.description}
-          layout={cardLayout}
-          ellipsis={ellipsis}
-          expand={expand}
-        />
+        <div
+          data-case-study-card
+          data-services={JSON.stringify((item as { services?: string[] }).services ?? [])}
+          class="h-full"
+        >
+          <Card
+            href={item.href}
+            image={item.image}
+            eyebrow={item.eyebrow}
+            title={item.title}
+            description={item.description}
+            layout={cardLayout}
+            ellipsis={ellipsis}
+            expand={expand}
+          />
+        </div>
       ))}
     </div>
 
     {readMore && (
-      <Link
-        href={readMore.href}
-        title={readMore.title}
-      />
+      <div class="mt-8">
+        <Link
+          href={readMore.href}
+          title={readMore.title}
+        />
+      </div>
     )}
 
   </Container>

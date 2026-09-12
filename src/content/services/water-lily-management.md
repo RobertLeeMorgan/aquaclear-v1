@@ -3,25 +3,29 @@ title: Water Lily Management
 seo:
   title: Water Lily Management
   description: Specialist water lily cutting and root and rhizome removal using Truxor amphibious equipment to control excessive growth while maintaining healthy aquatic habitats.
-  image: ../../assets/images/hero/placeholder.jpeg
+  image: ../../assets/images/weeds/waterlily.webp
 overview:
   - type: hero
     title: Water Lily Maintenance & Control
     description: Aquaclear provides specialist water lily cutting and removal services, helping to control excessive growth while maintaining a healthy balance of open water and aquatic vegetation.
-    image: ../../assets/images/hero/placeholder.jpeg
+    image: ../../assets/images/weeds/waterlily.webp
     alt: Water lilies growing across a lake or pond
     buttons:
       - title: Contact Us
         href: /contact
+      - title: Aquatic Weed Guide
+        href: /weed-identification-guide
   - type: iconListSection
     eyebrow: ''
     title: Problems Caused by Excessive Water Lily Growth
     description: |
       Water lilies are a valuable feature of many UK lakes and ponds, but excessive growth can gradually cover open water and outcompete other aquatic plants.
     media:
-      type: image
-      src: ../../assets/images/hero/placeholder.jpeg
-      alt: Dense water lily growth covering a watercourse
+      type: beforeAfter
+      before: ../../assets/images/before/lilies.jpg
+      after: ../../assets/images/after/lilies.jpg
+      beforeAlt: Water lilies covering a watercourse before cutting
+      afterAlt: Water lilies after targeted cutting and clearance
     items:
       - icon: leaf
         title: Cover large areas of open water
@@ -48,8 +52,8 @@ overview:
           Cutting provides an effective way to manage growth during the warmer months, but it is generally a temporary solution because the underlying root and rhizome systems remain in place.
         media:
           type: beforeAfter
-          before: ../../assets/images/hero/placeholder.jpeg
-          after: ../../assets/images/hero/placeholder.jpeg
+          before: ../../assets/images/before/lilies2.jpg
+          after: ../../assets/images/after/lilies2.jpg
           beforeAlt: Water lilies covering a watercourse before cutting
           afterAlt: Water lilies after targeted cutting and clearance
       - title: Root & Rhizome Removal
@@ -59,8 +63,8 @@ overview:
           Grip rakes and grab buckets can reach below the water surface and remove the underlying rhizome material. This approach is slower and more intensive than cutting, but can be appropriate where particular areas need to be cleared more permanently.
         media:
           type: beforeAfter
-          before: ../../assets/images/hero/placeholder.jpeg
-          after: ../../assets/images/hero/placeholder.jpeg
+          before: ../../assets/images/before/lilies3.jpg
+          after: ../../assets/images/after/lilies3.jpg
           beforeAlt: Dense water lily growth before root and rhizome removal
           afterAlt: Watercourse after water lily root and rhizome removal
       - title: Maintaining a Healthy Balance
@@ -70,17 +74,13 @@ overview:
           Every watercourse has different requirements, and water lily control can often form part of wider maintenance works carried out during the same visit.
         media:
           type: image
-          src: ../../assets/images/hero/placeholder.jpeg
-          alt: Selective water lily management on a lake or pond
+          src: ../../assets/images/before/lilies4.jpg
+          alt: A lake with water lilies in balance
   - type: cards
     eyebrow: Related Services
     title: Other Aquatic Weed Control
     description: We provide specialist cutting and removal services for a range of aquatic and marginal weed species.
     items:
-      - title: Aquatic Weed Cutting
-        description: Explore our full range of aquatic weed cutting, removal, and control services.
-        image: ../../assets/images/services/weedCutting.jpg
-        href: /services/aquatic-weed-cutting
       - title: Bulrush & Bur-reed Removal
         description: Specialist cutting and removal of excessive bulrush and bur-reed growth from watercourses.
         image: ../../assets/images/weeds/bulrush.webp
@@ -93,6 +93,9 @@ overview:
         description: Control and removal of excessive algae and blanket weed growth from ponds, lakes, and other waterways.
         image: ../../assets/images/before/algae.jpg
         href: /services/blanket-weed-removal
+    readMore:
+      title: Aquatic Weed Cutting Overview
+      href: /services/weed-cutting
 callToAction:
   eyebrow: ''
   title: Need Help with Water Lilies?

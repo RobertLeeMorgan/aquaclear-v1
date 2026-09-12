@@ -10,33 +10,19 @@ overview:
     title: Trash & Debris Removal
     description: Specialist removal of floating, submerged, and waterborne debris from canals, lakes, drainage systems, and other watercourses.
   - type: richTextSection
-    eyebrow: ''
+    eyebrow: Why manage debris?
     title: Debris Clearance
     content: |
       Waterways can accumulate plastic, timber, rubbish, and other debris, particularly in urban areas and on canals and lakes used by boats and other watercraft. Surface and underwater debris can obstruct water flow, restrict access, and create hazards for people and wildlife.
 
       Aquaclear can remove debris from the surface and bottom of watercourses, helping to keep canals, lakes, drainage systems, and other waterways clear, safe, and accessible.
     media:
-      type: image
-      src: ../../assets/images/services/debris.webp
-      alt: Debris clearance on a waterway
-  - type: cards
-    eyebrow: ''
-    title: Specialist Clearance
-    description: The Truxor and its specialist attachments allow our operators to remove debris from the surface and bottom of difficult-to-access waterways.
-    items:
-      - eyebrow: ''
-        title: Reed Rake
-        description: The reed rake can collect floating debris, vegetation, and other material from the surface of a watercourse, helping to clear obstructions and keep waterways accessible.
-        image: ../../assets/images/truxor/reed-rake.jpeg
-        alt: Truxor reed rake clearing debris from a waterway
-        href: ''
-      - eyebrow: ''
-        title: Grab Bucket
-        description: The grab bucket can lift heavier or submerged debris from the bottom of a watercourse, including timber, rubbish, and other material that cannot be removed from the surface.
-        image: ../../assets/images/truxor/grabbucket.webp
-        alt: Truxor grab bucket removing debris from a waterway
-        href: ''
+        type: beforeAfter
+        before: ../../assets/images/before/swanseatrash.jpg
+        after: ../../assets/images/after/swanseatrash.jpg
+        beforeAlt: Algae and accumulated debris across Swansea Canal
+        afterAlt: Swansea Canal following algae and debris removal
+    decoration: true
   - type: richTextSection
     eyebrow: ''
     title: Fallen Trees & Large Debris
@@ -46,6 +32,26 @@ overview:
       type: image
       src: ../../assets/images/services/treework.jpg
       alt: Debris clearance on a waterway
+    secondary: true
+    imagePosition: "left"
+  - type: cards
+    eyebrow: How we operate
+    title: Specialist Clearance
+    description: The Truxor and its specialist attachments allow our operators to remove debris from the surface and bottom of difficult-to-access waterways.
+    items:
+      - eyebrow: ''
+        title: Reed Rake
+        description: The reed rake can collect floating debris, vegetation, and other material from the surface of a watercourse, helping to clear obstructions and keep waterways accessible.
+        image: ../../assets/images/truxor/reed-rake.jpeg
+        alt: Truxor reed rake clearing debris from a waterway
+      - eyebrow: ''
+        title: Grab Bucket
+        description: The grab bucket can lift heavier or submerged debris from the bottom of a watercourse, including timber, rubbish, and other material that cannot be removed from the surface.
+        image: ../../assets/images/truxor/grabbucket.webp
+        alt: Truxor grab bucket removing debris from a waterway
+    readMore:
+      title: Read More About Truxor
+      href: /truxor
 callToAction:
   eyebrow: ''
   title: Need Help with Debris Clearance?

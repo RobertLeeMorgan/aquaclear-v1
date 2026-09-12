@@ -23,16 +23,21 @@ const serviceTitle = service
 <RichTextSections
   items={data.overview.items}
   secondary
-  editorial
+  eyebrow={data.overview.eyebrow}
+  title={data.overview.title}
+  description={data.overview.description}
+  readMore={data.overview.readMore}
+  decoration
 />
 
-{relatedCaseStudies.length > 0 && (
+{relatedCaseStudies.card.length > 0 && (
   <CarouselSection
     eyebrow="Related Projects"
     title="Similar Case Studies"
     description="Explore other projects where we have delivered similar waterway management work."
     items={relatedCaseStudies}
     dark
+    readMore={{title:"View All Case Studies", href:"/case-studies"}}
   />
 )}
 

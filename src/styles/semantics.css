@@ -120,13 +120,13 @@
 }
 
 .btn-outline {
-  @apply border-w border-solid border-border-strong;
+  @apply border-thick border-solid border-border-strong;
   @apply text-heading text-inverse;
   background: transparent;
 }
 
 .btn-outline:hover {
-  @apply bg-surface-alt border-primary;
+  @apply bg-primary-hover border-dark/30;
 }
 
 .btn-ghost {
@@ -145,7 +145,7 @@
 }
 
 .btn-md {
-  @apply px-lg py-sm text-md;
+  @apply px-lg py-xs text-md;
 }
 
 .btn-lg {
@@ -174,7 +174,7 @@
 }
 
 .btn-motion:hover {
-  @apply lift-sm;
+  @apply scale-sm;
 }
 
 .btn-motion:active {
@@ -219,7 +219,7 @@
 .link {
   @apply inline-flex items-center gap-xs;
 
-  @apply text-sm font-medium leading-normal;
+  @apply text-sm sm:text-md md:text-lg font-medium leading-normal;
   @apply text-primary;
 
   text-decoration: none;
@@ -342,7 +342,7 @@
 
 .banner-logo {
   width: auto;
-  height: 3rem;
+  height: 2.5rem;
   max-width: 10rem;
   object-fit: contain;
   opacity: 0.9;
@@ -351,6 +351,7 @@
 @media (min-width: 768px) {
   .banner-logo {
     height: 3.5rem;
+    max-width: 10rem;
   }
 }
 
@@ -417,7 +418,7 @@
 }
 
 .accordion-item.is-open .accordion-icon {
-  @apply rotate-md;
+  @apply rotate-[180deg];
 }
 
 .accordion-content {
@@ -530,7 +531,7 @@
 }
 
 .before-after-divider {
-  @apply absolute top-0 bottom-0 left-1/2 w-[2px] bg-white shadow-2;
+  @apply absolute top-0 bottom-0 left-1/2 w-[2px] bg-surface shadow-2;
 
   transform: translateX(-50%);
 }
@@ -654,61 +655,22 @@
    ========================================================== */
 
 .banner {
-  overflow: hidden;
   width: 100%;
+  overflow: hidden;
 }
 
 .banner-viewport {
-  overflow: hidden;
   width: 100%;
-}
-
-.banner-track {
-  display: flex;
-  width: max-content;
-  animation: banner-scroll 30s linear infinite;
-  will-change: transform;
 }
 
 .banner-group {
   display: flex;
-  flex: 0 0 auto;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 3rem;
-  padding-right: 3rem;
+  justify-content: center;
+  @apply gap-lg sm:gap-xl md:gap-2xl lg:gap-3xl
 }
 
 .banner-item {
   flex: 0 0 auto;
-  white-space: nowrap;
-}
-
-/* Speed variants */
-
-.banner-slow .banner-track {
-  animation-duration: 45s;
-}
-
-.banner-normal .banner-track {
-  animation-duration: 30s;
-}
-
-.banner-fast .banner-track {
-  animation-duration: 20s;
-}
-
-@keyframes banner-scroll {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .banner-track {
-    animation: none;
-  }
 }

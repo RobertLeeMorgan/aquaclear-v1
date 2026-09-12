@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import HomeLayout from "../layouts/HomeLayout.astro";
 import { getEntry, getCollection } from "astro:content";
 import { homeSchema } from "../lib/schema";
+import { sortServices } from "../lib/services";
 
 const entry = await getEntry("home", "index");
 
@@ -10,13 +11,25 @@ if (!entry) {
   throw new Error("Home content not found.");
 }
 
-const services = await getCollection("services");
-const featured = await getEntry("caseStudies", "canal-and-river-trust-wales");
+const services = sortServices(await getCollection("services"));
 
-const servicesItems = [...services.map((entry) => ({
-        ...entry.data.seo,
-        href: `/services/${entry.id}`,
-      })).flatMap((item) => [{ title: item.title, description: item.description, image: item.image, href: item.href }])];
+const servicesItems = services
+  .filter(({ id }) => ![
+    "blanket-weed-removal",
+    "invasive-species-removal",
+    "bulrush-removal",
+    "water-lily-management",
+  ].includes(id))
+  .map((entry) => ({
+    ...entry.data.seo,
+    href: `/services/${entry.id}`,
+  }))
+  .map((item) => ({
+    title: item.title,
+    description: item.description,
+    image: item.image,
+    href: item.href,
+  }));
 
 const schema = [
   homeSchema({

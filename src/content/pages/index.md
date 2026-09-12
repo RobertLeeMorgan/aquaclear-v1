@@ -3,11 +3,11 @@ title: Home
 seo:
   title: Aquaclear Water Management | UK Waterway Management
   description: Aquaclear provides specialist waterway, reed bed and wetland management services across the UK, with over 20 years of experience in aquatic vegetation control, silt removal and on-water works.
-  image: ../../assets/images/hero/banner.webp
+  image: ../../assets/images/after/cutting.jpg
 hero:
-  title: Clear Water. Healthy Habitats. Expert Care.
+  title: Clear Water. Healthy Habitats. Expert Care
   description: Aquaclear provides specialist waterway, reed bed and wetland management services across the UK, helping to restore, maintain and manage watercourses of all shapes and sizes.
-  image: ../../assets/images/hero/actionAbout.jpg
+  image: ../../assets/images/after/cutting.jpg
   alt: Aquaclear Water Management
   buttons:
     - title: Discuss Your Waterway
@@ -22,27 +22,53 @@ introduction:
 
     Our experience spans work with environmental organisations, building projects, local nature reserves, councils and private landowners. Whatever the size or condition of your watercourse, we have the experience and specialist equipment to help.
   media:
-    type: image
-    src: ../../assets/images/after/wales.webp
-    alt: Aquaclear Water Management
-  buttons:
-    - title: ''
-      href: ''
+    type: beforeAfter
+    before: ../../assets/images/before/wales.jpg
+    after: ../../assets/images/after/wales.jpg
+    beforeAlt: Before carrying out aquatic weed cutting and reed management on a Welsh canal
+    afterAlt: After carrying out aquatic weed cutting and reed management on a Welsh canal
+  readMore:
+    title: Learn More About Aquaclear
+    href: /about
 whyChooseUs:
   eyebrow: Why Aquaclear
-  title: Experienced People. Specialist Equipment. Practical Solutions.
-  description: We combine more than 20 years of hands-on experience with specialist amphibious equipment to work safely and efficiently in places that are difficult to access.
+  title: Practical Solutions for Challenging Waterways
+  description: Every waterway is different. We assess the site, understand the problem and select the most appropriate equipment and approach for the work, with care for the surrounding environment.
   media:
-    type: image
-    src: ../../assets/images/hero/placeholder.jpeg
-    alt: Truxor amphibious harvester
+    type: beforeAfter
+    before: ../../assets/images/before/canal3.jpg
+    after: ../../assets/images/after/canal3.jpg
+    beforeAlt: Before carrying out aquatic weed cutting and reed management on a Welsh lake
+    afterAlt: After carrying out aquatic weed cutting and reed management on a Welsh lake
   items:
+    - icon: compass
+      title: Site-Specific Solutions
     - icon: ship
-      title: Specialist Amphibious Equipment
+      title: Difficult Access
+    - icon: users
+      title: Experienced Operators
+    - icon: leaf
+      title: Environmentally Conscious
+    - icon: map
+      title: UK-Wide Coverage
+    - icon: mountain
+      title: Any Site, Any Terrain
+  readMore:
+    title: See Testimonials and Trusted Clients
+    href: /clients
+featuredProject:
+  eyebrow: Featured Project
+  title: Restoring a Private Swimming Lake
+  content: Extensive broadleaf aquatic weed removal from a private swimming lake, clearing dense growth and restoring open water for a cleaner, more usable and attractive swimming environment.
+  media:
+    type: beforeAfter
+    before: ../../assets/images/before/cutting.jpg
+    after: ../../assets/images/after/cutting.jpg
+    beforeAlt: Before carrying out aquatic weed cutting and reed management on a Welsh lake
+    afterAlt: After carrying out aquatic weed cutting and reed management on a Welsh lake
   buttons:
-    - title: Learn More About Truxor
-      href: /truxor
-  alt: ''
+    - title: View Case Study
+      href: /case-studies
 callToAction:
   eyebrow: Need Help With Your Watercourse?
   title: Let's Discuss Your Waterway
@@ -50,15 +76,4 @@ callToAction:
   buttons:
     - title: Contact Aquaclear
       href: /contact
-featuredProject:
-  eyebrow: ''
-  title: ''
-  content: ''
-  media:
-    type: image
-    src: ../../assets/images/hero/placeholder.jpeg
-    alt: ''
-  buttons:
-    - title: ''
-      href: ''
 ---

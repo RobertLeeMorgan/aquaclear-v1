@@ -42,7 +42,10 @@ import {
   ShieldCheck,
   Medal,
   ChevronsUp,
-  Merge
+  Merge,
+  Compass,
+  Users,
+  Mountain
 } from "lucide-astro";
 
 export const featureIconMap: Record<string, any> = {
@@ -90,5 +93,8 @@ export const featureIconMap: Record<string, any> = {
   shieldCheck: ShieldCheck,
   medal: Medal,
   chevronsUp: ChevronsUp,
-  merge: Merge
+  merge: Merge,
+  compass: Compass,
+  users: Users,
+  mountain: Mountain
 };

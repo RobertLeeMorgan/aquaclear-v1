@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Section from "../components/layout/Section.astro";
 import SectionHeader from "../components/content/SectionHeader.astro";
+import PageHeader from "../components/sections/PageHeader.astro";
 import Container from "../components/layout/Container.astro";
 import {site} from "../config/site"
 import { webPageSchema } from "../lib/schema";
@@ -20,9 +21,9 @@ const schema = [
   description={`Privacy Policy explaining how ${site.name} collects, uses, stores, and protects personal information provided through its website and services.`}
   schema={schema}
 >
-  <Section>
+  <PageHeader title="PRIVACY POLICY" eyebrow="Last updated July 10, 2026" as="h1" />
+  <Section>  
     <Container>
-      <SectionHeader title="PRIVACY POLICY" eyebrow="Last updated July 10, 2026" as="h1" />
       <div class="prose prose-neutral max-w-none space-y-xl mt-xl">  
         <div>
           <p>

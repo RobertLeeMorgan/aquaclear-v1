@@ -3,24 +3,28 @@ title: Blanket Weed Removal
 seo:
   title: Blanket Weed Removal
   description: Specialist blanket weed and algae removal using Truxor amphibious equipment across the UK.
-  image: ../../assets/images/hero/placeholder.jpeg
+  image: ../../assets/images/before/algae4.jpg
 overview:
   - type: hero
     title: Blanket Weed and Algae Removal
-    description: Aquaclear provides specialist blanket weed and algae removal services across the UK, helping to restore clear, open water in lakes, ponds, and other inland watercourses. Our mechanical removal methods allow excessive algae to be collected and removed while minimising disturbance to the aquatic environment.
-    image: ../../assets/images/hero/placeholder.jpeg
+    description: Specialist blanket weed and algae removal services across the UK, helping to restore clear, open water in lakes, ponds, and other inland watercourses. Our mechanical removal methods allow excessive algae to be collected and removed while minimising disturbance to the aquatic environment.
+    image: ../../assets/images/after/algae3.jpg
     alt: Blanket weed and algae removal
     buttons:
       - title: Contact Us
         href: /contact
+      - title: Aquatic Weed Guide
+        href: /weed-identification-guide
   - type: iconListSection
-    eyebrow: ''
+    eyebrow: Why manage algae?
     title: Problems Caused by Blanket Weed
     description: Excessive algae growth can affect the appearance and practical use of a watercourse, while severe blooms can create wider environmental concerns.
     media:
-      type: image
-      src: ../../assets/images/hero/placeholder.jpeg
-      alt: Dense blanket weed on a watercourse
+      type: beforeAfter
+      before: ../../assets/images/before/algae3.jpg
+      after: ../../assets/images/after/algae3.jpg
+      beforeAlt: Watercourse covered with blanket weed before removal
+      afterAlt: Watercourse after blanket weed removal
     items:
       - icon: leaf
         title: Spoil the appearance of lakes and ponds
@@ -46,8 +50,8 @@ overview:
           By removing algae from the surface while leaving submerged aquatic plant life largely undisturbed, this approach can help restore open water while retaining plants that contribute oxygen to the watercourse.
         media:
           type: beforeAfter
-          before: ../../assets/images/hero/placeholder.jpeg
-          after: ../../assets/images/hero/placeholder.jpeg
+          before: ../../assets/images/before/algae2.jpg
+          after: ../../assets/images/after/algae2.jpg
           beforeAlt: Watercourse covered with blanket weed before removal
           afterAlt: Watercourse after blanket weed removal
       - title: Addressing Recurring Algae Growth
@@ -56,9 +60,11 @@ overview:
 
           Silt pumping and dredging can therefore form part of a longer-term approach where repeated blanket weed growth is linked to the condition of the watercourse, helping to reduce the likelihood of recurring algal blooms.
         media:
-          type: image
-          src: ../../assets/images/hero/placeholder.jpeg
-          alt: Silt pumping from a watercourse
+          type: beforeAfter
+          before: ../../assets/images/before/algae1.jpg
+          after: ../../assets/images/after/algae1.jpg
+          beforeAlt: Watercourse covered with blanket weed before removal
+          afterAlt: Watercourse after blanket weed removal
       - type: richTextSection
         title: Harmful Algal Blooms
         content: |
@@ -66,21 +72,19 @@ overview:
 
           Where a watercourse is affected by a suspected harmful algal bloom, appropriate testing, monitoring, and specialist environmental advice may be required alongside any physical removal or management work.
         media:
-          type: image
-          src: ../../assets/images/hero/placeholder.jpeg
-          alt: Algal bloom affecting a watercourse
+          type: beforeAfter
+          before: ../../assets/images/before/algae4.jpg
+          after: ../../assets/images/after/algae4.jpg
+          beforeAlt: Watercourse covered with blanket weed before removal
+          afterAlt: Watercourse after blanket weed removal
   - type: cards
     eyebrow: Related Services
     title: Other Aquatic Weed Control
     description: We provide specialist cutting and removal services for a range of aquatic and marginal weed species.
     items:
-      - title: Aquatic Weed Cutting
-        description: Explore our full range of aquatic weed cutting, removal, and control services.
-        image: ../../assets/images/services/weedCutting.jpg
-        href: ''
       - title: Bulrush & Bur-reed Removal
         description: Specialist cutting and removal of excessive bulrush and bur-reed growth from watercourses.
-        image: ../../assets/images/hero/placeholder.jpeg
+        image: ../../assets/images/weeds/bulrush.webp
         href: /services/bulrush-removal
       - title: Invasive Aquatic Plants
         description: Specialist cutting, removal, and control of invasive aquatic plant species.
@@ -89,7 +93,10 @@ overview:
       - title: Water Lily Management
         description: Manage excessive water lily growth through targeted cutting and, where appropriate, root and rhizome removal.
         image: ../../assets/images/weeds/waterlily.webp
-        href: ''
+        href: /services/water-lily-management
+    readMore:
+      title: Aquatic Weed Cutting Overview
+      href: /services/weed-cutting
 callToAction:
   eyebrow: ''
   title: Need Help with Blanket Weed?

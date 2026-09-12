@@ -25,9 +25,6 @@ aboutAquaclear:
     type: image
     src: ../../assets/images/hero/action.jpg
     alt: Aquaclear team working on a waterway
-  buttons:
-    - title: ''
-      href: ''
 experienceAndExpertise:
   eyebrow: Experience & Expertise
   title: What Sets Aquaclear Apart
@@ -65,10 +62,9 @@ truxor:
     - icon: leaf
       title: Low-Impact Access
       description: Work in sensitive environments with minimal ground disturbance.
-  buttons:
-    - title: Discover Truxor
-      href: /truxor
-  alt: ''
+  readMore:
+    title: Discover Truxor
+    href: /truxor
 howWeWork:
   eyebrow: How We Work
   title: Practical Solutions for Every Watercourse
@@ -77,12 +73,11 @@ howWeWork:
 
     Whether carrying out routine maintenance or a larger restoration project, we work safely and efficiently, adapting our methods to the conditions while keeping disruption to the surrounding environment to a minimum.
   media:
-    type: image
-    src: ../../assets/images/after/rspb.webp
-    alt: Aquaclear carrying out waterway management work
-  buttons:
-    - title: ''
-      href: ''
+      type: beforeAfter
+      before: ../../assets/images/before/cutting2.jpg
+      after: ../../assets/images/after/cutting2.jpg
+      beforeAlt: Before cutting aquatic vegetation
+      afterAlt: After cutting aquatic vegetation
 callToAction:
   eyebrow: Talk to Aquaclear
   title: Have a Waterway That Needs Attention?

@@ -66,6 +66,16 @@ collections:
               - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Content", name: "content", widget: "markdown" }
+              - { label: "Dark", name: "dark", widget: "boolean", required: false }
+              - { label: "Secondary", name: "secondary", widget: "boolean", required: false }
+              - { label: "Decoration", name: "decoration", widget: "boolean", required: false }
+              - label: "Image Position"
+                name: "imagePosition"
+                widget: "select"
+                options:
+                  - "left"
+                  - "right"
+                required: false
               - label: "Media"
                 name: "media"
                 widget: list
@@ -123,6 +133,13 @@ collections:
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Href", name: "href", widget: "string", required: false }
+              - label: "Read More"
+                name: "readMore"
+                widget: object
+                required: false
+                fields:
+                  - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Href", name: "href", widget: "string", required: false }
           - label: "Rich Text Sections"
             name: "richTextSections"
@@ -196,6 +213,13 @@ collections:
                     fields:
                       - { label: "Title", name: "title", widget: "string" }
                       - { label: "Href", name: "href", widget: "string", required: false }
+              - label: "Read More"
+                name: "readMore"
+                widget: object
+                required: false
+                fields:
+                  - { label: "Title", name: "title", widget: "string", required: false }
+                  - { label: "Href", name: "href", widget: "string", required: false }
           - label: "Icon List Section"
             name: "iconListSection"
             widget: object
@@ -307,6 +331,9 @@ collections:
                       - "shieldCheck"
                       - "merge"
                       - "chevronsUp"
+                      - "compass"
+                      - "mountain"
+                      - "users"
                   - { label: "Title", name: "title", widget: "string" }
               - label: "Buttons"
                 name: "buttons"
@@ -314,6 +341,13 @@ collections:
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Href", name: "href", widget: "string", required: false }
+              - label: "Read More"
+                name: "readMore"
+                widget: object
+                required: false
+                fields:
+                  - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Href", name: "href", widget: "string", required: false }
           - label: "Accordion Section"
             name: "accordionSection"
@@ -509,6 +543,9 @@ collections:
                                       - "shieldCheck"
                                       - "merge"
                                       - "chevronsUp"
+                                      - "compass"
+                                      - "mountain"
+                                      - "users"
                                   - { label: "Title", name: "title", widget: "string" }
           - label: "Cards"
             name: "cards"
@@ -518,6 +555,8 @@ collections:
               - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string", required: false }
               - { label: "Description", name: "description", widget: "markdown", required: false }
+              - { label: "Dark", name: "dark", widget: "boolean", required: false }
+              - { label: "Secondary", name: "secondary", widget: "boolean", required: false }
               - label: "Items"
                 name: "items"
                 widget: list
@@ -526,6 +565,13 @@ collections:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Description", name: "description", widget: "markdown", required: false }
                   - { label: "Image", name: "image", widget: "image", required: false }
+                  - { label: "Href", name: "href", widget: "string", required: false }
+              - label: "Read More"
+                name: "readMore"
+                widget: object
+                required: false
+                fields:
+                  - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Href", name: "href", widget: "string", required: false }
           - label: "Gallery"
             name: "gallery"
@@ -711,6 +757,13 @@ collections:
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Href", name: "href", widget: "string", required: false }
+          - label: "Read More"
+            name: "readMore"
+            widget: object
+            required: false
+            fields:
+              - { label: "Title", name: "title", widget: "string", required: false }
+              - { label: "Href", name: "href", widget: "string", required: false }
 
   - name: "pages"
     label: "Pages"
@@ -808,6 +861,13 @@ collections:
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Href", name: "href", widget: "string", required: false }
+              - label: "Read More"
+                name: "readMore"
+                widget: object
+                required: false
+                fields:
+                  - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Href", name: "href", widget: "string", required: false }
           - label: "Why Choose Us"
             name: "whyChooseUs"
@@ -919,6 +979,9 @@ collections:
                       - "shieldCheck"
                       - "merge"
                       - "chevronsUp"
+                      - "compass"
+                      - "mountain"
+                      - "users"
                   - { label: "Title", name: "title", widget: "string" }
               - label: "Buttons"
                 name: "buttons"
@@ -926,6 +989,13 @@ collections:
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Href", name: "href", widget: "string", required: false }
+              - label: "Read More"
+                name: "readMore"
+                widget: object
+                required: false
+                fields:
+                  - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Href", name: "href", widget: "string", required: false }
           - label: "Featured Project"
             name: "featuredProject"
@@ -991,6 +1061,13 @@ collections:
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Href", name: "href", widget: "string", required: false }
+              - label: "Read More"
+                name: "readMore"
+                widget: object
+                required: false
+                fields:
+                  - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Href", name: "href", widget: "string", required: false }
           - label: "Call To Action"
             name: "callToAction"
@@ -1099,6 +1176,13 @@ collections:
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Href", name: "href", widget: "string", required: false }
+              - label: "Read More"
+                name: "readMore"
+                widget: object
+                required: false
+                fields:
+                  - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Href", name: "href", widget: "string", required: false }
           - label: "Experience and Expertise"
             name: "experienceAndExpertise"
@@ -1221,6 +1305,9 @@ collections:
                       - "shieldCheck"
                       - "merge"
                       - "chevronsUp"
+                      - "compass"
+                      - "mountain"
+                      - "users"
                   - { label: "Title", name: "title", widget: "string" }
               - label: "Buttons"
                 name: "buttons"
@@ -1228,6 +1315,13 @@ collections:
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Href", name: "href", widget: "string", required: false }
+              - label: "Read More"
+                name: "readMore"
+                widget: object
+                required: false
+                fields:
+                  - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Href", name: "href", widget: "string", required: false }
           - label: "How We Work"
             name: "howWeWork"
@@ -1293,6 +1387,13 @@ collections:
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Href", name: "href", widget: "string", required: false }
+              - label: "Read More"
+                name: "readMore"
+                widget: object
+                required: false
+                fields:
+                  - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Href", name: "href", widget: "string", required: false }
           - label: "Call To Action"
             name: "callToAction"
@@ -1418,6 +1519,13 @@ collections:
                           - { label: "Company", name: "company", widget: "string", required: false }
                           - { label: "Avatar", name: "avatar", widget: "image", required: false }
                           - { label: "Rating", name: "rating", widget: "number", required: false }
+              - label: "Read More"
+                name: "readMore"
+                widget: object
+                required: false
+                fields:
+                  - { label: "Title", name: "title", widget: "string", required: false }
+                  - { label: "Href", name: "href", widget: "string", required: false }
           - label: "Call To Action"
             name: "callToAction"
             widget: object
@@ -1477,6 +1585,13 @@ collections:
                   - { label: "Description", name: "description", widget: "markdown", required: false }
                   - { label: "Image", name: "image", widget: "image", required: false }
                   - { label: "Href", name: "href", widget: "string", required: false }
+              - label: "Read More"
+                name: "readMore"
+                widget: object
+                required: false
+                fields:
+                  - { label: "Title", name: "title", widget: "string", required: false }
+                  - { label: "Href", name: "href", widget: "string", required: false }
           - label: "Margins"
             name: "margins"
             widget: object
@@ -1492,6 +1607,13 @@ collections:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Description", name: "description", widget: "markdown", required: false }
                   - { label: "Image", name: "image", widget: "image", required: false }
+                  - { label: "Href", name: "href", widget: "string", required: false }
+              - label: "Read More"
+                name: "readMore"
+                widget: object
+                required: false
+                fields:
+                  - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Href", name: "href", widget: "string", required: false }
           - label: "Call To Action"
             name: "callToAction"
@@ -1600,6 +1722,13 @@ collections:
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Href", name: "href", widget: "string", required: false }
+              - label: "Read More"
+                name: "readMore"
+                widget: object
+                required: false
+                fields:
+                  - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Href", name: "href", widget: "string", required: false }
           - label: "Capabilities"
             name: "capabilities"
@@ -1711,6 +1840,9 @@ collections:
                       - "shieldCheck"
                       - "merge"
                       - "chevronsUp"
+                      - "compass"
+                      - "mountain"
+                      - "users"
                   - { label: "Title", name: "title", widget: "string" }
               - label: "Buttons"
                 name: "buttons"
@@ -1718,6 +1850,13 @@ collections:
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Href", name: "href", widget: "string", required: false }
+              - label: "Read More"
+                name: "readMore"
+                widget: object
+                required: false
+                fields:
+                  - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Href", name: "href", widget: "string", required: false }
           - label: "Aquaclear and Truxor"
             name: "aquaclearAndTruxor"
@@ -1783,6 +1922,13 @@ collections:
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Href", name: "href", widget: "string", required: false }
+              - label: "Read More"
+                name: "readMore"
+                widget: object
+                required: false
+                fields:
+                  - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Href", name: "href", widget: "string", required: false }
           - label: "Call To Action"
             name: "callToAction"
@@ -1966,6 +2112,9 @@ collections:
                       - "shieldCheck"
                       - "merge"
                       - "chevronsUp"
+                      - "compass"
+                      - "mountain"
+                      - "users"
                   - { label: "Title", name: "title", widget: "string" }
               - label: "Buttons"
                 name: "buttons"
@@ -1973,6 +2122,13 @@ collections:
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Href", name: "href", widget: "string", required: false }
+              - label: "Read More"
+                name: "readMore"
+                widget: object
+                required: false
+                fields:
+                  - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Href", name: "href", widget: "string", required: false }
           - label: "Testimonials"
             name: "testimonials"
@@ -2055,6 +2211,13 @@ collections:
                           - { label: "Company", name: "company", widget: "string", required: false }
                           - { label: "Avatar", name: "avatar", widget: "image", required: false }
                           - { label: "Rating", name: "rating", widget: "number", required: false }
+              - label: "Read More"
+                name: "readMore"
+                widget: object
+                required: false
+                fields:
+                  - { label: "Title", name: "title", widget: "string", required: false }
+                  - { label: "Href", name: "href", widget: "string", required: false }
           - label: "Call To Action"
             name: "callToAction"
             widget: object

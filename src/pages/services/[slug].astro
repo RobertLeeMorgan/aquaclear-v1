@@ -39,8 +39,6 @@ export async function getStaticPaths() {
 
 const { entry, relatedCaseStudiesItems } = Astro.props;
 
-console.log(relatedCaseStudiesItems)
-
 const schema = [
   serviceSchema({
     name: entry.data.seo.title,

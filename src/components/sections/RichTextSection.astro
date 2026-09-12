@@ -22,7 +22,8 @@ interface Props extends RichTextSection {
   layout?: "two-column" | "three-column";
 
   dark?: boolean;
-  secondary?: boolean
+  secondary?: boolean;
+  decoration?: boolean
 }
 
 const props = Astro.props as Props;
@@ -30,9 +31,7 @@ const props = Astro.props as Props;
 ---
 
 <Section id={props.title} dark={props.dark} secondary={props.secondary}>
-  {props.layout === "three-column" && 
-    <PlantGroup class="decorative -bottom-2 left-[4%] w-68 text-dark/10" />
-  }
+  
   <Container>
     {props.editorial &&
       <SectionHeader
@@ -41,5 +40,17 @@ const props = Astro.props as Props;
       />
     }
     <RichText {...props}/>
+    {props.decoration && 
+    <PlantGroup
+      class:list={[
+        "decorative -bottom-2 left-[4%] w-68",
+        props.dark
+          ? "text-surface/10"
+          : props.secondary
+            ? "text-dark/10"
+            : "text-surface-alt",
+      ]}
+    />
+  }
   </Container>
 </Section>

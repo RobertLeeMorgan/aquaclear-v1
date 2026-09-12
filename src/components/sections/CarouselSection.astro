@@ -5,7 +5,7 @@ import SectionHeader from "../content/SectionHeader.astro";
 import Carousel from "../content/carousel/Carousel.astro";
 import Link from "../actions/Link.astro";
 import type { CarouselSection } from "../../lib/types";
-import FlockBirds from "../../assets/images/svg/flockBirds.svg"
+import WaterPlant from "../../assets/images/svg/WaterPlant.svg"
 
 interface Props extends CarouselSection {
   readMore?: {
@@ -29,7 +29,7 @@ const {
 ---
 
 <Section id={title} dark={dark} secondary={secondary}>
-  <FlockBirds class={`decorative top-10 -right-[2%] w-100 ${dark ? "text-surface/10" : "text-dark/10"}`} />
+  <WaterPlant class={`decorative top-12 right-[2%] w-35 sm:w-50 ${dark ? "text-surface/10" : "text-dark/10"}`} />
     <Container>
         <SectionHeader
             eyebrow={eyebrow}
@@ -40,7 +40,9 @@ const {
 
         <Carousel carousel={items} dark={dark}/>
         {readMore && (
+          <div class="mt-4">
             <Link href={readMore.href} title={readMore.title}  />
+          </div>
         )}
     </Container>
 </Section>

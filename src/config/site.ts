@@ -1,7 +1,7 @@
 export const site = {
   name: "Aquaclear Water Management",
   url: "https://www.aquaclearwatermanagement.com/",
-  email: "nfo@aquaclearwatermanagement.com",
+  email: "info@aquaclearwatermanagement.com",
   mobile: "07814 741491",
   phone: "01646 641560",
   street: "16 Angle Village",

@@ -134,6 +134,11 @@ export interface MediaBeforeAfterType {
   afterAlt: string;
 }
 
+export interface ReadMoreType {
+  title?: string;
+  href?: string;
+}
+
 export type VideoUnion =
   | ({ provider: "youtube" } & VideoYoutubeType)
   | ({ provider: "vimeo" } & VideoVimeoType)
@@ -214,6 +219,9 @@ export type IconEnum =
   | "shieldCheck"
   | "merge"
   | "chevronsUp"
+  | "compass"
+  | "mountain"
+  | "users"
 
 export type ResponsiveProfileEnum =
   | "large"
@@ -253,6 +261,7 @@ export interface RichTextSection {
   content: string;
   media?: MediaUnion;
   buttons?: ButtonType[];
+  readMore?: ReadMoreType;
 }
 
 export interface RichTextSectionsSection {
@@ -260,6 +269,7 @@ export interface RichTextSectionsSection {
   title?: string;
   description?: string;
   items: RichTextType[];
+  readMore?: ReadMoreType;
 }
 
 export interface ContactFormSection {
@@ -273,6 +283,7 @@ export interface CardsSection {
   title?: string;
   description?: string;
   items: CardType[];
+  readMore?: ReadMoreType;
 }
 
 export interface CarouselSection {
@@ -280,6 +291,7 @@ export interface CarouselSection {
   title?: string;
   description?: string;
   items: CarouselUnion;
+  readMore?: ReadMoreType;
 }
 
 export interface IconListSection {
@@ -290,6 +302,7 @@ export interface IconListSection {
   alt?: string;
   items: IconType[];
   buttons?: ButtonType[];
+  readMore?: ReadMoreType;
 }
 
 export interface AccordionSection {

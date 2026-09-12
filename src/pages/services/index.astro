@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import ServicesIndexLayout from "../../layouts/ServicesIndexLayout.astro";
 import { getEntry, getCollection } from "astro:content";
 import { collectionSchema } from "../../lib/schema";
+import { sortServices } from "../../lib/services";
 
 const entry = await getEntry("servicesIndex", "servicesindex");
 
@@ -10,7 +11,7 @@ if (!entry) {
   throw new Error("Services Index content not found.");
 }
 
-const services = await getCollection("services");
+const services = sortServices(await getCollection("services"));
 
 const servicesItems = [...services.map((entry) => ({
         ...entry.data.seo,

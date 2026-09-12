@@ -6,6 +6,7 @@ import Link from "../actions/Link.astro";
 import MediaFrame from "../media/MediaFrame.astro";
 
 import type { RichTextSection, ResponsiveProfileEnum } from "../../lib/types";
+import Button from "../actions/Button.astro";
 
 interface Props extends RichTextSection {
   imagePosition?: "left" | "right";
@@ -27,6 +28,8 @@ interface Props extends RichTextSection {
     | "portrait"
     | "landscape"
     | "video";
+
+  dark?: boolean
 }
 
 const {
@@ -40,64 +43,79 @@ const {
   editorial,
   wide = false,
   layout = "two-column",
-  ratio
+  ratio,
+  dark = false,
+  buttons
 } = Astro.props as Props;
 ---
 
 {layout === "two-column" ? (
-<TwoColumns reverse={imagePosition === "left"} wide={wide} >
-  <div class="flex flex-col justify-center">
-    {!editorial && title &&
-      <SectionHeader
-        eyebrow={eyebrow}
-        title={title}
-      />
-    }
-    <div class="prose prose-neutral mt-xl max-w-none whitespace-pre-line">
-      <Fragment set:html={content} />
+  <TwoColumns reverse={imagePosition === "left"} wide={wide} >
+    <div class="flex flex-col justify-center">
+      {!editorial && title &&
+        <SectionHeader
+          eyebrow={eyebrow}
+          title={title}
+          dark={dark}
+        />
+      }
+      <div class={`prose prose-neutral max-w-none whitespace-pre-line ${title && "mt-xl"} ${dark && "text-inverse-muted"}`}>
+        <Fragment set:html={content} />
+      </div>
+
+      
+
+      {(buttons || readMore) && (
+            <div class="mt-8">
+              {buttons?.map((button: any, index: number) => (
+                <Button
+                  {...button}
+                  variant={index === 1 ? "dark" : "primary"}
+                />
+              ))}
+
+              {readMore && (
+                <Link
+                  href={readMore.href}
+                  title={readMore.title}
+                />
+              )}
+            </div>
+          )}
     </div>
 
-    {readMore && (
-        <div class="mt-md"> 
-          <Link href={readMore.href} title={readMore.title} className="text-lg" />
-        </div>
+    {media && (
+      <MediaFrame
+        media={media}
+        responsive={responsive}
+        ratio={ratio}
+        class="section-img"
+      />
     )}
-  </div>
-
-  {media && (
-    <MediaFrame
-      media={media}
-      responsive={responsive}
-      ratio={ratio}
-      class="section-img"
-    />
-  )}
-</TwoColumns> 
-) : (
-<ThreeColumns>
-  <div>
+  </TwoColumns> 
+  ) : (
+  <ThreeColumns>
     {eyebrow && title && (
       <SectionHeader
         eyebrow={eyebrow}
         title={title}
       />
     )}
-  </div>
 
-  <div class="prose prose-neutral max-w-none whitespace-pre-line">
-    <Fragment set:html={content} />
+    <div class="prose prose-neutral max-w-none whitespace-pre-line">
+      <Fragment set:html={content} />
 
-    {readMore && (
-      <Link href={readMore.href} title={readMore.title} />
+      {readMore && (
+        <Link href={readMore.href} title={readMore.title} />
+      )}
+    </div>
+
+    {media && (
+      <MediaFrame
+        media={media}
+        responsive={responsive}
+        class="section-img"
+      />
     )}
-  </div>
-
-  {media && (
-    <MediaFrame
-      media={media}
-      responsive={responsive}
-      class="section-img"
-    />
-  )}
-</ThreeColumns>
+  </ThreeColumns>
 )}

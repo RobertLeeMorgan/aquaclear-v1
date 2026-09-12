@@ -35,24 +35,6 @@ overview:
         title: Poor water quality and foul odours
       - icon: leaf
         title: Increased aquatic vegetation
-  - type: cards
-    eyebrow: Specialist Equipment
-    title: Dredging & Silt Removal
-    description: |
-      The Truxor provides an amphibious platform for accessing difficult areas, while specialist attachments allow us to remove different types of sediment and heavier material with minimal disturbance to the surrounding site.
-    items:
-      - title: Truxor T50
-        description: |
-          The Truxor amphibious harvester provides a stable, low-impact platform for dredging and silt removal in areas where conventional machinery may have difficulty accessing the water.
-        image: ../../assets/images/truxor/truxor.webp
-      - title: Doro Pump
-        description: |
-          The Doro Pump allows large quantities of silt to be pumped from difficult-to-access areas into designated containment areas up to 300 metres away, providing flexibility where direct access for conventional equipment is limited.
-        image: ../../assets/images/truxor/doroPump.webp
-      - title: Grab Bucket
-        description: |
-          The grab bucket can dredge silt and heavier material from the bottom of a watercourse and transport it to a nearby bank or designated area. It is particularly useful when working on stone or gravel beds.
-        image: ../../assets/images/truxor/grabbucket.webp
   - type: richTextSections
     eyebrow: How We Manage Removed Silt
     title: Silt Containment & Dewatering
@@ -85,8 +67,29 @@ overview:
           type: image
           src: ../../assets/images/services/siltbunds.webp
           alt: Soil bund used for silt containment
+  - type: cards
+    eyebrow: Specialist Equipment
+    title: Dredging & Silt Removal
+    description: |
+      The Truxor provides an amphibious platform for accessing difficult areas, while specialist attachments allow us to remove different types of sediment and heavier material with minimal disturbance to the surrounding site.
+    items:
+      - title: Truxor T50
+        description: |
+          The Truxor amphibious harvester provides a stable, low-impact platform for dredging and silt removal in areas where conventional machinery may have difficulty accessing the water.
+        image: ../../assets/images/truxor/truxor.webp
+      - title: Doro Pump
+        description: |
+          The Doro Pump allows large quantities of silt to be pumped from difficult-to-access areas into designated containment areas up to 300 metres away, providing flexibility where direct access for conventional equipment is limited.
+        image: ../../assets/images/truxor/doroPump.webp
+      - title: Grab Bucket
+        description: |
+          The grab bucket can dredge silt and heavier material from the bottom of a watercourse and transport it to a nearby bank or designated area. It is particularly useful when working on stone or gravel beds.
+        image: ../../assets/images/truxor/grabbucket.webp
+    readMore:
+      title: Read More About Truxor
+      href: /truxor
 callToAction:
-  eyebrow: ''
+  eyebrow: Discuss Your Requirements
   title: Need Help with Silt Removal?
   description: Contact us to discuss your silt removal or dredging requirements and find the right approach for your site.
   buttons:

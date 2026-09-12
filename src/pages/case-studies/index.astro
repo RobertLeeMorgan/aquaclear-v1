@@ -12,23 +12,28 @@ if (!entry) {
 
 const caseStudies = await getCollection("caseStudies");
 
-const caseStudiesItems = [...caseStudies.map((entry) => ({
-        ...entry.data.seo,
-        href: `/case-studies/${entry.id}`,
-      })).flatMap((item) => [{title: item.title, description: item.description, image: item.image, href: item.href }
-    ])];
+const caseStudiesItems = caseStudies.map((entry) => ({
+  ...entry.data.seo,
+  href: `/case-studies/${entry.id}`,
+  services: entry.data.metadata.services,
+}));
 
 const schema = [
   collectionSchema({
-        name: entry.data.seo.title,
-        description: entry.data.seo.description,
-        image: entry.data.seo.image?.src,
-        url: Astro.url.pathname,
-      }),
+    name: entry.data.seo.title,
+    description: entry.data.seo.description,
+    image: entry.data.seo.image?.src,
+    url: Astro.url.pathname,
+  }),
 ];
 ---
 
-<Layout title={entry.data.seo.title} description={entry.data.seo.description} image={entry.data.seo.image} schema={schema} >
+<Layout
+  title={entry.data.seo.title}
+  description={entry.data.seo.description}
+  image={entry.data.seo.image}
+  schema={schema}
+>
   <CSIndexLayout
     data={entry.data}
     caseStudiesItems={caseStudiesItems}

@@ -1,6 +1,7 @@
 ---
 import { getNavItems } from "../../../lib/navigation";
 import Button from "../../actions/Button.astro";
+import MobileMenu from "./MobileMenu.astro";
 
 import NavBrand from "./NavBrand.astro";
 import NavDesktop from "./NavDesktop.astro";
@@ -12,7 +13,6 @@ const currentPath = Astro.url.pathname;
 
 <header class="fixed top-0 z-nav w-full nav">
   <div class="flex items-center px-md sm:px-lg lg:px-2xl py-xs">
-
     <div class="flex-1">
       <NavBrand />
     </div>
@@ -23,16 +23,17 @@ const currentPath = Astro.url.pathname;
     />
 
     <div class="flex-1 hidden lg:flex justify-end">
-      <Button href="/contact" variant="outline" size="sm" title="Free Quote"/>
+      <Button href="/contact" variant="outline" size="md" title="Free Quote" />
     </div>
 
-    <NavMobile
-      navItems={navItems}
-      currentPath={currentPath}
-    />
-
+    <NavMobile />
   </div>
 </header>
+
+<MobileMenu
+  navItems={navItems}
+  currentPath={currentPath}
+/>
 
 <script>
   import "../../../scripts/nav";

@@ -25,6 +25,7 @@ const { data, trustedExperienceItems } = Astro.props;
   content={data.aboutAquaclear.content}
   media={data.aboutAquaclear.media}
   buttons={data.aboutAquaclear.buttons}
+  readMore={data.aboutAquaclear.readMore}
 />
 
 <KeyFeatures
@@ -39,6 +40,7 @@ const { data, trustedExperienceItems } = Astro.props;
   alt={data.truxor.alt}
   items={data.truxor.items}
   buttons={data.truxor.buttons}
+  readMore={data.truxor.readMore}
 />
 
 <RichTextSection
@@ -48,6 +50,7 @@ const { data, trustedExperienceItems } = Astro.props;
   media={data.howWeWork.media}
   secondary
   layout="three-column"
+  decoration
 />
 
 <CarouselSection
@@ -55,6 +58,7 @@ const { data, trustedExperienceItems } = Astro.props;
   title="Trusted Experience"
   items={trustedExperienceItems.carousel}
   dark
+  readMore={{title: "Leading Organisations We Have Worked With", href: "/clients"}}
 />
 
 <Cta

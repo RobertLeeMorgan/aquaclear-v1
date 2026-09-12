@@ -20,7 +20,7 @@ const isActive = (item: NavItem) => {
 };
 ---
 
-<nav class="hidden lg:flex items-center gap-xl tracking-wide text-md">
+<nav class="hidden lg:flex items-center gap-xl tracking-wide text-xl">
   {navItems.map((item) => (
     <div class="group relative">
       {!item.dropdown ? (
@@ -49,13 +49,13 @@ const isActive = (item: NavItem) => {
             {item.label}
           </a>
 
-          <div class="absolute left-0 top-full hidden z-50 group-hover:block">
-            <div class="card stack-xs min-w-56 py-xs">
+          <div class="absolute left-0 top-full hidden z-50 group-hover:block ">
+            <div class="card stack-xs min-w-56 py-xs bg-surface">
               {item.dropdown.map((link) => (
                 <a
                   href={link.href}
                   class:list={[
-                    "motion px-sm py-xs hover:bg-surface",
+                    "motion px-sm py-xs hover:bg-surface text-md",
                     currentPath === link.href
                       ? "text-primary font-semibold"
                       : "text-body",

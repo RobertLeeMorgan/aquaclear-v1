@@ -22,9 +22,6 @@ truxorExpertise:
     type: image
     src: ../../assets/images/truxor/overview.jpeg
     alt: Truxor amphibious machine operating in a wetland
-  buttons:
-    - title: ''
-      href: ''
 capabilities:
   eyebrow: What the Truxor can do
   title: One machine, many applications
@@ -49,14 +46,13 @@ capabilities:
   buttons:
     - title: See Our Services
       href: /services
-  alt: ''
 aquaclearAndTruxor:
   eyebrow: Aquaclear & Truxor
   title: The right machine for the job
   content: Aquaclear Water Management are partnered with Truxor UK Ltd, the UK retailer and distributor for Truxor machines, spare parts and servicing. Our experience operating Truxor machinery gives us a detailed understanding of its capabilities and the specialist attachments available. Whether the requirement is vegetation management, reed cutting, weed removal, silt pumping or work in sensitive wetland environments, we can select the right equipment and approach for the job.
-  buttons:
-    - title: Contact Truxor UK
-      href: https://truxoruk.co.uk/contact
+  readMore:
+    title: Contact Truxor UK
+    href: https://truxoruk.co.uk/contact
   media:
     type: image
     src: ../../assets/images/truxor/collecting.jpg
@@ -68,4 +64,6 @@ callToAction:
   buttons:
     - title: Contact Us
       href: /contact
+    - title: Explore Truxor UK
+      href: https://www.truxoruk.co.uk/
 ---

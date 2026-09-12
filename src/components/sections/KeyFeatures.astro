@@ -12,11 +12,10 @@ const { items } = Astro.props as Props;
 ---
 
 <section class="bg-surface-alt shadow-2 overflow-hidden relative">
-  <Reed1 class="decorative -bottom-10 left-[4%] w-22 text-dark/15 z-0" />
-  <Plant class="decorative -bottom-10 right-[2%] w-34 text-dark/15 z-0" />
+  <Reed1 class="decorative -bottom-10 left-[4%] sm:left-[5%] w-22 text-dark/10 z-0" />
+  <Plant class="decorative -bottom-10 right-[2%] sm:right-[5%] w-34 text-dark/10 z-0" />
   <Container>
     <div class="grid grid-cols-2 lg:grid-cols-4">
-
       {items.map((item, index) => {
         const Icon = featureIconMap[item.icon] ?? Lucide.Circle;
 
@@ -29,9 +28,9 @@ const { items } = Astro.props as Props;
               index % 4 === 0 && "lg:border-l-0",
             ]}
           >
-            <div class="cluster-sm mb-sm h-xl w-xl sm:h-2xl sm:w-2xl">
+            <div class="cluster-sm mb-sm h-2xl w-2xl">
               <Icon
-                class="h-lg w-lg text-primary sm:h-xl sm:w-xl"
+                class="h-lg w-lg text-primary"
                 aria-hidden="true"
               />
             </div>
@@ -45,11 +44,9 @@ const { items } = Astro.props as Props;
                 {item.description}
               </p>
             )}
-
           </div>
         );
       })}
-
     </div>
   </Container>
 </section>

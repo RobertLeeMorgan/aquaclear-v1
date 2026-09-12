@@ -25,7 +25,7 @@ const {
 
 {description && (
   expand ? (
-    <div class="expandable-description mt-lg flex-1">
+    <div class="expandable-description mt-md sm:mt-lg flex-1">
       <div
         class:list={[
           "description prose prose-neutral max-w-none whitespace-pre-line body",
@@ -47,7 +47,7 @@ const {
   ) : (
     <div
       class:list={[
-        "prose prose-neutral max-w-none whitespace-pre-line body flex-1 mt-lg",
+        "prose prose-neutral max-w-none whitespace-pre-line body flex-1 mt-md sm:mt-lg",
         lineClamp,
       ]}
     >

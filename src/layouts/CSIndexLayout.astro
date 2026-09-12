@@ -1,13 +1,186 @@
 ---
+import Container from "../components/layout/Container.astro";
 import Cards from "../components/sections/Cards.astro";
+import Cta from "../components/sections/Cta.astro";
 import PageHeader from "../components/sections/PageHeader.astro";
 
 const { data, caseStudiesItems } = Astro.props;
-
 ---
-<PageHeader title={data.hero.title} eyebrow="Projects" description={data.hero.description}/>
+
+<PageHeader
+  title={data.hero.title}
+  eyebrow="Case Studies"
+  description={data.hero.description}
+/>
+
+<Container>
+  <nav
+    aria-label="Filter case studies"
+    class="flex flex-wrap gap-2 pt-6"
+    data-case-study-filters
+  >
+    <button
+      type="button"
+      data-filter="all"
+      class="cursor-pointer rounded-full px-4 py-2 text-sm transition bg-dark/5 text-dark hover:bg-dark/10"
+    >
+      All Projects
+    </button>
+
+    <button
+      type="button"
+      data-filter="weed"
+      class="cursor-pointer rounded-full px-4 py-2 text-sm transition bg-dark/5 text-dark hover:bg-dark/10"
+    >
+      Aquatic Weed & Vegetation
+    </button>
+
+    <button
+      type="button"
+      data-filter="reed"
+      class="cursor-pointer rounded-full px-4 py-2 text-sm transition bg-dark/5 text-dark hover:bg-dark/10"
+    >
+      Reed Beds & Bulrush
+    </button>
+
+    <button
+      type="button"
+      data-filter="silt"
+      class="cursor-pointer rounded-full px-4 py-2 text-sm transition bg-dark/5 text-dark hover:bg-dark/10"
+    >
+      Silt & Sediment
+    </button>
+
+    <button
+      type="button"
+      data-filter="excavation"
+      class="cursor-pointer rounded-full px-4 py-2 text-sm transition bg-dark/5 text-dark hover:bg-dark/10"
+    >
+      Excavation & Habitat
+    </button>
+  </nav>
+</Container>
 
 <Cards
-  title="Case Studies"
+  eyebrow="Our Work"
+  title="Projects"
+  description="See how we have helped clients tackle challenging waterway management projects across a range of sites and environments."
   items={caseStudiesItems}
+  decoration
 />
+
+<Cta
+  title="Have a waterway management project?"
+  description="Get in touch with Aquaclear to discuss your requirements and find out how our experience and specialist equipment can help."
+  buttons={[
+    { title: "Our Services", href: "/services" },
+    { title: "Contact Us", href: "/contact" },
+  ]}
+/>
+
+<script>
+  type CaseStudyFilter = "all" | "weed" | "reed" | "silt" | "excavation";
+
+  const groups: Record<Exclude<CaseStudyFilter, "all">, string[]> = {
+    weed: [
+      "weed-cutting",
+      "water-lily-management",
+      "algae-removal",
+      "invasive-species-removal",
+    ],
+    reed: [
+      "reed-bed-management",
+      "bulrush-removal",
+    ],
+    silt: [
+      "silt-pumping",
+    ],
+    excavation: [
+      "excavation-and-ditching",
+      "tree-work",
+    ],
+  };
+
+  const initCaseStudyFilters = () => {
+    const filterNav = document.querySelector("[data-case-study-filters]");
+
+    if (!filterNav) {
+      return;
+    }
+
+    const cards = Array.from(
+      document.querySelectorAll("[data-case-study-card]"),
+    ) as HTMLElement[];
+
+    const buttons = Array.from(
+      filterNav.querySelectorAll("[data-filter]"),
+    ) as HTMLElement[];
+
+    const applyFilter = (filter: CaseStudyFilter) => {
+      cards.forEach((card) => {
+        const services = JSON.parse(
+          card.dataset.services || "[]",
+        ) as string[];
+
+        const activeGroup =
+          filter !== "all" ? groups[filter] : undefined;
+
+        const visible =
+          filter === "all" ||
+          activeGroup?.some((service) => services.includes(service));
+
+        card.style.display = visible ? "" : "none";
+      });
+
+      buttons.forEach((button) => {
+        const active = button.dataset.filter === filter;
+
+        button.classList.toggle("bg-dark", active);
+        button.classList.toggle("text-white", active);
+        button.classList.toggle("bg-dark/5", !active);
+        button.classList.toggle("text-dark", !active);
+        button.classList.toggle("hover:bg-dark/10", !active);
+      });
+    };
+
+    const getFilterFromUrl = (): CaseStudyFilter => {
+      const filter = new URLSearchParams(window.location.search).get("filter");
+
+      return filter &&
+        (filter === "all" ||
+          Object.prototype.hasOwnProperty.call(groups, filter))
+        ? (filter as CaseStudyFilter)
+        : "all";
+    };
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.dataset.filter as CaseStudyFilter | undefined;
+
+        if (!filter) {
+          return;
+        }
+
+        const url = new URL(window.location.href);
+
+        if (filter === "all") {
+          url.searchParams.delete("filter");
+        } else {
+          url.searchParams.set("filter", filter);
+        }
+
+        window.history.pushState({}, "", url);
+
+        applyFilter(filter);
+      });
+    });
+
+    window.addEventListener("popstate", () => {
+      applyFilter(getFilterFromUrl());
+    });
+
+    applyFilter(getFilterFromUrl());
+  };
+
+  document.addEventListener("astro:page-load", initCaseStudyFilters);
+</script>

@@ -24,6 +24,7 @@ const { data } = Astro.props;
   items={data.trustedBy.items}
   buttons={data.trustedBy.buttons}
   listStyle="client"
+  readMore={data.trustedBy.readMore}
 />
 
 <Banner/>
@@ -34,6 +35,7 @@ const { data } = Astro.props;
   description={data.testimonials.description}
   items={data.testimonials.items}
   dark
+  readMore={data.testimonials.readMore}
 />
 
 <Cta

@@ -47,10 +47,6 @@ trustedBy:
       icon: landPlot
     - title: Gleneagles Golf Club
       icon: trophy
-  alt: ''
-  buttons:
-    - title: ''
-      href: ''
 testimonials:
   eyebrow: What Our Clients Say
   title: Trusted by the People We Work With
@@ -81,12 +77,6 @@ testimonials:
         role: Site Manager
         company: Ham Wall Nature Reserve, Somerset
         avatar: ../../assets/images/hero/placeholder.jpeg
-    card:
-      - eyebrow: ''
-        title: ''
-        description: ''
-        image: ../../assets/images/hero/placeholder.jpeg
-        href: ''
 callToAction:
   eyebrow: Have a Waterway to Manage?
   title: Talk to Aquaclear About Your Project
