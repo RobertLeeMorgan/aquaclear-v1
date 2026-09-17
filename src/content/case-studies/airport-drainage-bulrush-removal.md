@@ -13,6 +13,8 @@ metadata:
   date: 18th June, 2024
   services:
     - bulrush-removal
+  sites:
+    - suds-reservoirs
   summary: Bulrush removal from airport drainage infrastructure to maintain clear channels and effective water flow.
 
 overview:
@@ -22,6 +24,7 @@ overview:
         Dense bulrush growth had established itself within the airport's drainage system, restricting the available water channel and reducing the effectiveness of the drainage infrastructure.
 
         Aquaclear removed the established bulrush to clear the drainage channel and restore unobstructed water flow. The work helped maintain the capacity and functionality of the drainage system while preventing dense vegetation from becoming an ongoing obstruction.
+      gallery: true
       media:
         type: beforeAfter
         before: ../../assets/images/before/airport.jpg

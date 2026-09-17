@@ -1,57 +1,125 @@
 ---
-import MediaRenderer from "../media/MediaRenderer.astro";
+import MediaFrame from "../media/MediaFrame.astro";
+import Link from "../actions/Link.astro";
 
-import type { MediaUnion, ResponsiveProfileEnum } from "../../lib/types";
+
+import type {
+  ResponsiveProfileEnum
+} from "../../lib/types";
 
 interface Props {
-  media: MediaUnion[];
-
+  items: any;
   responsive?: ResponsiveProfileEnum;
-
-  layout?: "auto" | "landscape" | "portrait" | "square";
-
-  gallery?: string;
 }
 
-const {
-  media,
-  layout = "auto",
-  gallery = crypto.randomUUID(),
-  responsive
-} = Astro.props as Props;
+const { items, responsive } = Astro.props as Props;
 
-function getOrientation(item: MediaUnion) {
-  if (layout !== "auto") {
-    return layout;
-  }
+const siteLabels: Record<string, string> = {
+  "nature-reserves-sssi": "Nature Reserves & SSSI Sites",
+  "castles-heritage-sites": "Castles & Heritage Sites",
+  "canals-rivers": "Canals & Rivers",
+  "fisheries": "Fisheries",
+  "suds-reservoirs": "SuDS & Reservoirs",
+  "golf-courses": "Golf Courses",
+  "leisure-waterways-marinas": "Leisure Waterways & Marinas",
+  "public-private-lakes-ponds": "Public / Private Lakes & Ponds",
+};
 
-  switch (item.type) {
-    case "image":
-      if (item.src.width === item.src.height) {
-        return "square";
-      }
+const serviceGroups: Record<string, {
+  label: string;
+  filter: string;
+}> = {
+  "weed-cutting": {
+    label: "Aquatic Weed Cutting",
+    filter: "weed",
+  },
+  "bulrush-removal": {
+    label: "Bulrush Removal",
+    filter: "reed",
+  },
+  "invasive-species-removal": {
+    label: "Invasive Species Removal",
+    filter: "weed",
+  },
+  "blanket-weed-removal": {
+    label: "Algae Removal",
+    filter: "weed",
+  },
+  "water-lily-management": {
+    label: "Water Lily Management",
+    filter: "weed",
+  },
+  "reed-bed-management": {
+    label: "Reed Beds Management",
+    filter: "reed",
+  },
+  "trash-and-debris-removal": {
+    label: "Trash & Debris",
+    filter: "debris",
+  },
+  "tree-work": {
+    label: "Tree Work",
+    filter: "excavation",
+  },
+  "silt-pumping": {
+    label: "Silt & Sediment",
+    filter: "silt",
+  },
+  "excavation-and-ditching": {
+    label: "Excavation & Habitat",
+    filter: "excavation",
+  },
+};
 
-      return item.src.width > item.src.height
-        ? "landscape"
-        : "portrait";
-
-    case "video":
-    case "beforeAfter":
-      return "landscape";
-  }
+function getServiceGroups(services: string[]) {
+  return [
+    ...new Map(
+      services
+        .map((service) => serviceGroups[service])
+        .filter(Boolean)
+        .map((group) => [group.filter, group])
+    ).values(),
+  ];
 }
 ---
 
-<div class={`gallery gallery-${media.length}`}>
-  {media.map((item) => (
-    <div
-      class={`gallery-item gallery-${getOrientation(item)}`}
-    >
-      <MediaRenderer
-        media={item}
-        gallery={gallery}
+<div class="grid grid-cols-1 gap-lg md:grid-cols-2">
+  {items.map((item: any) => (
+    <article data-gallery-item data-services={JSON.stringify(item.metadata.services)} data-sites={JSON.stringify(item.metadata.sites)}>
+      <MediaFrame
+        media={item.media}
+        class="section-img"
+        ratio="landscape"
         responsive={responsive}
       />
-    </div>
+
+      <div class="mt-4">
+        <p class="eyebrow">
+          {item.metadata.sites
+            .map((site: string) => siteLabels[site] ?? site)
+            .join(" · ")}
+        </p>
+
+        <div class="body mt-1">
+          {getServiceGroups(item.metadata.services).map((group, index) => (
+            <>
+              {index > 0 && " · "}
+              <a href={`/case-studies?filter=${group.filter}`}>
+                {group.label}
+              </a>
+            </>
+          ))}
+        </div>
+
+        <p class="caption mt-2">
+          {item.metadata.location} · {item.metadata.date}
+        </p>
+
+     {item.href && (
+        <Link href={item.href} title="View Case Study" className="text-md mt-xs"/>
+      )}
+      </div>
+    </article>
   ))}
 </div>
+

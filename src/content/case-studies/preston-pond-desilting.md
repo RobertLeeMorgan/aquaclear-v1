@@ -11,6 +11,8 @@ metadata:
   date: 5th September, 2025
   services:
     - silt-pumping
+  sites:
+    - public-private-lakes-ponds
   summary: Private pond desilting using a silt pump and temporary geotextile barrier to contain and dewater the removed material.
 overview:
   items:

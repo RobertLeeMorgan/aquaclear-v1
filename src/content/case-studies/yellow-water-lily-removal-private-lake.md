@@ -11,6 +11,8 @@ metadata:
   date: 18th November, 2025
   services:
     - water-lily-management
+  sites:
+    - leisure-waterways-marinas
   summary: Targeted removal of yellow water lily from a private lake to reduce dense aquatic growth and restore open water.
 overview:
   items:
@@ -21,6 +23,7 @@ overview:
         Targeted removal was carried out to reduce the extent of the established growth and reopen areas of the lake. This helped restore a better balance between aquatic vegetation and open water while improving the appearance and usability of the lake.
 
         Ongoing management can help prevent the plants from becoming overly dominant and maintain a healthier balance across the waterbody.
+      gallery: true
       media:
         type: beforeAfter
         before: ../../assets/images/before/lilies3.jpg

@@ -1,0 +1,69 @@
+---
+import Layout from "../layouts/Layout.astro";
+import GalleryLayout from "../layouts/GalleryLayout.astro";
+import { getCollection, getEntry } from "astro:content";
+import { collectionSchema } from "../lib/schema";
+
+const entry = await getEntry("gallery", "gallery");
+
+if (!entry) {
+  throw new Error("Gallery content not found.");
+}
+
+const caseStudies = await getCollection("caseStudies");
+
+const parseDate = (date: string) =>
+  new Date(
+    date.replace(/(\d+)(st|nd|rd|th)/, "$1")
+  ).getTime();
+
+const galleryItems = [
+  ...entry.data.items.map((item) => ({
+    ...item,
+    href: undefined,
+  })),
+
+  ...caseStudies.flatMap((caseStudy) =>
+    caseStudy.data.overview.items
+      .filter((item) => item.gallery && item.media)
+      .map((item) => ({
+        metadata: {
+          client: caseStudy.data.metadata.client,
+          location: caseStudy.data.metadata.location,
+          date: caseStudy.data.metadata.date,
+          services: caseStudy.data.metadata.services,
+          sites: caseStudy.data.metadata.sites,
+        },
+        media: item.media,
+        href: `/case-studies/${caseStudy.id}`,
+      }))
+  ),
+].sort(
+  (a, b) =>
+    parseDate(b.metadata.date) -
+    parseDate(a.metadata.date)
+);
+
+const galleryData = {
+  ...entry.data,
+  items: galleryItems,
+};
+
+const schema = [
+  collectionSchema({
+    name: entry.data.seo.title,
+    description: entry.data.seo.description,
+    image: entry.data.seo.image?.src,
+    url: Astro.url.pathname,
+  }),
+];
+---
+
+<Layout
+  title={entry.data.seo.title}
+  description={entry.data.seo.description}
+  image={entry.data.seo.image}
+  schema={schema}
+>
+  <GalleryLayout data={galleryData} />
+</Layout>

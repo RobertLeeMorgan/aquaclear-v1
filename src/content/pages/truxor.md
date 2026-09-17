@@ -55,7 +55,7 @@ aquaclearAndTruxor:
     href: https://truxoruk.co.uk/contact
   media:
     type: image
-    src: ../../assets/images/truxor/collecting.jpg
+    src: ../../assets/images/truxor/action.jpg
     alt: Aquaclear using a Truxor amphibious machine
 callToAction:
   eyebrow: Need Specialist Equipment?

@@ -11,6 +11,8 @@ metadata:
   date: 14th October, 2025
   services:
     - reed-bed-management
+  sites:
+    - nature-reserves-sssi
   summary: Reed clearance and excavation work to create open wading pools within an established reed bed, improving wetland habitat and encouraging wading birds.
 overview:
   items:
@@ -43,8 +45,9 @@ overview:
         These different habitats provide opportunities for a wider range of wildlife while maintaining the character and ecological value of the existing reed bed.
 
         The project demonstrates how targeted reed management and small-scale excavation can be used to improve the diversity and functionality of established wetland habitats.
+      gallery: true
       media:
         type: image
-        src: ../../assets/images/projects/reed3.webp
+        src: ../../assets/images/projects/reed4.webp
         alt: Completed wading pools creating open water within the National Trust reed bed
 ---

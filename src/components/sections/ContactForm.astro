@@ -4,123 +4,210 @@ import Container from "../layout/Container.astro";
 import Button from "../actions/Button.astro";
 import type { ContactFormSection } from "../../lib/types";
 
+import facebook from "../../assets/images/logos/facebook.png";
+import twitter from "../../assets/images/logos/twitter.png";
+
+import { site } from "../../config/site";
+
 interface Props extends ContactFormSection {}
 
 const {
-  eyebrow,
   title,
-  description,
 } = Astro.props as Props;
+---
 ---
 
 <Section id={title}>
   <Container>
-    <form
-      class="contact-form"
-      method="POST"
-      action="/api/contact"
-    >
-      <div class="field">
-        <label class="label" for="name">
-          Full Name
-        </label>
+    <div class="grid grid-cols-1 items-stretch gap-12 lg:grid-cols-[2fr_1fr]">
+      <form
+        class="contact-form"
+        method="POST"
+        action="/api/contact"
+      >
+        <div class="field">
+          <label class="label" for="name">
+            Full Name
+          </label>
 
-        <input
-          id="name"
-          class="input"
-          type="text"
-          name="name"
-          minlength="2"
-          maxlength="100"
-          required
-        />
-      </div>
-
-      <div class="field">
-        <label class="label" for="email">
-          Email
-        </label>
-
-        <input
-          id="email"
-          class="input"
-          type="email"
-          name="email"
-          minlength="6"
-          maxlength="100"
-          required
-        />
-      </div>
-
-      <div class="field">
-        <label class="label" for="phone">
-          Telephone
-        </label>
-
-        <input
-          id="phone"
-          class="input"
-          type="tel"
-          name="phone"
-          minlength="8"
-          maxlength="20"
-        />
-      </div>
-
-      <div class="field">
-        <label class="label" for="source">
-          How did you find us?
-        </label>
-
-        <select
-          id="source"
-          name="source"
-          class="select"
-        >
-          <option value="">Please Select</option>
-          <option>Google</option>
-          <option>Social Media</option>
-          <option>AI</option>
-          <option>Referral</option>
-          <option>Other</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label class="label" for="message">
-          Message
-        </label>
-
-        <textarea
-          id="message"
-          class="textarea"
-          name="message"
-          rows="7"
-          minlength="10"
-          maxlength="2000"
-          required
-        ></textarea>
-      </div>
-
-      {import.meta.env.PUBLIC_ENVIRONMENT === "production" && (
-        <>
-          <script
-            src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-            async
-            defer
-          ></script>
-
-          <div
-            class="cf-turnstile"
-            data-sitekey={import.meta.env.DATA_SITEKEY}
+          <input
+            id="name"
+            class="input"
+            type="text"
+            name="name"
+            minlength="2"
+            maxlength="100"
+            required
           />
-        </>
-      )}
-      <div class="justify-center flex">
-        <Button variant="primary" type="submit" title="Send Message" />
-      </div>
-    </form>
-  </Container>
+        </div>
+
+        <div class="field">
+          <label class="label" for="email">
+            Email
+          </label>
+
+          <input
+            id="email"
+            class="input"
+            type="email"
+            name="email"
+            minlength="6"
+            maxlength="100"
+            required
+          />
+        </div>
+
+        <div class="field">
+          <label class="label" for="phone">
+            Telephone
+          </label>
+
+          <input
+            id="phone"
+            class="input"
+            type="tel"
+            name="phone"
+            minlength="8"
+            maxlength="20"
+          />
+        </div>
+
+        <div class="field">
+          <label class="label" for="source">
+            How did you find us?
+          </label>
+
+          <select
+            id="source"
+            name="source"
+            class="select"
+          >
+            <option value="">Please Select</option>
+            <option>Google</option>
+            <option>Social Media</option>
+            <option>AI</option>
+            <option>Referral</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label class="label" for="message">
+            Message
+          </label>
+
+          <textarea
+            id="message"
+            class="textarea"
+            name="message"
+            rows="7"
+            minlength="10"
+            maxlength="2000"
+            required
+          ></textarea>
+        </div>
+
+        {import.meta.env.PUBLIC_ENVIRONMENT === "production" && (
+          <>
+            <script
+              src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+              async
+              defer
+            ></script>
+
+            <div
+              class="cf-turnstile"
+              data-sitekey={import.meta.env.DATA_SITEKEY}
+            />
+          </>
+        )}
+        <div class="justify-center flex">
+          <Button variant="primary" type="submit" title="Send Message" />
+        </div>
+      </form>
+
+      <aside class="space-y-4">
+        <div class="card card-hover bg-card p-6 space-y-8">
+          <img
+            src="/logo.svg"
+            alt="Aquaclear logo"
+            class="w-full max-h-26"
+          />
+
+          <div>
+            <h3 class="font-semibold text-heading">
+              Call us
+            </h3>
+
+            <div class="mt-2 space-y-1 text-soft">
+              <p>Mobile: {site.mobile}</p>
+              <p>Office: {site.phone}</p>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="font-semibold text-heading">
+              Email
+            </h3>
+
+            <a
+              href={`mailto:${site.email}`}
+              class="mt-2 block text-primary hover:underline"
+            >
+              {site.email}
+            </a>
+          </div>
+
+          <div>
+            <h3 class="font-semibold text-heading">
+              Location
+            </h3>
+
+            <address class="mt-2 not-italic leading-relaxed text-soft">
+              Cardiff<br />
+              UK
+            </address>
+
+            <p class="mt-2 not-italic leading-relaxed text-soft">Full address available on request</p>
+          </div>
+
+          <div>
+            <h3 class="font-semibold text-heading">
+              Follow us
+            </h3>
+
+            <div class="mt-md flex items-center gap-lg">
+              <a
+                href={site.social.x}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X"
+              >
+                <img
+                  src={twitter.src}
+                  alt="X logo"
+                  class="icon-lg"
+                />
+              </a>
+
+              <a
+                href={site.social.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <img
+                  src={facebook.src}
+                  alt="Facebook Logo"
+                  class="icon-lg"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    </Container>
 </Section>
 
 <script>

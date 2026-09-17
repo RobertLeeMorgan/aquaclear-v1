@@ -10,10 +10,6 @@ if (!entry) {
   throw new Error("Contact content not found.");
 }
 
-
-
-
-
 const schema = [
   contactSchema({
         name: entry.data.seo.title,
@@ -22,6 +18,8 @@ const schema = [
         url: Astro.url.pathname,
       }),
 ];
+
+console.log(entry.data)
 ---
 
 <Layout title={entry.data.seo.title} description={entry.data.seo.description} image={entry.data.seo.image} schema={schema} >

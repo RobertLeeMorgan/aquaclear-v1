@@ -13,6 +13,8 @@ metadata:
   date: 14th January, 2024
   services:
     - weed-cutting
+  sites:
+    - golf-courses
   summary: Extensive removal of broadleaf aquatic weed from a golf course pond and lake, restoring open water and helping control future regrowth.
 
 overview:
@@ -22,7 +24,7 @@ overview:
         Extensive broadleaf aquatic weed growth had spread across areas of the pond and lake, reducing the amount of visible open water and affecting the appearance of the course's water features.
 
         Aquaclear carried out extensive clearance to remove the established growth and reopen affected areas. Where appropriate, the work extended beyond surface clearance to include the removal of roots and rhizomes, helping address the underlying growth and reduce the potential for rapid regrowth.
-
+      gallery: true
       media:
         type: beforeAfter
         before: ../../assets/images/before/golf.jpg
@@ -35,7 +37,7 @@ overview:
         The clearance works restored substantial areas of open water across both waterbodies, transforming heavily vegetated sections into cleaner and more manageable pond and lake environments.
 
         By combining large-scale vegetation removal with root and rhizome clearance where suitable, Aquaclear helped bring the aquatic growth back under control while improving the appearance and long-term management of these important features within the golf course landscape.
-
+      gallery: true
       media:
         type: beforeAfter
         before: ../../assets/images/before/featured3.jpg

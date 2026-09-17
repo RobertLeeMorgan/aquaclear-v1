@@ -11,6 +11,8 @@ metadata:
   date: 10th October, 2025
   services:
     - silt-pumping
+  sites:
+    - public-private-lakes-ponds
   summary: Grab bucket desilting works to remove accumulated silt and improve the appearance of a public pond.
 overview:
   items:
@@ -21,6 +23,7 @@ overview:
         The desilting works were carried out alongside other maintenance works within the pond, allowing several areas of accumulated material to be cleared efficiently.
 
         Removing the built-up silt improved the appearance of the pond and helped restore a cleaner, more open waterbody for the surrounding area.
+      gallery: true
       media:
         type: beforeAfter
         before: ../../assets/images/projects/valleys1.webp

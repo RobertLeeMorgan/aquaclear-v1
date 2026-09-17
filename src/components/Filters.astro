@@ -1,0 +1,103 @@
+---
+import Container from "./layout/Container.astro";
+
+interface Props {
+  type: "gallery" | "case-study";
+}
+
+const { type } = Astro.props;
+---
+
+<Container>
+<nav
+  aria-label="Filter gallery"
+  class="flex flex-col gap-lg pt-md"
+  data-filter-nav={type}
+>
+    <div class="flex flex-wrap gap-md">
+      <button
+        type="button"
+        data-service-filter="all"
+        class="cursor-pointer rounded-full px-4 py-2 text-sm transition bg-dark text-white"
+      >
+        All
+      </button>
+
+      <button
+        type="button"
+        data-service-filter="weed"
+        class="cursor-pointer rounded-full px-4 py-2 text-sm transition bg-dark/5 text-dark hover:bg-dark/10"
+      >
+        Aquatic Weed & Vegetation
+      </button>
+
+      <button
+        type="button"
+        data-service-filter="reed"
+        class="cursor-pointer rounded-full px-4 py-2 text-sm transition bg-dark/5 text-dark hover:bg-dark/10"
+      >
+        Reed Beds & Bulrush
+      </button>
+
+      <button
+        type="button"
+        data-service-filter="silt"
+        class="cursor-pointer rounded-full px-4 py-2 text-sm transition bg-dark/5 text-dark hover:bg-dark/10"
+      >
+        Silt & Sediment
+      </button>
+
+      <button
+        type="button"
+        data-service-filter="excavation"
+        class="cursor-pointer rounded-full px-4 py-2 text-sm transition bg-dark/5 text-dark hover:bg-dark/10"
+      >
+        Excavation & Habitat
+      </button>
+    </div>
+
+    <!-- <div class="flex flex-wrap gap-2">
+      <span class="eyebrow self-center mr-2">Sites</span>
+
+      <button
+        type="button"
+        data-site-filter="all"
+        class="cursor-pointer rounded-full px-4 py-2 text-sm transition bg-dark text-white"
+      >
+        All
+      </button>
+
+      <button type="button" data-site-filter="nature-reserves-sssi" class="cursor-pointer rounded-full px-4 py-2 text-sm transition bg-dark/5 text-dark hover:bg-dark/10">
+        Nature Reserves & SSSI
+      </button>
+
+      <button type="button" data-site-filter="castles-heritage-sites" class="cursor-pointer rounded-full px-4 py-2 text-sm transition bg-dark/5 text-dark hover:bg-dark/10">
+        Castles & Heritage
+      </button>
+
+      <button type="button" data-site-filter="canals-rivers" class="cursor-pointer rounded-full px-4 py-2 text-sm transition bg-dark/5 text-dark hover:bg-dark/10">
+        Canals & Rivers
+      </button>
+
+      <button type="button" data-site-filter="fisheries" class="cursor-pointer rounded-full px-4 py-2 text-sm transition bg-dark/5 text-dark hover:bg-dark/10">
+        Fisheries
+      </button>
+
+      <button type="button" data-site-filter="suds-reservoirs" class="cursor-pointer rounded-full px-4 py-2 text-sm transition bg-dark/5 text-dark hover:bg-dark/10">
+        SuDS & Reservoirs
+      </button>
+
+      <button type="button" data-site-filter="golf-courses" class="cursor-pointer rounded-full px-4 py-2 text-sm transition bg-dark/5 text-dark hover:bg-dark/10">
+        Golf Courses
+      </button>
+
+      <button type="button" data-site-filter="leisure-waterways-marinas" class="cursor-pointer rounded-full px-4 py-2 text-sm transition bg-dark/5 text-dark hover:bg-dark/10">
+        Leisure Waterways & Marinas
+      </button>
+
+      <button type="button" data-site-filter="public-private-lakes-ponds" class="cursor-pointer rounded-full px-4 py-2 text-sm transition bg-dark/5 text-dark hover:bg-dark/10">
+        Public / Private Lakes & Ponds
+      </button>
+    </div> -->
+  </nav>
+</Container>

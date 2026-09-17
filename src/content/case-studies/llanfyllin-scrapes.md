@@ -11,6 +11,8 @@ metadata:
   date: 8th October, 2025
   services:
     - excavation-and-ditching
+  sites:
+    - suds-reservoirs
   summary: Conversion of a flood plain into a series of shallow ponds and pools to create valuable wetland habitat for wading birds and other wildlife.
 overview:
   items:
@@ -21,6 +23,7 @@ overview:
         The works involved excavating the flood plain to create a varied wetland landscape, with areas of differing depth and shape designed to hold water naturally across the site.
 
         Creating a network of connected wet areas provided a more diverse habitat than the existing flood plain, while making use of the site's natural tendency to retain water.
+      gallery: true
       media:
         type: beforeAfter
         before: ../../assets/images/before/habitat.webp

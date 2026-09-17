@@ -16,30 +16,46 @@ siteSpecific:
   items:
     type: card
     card:
-      - title: SSSI and Heritage Sites
-        description: Sites may have endangered plants, wildlife, or historical structures. We ensure careful work on protected species and listed buildings.
-        image: ../../assets/images/sites/heritage.webp
-      - title: Fisheries
-        description: We clear weed growth to prevent fishing hindrance, tangled lines, and fish stress, while protecting feature plants like lilies.
-        image: ../../assets/images/after/fishery.jpg
-      - title: Canals and Rivers
-        description: Regular weed cutting maintains flow and healthy aquatic ecosystems. We have 15+ years experience across the UK.
-        image: ../../assets/images/after/canal2.jpg
-      - title: Public/ Private Lakes
-        description: We clear weeds for recreational use or aesthetic enjoyment, tailoring work to be functional, aesthetic, or both.
-        image: ../../assets/images/after/cutting1.jpg
-      - title: Ponds
-        description: We clear and tidy public and private ponds, leaving the watercourse clean and aesthetically pleasing.
-        image: ../../assets/images/after/featured3.jpg
+      - title: Nature Reserves and SSSI Sites
+        description: We work carefully across protected habitats and SSSI sites, taking care around wildlife, endangered species and sensitive environments.
+        image: ../../assets/images/sites/turbine.jpg
+        href: /case-studies?site=
+
+      - title: Castles and Heritage Sites
+        description: We work on historic and heritage sites, taking care around listed buildings, historic structures and sensitive environments.
+        image: ../../assets/images/sites/castle.jpg
+        href: /case-studies?site=
+
+      - title: SuDS and Reservoirs
+        description: We manage areas designed to hold or control water, including sustainable drainage systems, reservoirs and other water storage areas.
+        image: ../../assets/images/sites/reservoir.jpg
+        href: /case-studies?site=
+
       - title: Golf Courses
-        description: Truxor machines are lightweight and semi-aquatic, minimizing damage to turf while accessing watercourses.
+        description: Truxor machines allow us to manage golf course water features while minimising disturbance to surrounding turf and landscaped areas.
         image: ../../assets/images/services/silt.jpg
-      - title: Marinas
-        description: Our machines work precisely within marina margins, avoiding boats and walkways while clearing weeds.
-        image: ../../assets/images/sites/marina.webp
-      - title: Sailing Clubs/ Leisure Lakes
-        description: We provide short-term or full-course clearance, ensuring open water for boating and business operations.
-        image: ../../assets/images/sites/sailing.webp
+        href: /case-studies?site=
+
+      - title: Fisheries
+        description: We clear weed growth to prevent fishing hindrance, tangled lines and fish stress, while protecting feature plants such as lilies.
+        image: ../../assets/images/after/fishery.jpg
+        href: /case-studies?site=
+
+      - title: Leisure Waterways and Marinas
+        description: We work across waterways used for sailing, paddleboarding, swimming and boating, as well as marinas and leisure facilities.
+        image: ../../assets/images/sites/marinas.jpeg
+        href: /case-studies?site=
+
+      - title: Canals and Rivers
+        description: We work across canals and rivers throughout the UK, managing aquatic vegetation and maintaining clear, healthy waterways.
+        image: ../../assets/images/sites/canal.jpg
+        href: /case-studies?site=
+
+      - title: Public / Private Lakes and Ponds
+        description: We manage public and private lakes and ponds for recreation, aesthetic enjoyment and general watercourse maintenance, including swimming lakes.
+        image: ../../assets/images/after/cutting1.jpg
+        href: /case-studies?site=
+        
 callToAction:
   eyebrow: Not Sure What You’re Dealing With?
   title: Identify Your Aquatic Weed

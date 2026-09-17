@@ -11,6 +11,8 @@ metadata:
   date: 18th June, 2025
   services:
     - weed-cutting
+  sites:
+    - canals-rivers
   summary: Targeted cutting and reed management to restore balance to a stretch of canal affected by invasive growth.
 overview:
   items:
@@ -21,6 +23,7 @@ overview:
         Using the Truxor, our operators were able to work selectively through the affected areas, cutting excessive vegetation and managing the established reed growth without unnecessarily disturbing areas of valuable habitat.
 
         The completed works improved navigation and the appearance of the canal while restoring a healthier balance between open water and aquatic vegetation, supporting the wider ecosystem function of the waterway.
+      gallery: true
       media:
         type: beforeAfter
         before: ../../assets/images/before/wales.jpg

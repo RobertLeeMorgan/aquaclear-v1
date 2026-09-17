@@ -573,64 +573,6 @@ collections:
                 fields:
                   - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Href", name: "href", widget: "string", required: false }
-          - label: "Gallery"
-            name: "gallery"
-            widget: object
-            fields:
-              - { label: "Type", name: "type", widget: "hidden", default: "gallery" }
-              - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
-              - { label: "Title", name: "title", widget: "string", required: false }
-              - { label: "Description", name: "description", widget: "markdown", required: false }
-              - label: "Items"
-                name: "items"
-                widget: list
-                types:
-                  - label: "Image"
-                    name: "image"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "image" }
-                      - { label: "Src", name: "src", widget: "image" }
-                      - { label: "Alt", name: "alt", widget: "string" }
-                  - label: "Video"
-                    name: "video"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "video" }
-                      - label: "Video"
-                        name: "video"
-                        widget: list
-                        types:
-                          - label: "Youtube"
-                            name: "youtube"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "youtube" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Vimeo"
-                            name: "vimeo"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "vimeo" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Html"
-                            name: "html"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "html" }
-                              - { label: "Src", name: "src", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                  - label: "Before After"
-                    name: "beforeAfter"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "beforeAfter" }
-                      - { label: "Before", name: "before", widget: "image" }
-                      - { label: "After", name: "after", widget: "image" }
-                      - { label: "Before Alt", name: "beforeAlt", widget: "string" }
-                      - { label: "After Alt", name: "afterAlt", widget: "string" }
       - label: "Call To Action"
         name: "callToAction"
         widget: object
@@ -685,6 +627,20 @@ collections:
                 - "tree-work"
                 - "silt-pumping"
                 - "excavation-and-ditching"
+          - label: "Sites"
+            name: "sites"
+            widget: list
+            field:
+              widget: select
+              options:
+                - "nature-reserves-sssi"
+                - "castles-heritage-sites"
+                - "canals-rivers"
+                - "fisheries"
+                - "suds-reservoirs"
+                - "golf-courses"
+                - "leisure-waterways-marinas"
+                - "public-private-lakes-ponds"
           - { label: "Summary", name: "summary", widget: "markdown" }
       - label: "Overview"
         name: "overview"
@@ -699,6 +655,7 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Content", name: "content", widget: "markdown" }
+              - { label: "Gallery", name: "gallery", widget: "boolean", default: true }
               - label: "Media"
                 name: "media"
                 widget: list
@@ -2267,3 +2224,124 @@ collections:
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Href", name: "href", widget: "string", required: false }
+
+      - file: "src/content/pages/gallery.md"
+        name: "gallery"
+        label: "Gallery"
+        media_folder: "../../assets/images"
+        public_folder: "../../assets/images"
+        fields:
+          - label: "SEO"
+            name: "seo"
+            widget: object
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "markdown" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+
+          - label: "Page Header"
+            name: "pageHeader"
+            widget: object
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "markdown", required: false }
+
+          - label: "Items"
+            name: "items"
+            widget: list
+            fields:
+              - label: "Metadata"
+                name: "metadata"
+                widget: object
+                fields:
+                  - { label: "Client", name: "client", widget: "string" }
+                  - { label: "Location", name: "location", widget: "string" }
+                  - { label: "Date", name: "date", widget: "string" }
+
+                  - label: "Services"
+                    name: "services"
+                    widget: list
+                    field:
+                      widget: select
+                      options:
+                        - "weed-cutting"
+                        - "bulrush-removal"
+                        - "invasive-species-removal"
+                        - "blanket-weed-removal"
+                        - "water-lily-management"
+                        - "reed-bed-management"
+                        - "trash-and-debris-removal"
+                        - "tree-work"
+                        - "silt-pumping"
+                        - "excavation-and-ditching"
+
+                  - label: "Sites"
+                    name: "sites"
+                    widget: list
+                    field:
+                      widget: select
+                      options:
+                        - "nature-reserves-sssi"
+                        - "castles-heritage-sites"
+                        - "canals-rivers"
+                        - "fisheries"
+                        - "suds-reservoirs"
+                        - "golf-courses"
+                        - "leisure-waterways-marinas"
+                        - "public-private-lakes-ponds"
+
+              - label: "Media"
+                name: "media"
+                widget: list
+                types:
+                  - label: "Image"
+                    name: "image"
+                    widget: object
+                    fields:
+                      - { label: "Type", name: "type", widget: "hidden", default: "image" }
+                      - { label: "Src", name: "src", widget: "image" }
+                      - { label: "Alt", name: "alt", widget: "string" }
+
+                  - label: "Video"
+                    name: "video"
+                    widget: object
+                    fields:
+                      - { label: "Type", name: "type", widget: "hidden", default: "video" }
+                      - label: "Video"
+                        name: "video"
+                        widget: list
+                        types:
+                          - label: "Youtube"
+                            name: "youtube"
+                            widget: object
+                            fields:
+                              - { label: "Provider", name: "provider", widget: "hidden", default: "youtube" }
+                              - { label: "Id", name: "id", widget: "string" }
+                              - { label: "Title", name: "title", widget: "string", required: false }
+
+                          - label: "Vimeo"
+                            name: "vimeo"
+                            widget: object
+                            fields:
+                              - { label: "Provider", name: "provider", widget: "hidden", default: "vimeo" }
+                              - { label: "Id", name: "id", widget: "string" }
+                              - { label: "Title", name: "title", widget: "string", required: false }
+
+                          - label: "Html"
+                            name: "html"
+                            widget: object
+                            fields:
+                              - { label: "Provider", name: "provider", widget: "hidden", default: "html" }
+                              - { label: "Src", name: "src", widget: "string" }
+                              - { label: "Title", name: "title", widget: "string", required: false }
+
+                  - label: "Before After"
+                    name: "beforeAfter"
+                    widget: object
+                    fields:
+                      - { label: "Type", name: "type", widget: "hidden", default: "beforeAfter" }
+                      - { label: "Before", name: "before", widget: "image" }
+                      - { label: "After", name: "after", widget: "image" }
+                      - { label: "Before Alt", name: "beforeAlt", widget: "string" }
+                      - { label: "After Alt", name: "afterAlt", widget: "string" } 

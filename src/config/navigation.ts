@@ -17,6 +17,7 @@ export const navigation = [
       { label: "Excavation & Habitat", filter: "excavation" },
     ],
   },
+  { page: "gallery", label: "Gallery", href: "/gallery" },
   { page: "clients", label: "Clients", href: "/clients" },
   { page: "truxor", label: "Truxor", href: "/truxor" },
 ] as const;

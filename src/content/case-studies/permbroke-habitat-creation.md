@@ -14,6 +14,8 @@ metadata:
     - reed-bed-management
     - tree-work
     - trash-and-debris-removal
+  sites:
+    - public-private-lakes-ponds
   summary: Tree clearance, ditching and bund construction to restore water levels across a drying reed bed at Pembroke Mill Pond.
 overview:
   items:
@@ -24,6 +26,7 @@ overview:
         The project involved a small amount of reed cutting alongside extensive tree work and clearance. Overgrown trees and hedges had to be removed along the proposed route, creating a clear path for the bund to follow.
 
         Once the vegetation clearance was complete, the digging arm was attached and work could begin on the ditch and bund.
+      gallery: true
       media:
         type: beforeAfter
         before: ../../assets/images/before/millpond3.webp

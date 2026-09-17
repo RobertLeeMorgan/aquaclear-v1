@@ -18,7 +18,7 @@ async function buildNavigation() {
     if (item.filters) {
       const dropdown = item.filters.map((filter: any) => ({
         label: filter.label,
-        href: `${item.href}?filter=${filter.filter}`,
+        href: `${item.href}?service=${filter.filter}`,
       }));
 
       nav.push({ label: item.label, href: item.href, dropdown });

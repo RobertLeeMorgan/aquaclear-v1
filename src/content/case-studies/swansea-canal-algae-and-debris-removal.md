@@ -14,6 +14,8 @@ metadata:
   services:
     - blanket-weed-removal
     - trash-and-debris-removal
+  sites:
+    - canals-rivers
   summary: Combined algae and debris removal to clear excessive growth and floating waste from Swansea Canal.
 
 overview:
@@ -23,6 +25,7 @@ overview:
         Excessive algae growth and accumulated trash and debris had affected sections of Swansea Canal, reducing the available open water and leaving the canal in need of clearance.
 
         Aquaclear removed the algae and floating debris, clearing the affected areas and restoring a cleaner, more open waterway.
+      gallery: true
       media:
         type: beforeAfter
         before: ../../assets/images/before/swanseatrash.jpg

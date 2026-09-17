@@ -87,5 +87,19 @@ const isActive = (item: NavItem) => {
           )}
         </div>
       ))}
+
+      <div class="py-lg">
+        <a
+          href="/contact"
+          class:list={[
+            "text-2xl motion py-lg",
+            currentPath.startsWith("/contact")
+              ? "text-inverse"
+              : "text-body text-inverse-muted",
+          ]}
+        >
+          Contact
+        </a>
+      </div>
     </nav>
   </div>

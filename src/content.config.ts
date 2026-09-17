@@ -72,6 +72,17 @@ const serviceEnumSchema = z.enum([
   "excavation-and-ditching",
 ]);
 
+const siteEnumSchema = z.enum([
+  "nature-reserves-sssi",
+  "castles-heritage-sites",
+  "canals-rivers",
+  "fisheries",
+  "suds-reservoirs",
+  "golf-courses",
+  "leisure-waterways-marinas",
+  "public-private-lakes-ponds",
+]);
+
 const imageItemSchema = (image: () => any) =>
   z.object({
     src: image(),
@@ -436,13 +447,6 @@ const services = defineCollection({
             dark: z.boolean().optional(),
             secondary: z.boolean().optional(),
           }),
-          z.object({
-            type: z.literal("gallery"),
-            eyebrow: z.string().optional(),
-            title: z.string().optional(),
-            description: z.string().optional(),
-            items: z.array(mediaSchema(image)),
-          }),
         ]),
       ),
       callToAction: z.object({
@@ -598,13 +602,22 @@ const caseStudies = defineCollection({
         location: z.string(),
         date: z.string(),
         services: z.array(serviceEnumSchema),
+        sites: z.array(siteEnumSchema),
         summary: z.string(),
       }),
       overview: z.object({
         eyebrow: z.string().optional(),
         title: z.string().optional(),
         description: z.string().optional(),
-        items: z.array(richTextSchema(image)),
+          items: z.array(
+            z.object({
+              title: z.string(),
+              content: z.string(),
+              media: mediaSchema(image).optional(),
+              buttons: z.array(buttonSchema(image)).optional(),
+              gallery: z.boolean().default(true),
+            }),
+          ),
         readMore: readMoreSchema(image).optional(),
       }),
     }),
@@ -697,6 +710,37 @@ const contact = defineCollection({
     }),
 });
 
+const gallery = defineCollection({
+  loader: glob({ pattern: "gallery.md", base: "./src/content/pages" }),
+  schema: ({ image }) =>
+    z.object({
+      seo: z.object({
+        title: z.string(),
+        description: z.string(),
+        image: image().optional(),
+      }),
+
+      pageHeader: z.object({
+        eyebrow: z.string().optional(),
+        title: z.string(),
+        description: z.string().optional(),
+      }),
+
+      items: z.array(
+        z.object({
+          metadata: z.object({
+            client: z.string(),
+            location: z.string(),
+            date: z.string(),
+            services: z.array(serviceEnumSchema),
+            sites: z.array(siteEnumSchema),
+          }),
+          media: mediaSchema(image),
+        }),
+      ),
+    }),
+});
+
 export const collections = {
   home,
   about,
@@ -708,4 +752,5 @@ export const collections = {
   caseStudiesIndex,
   clients,
   contact,
+  gallery
 };

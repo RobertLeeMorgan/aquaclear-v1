@@ -1353,8 +1353,8 @@
 @utility glass {
   background: linear-gradient(
     120deg,
-    rgb(from var(--color-nav) r g b / var(--opacity-soft)),
-    rgb(from var(--color-dark) r g b / var(--opacity-muted))
+    rgb(from var(--color-nav) r g b / var(--opacity-visible)),
+    rgb(from var(--color-dark) r g b / var(--opacity-soft))
   );
 
   backdrop-filter: blur(var(--blur-md)) saturate(110%);

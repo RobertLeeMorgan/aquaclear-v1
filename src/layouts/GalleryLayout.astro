@@ -1,0 +1,25 @@
+---
+import Gallery from "../components/sections/Gallery.astro";
+import PageHeader from "../components/sections/PageHeader.astro";
+import Filters from "../components/Filters.astro";
+
+const { data } = Astro.props;
+---
+
+<PageHeader
+  title={data.pageHeader.title}
+  eyebrow={data.pageHeader.eyebrow}
+  description={data.pageHeader.description}
+/>
+
+<Filters type="gallery" />
+
+<Gallery
+  items={data.items}
+/>
+
+<script>
+  import { initGalleryFilters } from "../scripts/filters";
+
+  document.addEventListener("astro:page-load", initGalleryFilters);
+</script>

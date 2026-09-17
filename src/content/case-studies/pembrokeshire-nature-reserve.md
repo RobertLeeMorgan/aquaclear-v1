@@ -11,6 +11,8 @@ metadata:
   date: 22nd August, 2025
   services:
     - silt-pumping
+  sites:
+    - nature-reserves-sssi
   summary: Silt removal and watercourse clearance to increase pond depth and reopen a natural brook feeding into the pond.
 overview:
   items:
@@ -45,6 +47,7 @@ overview:
         Removing this material opened up the natural brook feeding into the pond, improving the connection between the incoming watercourse and the restored open water.
 
         Combined with the silt pumping works, the clearance helped restore the pond's depth and improve the natural flow through the site.
+      gallery: true
       media:
         type: image
         src: ../../assets/images/projects/pembs4.webp

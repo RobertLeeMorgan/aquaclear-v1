@@ -13,6 +13,8 @@ metadata:
   date: 15th August, 2024
   services:
     - water-lily-management
+  sites:
+    - public-private-lakes-ponds  
   summary: Targeted water lily removal and root and rhizome extraction to restore open water and manage excessive aquatic growth.
 
 overview:
@@ -24,6 +26,7 @@ overview:
         Aquaclear carried out targeted removal of the established plants, including the roots and rhizomes beneath the water, to address the growth at its source and reduce the potential for rapid regrowth.
 
         The work restored clearer areas of open water while bringing the lake's aquatic vegetation back under better control.
+      gallery: true
       media:
         type: beforeAfter
         before: ../../assets/images/before/lilies.jpg

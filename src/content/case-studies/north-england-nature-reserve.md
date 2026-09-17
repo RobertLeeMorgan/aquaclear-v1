@@ -11,6 +11,8 @@ metadata:
   date: 15th July, 2025
   services:
     - silt-pumping
+  sites:
+    - nature-reserves-sssi
   summary: Silt removal from a small watercourse to increase water depth and maintain open water using a permeable membrane bund.
 overview:
   items:
@@ -21,6 +23,7 @@ overview:
         Following an earlier programme of reed clearance, the newly opened section provided access for the silt removal works. A wood and soil bund was prepared alongside a permeable Teram membrane to contain the pumped material while allowing excess water to drain away.
 
         This provided a practical way to manage the removed silt on site without requiring large de-silting bags or extensive additional infrastructure.
+      gallery: true
       media:
         type: image
         src: ../../assets/images/projects/northreserve1.webp

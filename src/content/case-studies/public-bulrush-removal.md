@@ -11,6 +11,8 @@ metadata:
   date: 11th November, 2025
   services:
     - bulrush-removal
+  sites:
+    - suds-reservoirs
   summary: Bulrush clearance from a public waterbody in a residential area, helping restore open water and maintain the function of the surrounding drainage system.
 overview:
   items:
@@ -21,6 +23,7 @@ overview:
         Established bulrush had spread through sections of the waterbody, reducing the amount of open water and creating dense areas of vegetation along the margins.
 
         The growth was selectively cleared to open up the waterbody, improve its appearance and help maintain the capacity and function of the surrounding drainage system. Regular management helps prevent bulrush from becoming overly dominant while retaining suitable vegetation elsewhere.
+      gallery: true
       media:
         type: beforeAfter
         before: ../../assets/images/before/bulrush3.jpg

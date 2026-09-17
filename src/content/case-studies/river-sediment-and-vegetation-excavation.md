@@ -15,6 +15,8 @@ metadata:
     - excavation-and-ditching
     - trash-and-debris-removal
     - tree-work
+  sites:
+    - canals-rivers
   summary: River excavation to remove sediment and excessive vegetation that had restricted water depth and flow.
 
 overview:
@@ -24,6 +26,7 @@ overview:
         Heavy sediment accumulation had reduced the depth of the river through sections of the shallows, while dense vegetation growth had spread across the affected areas. Together, the build-up had significantly restricted the available channel and reduced the flow of water through the river.
 
         Aquaclear carried out excavation and clearance works to remove the accumulated material and excessive vegetation, opening up the restricted sections of the river and restoring greater depth and capacity.
+      gallery: true
       media:
         type: beforeAfter
         before: ../../assets/images/before/excavation5.jpg
@@ -36,6 +39,7 @@ overview:
         Removing the accumulated sediment and vegetation restored a clearer, deeper channel through the affected sections. This allowed water to move more freely and returned greater depth to areas that had become heavily restricted.
 
         The work also reduced the excessive vegetation encroachment, helping to maintain a more open river channel and reducing the conditions that had contributed to the restriction.
+      gallery: true
       media:
         type: beforeAfter
         before: ../../assets/images/before/excavation6.jpg

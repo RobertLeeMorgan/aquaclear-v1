@@ -11,6 +11,8 @@ metadata:
   date: 28th October, 2025
   services:
     - reed-bed-management
+  sites:
+    - nature-reserves-sssi
   summary: Large-scale reed clearance to reconnect waterways, restore open water and improve sight lines across a nature reserve.
 overview:
   items:
@@ -21,6 +23,7 @@ overview:
         The work involved selectively clearing extensive sections of reed to reopen previously obscured areas and improve access through the wetland. Clearing along key routes also helped restore clearer sight lines across the reserve.
 
         The scale of the works allowed several areas of the site to be addressed as part of one coordinated programme, while retaining areas of established reed where appropriate.
+      gallery: true
       media:
         type: beforeAfter
         before: ../../assets/images/before/clearingArea.jpg
@@ -34,6 +37,7 @@ overview:
         Removing the accumulated vegetation helped reconnect sections of the wetland and re-establish clearer water channels through the reserve. The newly opened areas also improved visibility across the site and created a greater balance between dense reed habitat and open water.
 
         The completed works provided a more varied wetland landscape while helping maintain the natural function and character of the reserve.
+      gallery: true
       media:
         type: beforeAfter
         before: ../../assets/images/before/clearingLines.jpg

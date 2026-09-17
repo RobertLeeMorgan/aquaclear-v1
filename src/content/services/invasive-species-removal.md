@@ -7,7 +7,7 @@ seo:
 overview:
   - type: hero
     title: Controlling Invasive Aquatic Species
-    description: Aquaclear has over 15 years of experience cutting, removing, and controlling invasive aquatic species across the UK. Our approach is tailored to the species and site, with particular care taken to minimise fragmentation and the risk of spreading the infestation.
+    description: Aquaclear has over 15 years of experience cutting, removing, and controlling invasive aquatic species across the UK. Our approach is tailored to the species and site.
     image: ../../assets/images/weeds/aquaticweeds.jpg
     alt: Invasive aquatic weed removal
     buttons:
@@ -21,9 +21,11 @@ overview:
     description: |
       Invasive aquatic plants are non-native species that have been introduced outside their natural range and can spread rapidly once established in UK waterways. They can outcompete native species and alter the balance of an entire watercourse.
     media:
-      type: image
-      src: ../../assets/images/hero/placeholder.jpeg
-      alt: Dense invasive aquatic vegetation
+      type: beforeAfter
+      before: ../../assets/images/before/cutting1.jpg
+      after: ../../assets/images/after/cutting1.jpg
+      beforeAlt: Dense aquatic vegetation covering the watercourse
+      afterAlt: Watercourse after invasive vegetation has been cleared
     items:
       - icon: leaf
         title: Outcompete native plant species
@@ -47,36 +49,44 @@ overview:
 
           Cut material is collected and, where appropriate, left temporarily on the bank to allow invertebrates to return to the water before the vegetation is removed from site.
         media:
-          type: image
-          src: ../../assets/images/hero/placeholder.jpeg
-          alt: Mechanical cutting and removal of invasive aquatic weeds
+          type: beforeAfter
+          before: ../../assets/images/before/cutting2.jpg
+          after: ../../assets/images/after/cutting2.jpg
+          beforeAlt: Dense aquatic vegetation before cutting and clearance
+          afterAlt: Watercourse after invasive vegetation has been cut and cleared
       - title: Preventing Spread
         content: |
           Particular care is taken to minimise fragmentation during removal, as small pieces of some invasive plants can survive and establish new growth elsewhere.
 
           We remove as much cut material as possible from the watercourse and plan the handling and disposal of vegetation to reduce the risk of further spread and re-establishment.
         media:
-          type: image
-          src: ../../assets/images/hero/placeholder.jpeg
-          alt: Mechanical cutting and removal of invasive aquatic weeds
+          type: beforeAfter
+          before: ../../assets/images/before/featured4.jpg
+          after: ../../assets/images/after/featured4.jpg
+          beforeAlt: Dense invasive vegetation growing across the watercourse
+          afterAlt: Watercourse after invasive vegetation has been removed
       - title: Machinery Hygiene
         content: |
           Our machinery is cleaned and inspected after working with invasive species to remove plant fragments and reduce the risk of transferring invasive material between waterways.
 
           Careful cleaning between sites is an important part of working responsibly with invasive aquatic vegetation and helps prevent cross-contamination.
         media:
-          type: image
-          src: ../../assets/images/hero/placeholder.jpeg
-          alt: Mechanical cutting and removal of invasive aquatic weeds
+          type: beforeAfter
+          before: ../../assets/images/before/invasive1.jpg
+          after: ../../assets/images/after/invasive1.jpg
+          beforeAlt: Invasive aquatic vegetation collected during removal
+          afterAlt: Cleared watercourse following invasive vegetation removal
       - title: Ongoing Control
         content: |
           Invasive aquatic species often require continued management rather than a single clearance operation. We can recommend practical ways for clients to monitor and manage regrowth after the initial work has been completed.
 
           The timing and frequency of follow-up work will depend on the species, extent of the infestation, and conditions at the site.
         media:
-          type: image
-          src: ../../assets/images/hero/placeholder.jpeg
-          alt: Mechanical cutting and removal of invasive aquatic weeds
+          type: beforeAfter
+          before: ../../assets/images/before/invasive.jpg
+          after: ../../assets/images/after/invasive.jpg
+          beforeAlt: Regrowth of invasive aquatic vegetation in the watercourse
+          afterAlt: Watercourse following further invasive vegetation management
   - type: accordionSection
     eyebrow: Species Specific
     title: Different Species Require Different Approaches

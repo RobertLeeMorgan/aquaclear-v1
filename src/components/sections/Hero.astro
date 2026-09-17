@@ -41,7 +41,7 @@ const heightClass = {
 
 const alignmentClass = {
   left: "justify-start text-start",
-  right: "justify-end text-end",
+  right: "justify-start text-start sm:justify-end sm:text-end",
 }[align];
 
 const verticalClass = {
@@ -93,7 +93,7 @@ const overlayClass = {
           class:list={[
             "cluster-md mt-2xl",
             align === "right"
-              ? "justify-end"
+              ? "justify-start sm:justify-end"
               : "justify-start",
           ]}
         >

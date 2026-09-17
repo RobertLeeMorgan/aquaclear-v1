@@ -7,56 +7,57 @@
   --font-heading: "DM Sans", sans-serif;
   --font-display: "DM Serif Display", serif;
 
-  /* ===========================
-     Brand
-     =========================== */
+   /* ===========================
+      Brand
+      =========================== */
 
-  --color-primary: #438991;
-  --color-primary-hover: #24545a;
-  --color-accent: #7d8f5b;
+   --color-primary: #076ab0;
+   --color-primary-hover: #05558e;
+   --color-accent: #718653;
 
-  /* ===========================
-     Surfaces
-     =========================== */
+   /* ===========================
+      Surfaces
+      =========================== */
 
-  --color-surface: #f8f7f2;
-  --color-surface-alt: #e9eee8;
-  --color-surface-dark: #d9e2dc;
-  --color-overlay: rgb(24 43 44 / 0.58);
-  --color-dark: #183b3e;
+   --color-surface: #f8f8f4;
+   --color-surface-alt: #e9efeb;
+   --color-surface-dark: #d9e4df;
+   --color-overlay: rgb(15 45 58 / 0.58);
 
-  /* ===========================
-     Cards
-     =========================== */
+   /* ===========================
+      Cards
+      =========================== */
 
-  --color-card: #ffffff;
-  --color-card-alt: #f1f3ed;
+   --color-card: #ffffff;
+   --color-card-alt: #f1f4ef;
 
-  /* ===========================
-     Navigation
-     =========================== */
+   /* ===========================
+      Navigation
+      =========================== */
 
-  --color-nav: #183438;
-  --color-footer: #24545a;
-  --nav-h: 3.5rem;
+   --color-dark: #10476a;
+   --color-nav: #0b4164;
+   --color-footer: #07619a;
 
-  /* ===========================
-     Text
-     =========================== */
+   --nav-h: 3.5rem;
 
-  --color-body: #394b4c;
-  --color-soft: #607071;
-  --color-muted: #7b8785;
-  --color-heading: #183b3e;
-  --color-inverse: #ffffff;
-  --color-inverse-muted: rgb(255 255 255 / 0.72);
+   /* ===========================
+      Text
+      =========================== */
 
-  /* ===========================
-     Borders
-     =========================== */
+   --color-body: #394b4f;
+   --color-soft: #607074;
+   --color-muted: #7b8787;
+   --color-heading: #123c50;
+   --color-inverse: #ffffff;
+   --color-inverse-muted: rgb(255 255 255 / 0.72);
 
-  --color-border: #d7ded8;
-  --color-border-strong: #bccac2;
+   /* ===========================
+      Borders
+      =========================== */
+
+   --color-border: #d6dfda;
+   --color-border-strong: #bbc9c3;
   --border-width: 1px;
   --border-thick: 2px;
 

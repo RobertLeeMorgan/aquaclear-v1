@@ -15,6 +15,8 @@ metadata:
     - weed-cutting
     - bulrush-removal
     - excavation-and-ditching
+  sites:
+    - public-private-lakes-ponds
   summary: Weed cutting, bulrush removal and habitat creation to improve private ponds and create more varied aquatic habitat.
 
 overview:
@@ -24,6 +26,7 @@ overview:
         Several private ponds had become heavily affected by excessive weed and bulrush growth, reducing areas of open water and limiting the variety of habitats available across the site.
 
         Aquaclear carried out targeted weed cutting and bulrush removal, opening up areas that had become densely vegetated while retaining suitable established growth elsewhere around the ponds.
+      gallery: true
       media:
         type: beforeAfter
         before: ../../assets/images/before/excavation2.jpg
@@ -36,6 +39,7 @@ overview:
         Excavation and ditching works were then used to improve the shape and variety of the pond environment, creating a better balance between open water and areas of aquatic vegetation.
 
         The completed work provided a more diverse habitat across the ponds, with clearer areas of water alongside retained vegetation to support wildlife. The result was a healthier and more varied pond environment that could be managed more effectively over time.
+      gallery: true
       media:
         type: beforeAfter
         before: ../../assets/images/before/excavation4.jpg

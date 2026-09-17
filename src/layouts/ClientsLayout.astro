@@ -5,7 +5,7 @@ import PageHeader from "../components/sections/PageHeader.astro";
 import IconListSection from "../components/sections/IconListSection.astro";
 import Banner from "../components/sections/Banner.astro";
 
-const { data } = Astro.props;
+const { data, servicesIndexData } = Astro.props;
 
 ---
 <PageHeader
@@ -27,7 +27,17 @@ const { data } = Astro.props;
   readMore={data.trustedBy.readMore}
 />
 
-<Banner/>
+<CarouselSection
+  eyebrow="Our Experience"
+  title="Working Across Diverse Waterways"
+  description={servicesIndexData.siteSpecific.description}
+  items={servicesIndexData.siteSpecific.items}
+  secondary
+  readMore={servicesIndexData.siteSpecific.readMore}
+/>
+
+
+<Banner secondary/>
 
 <CarouselSection
   eyebrow={data.testimonials.eyebrow}

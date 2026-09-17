@@ -4,6 +4,8 @@ import Container from "../components/layout/Container.astro";
 import Section from "../components/layout/Section.astro";
 import SectionHeader from "../components/content/SectionHeader.astro";
 import Button from "../components/actions/Button.astro";
+import FlockBirds from "../assets/images/svg/flockBirds.svg"
+
 ---
 
 <Layout
@@ -11,26 +13,50 @@ import Button from "../components/actions/Button.astro";
   description="Something went wrong while processing your request."
   noindex={true}
 >
-  <Section>
+  <Section dark class="overflow-hidden">
+    <FlockBirds class={`decorative top-10 -right-[2%] w-100 text-surface/10`} />
     <Container>
-      <div class="flex min-h-[50vh] flex-col items-center justify-center text-center">
-        <p class="display-lg text-primary">
-          500
-        </p>
-
-        <SectionHeader
-          title="Something Went Wrong"
-          description="We're sorry, but something went wrong on our end. Please try again in a few moments."
-          as="h1"
-          align="center"
-        />
-
-        <Button
-          href="/"
-          class="mt-lg"
-          title="Return Home"
-        />
-      </div>
+      <div class="flex items-center justify-center"/>
     </Container>
+    <svg
+        class:list={[
+            "absolute bottom-0 left-0 z-20 w-full h-16 md:h-24 pointer-events-none "
+        ]}
+        viewBox="0 0 1440 120"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        >
+        <path
+            fill="var(--color-surface)"
+            d="M0 50
+            C180 72 360 92 540 92
+            C720 92 900 58 1120 50
+            C1230 50 1340 50 1440 50
+            L1440 121
+            L0 121
+            Z"
+        />
+    </svg>
   </Section>
+
+  <Container class="py-xl">
+    <div class="flex min-h-[50vh] flex-col items-center justify-center text-center">
+      <p class="display-lg text-primary">
+        500
+      </p>
+
+      <SectionHeader
+        title="Something Went Wrong"
+        description="We're sorry, but something went wrong on our end. Please try again in a few moments."
+        as="h1"
+        align="center"
+      />
+
+      <Button
+        href="/"
+        class="mt-lg"
+        title="Return Home"
+      />
+    </div>
+  </Container>
 </Layout>

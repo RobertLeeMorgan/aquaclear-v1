@@ -16,6 +16,7 @@ const caseStudiesItems = caseStudies.map((entry) => ({
   ...entry.data.seo,
   href: `/case-studies/${entry.id}`,
   services: entry.data.metadata.services,
+  sites: entry.data.metadata.sites,
 }));
 
 const schema = [

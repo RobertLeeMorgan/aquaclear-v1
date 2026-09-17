@@ -12,6 +12,8 @@ metadata:
   services:
     - water-lily-management
     - weed-cutting
+  sites:
+    - public-private-lakes-ponds
   summary: Aquatic lily removal and weed cutting to reduce excessive growth and restore open water within a public pond.
 overview:
   items:
@@ -22,6 +24,7 @@ overview:
         Targeted removal was carried out to reduce the established growth and reopen areas of the pond. Additional aquatic weed cutting was undertaken alongside the lily management to clear other unwanted vegetation and improve the overall condition of the waterbody.
 
         The combined works helped restore a better balance between aquatic vegetation and open water while keeping the pond accessible and well maintained.
+      gallery: true
       media:
         type: beforeAfter
         before: ../../assets/images/before/lilies2.jpg

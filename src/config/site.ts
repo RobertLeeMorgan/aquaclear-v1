@@ -18,9 +18,7 @@ export const site = {
 
   social: {
     facebook: "https://www.facebook.com/profile.php?id=100068576013925&fref=ts#",
-    instagram: "",
     linkedin: "https://www.linkedin.com/in/sean-harries-7a3a58365/",
-    youtube: "",
     x: "https://x.com/aquaclearwm",
   },
 }

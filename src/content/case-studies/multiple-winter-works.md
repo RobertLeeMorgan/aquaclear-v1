@@ -11,6 +11,8 @@ metadata:
   date: 18th March, 2025
   services:
     - silt-pumping
+  sites:
+    - suds-reservoirs
   summary: Winter silt pumping works using temporary semi-permeable membranes to manage dredged material on challenging sites.
 overview:
   items:
@@ -21,6 +23,7 @@ overview:
         Where surrounding ground conditions were too uneven for conventional de-silting bags, semi-permeable membranes provided a practical alternative. The membranes were installed to contain the pumped silt while allowing water to drain away naturally.
 
         This approach allowed works to continue through the winter while minimising disruption to the surrounding site and providing a controlled area for the material to settle and dry.
+      gallery: true
       media:
         type: image
         src: ../../assets/images/projects/teram1.webp

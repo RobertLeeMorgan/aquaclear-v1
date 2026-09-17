@@ -11,6 +11,8 @@ metadata:
   date: 4th November, 2025
   services:
     - bulrush-removal
+  sites:
+    - suds-reservoirs
   summary: Bulrush clearance from a public canal and pond forming part of a SuDS network, restoring open water and helping maintain effective drainage.
 overview:
   items:
@@ -21,6 +23,7 @@ overview:
         SuDS features are designed to collect, store and manage surface water, but excessive vegetation can reduce the available open water and gradually restrict the way water moves through the system. Bulrush can spread particularly quickly in shallow areas, making regular management important where drainage capacity needs to be maintained.
 
         The works focused on clearing dense areas of bulrush from the waterbodies, opening up sections that had become heavily overgrown while retaining appropriate vegetation elsewhere.
+      gallery: true
       media:
         type: beforeAfter
         before: ../../assets/images/before/bulrush1.jpg
@@ -34,6 +37,7 @@ overview:
         Opening up the waterbodies also helps make future maintenance more manageable, reducing the extent to which dense vegetation can dominate the margins and spread into areas intended to remain open.
 
         Regular vegetation management is an important part of maintaining SuDS features over their working life, helping to preserve their drainage function while keeping public ponds and waterways accessible and well maintained.
+      gallery: true
       media:
         type: beforeAfter
         before: ../../assets/images/before/bulrush2.jpg

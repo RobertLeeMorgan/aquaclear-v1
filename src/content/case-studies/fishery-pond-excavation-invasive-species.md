@@ -15,6 +15,8 @@ metadata:
     - excavation-and-ditching
     - invasive-species-removal
     - weed-cutting
+  sites:
+    - fisheries
   summary: Excavation, vegetation clearance and invasive species removal to transform a small, overgrown pond into a larger, cleaner fishery.
 
 overview:
@@ -26,6 +28,7 @@ overview:
         Aquaclear cleared the excessive vegetation, removed the invasive growth and carried out excavation to reshape and enlarge the waterbody. The work transformed the site from a heavily overgrown pond into a substantial, clean fishery with a much greater area of open water.
 
         The completed work created a more practical and attractive fishery while bringing the surrounding vegetation and aquatic environment under better control.
+      gallery: true
       media:
         type: beforeAfter
         before: ../../assets/images/before/excavation1.jpg

@@ -6,9 +6,14 @@ import { homeSchema } from "../lib/schema";
 import { sortServices } from "../lib/services";
 
 const entry = await getEntry("home", "index");
+const servicesIndex = await getEntry("servicesIndex", "servicesindex");
 
 if (!entry) {
   throw new Error("Home content not found.");
+}
+
+if (!servicesIndex) {
+  throw new Error("Services Index content not found.");
 }
 
 const services = sortServices(await getCollection("services"));
@@ -45,5 +50,6 @@ const schema = [
   <HomeLayout
     data={entry.data}
     servicesItems={servicesItems}
+    servicesIndexData={servicesIndex.data}
   />
 </Layout>

@@ -11,6 +11,8 @@ metadata:
   date: 12th September, 2025
   services:
     - silt-pumping
+  sites:
+    - suds-reservoirs
   summary: Silt pumped from a water utility site and processed into manageable silt cake ready for removal.
 overview:
   items:
@@ -21,6 +23,7 @@ overview:
         The silt was pumped into a specialist processing tank operated in conjunction with a company specialising in silt treatment. The material was then processed to remove excess water and converted into a manageable form of 'silt cake'.
 
         The resulting material could be deposited into suitable containers, making it significantly easier to handle, transport and remove from site. This provided an efficient solution where leaving the silt to dry naturally was not practical or where complete removal was required.
+      gallery: true
       media:
         type: image
         src: ../../assets/images/projects/siltcake.webp

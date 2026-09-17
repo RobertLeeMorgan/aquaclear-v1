@@ -1,12 +1,13 @@
 ---
 import Banner from "../components/sections/Banner.astro";
 import Cards from "../components/sections/Cards.astro";
+import CarouselSection from "../components/sections/CarouselSection.astro";
 import Cta from "../components/sections/Cta.astro";
 import Hero from "../components/sections/Hero.astro";
 import IconListSection from "../components/sections/IconListSection.astro";
 import RichTextSection from "../components/sections/RichTextSection.astro";
 
-const { data, servicesItems } = Astro.props;
+const { data, servicesItems, servicesIndexData } = Astro.props;
 
 ---
 <Hero
@@ -39,6 +40,15 @@ const { data, servicesItems } = Astro.props;
   readMore={{ title: "Explore All Services", href: "/services" }}
 />
 
+<CarouselSection
+  eyebrow={servicesIndexData.siteSpecific.eyebrow}
+  title={servicesIndexData.siteSpecific.title}
+  description={servicesIndexData.siteSpecific.description}
+  items={servicesIndexData.siteSpecific.items}
+  secondary
+  readMore={servicesIndexData.siteSpecific.readMore}
+/>
+
 <IconListSection
   eyebrow={data.whyChooseUs.eyebrow}
   title={data.whyChooseUs.title}
@@ -47,7 +57,6 @@ const { data, servicesItems } = Astro.props;
   alt={data.whyChooseUs.alt}
   items={data.whyChooseUs.items}
   buttons={data.whyChooseUs.buttons}
-  secondary
   readMore={data.whyChooseUs.readMore}
 />
 

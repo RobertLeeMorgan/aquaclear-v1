@@ -13,6 +13,8 @@ metadata:
   date: 18th July, 2024
   services:
     - blanket-weed-removal
+  sites:
+    - fisheries
   summary: Algae removal at a fishery to clear excessive growth and restore areas of open water.
 
 overview:
@@ -22,6 +24,7 @@ overview:
         Excessive algae growth had spread across areas of the fishery, covering the water surface and reducing the available open water.
 
         Aquaclear carried out targeted algae removal to clear the affected areas and restore a more open water surface, helping the fishery remain accessible and better managed.
+      gallery: true
       media:
         type: beforeAfter
         before: ../../assets/images/before/dartford.jpg

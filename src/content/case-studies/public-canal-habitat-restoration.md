@@ -15,6 +15,8 @@ metadata:
     - invasive-species-removal
     - weed-cutting
     - blanket-weed-removal
+  sites:
+    - canals-rivers
   summary: Invasive species removal, weed cutting and algae clearance to restore a public canal and improve habitat for wildlife.
 
 overview:
@@ -26,6 +28,7 @@ overview:
         The restoration created clearer areas of open water while retaining suitable vegetation around the canal, providing a more varied environment for wildlife. Removing excessive growth allowed the waterway to function more naturally and improved the range of habitats available within the canal corridor.
 
         The completed works transformed the appearance and condition of the affected sections while helping restore a healthier balance between open water, aquatic vegetation and habitat for wildlife.
+      gallery: true
       media:
         type: beforeAfter
         before: ../../assets/images/before/canal.jpg

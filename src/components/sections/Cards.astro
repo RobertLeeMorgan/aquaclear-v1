@@ -80,6 +80,7 @@ const gridClass = {
         <div
           data-case-study-card
           data-services={JSON.stringify((item as { services?: string[] }).services ?? [])}
+          data-sites={JSON.stringify((item as { sites?: string[]}).sites ?? [])}
           class="h-full"
         >
           <Card

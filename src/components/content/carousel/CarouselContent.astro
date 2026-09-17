@@ -15,10 +15,9 @@ const { carousel } = Astro.props as Props;
 
 {carousel.type === "card" &&
   carousel.card.map((card) => (
-    <div class="shrink-0 basis-[240px] sm:basis-[300px] snap-start">
+    <div class="shrink-0 basis-[280px] sm:basis-[300px] md:basis-[310px] snap-start">
       <Card
         layout="vertical"
-        ellipsis={3}
         title={card.title}
         description={card.description}
         image={card.image}

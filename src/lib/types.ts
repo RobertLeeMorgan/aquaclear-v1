@@ -241,6 +241,16 @@ export type ServiceEnum =
   | "silt-pumping"
   | "excavation-and-ditching"
 
+export type SiteEnum =
+  | "nature-reserves-sssi"
+  | "castles-heritage-sites"
+  | "canals-rivers"
+  | "fisheries"
+  | "suds-reservoirs"
+  | "golf-courses"
+  | "leisure-waterways-marinas"
+  | "public-private-lakes-ponds"
+
 export interface HeroSection {
   title: string;
   description?: string;
@@ -358,6 +368,7 @@ export interface MetadataSection {
   location: string;
   date: string;
   services: ServiceEnum[];
+  sites: SiteEnum[];
   summary: string;
 }
 

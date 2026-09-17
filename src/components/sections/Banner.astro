@@ -1,7 +1,6 @@
 ---
 import AppImage from "../media/AppImage.astro";
 
-
 import CanalRiver from "../../assets/images/logos/canal-river.svg";
 import EnvironmentAgency from "../../assets/images/logos/environment-agency.png";
 import Gleneagles from "../../assets/images/logos/gleneagles.png";
@@ -43,9 +42,11 @@ const logos = [
     alt: "London 2012 Olympic Games",
   },
 ];
+
+const { secondary } = Astro.props;
 ---
 
-<div class="banner bg-surface-alt py-2xl relative">
+<div class={`banner ${secondary ? "bg-surface" : "bg-surface-alt"} py-2xl relative`}>
   <Reed1 class="decorative -bottom-10 left-[4%] w-22 text-dark/10 z-0" />
   <Plant class="decorative -bottom-10 right-[2%] w-30 sm:w-34 text-dark/10 z-0" />
   <Container>
