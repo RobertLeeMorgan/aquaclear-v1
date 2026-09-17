@@ -507,6 +507,8 @@
   --position: 50%;
 
   @apply relative h-full overflow-hidden select-none;
+
+  touch-action: pan-y;
 }
 
 .before-after-before {
@@ -527,9 +529,9 @@
 
 .before-after-handle {
   @apply absolute inset-y-0 cursor-ew-resize;
-
   left: var(--position);
   transform: translateX(-50%);
+  touch-action: none;
 }
 
 .before-after-divider {

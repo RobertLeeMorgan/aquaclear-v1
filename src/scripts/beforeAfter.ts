@@ -1,5 +1,11 @@
 function initBeforeAfter() {
   document.querySelectorAll<HTMLElement>(".before-after").forEach((container) => {
+    const handle = container.querySelector<HTMLButtonElement>(
+      ".before-after-handle",
+    );
+
+    if (!handle) return;
+
     let dragging = false;
 
     function update(clientX: number) {
@@ -14,21 +20,25 @@ function initBeforeAfter() {
     }
 
     function pointerDown(event: PointerEvent) {
-        dragging = true;
+      dragging = true;
 
-        container.classList.add("dragging");
+      container.classList.add("dragging");
 
-        container.setPointerCapture(event.pointerId);
+      handle?.setPointerCapture(event.pointerId);
 
-        update(event.clientX);
+      update(event.clientX);
     }
 
     function pointerUp(event: PointerEvent) {
-        dragging = false;
+      if (!dragging) return;
 
-        container.classList.remove("dragging");
+      dragging = false;
 
-        container.releasePointerCapture(event.pointerId);
+      container.classList.remove("dragging");
+
+      if (handle?.hasPointerCapture(event.pointerId)) {
+        handle.releasePointerCapture(event.pointerId);
+      }
     }
 
     function pointerMove(event: PointerEvent) {
@@ -37,10 +47,10 @@ function initBeforeAfter() {
       update(event.clientX);
     }
 
-    container.addEventListener("pointerdown", pointerDown);
-    container.addEventListener("pointermove", pointerMove);
-    container.addEventListener("pointerup", pointerUp);
-    container.addEventListener("pointerleave", pointerUp);
+    handle.addEventListener("pointerdown", pointerDown);
+    handle.addEventListener("pointermove", pointerMove);
+    handle.addEventListener("pointerup", pointerUp);
+    handle.addEventListener("pointerleave", pointerUp);
   });
 }
 
