@@ -5,8 +5,8 @@ backend:
   name: github
   repo: RobertLeeMorgan/aquaclear-v1
   branch: main
-  site_domain: https://www.aquaclearwatermanagement.com/
-  base_url: https://www.aquaclearwatermanagement.com/
+  site_domain: https://aquaclear.pages.dev
+  base_url: https://aquaclear.pages.dev
   auth_endpoint: /api/auth
   squash_merges: true
 
@@ -615,6 +615,7 @@ collections:
             name: "services"
             widget: list
             field:
+              name: "service"
               widget: select
               options:
                 - "weed-cutting"
@@ -631,6 +632,7 @@ collections:
             name: "sites"
             widget: list
             field:
+              name: "site"
               widget: select
               options:
                 - "nature-reserves-sssi"
@@ -2264,6 +2266,7 @@ collections:
                     widget: list
                     field:
                       widget: select
+                      name: "service"
                       options:
                         - "weed-cutting"
                         - "bulrush-removal"
@@ -2281,6 +2284,7 @@ collections:
                     widget: list
                     field:
                       widget: select
+                      name: "site"
                       options:
                         - "nature-reserves-sssi"
                         - "castles-heritage-sites"
