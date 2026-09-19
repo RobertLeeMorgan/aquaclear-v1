@@ -49,6 +49,8 @@ export async function onRequest(context) {
                 status: 401 
             });
         }
+        console.log("GitHub OAuth result:", result);
+
         const token = result.access_token;
         const provider = 'github';
         const responseBody = renderBody('success', {

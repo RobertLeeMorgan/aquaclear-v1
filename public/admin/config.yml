@@ -14,7 +14,6 @@ media_library:
   name: uploadcare
 
 collections:
-
   - name: "services"
     label: "Services"
     folder: "src/content/services"
@@ -88,36 +87,7 @@ collections:
                       - { label: "Type", name: "type", widget: "hidden", default: "image" }
                       - { label: "Src", name: "src", widget: "image" }
                       - { label: "Alt", name: "alt", widget: "string" }
-                  - label: "Video"
-                    name: "video"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "video" }
-                      - label: "Video"
-                        name: "video"
-                        widget: list
-                        types:
-                          - label: "Youtube"
-                            name: "youtube"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "youtube" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Vimeo"
-                            name: "vimeo"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "vimeo" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Html"
-                            name: "html"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "html" }
-                              - { label: "Src", name: "src", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
+ 
                   - label: "Before After"
                     name: "beforeAfter"
                     widget: object
@@ -167,36 +137,7 @@ collections:
                           - { label: "Type", name: "type", widget: "hidden", default: "image" }
                           - { label: "Src", name: "src", widget: "image" }
                           - { label: "Alt", name: "alt", widget: "string" }
-                      - label: "Video"
-                        name: "video"
-                        widget: object
-                        fields:
-                          - { label: "Type", name: "type", widget: "hidden", default: "video" }
-                          - label: "Video"
-                            name: "video"
-                            widget: list
-                            types:
-                              - label: "Youtube"
-                                name: "youtube"
-                                widget: object
-                                fields:
-                                  - { label: "Provider", name: "provider", widget: "hidden", default: "youtube" }
-                                  - { label: "Id", name: "id", widget: "string" }
-                                  - { label: "Title", name: "title", widget: "string", required: false }
-                              - label: "Vimeo"
-                                name: "vimeo"
-                                widget: object
-                                fields:
-                                  - { label: "Provider", name: "provider", widget: "hidden", default: "vimeo" }
-                                  - { label: "Id", name: "id", widget: "string" }
-                                  - { label: "Title", name: "title", widget: "string", required: false }
-                              - label: "Html"
-                                name: "html"
-                                widget: object
-                                fields:
-                                  - { label: "Provider", name: "provider", widget: "hidden", default: "html" }
-                                  - { label: "Src", name: "src", widget: "string" }
-                                  - { label: "Title", name: "title", widget: "string", required: false }
+                      
                       - label: "Before After"
                         name: "beforeAfter"
                         widget: object
@@ -239,36 +180,7 @@ collections:
                       - { label: "Type", name: "type", widget: "hidden", default: "image" }
                       - { label: "Src", name: "src", widget: "image" }
                       - { label: "Alt", name: "alt", widget: "string" }
-                  - label: "Video"
-                    name: "video"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "video" }
-                      - label: "Video"
-                        name: "video"
-                        widget: list
-                        types:
-                          - label: "Youtube"
-                            name: "youtube"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "youtube" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Vimeo"
-                            name: "vimeo"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "vimeo" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Html"
-                            name: "html"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "html" }
-                              - { label: "Src", name: "src", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
+ 
                   - label: "Before After"
                     name: "beforeAfter"
                     widget: object
@@ -390,36 +302,7 @@ collections:
                                       - { label: "Type", name: "type", widget: "hidden", default: "image" }
                                       - { label: "Src", name: "src", widget: "image" }
                                       - { label: "Alt", name: "alt", widget: "string" }
-                                  - label: "Video"
-                                    name: "video"
-                                    widget: object
-                                    fields:
-                                      - { label: "Type", name: "type", widget: "hidden", default: "video" }
-                                      - label: "Video"
-                                        name: "video"
-                                        widget: list
-                                        types:
-                                          - label: "Youtube"
-                                            name: "youtube"
-                                            widget: object
-                                            fields:
-                                              - { label: "Provider", name: "provider", widget: "hidden", default: "youtube" }
-                                              - { label: "Id", name: "id", widget: "string" }
-                                              - { label: "Title", name: "title", widget: "string", required: false }
-                                          - label: "Vimeo"
-                                            name: "vimeo"
-                                            widget: object
-                                            fields:
-                                              - { label: "Provider", name: "provider", widget: "hidden", default: "vimeo" }
-                                              - { label: "Id", name: "id", widget: "string" }
-                                              - { label: "Title", name: "title", widget: "string", required: false }
-                                          - label: "Html"
-                                            name: "html"
-                                            widget: object
-                                            fields:
-                                              - { label: "Provider", name: "provider", widget: "hidden", default: "html" }
-                                              - { label: "Src", name: "src", widget: "string" }
-                                              - { label: "Title", name: "title", widget: "string", required: false }
+                                  
                                   - label: "Before After"
                                     name: "beforeAfter"
                                     widget: object
@@ -446,36 +329,7 @@ collections:
                                       - { label: "Type", name: "type", widget: "hidden", default: "image" }
                                       - { label: "Src", name: "src", widget: "image" }
                                       - { label: "Alt", name: "alt", widget: "string" }
-                                  - label: "Video"
-                                    name: "video"
-                                    widget: object
-                                    fields:
-                                      - { label: "Type", name: "type", widget: "hidden", default: "video" }
-                                      - label: "Video"
-                                        name: "video"
-                                        widget: list
-                                        types:
-                                          - label: "Youtube"
-                                            name: "youtube"
-                                            widget: object
-                                            fields:
-                                              - { label: "Provider", name: "provider", widget: "hidden", default: "youtube" }
-                                              - { label: "Id", name: "id", widget: "string" }
-                                              - { label: "Title", name: "title", widget: "string", required: false }
-                                          - label: "Vimeo"
-                                            name: "vimeo"
-                                            widget: object
-                                            fields:
-                                              - { label: "Provider", name: "provider", widget: "hidden", default: "vimeo" }
-                                              - { label: "Id", name: "id", widget: "string" }
-                                              - { label: "Title", name: "title", widget: "string", required: false }
-                                          - label: "Html"
-                                            name: "html"
-                                            widget: object
-                                            fields:
-                                              - { label: "Provider", name: "provider", widget: "hidden", default: "html" }
-                                              - { label: "Src", name: "src", widget: "string" }
-                                              - { label: "Title", name: "title", widget: "string", required: false }
+                                  
                                   - label: "Before After"
                                     name: "beforeAfter"
                                     widget: object
@@ -670,36 +524,7 @@ collections:
                       - { label: "Type", name: "type", widget: "hidden", default: "image" }
                       - { label: "Src", name: "src", widget: "image" }
                       - { label: "Alt", name: "alt", widget: "string" }
-                  - label: "Video"
-                    name: "video"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "video" }
-                      - label: "Video"
-                        name: "video"
-                        widget: list
-                        types:
-                          - label: "Youtube"
-                            name: "youtube"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "youtube" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Vimeo"
-                            name: "vimeo"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "vimeo" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Html"
-                            name: "html"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "html" }
-                              - { label: "Src", name: "src", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
+ 
                   - label: "Before After"
                     name: "beforeAfter"
                     widget: object
@@ -775,36 +600,7 @@ collections:
                       - { label: "Type", name: "type", widget: "hidden", default: "image" }
                       - { label: "Src", name: "src", widget: "image" }
                       - { label: "Alt", name: "alt", widget: "string" }
-                  - label: "Video"
-                    name: "video"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "video" }
-                      - label: "Video"
-                        name: "video"
-                        widget: list
-                        types:
-                          - label: "Youtube"
-                            name: "youtube"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "youtube" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Vimeo"
-                            name: "vimeo"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "vimeo" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Html"
-                            name: "html"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "html" }
-                              - { label: "Src", name: "src", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
+ 
                   - label: "Before After"
                     name: "beforeAfter"
                     widget: object
@@ -846,36 +642,7 @@ collections:
                       - { label: "Type", name: "type", widget: "hidden", default: "image" }
                       - { label: "Src", name: "src", widget: "image" }
                       - { label: "Alt", name: "alt", widget: "string" }
-                  - label: "Video"
-                    name: "video"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "video" }
-                      - label: "Video"
-                        name: "video"
-                        widget: list
-                        types:
-                          - label: "Youtube"
-                            name: "youtube"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "youtube" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Vimeo"
-                            name: "vimeo"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "vimeo" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Html"
-                            name: "html"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "html" }
-                              - { label: "Src", name: "src", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
+ 
                   - label: "Before After"
                     name: "beforeAfter"
                     widget: object
@@ -975,36 +742,7 @@ collections:
                       - { label: "Type", name: "type", widget: "hidden", default: "image" }
                       - { label: "Src", name: "src", widget: "image" }
                       - { label: "Alt", name: "alt", widget: "string" }
-                  - label: "Video"
-                    name: "video"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "video" }
-                      - label: "Video"
-                        name: "video"
-                        widget: list
-                        types:
-                          - label: "Youtube"
-                            name: "youtube"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "youtube" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Vimeo"
-                            name: "vimeo"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "vimeo" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Html"
-                            name: "html"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "html" }
-                              - { label: "Src", name: "src", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
+ 
                   - label: "Before After"
                     name: "beforeAfter"
                     widget: object
@@ -1090,36 +828,6 @@ collections:
                       - { label: "Type", name: "type", widget: "hidden", default: "image" }
                       - { label: "Src", name: "src", widget: "image" }
                       - { label: "Alt", name: "alt", widget: "string" }
-                  - label: "Video"
-                    name: "video"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "video" }
-                      - label: "Video"
-                        name: "video"
-                        widget: list
-                        types:
-                          - label: "Youtube"
-                            name: "youtube"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "youtube" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Vimeo"
-                            name: "vimeo"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "vimeo" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Html"
-                            name: "html"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "html" }
-                              - { label: "Src", name: "src", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
                   - label: "Before After"
                     name: "beforeAfter"
                     widget: object
@@ -1172,36 +880,6 @@ collections:
                       - { label: "Type", name: "type", widget: "hidden", default: "image" }
                       - { label: "Src", name: "src", widget: "image" }
                       - { label: "Alt", name: "alt", widget: "string" }
-                  - label: "Video"
-                    name: "video"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "video" }
-                      - label: "Video"
-                        name: "video"
-                        widget: list
-                        types:
-                          - label: "Youtube"
-                            name: "youtube"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "youtube" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Vimeo"
-                            name: "vimeo"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "vimeo" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Html"
-                            name: "html"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "html" }
-                              - { label: "Src", name: "src", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
                   - label: "Before After"
                     name: "beforeAfter"
                     widget: object
@@ -1301,36 +979,6 @@ collections:
                       - { label: "Type", name: "type", widget: "hidden", default: "image" }
                       - { label: "Src", name: "src", widget: "image" }
                       - { label: "Alt", name: "alt", widget: "string" }
-                  - label: "Video"
-                    name: "video"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "video" }
-                      - label: "Video"
-                        name: "video"
-                        widget: list
-                        types:
-                          - label: "Youtube"
-                            name: "youtube"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "youtube" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Vimeo"
-                            name: "vimeo"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "vimeo" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Html"
-                            name: "html"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "html" }
-                              - { label: "Src", name: "src", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
                   - label: "Before After"
                     name: "beforeAfter"
                     widget: object
@@ -1433,36 +1081,6 @@ collections:
                         fields:
                           - { label: "Src", name: "src", widget: "image" }
                           - { label: "Alt", name: "alt", widget: "string" }
-                  - label: "Video"
-                    name: "video"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "video" }
-                      - label: "Video"
-                        name: "video"
-                        widget: list
-                        types:
-                          - label: "Youtube"
-                            name: "youtube"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "youtube" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Vimeo"
-                            name: "vimeo"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "vimeo" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Html"
-                            name: "html"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "html" }
-                              - { label: "Src", name: "src", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
                   - label: "Testimonial"
                     name: "testimonial"
                     widget: object
@@ -1636,36 +1254,6 @@ collections:
                       - { label: "Type", name: "type", widget: "hidden", default: "image" }
                       - { label: "Src", name: "src", widget: "image" }
                       - { label: "Alt", name: "alt", widget: "string" }
-                  - label: "Video"
-                    name: "video"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "video" }
-                      - label: "Video"
-                        name: "video"
-                        widget: list
-                        types:
-                          - label: "Youtube"
-                            name: "youtube"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "youtube" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Vimeo"
-                            name: "vimeo"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "vimeo" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Html"
-                            name: "html"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "html" }
-                              - { label: "Src", name: "src", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
                   - label: "Before After"
                     name: "beforeAfter"
                     widget: object
@@ -1707,36 +1295,6 @@ collections:
                       - { label: "Type", name: "type", widget: "hidden", default: "image" }
                       - { label: "Src", name: "src", widget: "image" }
                       - { label: "Alt", name: "alt", widget: "string" }
-                  - label: "Video"
-                    name: "video"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "video" }
-                      - label: "Video"
-                        name: "video"
-                        widget: list
-                        types:
-                          - label: "Youtube"
-                            name: "youtube"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "youtube" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Vimeo"
-                            name: "vimeo"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "vimeo" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Html"
-                            name: "html"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "html" }
-                              - { label: "Src", name: "src", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
                   - label: "Before After"
                     name: "beforeAfter"
                     widget: object
@@ -1836,36 +1394,6 @@ collections:
                       - { label: "Type", name: "type", widget: "hidden", default: "image" }
                       - { label: "Src", name: "src", widget: "image" }
                       - { label: "Alt", name: "alt", widget: "string" }
-                  - label: "Video"
-                    name: "video"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "video" }
-                      - label: "Video"
-                        name: "video"
-                        widget: list
-                        types:
-                          - label: "Youtube"
-                            name: "youtube"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "youtube" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Vimeo"
-                            name: "vimeo"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "vimeo" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Html"
-                            name: "html"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "html" }
-                              - { label: "Src", name: "src", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
                   - label: "Before After"
                     name: "beforeAfter"
                     widget: object
@@ -1979,36 +1507,7 @@ collections:
                       - { label: "Type", name: "type", widget: "hidden", default: "image" }
                       - { label: "Src", name: "src", widget: "image" }
                       - { label: "Alt", name: "alt", widget: "string" }
-                  - label: "Video"
-                    name: "video"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "video" }
-                      - label: "Video"
-                        name: "video"
-                        widget: list
-                        types:
-                          - label: "Youtube"
-                            name: "youtube"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "youtube" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Vimeo"
-                            name: "vimeo"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "vimeo" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Html"
-                            name: "html"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "html" }
-                              - { label: "Src", name: "src", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
+ 
                   - label: "Before After"
                     name: "beforeAfter"
                     widget: object
@@ -2125,36 +1624,7 @@ collections:
                         fields:
                           - { label: "Src", name: "src", widget: "image" }
                           - { label: "Alt", name: "alt", widget: "string" }
-                  - label: "Video"
-                    name: "video"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "video" }
-                      - label: "Video"
-                        name: "video"
-                        widget: list
-                        types:
-                          - label: "Youtube"
-                            name: "youtube"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "youtube" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Vimeo"
-                            name: "vimeo"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "vimeo" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-                          - label: "Html"
-                            name: "html"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "html" }
-                              - { label: "Src", name: "src", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
+ 
                   - label: "Testimonial"
                     name: "testimonial"
                     widget: object
@@ -2306,39 +1776,6 @@ collections:
                       - { label: "Type", name: "type", widget: "hidden", default: "image" }
                       - { label: "Src", name: "src", widget: "image" }
                       - { label: "Alt", name: "alt", widget: "string" }
-
-                  - label: "Video"
-                    name: "video"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "video" }
-                      - label: "Video"
-                        name: "video"
-                        widget: list
-                        types:
-                          - label: "Youtube"
-                            name: "youtube"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "youtube" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-
-                          - label: "Vimeo"
-                            name: "vimeo"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "vimeo" }
-                              - { label: "Id", name: "id", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
-
-                          - label: "Html"
-                            name: "html"
-                            widget: object
-                            fields:
-                              - { label: "Provider", name: "provider", widget: "hidden", default: "html" }
-                              - { label: "Src", name: "src", widget: "string" }
-                              - { label: "Title", name: "title", widget: "string", required: false }
 
                   - label: "Before After"
                     name: "beforeAfter"
