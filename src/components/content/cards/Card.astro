@@ -9,6 +9,7 @@ interface Props extends CardType {
   layout?: "vertical" | "horizontal" | "compact";
   ellipsis?: 2 | 3 | 4;
   expand?: boolean;
+  featured?: boolean;
 }
 
 const {
@@ -20,6 +21,7 @@ const {
   layout = "vertical",
   ellipsis,
   expand = false,
+  featured
 } = Astro.props as Props;
 
 const lineClamp = {
@@ -57,6 +59,7 @@ const wrapperClass = expand
 ---
 
 <Wrapper
+  data-featured={featured ? "true" : undefined}
   {...wrapperProps}
   class:list={[
   "card card-motion group relative pb-lg motion",

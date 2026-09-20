@@ -11,7 +11,9 @@ export const initFeaturedCaseStudies = () => {
     ) as HTMLElement[];
 
     cards.forEach((card) => {
-      card.classList.remove("featured-card");
+      const actualCard = card.querySelector(".card");
+
+      actualCard?.classList.remove("featured-card");
 
       const eyebrow = card.querySelector("[data-card-eyebrow]");
 
@@ -32,8 +34,10 @@ export const initFeaturedCaseStudies = () => {
       .slice(0, 3);
 
     selected.forEach((card) => {
+      const actualCard = card.querySelector(".card");
+
       grid.prepend(card);
-      card.classList.add("featured-card");
+      actualCard?.classList.add("featured-card");
 
       const eyebrow = card.querySelector("[data-card-eyebrow]");
 

@@ -49,6 +49,7 @@ export async function onRequestPost({ request, env }) {
     const phone = String(data.get("phone") ?? "").trim();
     const source = String(data.get("source") ?? "").trim();
     const message = String(data.get("message") ?? "").trim();
+    const location = String(data.get("location") ?? "").trim();
 
     if (name.length < 2 || name.length > 100) {
       throw new Error("Invalid name");
@@ -72,6 +73,10 @@ export async function onRequestPost({ request, env }) {
       throw new Error("Invalid message");
     }
 
+    if (location.length > 200) {
+      throw new Error("Invalid location");
+    }
+
     const resend = new Resend(env.RESEND_API_KEY);
 
     const { error } = await resend.emails.send({
@@ -85,6 +90,7 @@ export async function onRequestPost({ request, env }) {
           email,
           phone,
           source,
+          location,
           message,
         },
       },

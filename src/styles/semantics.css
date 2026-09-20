@@ -307,6 +307,12 @@
   @apply scale;
 }
 
+.featured-card {
+  transform: translateY(-4px);
+  border: 1px solid var(--color-accent);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.08);
+}
+
 /* ==========================================================
    Images
    ========================================================== */

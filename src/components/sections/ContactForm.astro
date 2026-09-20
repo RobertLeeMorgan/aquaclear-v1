@@ -53,6 +53,7 @@ const {
             name="email"
             minlength="6"
             maxlength="100"
+            placeholder="you@example.com"
             required
           />
         </div>
@@ -69,6 +70,7 @@ const {
             name="phone"
             minlength="8"
             maxlength="20"
+            placeholder="Your phone number"
           />
         </div>
 
@@ -92,6 +94,21 @@ const {
         </div>
 
         <div class="field">
+          <label class="label" for="location">
+            Site Location
+          </label>
+
+          <input
+            id="location"
+            class="input"
+            type="text"
+            name="location"
+            maxlength="200"
+            placeholder="Postcode, What3Words address, or map location"
+          />
+        </div>
+
+        <div class="field">
           <label class="label" for="message">
             Message
           </label>
@@ -104,6 +121,7 @@ const {
             minlength="10"
             maxlength="2000"
             required
+            placeholder="Tell us about your project or enquiry"
           ></textarea>
         </div>
 
