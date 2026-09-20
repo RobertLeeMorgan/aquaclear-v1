@@ -11,11 +11,14 @@ const {
 } = Astro.props;
 ---
 
-{eyebrow && (
-  <p class="eyebrow">
-    {eyebrow}
-  </p>
-)}
+<p
+  class="eyebrow"
+  data-card-eyebrow
+  class:list={["mb-xs", { hidden: !eyebrow }]}
+>
+  {eyebrow}
+</p>
+
 
 {title && (
   <h3 class={layout === "compact" ? "subheading" : "heading"}>

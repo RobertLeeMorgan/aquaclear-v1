@@ -11,6 +11,7 @@ metadata:
   client: Private Client
   location: UK
   date: "6th December, 2023"
+  featured: true
   services:
     - weed-cutting
     - trash-and-debris-removal

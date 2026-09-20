@@ -222,6 +222,7 @@ export type IconEnum =
   | "compass"
   | "mountain"
   | "users"
+  | "castle"
 
 export type ResponsiveProfileEnum =
   | "large"
@@ -367,6 +368,7 @@ export interface MetadataSection {
   client: string;
   location: string;
   date: string;
+  featured?: boolean;
   services: ServiceEnum[];
   sites: SiteEnum[];
   summary: string;

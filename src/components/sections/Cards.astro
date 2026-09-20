@@ -70,6 +70,7 @@ const gridClass = {
     />
 
     <div
+      data-case-study-grid
       class:list={[
         layout === "grid"
           ? ["mt-3xl", "grid", "gap-xl", "items-start", gridClass]
@@ -81,6 +82,7 @@ const gridClass = {
           data-case-study-card
           data-services={JSON.stringify((item as { services?: string[] }).services ?? [])}
           data-sites={JSON.stringify((item as { sites?: string[]}).sites ?? [])}
+          data-featured={(item as { featured?: boolean }).featured ? "true" : undefined}
           class="h-full"
         >
           <Card

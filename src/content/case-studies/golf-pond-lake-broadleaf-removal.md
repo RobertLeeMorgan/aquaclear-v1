@@ -13,6 +13,7 @@ metadata:
   date: 14th January, 2024
   services:
     - weed-cutting
+  featured: true
   sites:
     - golf-courses
   summary: Extensive removal of broadleaf aquatic weed from a golf course pond and lake, restoring open water and helping control future regrowth.

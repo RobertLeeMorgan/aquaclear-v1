@@ -45,7 +45,8 @@ import {
   Merge,
   Compass,
   Users,
-  Mountain
+  Mountain,
+  Castle
 } from "lucide-astro";
 
 export const featureIconMap: Record<string, any> = {
@@ -96,5 +97,6 @@ export const featureIconMap: Record<string, any> = {
   merge: Merge,
   compass: Compass,
   users: Users,
-  mountain: Mountain
+  mountain: Mountain,
+  castle: Castle
 };

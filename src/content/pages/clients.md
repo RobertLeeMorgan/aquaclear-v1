@@ -27,6 +27,8 @@ trustedBy:
   items:
     - title: Royal Society for the Protection of Birds
       icon: bird
+    - title: National Trust
+      icon: sprout
     - title: Natural Resources Wales
       icon: leaf
     - title: Environment Agency
@@ -35,6 +37,8 @@ trustedBy:
       icon: waves
     - title: Natural England
       icon: treePine
+    - title: Cadw
+      icon: castle
     - title: The Parks Trust
       icon: trees
     - title: London 2012 Olympic Games

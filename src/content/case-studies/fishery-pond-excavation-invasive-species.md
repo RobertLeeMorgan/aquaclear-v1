@@ -15,6 +15,7 @@ metadata:
     - excavation-and-ditching
     - invasive-species-removal
     - weed-cutting
+  featured: true
   sites:
     - fisheries
   summary: Excavation, vegetation clearance and invasive species removal to transform a small, overgrown pond into a larger, cleaner fishery.

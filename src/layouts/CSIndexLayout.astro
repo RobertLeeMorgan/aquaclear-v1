@@ -34,6 +34,15 @@ const { data, caseStudiesItems } = Astro.props;
 
 <script>
   import { initCaseStudyFilters } from "../scripts/filters";
+  import { initFeaturedCaseStudies } from "../scripts/featured";
 
-  document.addEventListener("astro:page-load", initCaseStudyFilters);
+  document.addEventListener(
+    "astro:page-load",
+    initFeaturedCaseStudies,
+  );
+
+  document.addEventListener(
+    "astro:page-load",
+    initCaseStudyFilters,
+  );
 </script>

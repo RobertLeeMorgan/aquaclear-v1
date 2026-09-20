@@ -36,6 +36,28 @@ const servicesItems = services
     href: item.href,
   }));
 
+const caseStudies = await getCollection("caseStudies");
+
+const featuredProjects = caseStudies
+  .filter((entry) => entry.data.metadata.featured)
+  .map((entry) => ({
+    eyebrow: [
+      entry.data.metadata.client,
+      entry.data.metadata.location,
+    ]
+      .filter(Boolean)
+      .join(" · "),
+    title: entry.data.metadata.title,
+    content: entry.data.metadata.summary,
+    media: entry.data.overview.items[0]?.media,
+    buttons: [
+      {
+        title: "View Case Study",
+        href: `/case-studies/${entry.id}`,
+      },
+    ],
+  }));
+
 const schema = [
   homeSchema({
         name: entry.data.seo.title,
@@ -51,5 +73,6 @@ const schema = [
     data={entry.data}
     servicesItems={servicesItems}
     servicesIndexData={servicesIndex.data}
+    featuredProjects={featuredProjects}
   />
 </Layout>

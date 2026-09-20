@@ -7,7 +7,7 @@ import Hero from "../components/sections/Hero.astro";
 import IconListSection from "../components/sections/IconListSection.astro";
 import RichTextSection from "../components/sections/RichTextSection.astro";
 
-const { data, servicesItems, servicesIndexData } = Astro.props;
+const { data, servicesItems, servicesIndexData, featuredProjects } = Astro.props;
 
 ---
 <Hero
@@ -60,15 +60,23 @@ const { data, servicesItems, servicesIndexData } = Astro.props;
   readMore={data.whyChooseUs.readMore}
 />
 
-<RichTextSection
-  eyebrow={data.featuredProject.eyebrow}
-  title={data.featuredProject.title}
-  content={data.featuredProject.content}
-  media={data.featuredProject.media}
-  buttons={data.featuredProject.buttons}
-  dark
-  decoration
-/>
+{featuredProjects.map((project: any, index: number) => (
+  <div
+    data-featured-project
+    data-featured-project-index={index}
+    class="hidden"
+  >
+    <RichTextSection
+      eyebrow={project.eyebrow}
+      title={project.title}
+      content={project.content}
+      media={project.media}
+      buttons={project.buttons}
+      dark
+      decoration
+    />
+  </div>
+))}
 
 <Cta
   eyebrow={data.callToAction.eyebrow}
@@ -76,3 +84,23 @@ const { data, servicesItems, servicesIndexData } = Astro.props;
   description={data.callToAction.description}
   buttons={data.callToAction.buttons}
 />
+
+<script>
+  const initFeaturedProject = () => {
+  const projects = Array.from(
+    document.querySelectorAll("[data-featured-project]"),
+  ) as HTMLElement[];
+
+  if (projects.length <= 1) {
+    return;
+  }
+
+  const selectedIndex = Math.floor(Math.random() * projects.length);
+
+  projects.forEach((project, index) => {
+    project.classList.toggle("hidden", index !== selectedIndex);
+  });
+};
+
+document.addEventListener("astro:page-load", initFeaturedProject);
+</script>

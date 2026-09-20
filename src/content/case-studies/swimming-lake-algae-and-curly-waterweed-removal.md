@@ -13,7 +13,9 @@ metadata:
   date: 22nd May, 2023
   services:
     - blanket-weed-removal
+    - invasive-species-removal
     - weed-cutting
+  featured: true
   sites:
     - leisure-waterways-marinas
   summary: Algae and curly water weed removal from a swimming lake to restore open water and improve the swimming environment.

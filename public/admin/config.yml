@@ -29,8 +29,8 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Description", name: "description", widget: "markdown" }
           - { label: "Image", name: "image", widget: "image", required: false }
-      - label: "Content"
-        name: "content"
+      - label: "Overview"
+        name: "overview"
         widget: list
         types:
           - label: "Hero"
@@ -77,26 +77,41 @@ collections:
                 required: false
               - label: "Media"
                 name: "media"
-                widget: list
+                widget: object
                 required: false
-                types:
-                  - label: "Image"
-                    name: "image"
+                fields:
+                  - label: "Type"
+                    name: "type"
+                    widget: select
+                    options:
+                      - "image"
+                      - "video"
+                      - "beforeAfter"
+
+                  - { label: "Src", name: "src", widget: "image", required: false }
+                  - { label: "Alt", name: "alt", widget: "string", required: false }
+
+                  - label: "Video"
+                    name: "video"
                     widget: object
+                    required: false
                     fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "image" }
-                      - { label: "Src", name: "src", widget: "image" }
-                      - { label: "Alt", name: "alt", widget: "string" }
- 
-                  - label: "Before After"
-                    name: "beforeAfter"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "beforeAfter" }
-                      - { label: "Before", name: "before", widget: "image" }
-                      - { label: "After", name: "after", widget: "image" }
-                      - { label: "Before Alt", name: "beforeAlt", widget: "string" }
-                      - { label: "After Alt", name: "afterAlt", widget: "string" }
+                      - label: "Provider"
+                        required: false
+                        name: "provider"
+                        widget: select
+                        options:
+                          - "youtube"
+                          - "vimeo"
+                          - "html"
+                      - { label: "Id", name: "id", widget: "string", required: false }
+                      - { label: "Src", name: "src", widget: "string", required: false }
+                      - { label: "Title", name: "title", widget: "string", required: false }
+
+                  - { label: "Before", name: "before", widget: "image", required: false }
+                  - { label: "After", name: "after", widget: "image", required: false }
+                  - { label: "Before Alt", name: "beforeAlt", widget: "string", required: false }
+                  - { label: "After Alt", name: "afterAlt", widget: "string", required: false }
               - label: "Buttons"
                 name: "buttons"
                 widget: list
@@ -127,26 +142,41 @@ collections:
                   - { label: "Content", name: "content", widget: "markdown" }
                   - label: "Media"
                     name: "media"
-                    widget: list
+                    widget: object
                     required: false
-                    types:
-                      - label: "Image"
-                        name: "image"
+                    fields:
+                      - label: "Type"
+                        name: "type"
+                        widget: select
+                        options:
+                          - "image"
+                          - "video"
+                          - "beforeAfter"
+
+                      - { label: "Src", name: "src", widget: "image", required: false }
+                      - { label: "Alt", name: "alt", widget: "string", required: false }
+
+                      - label: "Video"
+                        name: "video"
                         widget: object
+                        required: false
                         fields:
-                          - { label: "Type", name: "type", widget: "hidden", default: "image" }
-                          - { label: "Src", name: "src", widget: "image" }
-                          - { label: "Alt", name: "alt", widget: "string" }
-                      
-                      - label: "Before After"
-                        name: "beforeAfter"
-                        widget: object
-                        fields:
-                          - { label: "Type", name: "type", widget: "hidden", default: "beforeAfter" }
-                          - { label: "Before", name: "before", widget: "image" }
-                          - { label: "After", name: "after", widget: "image" }
-                          - { label: "Before Alt", name: "beforeAlt", widget: "string" }
-                          - { label: "After Alt", name: "afterAlt", widget: "string" }
+                          - label: "Provider"
+                            required: false
+                            name: "provider"
+                            widget: select
+                            options:
+                              - "youtube"
+                              - "vimeo"
+                              - "html"
+                          - { label: "Id", name: "id", widget: "string", required: false }
+                          - { label: "Src", name: "src", widget: "string", required: false }
+                          - { label: "Title", name: "title", widget: "string", required: false }
+
+                      - { label: "Before", name: "before", widget: "image", required: false }
+                      - { label: "After", name: "after", widget: "image", required: false }
+                      - { label: "Before Alt", name: "beforeAlt", widget: "string", required: false }
+                      - { label: "After Alt", name: "afterAlt", widget: "string", required: false }
                   - label: "Buttons"
                     name: "buttons"
                     widget: list
@@ -171,26 +201,41 @@ collections:
               - { label: "Description", name: "description", widget: "markdown", required: false }
               - label: "Media"
                 name: "media"
-                widget: list
-                types:
-                  - label: "Image"
-                    name: "image"
+                widget: object
+                required: false
+                fields:
+                  - label: "Type"
+                    name: "type"
+                    widget: select
+                    options:
+                      - "image"
+                      - "video"
+                      - "beforeAfter"
+
+                  - { label: "Src", name: "src", widget: "image", required: false }
+                  - { label: "Alt", name: "alt", widget: "string", required: false }
+
+                  - label: "Video"
+                    name: "video"
                     widget: object
+                    required: false
                     fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "image" }
-                      - { label: "Src", name: "src", widget: "image" }
-                      - { label: "Alt", name: "alt", widget: "string" }
- 
-                  - label: "Before After"
-                    name: "beforeAfter"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "beforeAfter" }
-                      - { label: "Before", name: "before", widget: "image" }
-                      - { label: "After", name: "after", widget: "image" }
-                      - { label: "Before Alt", name: "beforeAlt", widget: "string" }
-                      - { label: "After Alt", name: "afterAlt", widget: "string" }
-              - { label: "Alt", name: "alt", widget: "string", required: false }
+                      - label: "Provider"
+                        required: false
+                        name: "provider"
+                        widget: select
+                        options:
+                          - "youtube"
+                          - "vimeo"
+                          - "html"
+                      - { label: "Id", name: "id", widget: "string", required: false }
+                      - { label: "Src", name: "src", widget: "string", required: false }
+                      - { label: "Title", name: "title", widget: "string", required: false }
+
+                  - { label: "Before", name: "before", widget: "image", required: false }
+                  - { label: "After", name: "after", widget: "image", required: false }
+                  - { label: "Before Alt", name: "beforeAlt", widget: "string", required: false }
+                  - { label: "After Alt", name: "afterAlt", widget: "string", required: false }
               - label: "Items"
                 name: "items"
                 widget: list
@@ -292,53 +337,78 @@ collections:
                               - { label: "Content", name: "content", widget: "markdown" }
                               - label: "Media"
                                 name: "media"
-                                widget: list
+                                widget: object
                                 required: false
-                                types:
-                                  - label: "Image"
-                                    name: "image"
+                                fields:
+                                  - label: "Type"
+                                    name: "type"
+                                    widget: select
+                                    options:
+                                      - "image"
+                                      - "video"
+                                      - "beforeAfter"
+
+                                  - { label: "Src", name: "src", widget: "image", required: false }
+                                  - { label: "Alt", name: "alt", widget: "string", required: false }
+
+                                  - label: "Video"
+                                    name: "video"
                                     widget: object
+                                    required: false
                                     fields:
-                                      - { label: "Type", name: "type", widget: "hidden", default: "image" }
-                                      - { label: "Src", name: "src", widget: "image" }
-                                      - { label: "Alt", name: "alt", widget: "string" }
-                                  
-                                  - label: "Before After"
-                                    name: "beforeAfter"
-                                    widget: object
-                                    fields:
-                                      - { label: "Type", name: "type", widget: "hidden", default: "beforeAfter" }
-                                      - { label: "Before", name: "before", widget: "image" }
-                                      - { label: "After", name: "after", widget: "image" }
-                                      - { label: "Before Alt", name: "beforeAlt", widget: "string" }
-                                      - { label: "After Alt", name: "afterAlt", widget: "string" }
+                                      - label: "Provider"
+                                        required: false
+                                        name: "provider"
+                                        widget: select
+                                        options:
+                                          - "youtube"
+                                          - "vimeo"
+                                          - "html"
+                                      - { label: "Id", name: "id", widget: "string", required: false }
+                                      - { label: "Src", name: "src", widget: "string", required: false }
+                                      - { label: "Title", name: "title", widget: "string", required: false }
+
+                                  - { label: "Before", name: "before", widget: "image", required: false }
+                                  - { label: "After", name: "after", widget: "image", required: false }
+                                  - { label: "Before Alt", name: "beforeAlt", widget: "string", required: false }
+                                  - { label: "After Alt", name: "afterAlt", widget: "string", required: false }
                           - label: "Media"
                             name: "media"
                             widget: object
+                            required: false
                             fields:
-                              - { label: "Type", name: "type", widget: "hidden", default: "media" }
-                              - { label: "Heading", name: "heading", widget: "string", required: false }
-                              - label: "Media"
-                                name: "media"
-                                widget: list
-                                types:
-                                  - label: "Image"
-                                    name: "image"
-                                    widget: object
-                                    fields:
-                                      - { label: "Type", name: "type", widget: "hidden", default: "image" }
-                                      - { label: "Src", name: "src", widget: "image" }
-                                      - { label: "Alt", name: "alt", widget: "string" }
-                                  
-                                  - label: "Before After"
-                                    name: "beforeAfter"
-                                    widget: object
-                                    fields:
-                                      - { label: "Type", name: "type", widget: "hidden", default: "beforeAfter" }
-                                      - { label: "Before", name: "before", widget: "image" }
-                                      - { label: "After", name: "after", widget: "image" }
-                                      - { label: "Before Alt", name: "beforeAlt", widget: "string" }
-                                      - { label: "After Alt", name: "afterAlt", widget: "string" }
+                              - label: "Type"
+                                name: "type"
+                                widget: select
+                                options:
+                                  - "image"
+                                  - "video"
+                                  - "beforeAfter"
+
+                              - { label: "Src", name: "src", widget: "image", required: false }
+                              - { label: "Alt", name: "alt", widget: "string", required: false }
+
+                              - label: "Video"
+                                name: "video"
+                                widget: object
+                                required: false
+                                fields:
+                                  - label: "Provider"
+                                    required: false
+                                    name: "provider"
+                                    widget: select
+                                    options:
+                                      - "youtube"
+                                      - "vimeo"
+                                      - "html"
+                                  - { label: "Id", name: "id", widget: "string", required: false }
+                                  - { label: "Src", name: "src", widget: "string", required: false }
+                                  - { label: "Title", name: "title", widget: "string", required: false }
+
+                              - { label: "Before", name: "before", widget: "image", required: false }
+                              - { label: "After", name: "after", widget: "image", required: false }
+                              - { label: "Before Alt", name: "beforeAlt", widget: "string", required: false }
+                              - { label: "After Alt", name: "afterAlt", widget: "string", required: false }
                           - label: "Icons"
                             name: "icons"
                             widget: object
@@ -446,7 +516,7 @@ collections:
     label: "Case Studies"
     folder: "src/content/case-studies"
     create: true
-    slug: "{{fields.slug}}"
+    slug: "{{fields.metadata.title}}"
     media_folder: "../../assets/images"
     public_folder: "../../assets/images"
     fields:
@@ -457,6 +527,7 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Description", name: "description", widget: "markdown" }
           - { label: "Image", name: "image", widget: "image", required: false }
+
       - label: "Metadata"
         name: "metadata"
         widget: object
@@ -498,6 +569,7 @@ collections:
                 - "leisure-waterways-marinas"
                 - "public-private-lakes-ponds"
           - { label: "Summary", name: "summary", widget: "markdown" }
+
       - label: "Overview"
         name: "overview"
         widget: object
@@ -505,35 +577,53 @@ collections:
           - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
           - { label: "Title", name: "title", widget: "string", required: false }
           - { label: "Description", name: "description", widget: "string", required: false }
+
           - label: "Items"
             name: "items"
             widget: list
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Content", name: "content", widget: "markdown" }
-              - { label: "Gallery", name: "gallery", widget: "boolean", default: true }
+              - { label: "Gallery", name: "gallery", widget: "boolean", default: false }
+
               - label: "Media"
                 name: "media"
-                widget: list
+                widget: object
                 required: false
-                types:
-                  - label: "Image"
-                    name: "image"
+                fields:
+                  - label: "Type"
+                    name: "type"
+                    widget: select
+                    options:
+                      - "image"
+                      - "video"
+                      - "beforeAfter"
+
+                  - { label: "Src", name: "src", widget: "image", required: false }
+                  - { label: "Alt", name: "alt", widget: "string", required: false }
+
+                  - label: "Video"
+                    name: "video"
                     widget: object
+                    required: false
                     fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "image" }
-                      - { label: "Src", name: "src", widget: "image" }
-                      - { label: "Alt", name: "alt", widget: "string" }
- 
-                  - label: "Before After"
-                    name: "beforeAfter"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "beforeAfter" }
-                      - { label: "Before", name: "before", widget: "image" }
-                      - { label: "After", name: "after", widget: "image" }
-                      - { label: "Before Alt", name: "beforeAlt", widget: "string" }
-                      - { label: "After Alt", name: "afterAlt", widget: "string" }
+                      - label: "Provider"
+                        required: false
+                        name: "provider"
+                        widget: select
+                        options:
+                          - "youtube"
+                          - "vimeo"
+                          - "html"
+                      - { label: "Id", name: "id", widget: "string", required: false }
+                      - { label: "Src", name: "src", widget: "string", required: false }
+                      - { label: "Title", name: "title", widget: "string", required: false }
+
+                  - { label: "Before", name: "before", widget: "image", required: false }
+                  - { label: "After", name: "after", widget: "image", required: false }
+                  - { label: "Before Alt", name: "beforeAlt", widget: "string", required: false }
+                  - { label: "After Alt", name: "afterAlt", widget: "string", required: false }
+
               - label: "Buttons"
                 name: "buttons"
                 widget: list
@@ -541,6 +631,7 @@ collections:
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Href", name: "href", widget: "string", required: false }
+
           - label: "Read More"
             name: "readMore"
             widget: object
@@ -552,7 +643,6 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-
       - file: "src/content/pages/index.md"
         name: "home"
         label: "Home"
@@ -566,6 +656,7 @@ collections:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "markdown" }
               - { label: "Image", name: "image", widget: "image", required: false }
+
           - label: "Hero"
             name: "hero"
             widget: object
@@ -581,6 +672,7 @@ collections:
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Href", name: "href", widget: "string", required: false }
+
           - label: "Introduction"
             name: "introduction"
             widget: object
@@ -588,28 +680,45 @@ collections:
               - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Content", name: "content", widget: "markdown" }
+
               - label: "Media"
                 name: "media"
-                widget: list
+                widget: object
                 required: false
-                types:
-                  - label: "Image"
-                    name: "image"
+                fields:
+                  - label: "Type"
+                    name: "type"
+                    widget: select
+                    options:
+                      - "image"
+                      - "video"
+                      - "beforeAfter"
+
+                  - { label: "Src", name: "src", widget: "image", required: false }
+                  - { label: "Alt", name: "alt", widget: "string", required: false }
+
+                  - label: "Video"
+                    name: "video"
                     widget: object
+                    required: false
                     fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "image" }
-                      - { label: "Src", name: "src", widget: "image" }
-                      - { label: "Alt", name: "alt", widget: "string" }
- 
-                  - label: "Before After"
-                    name: "beforeAfter"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "beforeAfter" }
-                      - { label: "Before", name: "before", widget: "image" }
-                      - { label: "After", name: "after", widget: "image" }
-                      - { label: "Before Alt", name: "beforeAlt", widget: "string" }
-                      - { label: "After Alt", name: "afterAlt", widget: "string" }
+                      - label: "Provider"
+                        required: false
+                        name: "provider"
+                        widget: select
+                        options:
+                          - "youtube"
+                          - "vimeo"
+                          - "html"
+                      - { label: "Id", name: "id", widget: "string", required: false }
+                      - { label: "Src", name: "src", widget: "string", required: false }
+                      - { label: "Title", name: "title", widget: "string", required: false }
+
+                  - { label: "Before", name: "before", widget: "image", required: false }
+                  - { label: "After", name: "after", widget: "image", required: false }
+                  - { label: "Before Alt", name: "beforeAlt", widget: "string", required: false }
+                  - { label: "After Alt", name: "afterAlt", widget: "string", required: false }
+
               - label: "Buttons"
                 name: "buttons"
                 widget: list
@@ -617,6 +726,7 @@ collections:
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Href", name: "href", widget: "string", required: false }
+
               - label: "Read More"
                 name: "readMore"
                 widget: object
@@ -624,6 +734,7 @@ collections:
                 fields:
                   - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Href", name: "href", widget: "string", required: false }
+
           - label: "Why Choose Us"
             name: "whyChooseUs"
             widget: object
@@ -631,28 +742,45 @@ collections:
               - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "markdown", required: false }
+
               - label: "Media"
                 name: "media"
-                widget: list
-                types:
-                  - label: "Image"
-                    name: "image"
+                widget: object
+                required: false
+                fields:
+                  - label: "Type"
+                    name: "type"
+                    widget: select
+                    options:
+                      - "image"
+                      - "video"
+                      - "beforeAfter"
+
+                  - { label: "Src", name: "src", widget: "image", required: false }
+                  - { label: "Alt", name: "alt", widget: "string", required: false }
+
+                  - label: "Video"
+                    name: "video"
                     widget: object
+                    required: false
                     fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "image" }
-                      - { label: "Src", name: "src", widget: "image" }
-                      - { label: "Alt", name: "alt", widget: "string" }
- 
-                  - label: "Before After"
-                    name: "beforeAfter"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "beforeAfter" }
-                      - { label: "Before", name: "before", widget: "image" }
-                      - { label: "After", name: "after", widget: "image" }
-                      - { label: "Before Alt", name: "beforeAlt", widget: "string" }
-                      - { label: "After Alt", name: "afterAlt", widget: "string" }
-              - { label: "Alt", name: "alt", widget: "string", required: false }
+                      - label: "Provider"
+                        required: false
+                        name: "provider"
+                        widget: select
+                        options:
+                          - "youtube"
+                          - "vimeo"
+                          - "html"
+                      - { label: "Id", name: "id", widget: "string", required: false }
+                      - { label: "Src", name: "src", widget: "string", required: false }
+                      - { label: "Title", name: "title", widget: "string", required: false }
+
+                  - { label: "Before", name: "before", widget: "image", required: false }
+                  - { label: "After", name: "after", widget: "image", required: false }
+                  - { label: "Before Alt", name: "beforeAlt", widget: "string", required: false }
+                  - { label: "After Alt", name: "afterAlt", widget: "string", required: false }
+
               - label: "Items"
                 name: "items"
                 widget: list
@@ -709,6 +837,7 @@ collections:
                       - "mountain"
                       - "users"
                   - { label: "Title", name: "title", widget: "string" }
+
               - label: "Buttons"
                 name: "buttons"
                 widget: list
@@ -716,6 +845,7 @@ collections:
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Href", name: "href", widget: "string", required: false }
+
               - label: "Read More"
                 name: "readMore"
                 widget: object
@@ -723,49 +853,7 @@ collections:
                 fields:
                   - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Href", name: "href", widget: "string", required: false }
-          - label: "Featured Project"
-            name: "featuredProject"
-            widget: object
-            fields:
-              - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Content", name: "content", widget: "markdown" }
-              - label: "Media"
-                name: "media"
-                widget: list
-                required: false
-                types:
-                  - label: "Image"
-                    name: "image"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "image" }
-                      - { label: "Src", name: "src", widget: "image" }
-                      - { label: "Alt", name: "alt", widget: "string" }
- 
-                  - label: "Before After"
-                    name: "beforeAfter"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "beforeAfter" }
-                      - { label: "Before", name: "before", widget: "image" }
-                      - { label: "After", name: "after", widget: "image" }
-                      - { label: "Before Alt", name: "beforeAlt", widget: "string" }
-                      - { label: "After Alt", name: "afterAlt", widget: "string" }
-              - label: "Buttons"
-                name: "buttons"
-                widget: list
-                required: false
-                fields:
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Href", name: "href", widget: "string", required: false }
-              - label: "Read More"
-                name: "readMore"
-                widget: object
-                required: false
-                fields:
-                  - { label: "Title", name: "title", widget: "string", required: false }
-                  - { label: "Href", name: "href", widget: "string", required: false }
+
           - label: "Call To Action"
             name: "callToAction"
             widget: object
@@ -789,14 +877,15 @@ collections:
         fields:
           - label: "SEO"
             name: "seo"
-            widget: object
+            widget: "object"
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "markdown" }
               - { label: "Image", name: "image", widget: "image", required: false }
+
           - label: "Hero"
             name: "hero"
-            widget: object
+            widget: "object"
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "markdown", required: false }
@@ -804,99 +893,113 @@ collections:
               - { label: "Alt", name: "alt", widget: "string", required: false }
               - label: "Buttons"
                 name: "buttons"
-                widget: list
+                widget: "list"
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Href", name: "href", widget: "string", required: false }
+
           - label: "About Aquaclear"
             name: "aboutAquaclear"
-            widget: object
+            widget: "object"
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Content", name: "content", widget: "markdown" }
+
               - label: "Media"
                 name: "media"
-                widget: list
+                widget: "object"
                 required: false
-                types:
-                  - label: "Image"
-                    name: "image"
-                    widget: object
+                fields:
+                  - { label: "Type", name: "type", widget: "select", options: ["image", "video", "beforeAfter"] }
+                  - { label: "Src", name: "src", widget: "image", required: false }
+                  - { label: "Alt", name: "alt", widget: "string", required: false }
+
+                  - label: "Video"
+                    name: "video"
+                    widget: "object"
+                    required: false
                     fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "image" }
-                      - { label: "Src", name: "src", widget: "image" }
-                      - { label: "Alt", name: "alt", widget: "string" }
-                  - label: "Before After"
-                    name: "beforeAfter"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "beforeAfter" }
-                      - { label: "Before", name: "before", widget: "image" }
-                      - { label: "After", name: "after", widget: "image" }
-                      - { label: "Before Alt", name: "beforeAlt", widget: "string" }
-                      - { label: "After Alt", name: "afterAlt", widget: "string" }
+                      - { label: "Provider", name: "provider", widget: "select", options: ["youtube", "vimeo", "html"] }
+                      - { label: "Id", name: "id", widget: "string", required: false }
+                      - { label: "Src", name: "src", widget: "string", required: false }
+                      - { label: "Title", name: "title", widget: "string", required: false }
+
+                  - { label: "Before", name: "before", widget: "image", required: false }
+                  - { label: "After", name: "after", widget: "image", required: false }
+                  - { label: "Before Alt", name: "beforeAlt", widget: "string", required: false }
+                  - { label: "After Alt", name: "afterAlt", widget: "string", required: false }
+
               - label: "Buttons"
                 name: "buttons"
-                widget: list
+                widget: "list"
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Href", name: "href", widget: "string", required: false }
+
               - label: "Read More"
                 name: "readMore"
-                widget: object
+                widget: "object"
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Href", name: "href", widget: "string", required: false }
+
           - label: "Experience and Expertise"
             name: "experienceAndExpertise"
-            widget: object
+            widget: "object"
             fields:
               - label: "Items"
                 name: "items"
-                widget: list
+                widget: "list"
                 fields:
                   - { label: "Icon", name: "icon", widget: "string" }
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Description", name: "description", widget: "markdown", required: false }
+
           - label: "Truxor"
             name: "truxor"
-            widget: object
+            widget: "object"
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "markdown", required: false }
+
               - label: "Media"
                 name: "media"
-                widget: list
-                types:
-                  - label: "Image"
-                    name: "image"
-                    widget: object
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Type", name: "type", widget: "select", options: ["image", "video", "beforeAfter"] }
+                  - { label: "Src", name: "src", widget: "image", required: false }
+                  - { label: "Alt", name: "alt", widget: "string", required: false }
+
+                  - label: "Video"
+                    name: "video"
+                    widget: "object"
+                    required: false
                     fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "image" }
-                      - { label: "Src", name: "src", widget: "image" }
-                      - { label: "Alt", name: "alt", widget: "string" }
-                  - label: "Before After"
-                    name: "beforeAfter"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "beforeAfter" }
-                      - { label: "Before", name: "before", widget: "image" }
-                      - { label: "After", name: "after", widget: "image" }
-                      - { label: "Before Alt", name: "beforeAlt", widget: "string" }
-                      - { label: "After Alt", name: "afterAlt", widget: "string" }
+                      - { label: "Provider", name: "provider", widget: "select", options: ["youtube", "vimeo", "html"] }
+                      - { label: "Id", name: "id", widget: "string", required: false }
+                      - { label: "Src", name: "src", widget: "string", required: false }
+                      - { label: "Title", name: "title", widget: "string", required: false }
+
+                  - { label: "Before", name: "before", widget: "image", required: false }
+                  - { label: "After", name: "after", widget: "image", required: false }
+                  - { label: "Before Alt", name: "beforeAlt", widget: "string", required: false }
+                  - { label: "After Alt", name: "afterAlt", widget: "string", required: false }
+
               - { label: "Alt", name: "alt", widget: "string", required: false }
+
               - label: "Items"
                 name: "items"
-                widget: list
+                widget: "list"
                 fields:
                   - label: "Icon"
                     name: "icon"
-                    widget: select
+                    widget: "select"
                     options:
                       - "leaf"
                       - "gauge"
@@ -946,72 +1049,81 @@ collections:
                       - "mountain"
                       - "users"
                   - { label: "Title", name: "title", widget: "string" }
+
               - label: "Buttons"
                 name: "buttons"
-                widget: list
+                widget: "list"
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Href", name: "href", widget: "string", required: false }
+
               - label: "Read More"
                 name: "readMore"
-                widget: object
+                widget: "object"
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Href", name: "href", widget: "string", required: false }
+
           - label: "How We Work"
             name: "howWeWork"
-            widget: object
+            widget: "object"
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Content", name: "content", widget: "markdown" }
+
               - label: "Media"
                 name: "media"
-                widget: list
+                widget: "object"
                 required: false
-                types:
-                  - label: "Image"
-                    name: "image"
-                    widget: object
+                fields:
+                  - { label: "Type", name: "type", widget: "select", options: ["image", "video", "beforeAfter"] }
+                  - { label: "Src", name: "src", widget: "image", required: false }
+                  - { label: "Alt", name: "alt", widget: "string", required: false }
+
+                  - label: "Video"
+                    name: "video"
+                    widget: "object"
+                    required: false
                     fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "image" }
-                      - { label: "Src", name: "src", widget: "image" }
-                      - { label: "Alt", name: "alt", widget: "string" }
-                  - label: "Before After"
-                    name: "beforeAfter"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "beforeAfter" }
-                      - { label: "Before", name: "before", widget: "image" }
-                      - { label: "After", name: "after", widget: "image" }
-                      - { label: "Before Alt", name: "beforeAlt", widget: "string" }
-                      - { label: "After Alt", name: "afterAlt", widget: "string" }
+                      - { label: "Provider", name: "provider", widget: "select", options: ["youtube", "vimeo", "html"] }
+                      - { label: "Id", name: "id", widget: "string", required: false }
+                      - { label: "Src", name: "src", widget: "string", required: false }
+                      - { label: "Title", name: "title", widget: "string", required: false }
+
+                  - { label: "Before", name: "before", widget: "image", required: false }
+                  - { label: "After", name: "after", widget: "image", required: false }
+                  - { label: "Before Alt", name: "beforeAlt", widget: "string", required: false }
+                  - { label: "After Alt", name: "afterAlt", widget: "string", required: false }
+
               - label: "Buttons"
                 name: "buttons"
-                widget: list
+                widget: "list"
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Href", name: "href", widget: "string", required: false }
+
               - label: "Read More"
                 name: "readMore"
-                widget: object
+                widget: "object"
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Href", name: "href", widget: "string", required: false }
+
           - label: "Call To Action"
             name: "callToAction"
-            widget: object
+            widget: "object"
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "markdown", required: false }
               - label: "Buttons"
                 name: "buttons"
-                widget: list
+                widget: "list"
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
@@ -1054,48 +1166,24 @@ collections:
               - { label: "Description", name: "description", widget: "markdown", required: false }
               - label: "Items"
                 name: "items"
-                widget: list
-                types:
+                widget: "object"
+                fields:
+                  - label: "Type"
+                    name: "type"
+                    widget: "select"
+                    options:
+                      - "card"
+
                   - label: "Card"
                     name: "card"
-                    widget: object
+                    widget: "list"
+                    required: false
                     fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "card" }
-                      - label: "Card"
-                        name: "card"
-                        widget: list
-                        fields:
-                          - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
-                          - { label: "Title", name: "title", widget: "string" }
-                          - { label: "Description", name: "description", widget: "markdown", required: false }
-                          - { label: "Image", name: "image", widget: "image", required: false }
-                          - { label: "Href", name: "href", widget: "string", required: false }
-                  - label: "Image"
-                    name: "image"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "image" }
-                      - label: "Image"
-                        name: "image"
-                        widget: list
-                        fields:
-                          - { label: "Src", name: "src", widget: "image" }
-                          - { label: "Alt", name: "alt", widget: "string" }
-                  - label: "Testimonial"
-                    name: "testimonial"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "testimonial" }
-                      - label: "Testimonial"
-                        name: "testimonial"
-                        widget: list
-                        fields:
-                          - { label: "Quote", name: "quote", widget: "markdown" }
-                          - { label: "Author", name: "author", widget: "string" }
-                          - { label: "Role", name: "role", widget: "string", required: false }
-                          - { label: "Company", name: "company", widget: "string", required: false }
-                          - { label: "Avatar", name: "avatar", widget: "image", required: false }
-                          - { label: "Rating", name: "rating", widget: "number", required: false }
+                      - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Description", name: "description", widget: "markdown", required: false }
+                      - { label: "Image", name: "image", widget: "image", required: false }
+                      - { label: "Href", name: "href", widget: "string", required: false }
               - label: "Read More"
                 name: "readMore"
                 widget: object
@@ -1215,14 +1303,15 @@ collections:
         fields:
           - label: "SEO"
             name: "seo"
-            widget: object
+            widget: "object"
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "markdown" }
               - { label: "Image", name: "image", widget: "image", required: false }
+
           - label: "Hero"
             name: "hero"
-            widget: object
+            widget: "object"
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "markdown", required: false }
@@ -1230,88 +1319,79 @@ collections:
               - { label: "Alt", name: "alt", widget: "string", required: false }
               - label: "Buttons"
                 name: "buttons"
-                widget: list
+                widget: "list"
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Href", name: "href", widget: "string", required: false }
+
           - label: "Truxor Expertise"
             name: "truxorExpertise"
-            widget: object
+            widget: "object"
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Content", name: "content", widget: "markdown" }
+
               - label: "Media"
                 name: "media"
-                widget: list
+                widget: "object"
                 required: false
-                types:
-                  - label: "Image"
-                    name: "image"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "image" }
-                      - { label: "Src", name: "src", widget: "image" }
-                      - { label: "Alt", name: "alt", widget: "string" }
-                  - label: "Before After"
-                    name: "beforeAfter"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "beforeAfter" }
-                      - { label: "Before", name: "before", widget: "image" }
-                      - { label: "After", name: "after", widget: "image" }
-                      - { label: "Before Alt", name: "beforeAlt", widget: "string" }
-                      - { label: "After Alt", name: "afterAlt", widget: "string" }
+                fields:
+                  - { label: "Type", name: "type", widget: "select", options: ["image", "beforeAfter"] }
+                  - { label: "Src", name: "src", widget: "image", required: false }
+                  - { label: "Alt", name: "alt", widget: "string", required: false }
+                  - { label: "Before", name: "before", widget: "image", required: false }
+                  - { label: "After", name: "after", widget: "image", required: false }
+                  - { label: "Before Alt", name: "beforeAlt", widget: "string", required: false }
+                  - { label: "After Alt", name: "afterAlt", widget: "string", required: false }
+
               - label: "Buttons"
                 name: "buttons"
-                widget: list
+                widget: "list"
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Href", name: "href", widget: "string", required: false }
+
               - label: "Read More"
                 name: "readMore"
-                widget: object
+                widget: "object"
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Href", name: "href", widget: "string", required: false }
+
           - label: "Capabilities"
             name: "capabilities"
-            widget: object
+            widget: "object"
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "markdown", required: false }
+
               - label: "Media"
                 name: "media"
-                widget: list
-                types:
-                  - label: "Image"
-                    name: "image"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "image" }
-                      - { label: "Src", name: "src", widget: "image" }
-                      - { label: "Alt", name: "alt", widget: "string" }
-                  - label: "Before After"
-                    name: "beforeAfter"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "beforeAfter" }
-                      - { label: "Before", name: "before", widget: "image" }
-                      - { label: "After", name: "after", widget: "image" }
-                      - { label: "Before Alt", name: "beforeAlt", widget: "string" }
-                      - { label: "After Alt", name: "afterAlt", widget: "string" }
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Type", name: "type", widget: "select", options: ["image", "beforeAfter"] }
+                  - { label: "Src", name: "src", widget: "image", required: false }
+                  - { label: "Alt", name: "alt", widget: "string", required: false }
+                  - { label: "Before", name: "before", widget: "image", required: false }
+                  - { label: "After", name: "after", widget: "image", required: false }
+                  - { label: "Before Alt", name: "beforeAlt", widget: "string", required: false }
+                  - { label: "After Alt", name: "afterAlt", widget: "string", required: false }
+
               - { label: "Alt", name: "alt", widget: "string", required: false }
+
               - label: "Items"
                 name: "items"
-                widget: list
+                widget: "list"
                 fields:
                   - label: "Icon"
                     name: "icon"
-                    widget: select
+                    widget: "select"
                     options:
                       - "leaf"
                       - "gauge"
@@ -1361,72 +1441,70 @@ collections:
                       - "mountain"
                       - "users"
                   - { label: "Title", name: "title", widget: "string" }
+
               - label: "Buttons"
                 name: "buttons"
-                widget: list
+                widget: "list"
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Href", name: "href", widget: "string", required: false }
+
               - label: "Read More"
                 name: "readMore"
-                widget: object
+                widget: "object"
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Href", name: "href", widget: "string", required: false }
+
           - label: "Aquaclear and Truxor"
             name: "aquaclearAndTruxor"
-            widget: object
+            widget: "object"
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Content", name: "content", widget: "markdown" }
+
               - label: "Media"
                 name: "media"
-                widget: list
+                widget: "object"
                 required: false
-                types:
-                  - label: "Image"
-                    name: "image"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "image" }
-                      - { label: "Src", name: "src", widget: "image" }
-                      - { label: "Alt", name: "alt", widget: "string" }
-                  - label: "Before After"
-                    name: "beforeAfter"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "beforeAfter" }
-                      - { label: "Before", name: "before", widget: "image" }
-                      - { label: "After", name: "after", widget: "image" }
-                      - { label: "Before Alt", name: "beforeAlt", widget: "string" }
-                      - { label: "After Alt", name: "afterAlt", widget: "string" }
+                fields:
+                  - { label: "Type", name: "type", widget: "select", options: ["image", "beforeAfter"] }
+                  - { label: "Src", name: "src", widget: "image", required: false }
+                  - { label: "Alt", name: "alt", widget: "string", required: false }
+                  - { label: "Before", name: "before", widget: "image", required: false }
+                  - { label: "After", name: "after", widget: "image", required: false }
+                  - { label: "Before Alt", name: "beforeAlt", widget: "string", required: false }
+                  - { label: "After Alt", name: "afterAlt", widget: "string", required: false }
+
               - label: "Buttons"
                 name: "buttons"
-                widget: list
+                widget: "list"
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Href", name: "href", widget: "string", required: false }
+
               - label: "Read More"
                 name: "readMore"
-                widget: object
+                widget: "object"
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Href", name: "href", widget: "string", required: false }
+
           - label: "Call To Action"
             name: "callToAction"
-            widget: object
+            widget: "object"
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "markdown", required: false }
               - label: "Buttons"
                 name: "buttons"
-                widget: list
+                widget: "list"
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
@@ -1467,64 +1545,56 @@ collections:
         media_folder: "../../assets/images"
         public_folder: "../../assets/images"
         fields:
+          - { label: "Title", name: "title", widget: "string" }
+
           - label: "SEO"
             name: "seo"
-            widget: object
+            widget: "object"
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "markdown" }
               - { label: "Image", name: "image", widget: "image", required: false }
+
           - label: "Hero"
             name: "hero"
-            widget: object
+            widget: "object"
             fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "markdown", required: false }
               - { label: "Image", name: "image", widget: "image" }
               - { label: "Alt", name: "alt", widget: "string", required: false }
               - label: "Buttons"
                 name: "buttons"
-                widget: list
+                widget: "list"
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Href", name: "href", widget: "string", required: false }
+
           - label: "Trusted By"
             name: "trustedBy"
-            widget: object
+            widget: "object"
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "markdown", required: false }
+
               - label: "Media"
                 name: "media"
-                widget: list
-                types:
-                  - label: "Image"
-                    name: "image"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "image" }
-                      - { label: "Src", name: "src", widget: "image" }
-                      - { label: "Alt", name: "alt", widget: "string" }
- 
-                  - label: "Before After"
-                    name: "beforeAfter"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "beforeAfter" }
-                      - { label: "Before", name: "before", widget: "image" }
-                      - { label: "After", name: "after", widget: "image" }
-                      - { label: "Before Alt", name: "beforeAlt", widget: "string" }
-                      - { label: "After Alt", name: "afterAlt", widget: "string" }
-              - { label: "Alt", name: "alt", widget: "string", required: false }
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "hidden", default: "image" }
+                  - { label: "Src", name: "src", widget: "image" }
+                  - { label: "Alt", name: "alt", widget: "string" }
+
               - label: "Items"
                 name: "items"
-                widget: list
+                widget: "list"
                 fields:
                   - label: "Icon"
                     name: "icon"
-                    widget: select
+                    widget: "select"
                     options:
                       - "leaf"
                       - "gauge"
@@ -1574,89 +1644,70 @@ collections:
                       - "mountain"
                       - "users"
                   - { label: "Title", name: "title", widget: "string" }
+
               - label: "Buttons"
                 name: "buttons"
-                widget: list
+                widget: "list"
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Href", name: "href", widget: "string", required: false }
+
               - label: "Read More"
                 name: "readMore"
-                widget: object
+                widget: "object"
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Href", name: "href", widget: "string", required: false }
+
           - label: "Testimonials"
             name: "testimonials"
-            widget: object
+            widget: "object"
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string", required: false }
               - { label: "Description", name: "description", widget: "markdown", required: false }
+
               - label: "Items"
                 name: "items"
-                widget: list
-                types:
-                  - label: "Card"
-                    name: "card"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "card" }
-                      - label: "Card"
-                        name: "card"
-                        widget: list
-                        fields:
-                          - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
-                          - { label: "Title", name: "title", widget: "string" }
-                          - { label: "Description", name: "description", widget: "markdown", required: false }
-                          - { label: "Image", name: "image", widget: "image", required: false }
-                          - { label: "Href", name: "href", widget: "string", required: false }
-                  - label: "Image"
-                    name: "image"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "image" }
-                      - label: "Image"
-                        name: "image"
-                        widget: list
-                        fields:
-                          - { label: "Src", name: "src", widget: "image" }
-                          - { label: "Alt", name: "alt", widget: "string" }
- 
+                widget: "object"
+                fields:
+                  - label: "Type"
+                    name: "type"
+                    widget: "hidden"
+                    default: "testimonial"
+
                   - label: "Testimonial"
                     name: "testimonial"
-                    widget: object
+                    widget: "list"
+                    required: false
                     fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "testimonial" }
-                      - label: "Testimonial"
-                        name: "testimonial"
-                        widget: list
-                        fields:
-                          - { label: "Quote", name: "quote", widget: "markdown" }
-                          - { label: "Author", name: "author", widget: "string" }
-                          - { label: "Role", name: "role", widget: "string", required: false }
-                          - { label: "Company", name: "company", widget: "string", required: false }
-                          - { label: "Avatar", name: "avatar", widget: "image", required: false }
-                          - { label: "Rating", name: "rating", widget: "number", required: false }
+                      - { label: "Quote", name: "quote", widget: "markdown" }
+                      - { label: "Author", name: "author", widget: "string" }
+                      - { label: "Role", name: "role", widget: "string", required: false }
+                      - { label: "Company", name: "company", widget: "string", required: false }
+                      - { label: "Avatar", name: "avatar", widget: "image", required: false }
+                      - { label: "Rating", name: "rating", widget: "number", required: false }
+
               - label: "Read More"
                 name: "readMore"
-                widget: object
+                widget: "object"
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string", required: false }
                   - { label: "Href", name: "href", widget: "string", required: false }
+
           - label: "Call To Action"
             name: "callToAction"
-            widget: object
+            widget: "object"
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "markdown", required: false }
               - label: "Buttons"
                 name: "buttons"
-                widget: list
+                widget: "list"
                 required: false
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
@@ -1705,7 +1756,7 @@ collections:
         fields:
           - label: "SEO"
             name: "seo"
-            widget: object
+            widget: "object"
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "markdown" }
@@ -1713,7 +1764,7 @@ collections:
 
           - label: "Page Header"
             name: "pageHeader"
-            widget: object
+            widget: "object"
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
@@ -1721,22 +1772,22 @@ collections:
 
           - label: "Items"
             name: "items"
-            widget: list
+            widget: "list"
             fields:
               - label: "Metadata"
                 name: "metadata"
-                widget: object
+                widget: "object"
                 fields:
                   - { label: "Client", name: "client", widget: "string" }
                   - { label: "Location", name: "location", widget: "string" }
                   - { label: "Date", name: "date", widget: "string" }
-
+                  - { label: "Featured", name: "featured", widget: "boolean", default: false, required: false }
                   - label: "Services"
                     name: "services"
-                    widget: list
+                    widget: "list"
                     field:
-                      widget: select
                       name: "service"
+                      widget: "select"
                       options:
                         - "weed-cutting"
                         - "bulrush-removal"
@@ -1751,10 +1802,10 @@ collections:
 
                   - label: "Sites"
                     name: "sites"
-                    widget: list
+                    widget: "list"
                     field:
-                      widget: select
                       name: "site"
+                      widget: "select"
                       options:
                         - "nature-reserves-sssi"
                         - "castles-heritage-sites"
@@ -1767,22 +1818,31 @@ collections:
 
               - label: "Media"
                 name: "media"
-                widget: list
-                types:
-                  - label: "Image"
-                    name: "image"
-                    widget: object
-                    fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "image" }
-                      - { label: "Src", name: "src", widget: "image" }
-                      - { label: "Alt", name: "alt", widget: "string" }
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "select", options: ["image", "video", "beforeAfter"] }
 
-                  - label: "Before After"
-                    name: "beforeAfter"
-                    widget: object
+                  - label: "Src"
+                    name: "src"
+                    widget: "image"
+                    required: false
+
+                  - label: "Alt"
+                    name: "alt"
+                    widget: "string"
+                    required: false
+
+                  - label: "Video"
+                    name: "video"
+                    widget: "object"
+                    required: false
                     fields:
-                      - { label: "Type", name: "type", widget: "hidden", default: "beforeAfter" }
-                      - { label: "Before", name: "before", widget: "image" }
-                      - { label: "After", name: "after", widget: "image" }
-                      - { label: "Before Alt", name: "beforeAlt", widget: "string" }
-                      - { label: "After Alt", name: "afterAlt", widget: "string" } 
+                      - { label: "Provider", name: "provider", widget: "select", options: ["youtube", "vimeo", "html"] }
+                      - { label: "Id", name: "id", widget: "string", required: false }
+                      - { label: "Src", name: "src", widget: "string", required: false }
+                      - { label: "Title", name: "title", widget: "string", required: false }
+
+                  - { label: "Before", name: "before", widget: "image", required: false }
+                  - { label: "After", name: "after", widget: "image", required: false }
+                  - { label: "Before Alt", name: "beforeAlt", widget: "string", required: false }
+                  - { label: "After Alt", name: "afterAlt", widget: "string", required: false }

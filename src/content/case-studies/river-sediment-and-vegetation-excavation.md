@@ -17,6 +17,7 @@ metadata:
     - tree-work
   sites:
     - canals-rivers
+  featured: true
   summary: River excavation to remove sediment and excessive vegetation that had restricted water depth and flow.
 
 overview:

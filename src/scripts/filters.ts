@@ -160,6 +160,10 @@ const initFilters = ({
       siteFilter,
       "siteFilter",
     );
+
+    document.dispatchEvent(
+      new CustomEvent("case-study-filters-updated"),
+    );
   };
 
   const updateUrl = (

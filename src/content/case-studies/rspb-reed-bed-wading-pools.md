@@ -9,6 +9,7 @@ metadata:
   client: RSPB
   location: UK
   date: 21st October, 2025
+  featured: true
   services:
     - reed-bed-management
   sites:

@@ -56,19 +56,6 @@ whyChooseUs:
   readMore:
     title: See Testimonials and Trusted Clients
     href: /clients
-featuredProject:
-  eyebrow: Featured Project
-  title: Restoring a Private Swimming Lake
-  content: Extensive broadleaf aquatic weed removal from a private swimming lake, clearing dense growth and restoring open water for a cleaner, more usable and attractive swimming environment.
-  media:
-    type: beforeAfter
-    before: ../../assets/images/before/cutting.jpg
-    after: ../../assets/images/after/cutting.jpg
-    beforeAlt: Before carrying out aquatic weed cutting and reed management on a Welsh lake
-    afterAlt: After carrying out aquatic weed cutting and reed management on a Welsh lake
-  buttons:
-    - title: View Case Study
-      href: /case-studies
 callToAction:
   eyebrow: Need Help With Your Watercourse?
   title: Let's Discuss Your Waterway

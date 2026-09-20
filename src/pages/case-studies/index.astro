@@ -12,11 +12,25 @@ if (!entry) {
 
 const caseStudies = await getCollection("caseStudies");
 
-const caseStudiesItems = caseStudies.map((entry) => ({
+const parseDate = (date: string) =>
+  new Date(
+    date.replace(/(\d+)(st|nd|rd|th)/, "$1")
+  ).getTime();
+
+
+const sortedCaseStudies = [...caseStudies].sort(
+  (a, b) =>
+    parseDate(b.data.metadata.date) -
+    parseDate(a.data.metadata.date)
+);
+
+
+const caseStudiesItems = sortedCaseStudies.map((entry) => ({
   ...entry.data.seo,
   href: `/case-studies/${entry.id}`,
   services: entry.data.metadata.services,
   sites: entry.data.metadata.sites,
+  featured: entry.data.metadata.featured,
 }));
 
 const schema = [

@@ -50,6 +50,7 @@ const iconEnumSchema = z.enum([
   "compass",
   "mountain",
   "users",
+  "castle"
 ]);
 
 const responsiveProfileSchema = z.enum([
@@ -297,14 +298,6 @@ const home = defineCollection({
         media: mediaSchema(image),
         alt: z.string().optional(),
         items: z.array(iconSchema(image)),
-        buttons: z.array(buttonSchema(image)).optional(),
-        readMore: readMoreSchema(image).optional(),
-      }),
-      featuredProject: z.object({
-        eyebrow: z.string().optional(),
-        title: z.string(),
-        content: z.string(),
-        media: mediaSchema(image).optional(),
         buttons: z.array(buttonSchema(image)).optional(),
         readMore: readMoreSchema(image).optional(),
       }),
@@ -604,6 +597,7 @@ const caseStudies = defineCollection({
         services: z.array(serviceEnumSchema),
         sites: z.array(siteEnumSchema),
         summary: z.string(),
+        featured: z.boolean().optional().default(false)
       }),
       overview: z.object({
         eyebrow: z.string().optional(),
@@ -615,7 +609,7 @@ const caseStudies = defineCollection({
               content: z.string(),
               media: mediaSchema(image).optional(),
               buttons: z.array(buttonSchema(image)).optional(),
-              gallery: z.boolean().default(true),
+              gallery: z.boolean().default(false),
             }),
           ),
         readMore: readMoreSchema(image).optional(),
