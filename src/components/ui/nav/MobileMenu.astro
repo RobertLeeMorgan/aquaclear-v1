@@ -24,14 +24,14 @@ const isActive = (item: NavItem) => {
  <div
     id="mobileMenu" class="fixed z-20 inset-x-0 top-0 bottom-0 bg-nav lg:hidden opacity-0 -translate-y-6 pointer-events-none motion pt-[var(--nav-h)]"
   >
-    <nav class="h-full overflow-y-auto px-lg py-lg">
+    <nav class="h-full overflow-y-auto px-lg py-md">
       {navItems.map((item, index) => (
-        <div class="py-lg">
+        <div class="py-md">
           {!item.dropdown ? (
             <a
               href={item.href}
               class:list={[
-                "text-2xl motion py-lg",
+                "text-2xl motion py-md",
                 isActive(item)
                   ? "text-inverse"
                   : "text-body text-inverse-muted",
@@ -55,7 +55,7 @@ const isActive = (item: NavItem) => {
                 </a>
 
                 <button
-                  class="mobile-toggle p-sm justify-end text-inverse-muted"
+                  class="mobile-toggle justify-end text-inverse-muted"
                   data-target={`mobile-submenu-${index}`}
                   aria-label={`Expand ${item.label}`}
                 >
@@ -67,7 +67,7 @@ const isActive = (item: NavItem) => {
 
               <div
                 id={`mobile-submenu-${index}`}
-                class="hidden py-md"
+                class="hidden pt-md"
               >
                 {item.dropdown.map((link) => (
                   <a
@@ -88,11 +88,11 @@ const isActive = (item: NavItem) => {
         </div>
       ))}
 
-      <div class="py-lg">
+      <div class="py-md">
         <a
           href="/contact"
           class:list={[
-            "text-2xl motion py-lg",
+            "text-2xl motion py-md",
             currentPath.startsWith("/contact")
               ? "text-inverse"
               : "text-body text-inverse-muted",
