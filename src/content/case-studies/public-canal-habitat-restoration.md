@@ -1,7 +1,7 @@
 ---
 title: Canal Restoration and Habitat Management
 seo:
-  title: Canal Maintenance and Habitat Management
+  title: Canal Maintenance for the Canal and River Trust
   description: Canal maintenance involving invasive species removal, weed cutting
     and algae clearance to restore open water and improve habitat for wildlife.
   image: ../../assets/images/before/canal.jpg
