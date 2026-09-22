@@ -1,7 +1,7 @@
 ---
 seo:
-  title: asdfasd
-  description: asdfsdf
+  title: This is just a test
+  description: This is Just a test
   image: ../../assets/images/airport.jpg
 metadata:
   title: asdf
@@ -9,9 +9,10 @@ metadata:
   location: asdf
   date: asdf
   sites:
+    - suds-reservoirs
     - canals-rivers
   services:
-    - blanket-weed-removal
+    - bulrush-removal
   summary: asdfasd
 overview:
   items:
