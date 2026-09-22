@@ -12,7 +12,7 @@ export const site = {
   theme: "#0A5A99",
   tagline: "UK Waterway Management Specialists.",
   short: "Waterway Management & Amphibious Machinery",
-  emailTemplate: "enquiry-template",
+  emailTemplate: "aquaclear-template",
   language: "en-GB",
   repo: "aquaclear-v1",
 

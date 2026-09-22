@@ -1,4 +1,5 @@
 import { Resend } from "resend";
+import { site } from "../../src/config/site";
 
 export async function onRequestPost({ request, env }) {
   try {
@@ -80,9 +81,9 @@ export async function onRequestPost({ request, env }) {
     const resend = new Resend(env.RESEND_API_KEY);
 
     const { error } = await resend.emails.send({
-      from: `${site.name} <onboarding@resend.dev>`,
+      from: `${site.name} <${site.email}>`,
       to: site.email,
-      replyTo: `<${email}>`,
+      replyTo: email,
       template: {
         id: site.emailTemplate,
         variables: {
