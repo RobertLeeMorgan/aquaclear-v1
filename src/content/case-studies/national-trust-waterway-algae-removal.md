@@ -1,7 +1,7 @@
 ---
 title: Algae Removal from a National Trust Waterway
 seo:
-  title: Algae Removal from Public Waterway
+  title: Algae Removal from a Public Waterway
   description: Algae removal from a public waterway, restoring open water and
     improving conditions for wildlife and aquatic habitats.
   image: ../../assets/images/20260916_143310.jpg
