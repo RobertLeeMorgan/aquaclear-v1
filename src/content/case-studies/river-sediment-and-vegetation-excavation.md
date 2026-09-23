@@ -40,9 +40,8 @@ overview:
         - type: image
           src: ../../assets/images/20260219_104525.jpg
           alt: Before photo of a heavily congested river channel
-    - title: Sediment and Vegetation Removal
-      content: >-
-        This public country park in South Wales is a popular destination for
+    - gallery: false
+      content: This public country park in South Wales is a popular destination for
         walkers and visitors throughout the year. Over time, heavy sediment
         accumulation and the spread of Parrot’s feather had gradually reduced
         the depth and width of what had previously been an open river channel.
@@ -51,9 +50,15 @@ overview:
         Together, the accumulated sediment and dense vegetation significantly
         restricted the available channel, reduced water flow and left sections
         of the river heavily congested.
-
-
-        Aquaclear carried out targeted excavation and vegetation clearance to remove the accumulated sediment, invasive growth and established vegetation from the affected sections of the river. Using the Truxor and a range of specialist attachments, dense stands of vegetation could be removed together with the underlying roots and rhizomes, while accumulated sediment was excavated from areas where the channel had become particularly shallow and restricted.
+      title: The Importance of Management
+    - title: Sediment and Vegetation Removal
+      content: Aquaclear carried out targeted excavation and vegetation clearance to
+        remove the accumulated sediment, invasive growth and established
+        vegetation from the affected sections of the river. Using the Truxor and
+        a range of specialist attachments, dense stands of vegetation could be
+        removed together with the underlying roots and rhizomes, while
+        accumulated sediment was excavated from areas where the channel had
+        become particularly shallow and restricted.
       gallery: true
       media:
         - type: beforeAfter
