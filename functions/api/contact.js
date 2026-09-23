@@ -81,7 +81,7 @@ export async function onRequestPost({ request, env }) {
     const resend = new Resend(env.RESEND_API_KEY);
 
     const { error } = await resend.emails.send({
-      from: `${site.name} <${site.email}>`,
+      from: "Aquaclear Contact Form <website@aquaclearwatermanagement.com>",
       to: site.email,
       replyTo: email,
       template: {
