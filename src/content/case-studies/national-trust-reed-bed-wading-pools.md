@@ -80,4 +80,6 @@ overview:
         type: beforeAfter
         before: ../../assets/images/wading-pool-1-before.jpg
         after: ../../assets/images/wading-pool-1-after.jpg
+        beforeAlt: Reed beds before wading pool creation
+        afterAlt: After reed bed cutting and wading pool creation
 ---
