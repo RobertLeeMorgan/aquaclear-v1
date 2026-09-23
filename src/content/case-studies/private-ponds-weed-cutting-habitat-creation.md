@@ -57,9 +57,10 @@ overview:
     - title: Restoring Overgrown Waterbodies
       content: >-
         At Aquaclear, we have decades of experience restoring and managing
-        waterbodies of all shapes and sizes. Every pond presents different
-        challenges, so the scale and intensity of our work can be tailored to
-        suit the site and the condition of the waterbody.
+        waterbodies of all shapes and sizes across the whole of the UK. Every
+        pond presents different challenges, so the scale and intensity of our
+        work can be tailored to suit the site and the condition of the
+        waterbody.
 
 
         Our experience ranges from heavily overgrown, almost dry ponds requiring substantial vegetation clearance and excavation, through to lined ornamental ponds where a far more delicate approach is needed. Using the Truxor’s range of specialist attachments, we can carefully remove vegetation, roots, rhizomes and accumulated material while working around sensitive banks, liners and established features.
