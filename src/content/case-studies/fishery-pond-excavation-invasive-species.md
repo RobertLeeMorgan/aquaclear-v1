@@ -8,7 +8,7 @@ seo:
 metadata:
   title: Pond Excavation and Invasive Species Removal for a Fishery
   client: Fishery
-  location: Shropshire, UK
+  location: England, UK
   date: 8th April, 2022
   services:
     - excavation-and-ditching
