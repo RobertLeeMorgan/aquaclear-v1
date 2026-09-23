@@ -55,8 +55,8 @@ overview:
       gallery: true
       media:
         - type: beforeAfter
-          before: ../../assets/images/before/bulrush1.jpg
-          after: ../../assets/images/after/bulrush1.jpg
+          before: ../../assets/images/suds-1-before.jpg
+          after: ../../assets/images/suds-1-after.jpg
           beforeAlt: Dense bulrush growth within a public SuDS waterbody
           afterAlt: Cleared SuDS waterbody following bulrush removal
     - title: Restoring Open Water and Drainage Capacity
