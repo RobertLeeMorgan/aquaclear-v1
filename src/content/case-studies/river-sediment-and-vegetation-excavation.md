@@ -1,32 +1,59 @@
 ---
 title: River Sediment and Vegetation Clearance
-
 seo:
-  title: River Excavation and Sediment Removal
-  description: River excavation to remove accumulated sediment and excessive vegetation, restoring water depth and improving restricted flow.
+  title: Parrots Feather and Sediment Removal on a River
+  description: Use of grab buckets to remove accumulated sediment and Parrot's
+    Feather, restoring water depth and improving restricted flow.
   image: ../../assets/images/before/excavation5.jpg
-
 metadata:
-  title: River Sediment and Vegetation Clearance
-  client: Private Client
-  location: UK
-  date: 15th March, 2024
+  title: Parrot's Feather and Sediment Clearance on a River
+  client: Country Park
+  location: South Wales, UK
+  date: 15th March, 2026
   services:
     - excavation-and-ditching
     - trash-and-debris-removal
-    - tree-work
+    - bulrush-removal
+    - invasive-species-removal
   sites:
     - canals-rivers
+    - public-private-lakes-ponds
   featured: true
-  summary: River excavation to remove sediment and excessive vegetation that had restricted water depth and flow.
-
+  summary: Use of grab buckets to remove accumulated sediment and Parrot's
+    Feather, restoring water depth and improving restricted flow.
 overview:
   items:
-    - title: Sediment and Vegetation Build-Up
-      content: |
-        Heavy sediment accumulation had reduced the depth of the river through sections of the shallows, while dense vegetation growth had spread across the affected areas. Together, the build-up had significantly restricted the available channel and reduced the flow of water through the river.
+    - gallery: false
+      title: Managing Parrot's Feather
+      content: >-
+        Parrot’s feather is an invasive non-native aquatic plant that can spread
+        rapidly through UK ponds, lakes and slow-moving waterways, forming dense
+        growth that can restrict water flow, shade out native vegetation and
+        reduce areas of open water. Effective management usually involves
+        carefully removing as much of the plant and its root system as possible
+        while minimising fragmentation, as even small pieces can spread and
+        establish new growth. 
 
-        Aquaclear carried out excavation and clearance works to remove the accumulated material and excessive vegetation, opening up the restricted sections of the river and restoring greater depth and capacity.
+
+        Aquaclear is regularly called upon to manage Parrot’s feather across UK waterways. Using the Truxor’s clamshell bucket, large sections of the plant can be carefully lifted together with its roots and rhizomes, helping to remove established growth while minimising fragmentation and the risk of spreading plant material to other areas of the waterway.
+      media:
+        - type: image
+          src: ../../assets/images/20260219_104525.jpg
+          alt: Before photo of a heavily congested river channel
+    - title: Sediment and Vegetation Removal
+      content: >-
+        This public country park in South Wales is a popular destination for
+        walkers and visitors throughout the year. Over time, heavy sediment
+        accumulation and the spread of Parrot’s feather had gradually reduced
+        the depth and width of what had previously been an open river channel.
+        These shallower conditions allowed other vegetation, including bulrush,
+        willow and bur-reed, to establish within the centre of the waterway.
+        Together, the accumulated sediment and dense vegetation significantly
+        restricted the available channel, reduced water flow and left sections
+        of the river heavily congested.
+
+
+        Aquaclear carried out targeted excavation and vegetation clearance to remove the accumulated sediment, invasive growth and established vegetation from the affected sections of the river. Using the Truxor and a range of specialist attachments, dense stands of vegetation could be removed together with the underlying roots and rhizomes, while accumulated sediment was excavated from areas where the channel had become particularly shallow and restricted.
       gallery: true
       media:
         - type: beforeAfter
@@ -34,12 +61,17 @@ overview:
           after: ../../assets/images/after/excavation5.jpg
           beforeAlt: Sediment and dense vegetation restricting a section of river
           afterAlt: River section following sediment and vegetation clearance
-
     - title: Restoring River Flow
-      content: |
-        Removing the accumulated sediment and vegetation restored a clearer, deeper channel through the affected sections. This allowed water to move more freely and returned greater depth to areas that had become heavily restricted.
+      content: >-
+        The works were carried out progressively along the watercourse,
+        reopening the original channel and creating a clearer route for water to
+        move through the site. Removing the combination of sediment and
+        excessive vegetation restored greater depth, width and overall capacity
+        to the river, while reducing the likelihood of floating material
+        becoming trapped amongst dense growth.
 
-        The work also reduced the excessive vegetation encroachment, helping to maintain a more open river channel and reducing the conditions that had contributed to the restriction.
+
+        Once completed, previously congested sections of the river were returned to open water, significantly improving both the flow and appearance of the watercourse. The restoration also helped re-establish the river as a prominent feature of the country park, providing a cleaner and more open waterside environment for the many walkers and visitors who use the site throughout the year.
       gallery: true
       media:
         - type: beforeAfter
