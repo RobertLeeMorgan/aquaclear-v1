@@ -32,13 +32,13 @@ overview:
       content: >-
         Working within the short timeframe, Aquaclear carried out targeted
         clearance of the lily growth, opening up the required areas while
-        leaving the surrounding landscape largely undisturbed. Not every
-        waterway project needs to be about long-term restoration, drainage
-        improvement or permanent vegetation control. Sometimes the requirement
-        is much simpler: to achieve a particular result at a particular time.
-        For events, photography, property presentation or seasonal use, targeted
-        clearance can provide an immediate transformation without the cost or
-        disruption of more extensive works.
+        leaving small patches and the surrounding landscape largely undisturbed.
+        Not every waterway project needs to be about long-term restoration,
+        drainage improvement or permanent vegetation control. Sometimes the
+        requirement is much simpler: to achieve a particular result at a
+        particular time. For events, photography, property presentation or
+        seasonal use, targeted clearance can provide an immediate transformation
+        without the cost or disruption of more extensive works.
 
 
         The Truxor is particularly well suited to this type of project. Its lightweight, amphibious design allows it to access the water directly with minimal impact on lawns, banks and landscaped surroundings, while its specialist attachments allow specific areas of vegetation to be cleared quickly and precisely. In this case, the objective was straightforward — restore an attractive area of open water in time for the wedding — and the works were tailored accordingly.
