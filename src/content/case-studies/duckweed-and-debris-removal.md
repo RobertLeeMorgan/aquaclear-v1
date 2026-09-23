@@ -10,7 +10,7 @@ metadata:
   client: All Clients and Customers
   location: Nationwide
   date: 6th December, 2023
-  featured: true
+  featured: false
   services:
     - weed-cutting
     - blanket-weed-removal
