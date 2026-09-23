@@ -22,7 +22,8 @@ overview:
   items:
     - gallery: false
       title: Managing SuDs Ponds
-      content: SuDS ponds form part of Sustainable Drainage Systems and are commonly
+      content: >-
+        SuDS ponds form part of Sustainable Drainage Systems and are commonly
         used in urban and developed areas to collect, store and gradually
         release surface water. By managing runoff from roads, housing
         developments and other hard surfaces, they can help reduce pressure on
@@ -32,22 +33,25 @@ overview:
         storage capacity and water movement. Regular management helps ensure
         these ponds continue to perform their drainage function while retaining
         the valuable wetland habitat they can provide.
+
+
+        Each year, Aquaclear is commissioned to manage established bulrush and other aquatic vegetation across public attenuation ponds forming part of wider Sustainable Drainage Systems (SuDS).
+      media:
+        - type: beforeAfter
+          before: ../../assets/images/suds-3-before.jpg
+          beforeAlt: Dense bulrush growth within a public SuDS waterbody
+          after: ../../assets/images/suds-3-after.jpg
+          afterAlt: Cleared SuDS waterbody following bulrush removal
     - title: Clearing Bulrush from SuDS
       content: >-
-        Each year, Aquaclear is commissioned to manage established bulrush and
-        other aquatic vegetation across public attenuation ponds forming part of
-        wider Sustainable Drainage Systems (SuDS). While these ponds perform an
-        important drainage function, they are often also prominent features
-        within housing developments, landscaped public spaces and local parks.
-        It is therefore important that maintenance not only restores the
-        function of the pond, but leaves the site with a clean and considered
-        finish for residents and visitors to enjoy.
+        While these ponds perform an important drainage function, they are often
+        also prominent features within housing developments, landscaped public
+        spaces and local parks. It is therefore important that maintenance not
+        only restores the function of the pond, but leaves the site with a clean
+        and considered finish for residents and visitors to enjoy.
 
 
-        The extent of vegetation management varies between sites according to the drainage requirements of the pond and its ecological value. In some cases, selective clearance is all that is required to maintain an open route between the inlet and outlet, while leaving substantial areas of established vegetation undisturbed for habitat. At other sites, more extensive clearance may be necessary to recover storage capacity and ensure the basin can continue to manage surface water effectively, while still retaining suitable areas of vegetation for wildlife.
-
-
-        By tailoring the work to the requirements of each site, Aquaclear can balance effective drainage, habitat retention and the appearance of these important public spaces.
+        The extent of vegetation management varies between sites according to the drainage requirements of the pond and its ecological value. In some cases, selective clearance is all that is required to maintain an open route between the inlet and outlet, while leaving substantial areas of established vegetation undisturbed for habitat. At other sites, more extensive clearance may be necessary to recover storage capacity and ensure the basin can continue to manage surface water effectively, while still retaining suitable areas of vegetation for wildlife. By tailoring the work to the requirements of each site, Aquaclear can balance effective drainage, habitat retention and the appearance of these important public spaces.
       gallery: true
       media:
         - type: beforeAfter
