@@ -12,7 +12,7 @@ metadata:
   date: 12th September, 2026
   services:
     - blanket-weed-removal
-    - reed-bed-management
+    - weed-cutting
   sites:
     - castles-heritage-sites
     - public-private-lakes-ponds
