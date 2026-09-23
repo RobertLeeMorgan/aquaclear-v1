@@ -45,13 +45,12 @@ overview:
     - title: Clearing Bulrush from SuDS
       content: >-
         While these ponds perform an important drainage function, they are often
-        also prominent features within housing developments, landscaped public
-        spaces and local parks. It is therefore important that maintenance not
-        only restores the function of the pond, but leaves the site with a clean
-        and considered finish for residents and visitors to enjoy.
+        prominent features within housing developments, parks and public spaces.
+        Maintenance must therefore restore function while leaving a clean,
+        attractive finish for residents and visitors.
 
 
-        The extent of vegetation management varies between sites according to the drainage requirements of the pond and its ecological value. In some cases, selective clearance is all that is required to maintain an open route between the inlet and outlet, while leaving substantial areas of established vegetation undisturbed for habitat. At other sites, more extensive clearance may be necessary to recover storage capacity and ensure the basin can continue to manage surface water effectively, while still retaining suitable areas of vegetation for wildlife. By tailoring the work to the requirements of each site, Aquaclear can balance effective drainage, habitat retention and the appearance of these important public spaces.
+        The level of vegetation management varies according to each pond’s drainage and ecological requirements. Some sites need only selective clearance between the inlet and outlet, retaining established vegetation for habitat. Others require more extensive clearance to restore storage capacity while preserving suitable areas for wildlife. By tailoring the approach to each site, Aquaclear can balance effective drainage, habitat retention and the appearance of these important public spaces.
       gallery: true
       media:
         - type: beforeAfter
