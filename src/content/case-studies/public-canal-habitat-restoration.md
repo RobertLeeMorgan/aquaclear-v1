@@ -69,6 +69,5 @@ overview:
 
 
         By the end of the project, extensive stretches of heavily overgrown waterway had been reopened, restoring a much clearer channel through the landscape. The work improved water movement and helped preserve the function and condition of the wider canal system, while retaining important areas of habitat along its margins. For walkers and other users of the towpath, the clearance also revealed more of the historic waterway, creating a more open and attractive environment in which the canal can once again be appreciated as a prominent feature of the landscape.
-      media:
-        type: image
+
 ---
