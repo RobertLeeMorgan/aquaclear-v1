@@ -8,7 +8,7 @@ seo:
 metadata:
   title: Moat Restoration and Flood Management
   client: Private Client
-  location: UK
+  location: East Anglia
   date: 14th October, 2023
   services:
     - bulrush-removal
