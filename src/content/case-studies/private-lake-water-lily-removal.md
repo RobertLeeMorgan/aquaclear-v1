@@ -2,8 +2,8 @@
 title: Water Lily Removal from a Private Lake
 seo:
   title: Water Lily Removal for a Wedding Photo
-  description: Targeted, fast water lily cutting and clearance to prepare for the
-    a wedding the following weekend
+  description: Targeted, fast water lily cutting and clearance to prepare for a
+    wedding the following weekend
   image: ../../assets/images/before/lilies.jpg
 metadata:
   title: Water Lily Removal for a Wedding Photo
@@ -14,7 +14,7 @@ metadata:
     - water-lily-management
   sites:
     - public-private-lakes-ponds
-  summary: Targeted, fast water lily cutting and clearance to prepare for the a
+  summary: Targeted, fast water lily cutting and clearance to prepare for a
     wedding the following weekend
 overview:
   items:
