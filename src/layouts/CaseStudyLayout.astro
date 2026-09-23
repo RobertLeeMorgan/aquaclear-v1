@@ -21,7 +21,10 @@ const serviceTitle = service
 />
 
 <RichTextSections
-  items={data.overview.items}
+  items={data.overview.items.map((item: any) => ({
+    ...item,
+    media: item.media?.[0],
+  }))}
   secondary
   eyebrow={data.overview.eyebrow}
   title={data.overview.title}

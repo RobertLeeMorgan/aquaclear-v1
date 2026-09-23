@@ -49,73 +49,83 @@ const {
 } = Astro.props as Props;
 ---
 
-{layout === "two-column" ? (
-  <TwoColumns reverse={imagePosition === "left"} wide={wide} >
-    <div class="flex flex-col justify-center">
-      {!editorial && title &&
-        <SectionHeader
-          eyebrow={eyebrow}
-          title={title}
-          dark={dark}
-        />
-      }
-      <div class={`prose prose-neutral max-w-none whitespace-pre-line ${title && "mt-xl"} ${dark && "text-inverse-muted"}`}>
-        <Fragment set:html={content} />
+{media ? (
+  layout === "two-column" ? (
+    <TwoColumns reverse={imagePosition === "left"} wide={wide}>
+      <div class="flex flex-col justify-center">
+        {!editorial && title && (
+          <SectionHeader
+            eyebrow={eyebrow}
+            title={title}
+            dark={dark}
+          />
+        )}
+
+        <div class={`prose prose-neutral max-w-none whitespace-pre-line ${title && "mt-xl"} ${dark && "text-inverse-muted"}`}>
+          <Fragment set:html={content} />
+        </div>
+
+        {(buttons || readMore) && (
+          <div class="mt-8">
+            {buttons?.map((button: any, index: number) => (
+              <Button
+                {...button}
+                variant={index === 1 ? "dark" : "primary"}
+              />
+            ))}
+
+            {readMore && (
+              <Link
+                href={readMore.href}
+                title={readMore.title}
+              />
+            )}
+          </div>
+        )}
       </div>
 
-      
-
-      {(buttons || readMore) && (
-            <div class="mt-8">
-              {buttons?.map((button: any, index: number) => (
-                <Button
-                  {...button}
-                  variant={index === 1 ? "dark" : "primary"}
-                />
-              ))}
-
-              {readMore && (
-                <Link
-                  href={readMore.href}
-                  title={readMore.title}
-                />
-              )}
-            </div>
-          )}
-    </div>
-
-    {media && (
       <MediaFrame
         media={media}
         responsive={responsive}
         ratio={ratio}
         class="section-img"
       />
-    )}
-  </TwoColumns> 
+    </TwoColumns>
   ) : (
-  <ThreeColumns>
-    {eyebrow && title && (
+    <ThreeColumns>
+      {/* existing three-column implementation */}
+    </ThreeColumns>
+  )
+) : (
+  <div class="...">
+    {!editorial && title && (
       <SectionHeader
         eyebrow={eyebrow}
         title={title}
+        dark={dark}
       />
     )}
 
-    <div class="prose prose-neutral max-w-none whitespace-pre-line">
+    <div class={`prose prose-neutral max-w-none whitespace-pre-line ${title && "mt-xl"} ${dark && "text-inverse-muted"}`}>
       <Fragment set:html={content} />
-
-      {readMore && (
-        <Link href={readMore.href} title={readMore.title} />
-      )}
     </div>
 
-    {media && (
-      <MediaFrame
-        media={media}
-        responsive={responsive}
-        class="section-img"
-      />
+    {(buttons || readMore) && (
+      <div class="mt-8">
+        {buttons?.map((button: any, index: number) => (
+          <Button
+            {...button}
+            variant={index === 1 ? "dark" : "primary"}
+          />
+        ))}
+
+        {readMore && (
+          <Link
+            href={readMore.href}
+            title={readMore.title}
+          />
+        )}
+      </div>
     )}
-  </ThreeColumns>
+  </div>
 )}

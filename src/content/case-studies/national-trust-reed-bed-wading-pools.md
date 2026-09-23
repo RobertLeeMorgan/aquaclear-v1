@@ -29,9 +29,9 @@ overview:
 
         Creating shallow wading pools within dense reed beds introduces valuable areas of open water and increases habitat diversity. These pools provide accessible feeding and foraging areas for wading birds and other wetland species, while the surrounding reeds continue to offer shelter, nesting habitat and cover. The combination of shallow water, open margins and established vegetation creates a more varied wetland environment capable of supporting a wider range of wildlife.
       media:
-        type: image
-        src: ../../assets/images/projects/reed1.webp
-        alt: Reed clearance being carried out within a National Trust wetland
+        - type: image
+          src: ../../assets/images/projects/reed1.webp
+          alt: Reed clearance being carried out within a National Trust wetland
       gallery: true
     - title: Creating Wading Pools With a Truxor
       content: >-
@@ -47,9 +47,9 @@ overview:
 
         The versatility of the Truxor allows cutting, clearance and excavation to be carried out from within the wetland itself, making it particularly well suited to targeted habitat creation in areas where access for conventional land-based machinery may be difficult or undesirable.
       media:
-        type: image
-        src: ../../assets/images/projects/reed2.webp
-        alt: Shallow wading pools created within the reed bed
+        - type: image
+          src: ../../assets/images/projects/reed2.webp
+          alt: Shallow wading pools created within the reed bed
       gallery: true
     - title: Creating a More Diverse Wetland
       content: Through careful and targeted reed bed management, areas of dense
@@ -62,10 +62,10 @@ overview:
         foraging opportunities for wading birds and other wetland wildlife.
       gallery: true
       media:
-        type: image
-        src: ../../assets/images/projects/reed4.webp
-        alt: Completed wading pools creating open water within the National Trust reed
-          bed
+        - type: image
+          src: ../../assets/images/projects/reed4.webp
+          alt: Completed wading pools creating open water within the National Trust reed
+            bed
     - gallery: false
       title: Proven Benefits for Wetland Wildlife
       content: Aquaclear has been asked to carry out this type of reed bed management
@@ -77,9 +77,9 @@ overview:
         pools, demonstrating the value that carefully planned reed clearance and
         open-water creation can bring to established wetland habitats.
       media:
-        type: beforeAfter
-        before: ../../assets/images/wading-pool-1-before.jpg
-        after: ../../assets/images/wading-pool-1-after.jpg
-        beforeAlt: Reed beds before wading pool creation
-        afterAlt: After reed bed cutting and wading pool creation
+        - type: beforeAfter
+          before: ../../assets/images/wading-pool-1-before.jpg
+          after: ../../assets/images/wading-pool-1-after.jpg
+          beforeAlt: Reed beds before wading pool creation
+          afterAlt: After reed bed cutting and wading pool creation
 ---

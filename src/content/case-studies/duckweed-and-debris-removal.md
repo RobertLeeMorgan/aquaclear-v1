@@ -28,9 +28,9 @@ overview:
         Aquaclear carried out large-scale removal of the duckweed, clearing the affected area and restoring substantial areas of open water. The work brought the excessive surface growth back under control and created a cleaner, more open waterbody.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/duckweed.jpg
-        after: ../../assets/images/after/duckweed.jpg
-        beforeAlt: Large area of water covered by dense duckweed
-        afterAlt: Waterbody following large-scale duckweed removal
+        - type: beforeAfter
+          before: ../../assets/images/before/duckweed.jpg
+          after: ../../assets/images/after/duckweed.jpg
+          beforeAlt: Large area of water covered by dense duckweed
+          afterAlt: Waterbody following large-scale duckweed removal
 ---

@@ -25,9 +25,9 @@ overview:
         This approach allowed works to continue through the winter while minimising disruption to the surrounding site and providing a controlled area for the material to settle and dry.
       gallery: true
       media:
-        type: image
-        src: ../../assets/images/projects/teram1.webp
-        alt: Temporary semi-permeable membrane used to contain silt during winter pumping works
+        - type: image
+          src: ../../assets/images/projects/teram1.webp
+          alt: Temporary semi-permeable membrane used to contain silt during winter pumping works
     - title: Drying and Site Restoration
       content: |
         Once the pumping works were complete, the temporary membranes were left in place while the retained silt gradually dried during the warmer months.
@@ -36,7 +36,7 @@ overview:
 
         The method provided an efficient solution for sites where ground conditions, access or space made traditional de-silting methods unsuitable.
       media:
-        type: image
-        src: ../../assets/images/projects/teram2.webp
-        alt: Silt contained within temporary membranes during drying following pumping works
+        - type: image
+          src: ../../assets/images/projects/teram2.webp
+          alt: Silt contained within temporary membranes during drying following pumping works
 ---

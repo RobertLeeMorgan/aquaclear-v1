@@ -23,11 +23,11 @@ overview:
   items:
     - gallery: false
       media:
-        type: beforeAfter
-        before: ../../assets/images/canal-3-before.jpg
-        after: ../../assets/images/canal-3-after.jpg
-        beforeAlt: Overgrown public canal affected by invasive species, weeds and algae
-        afterAlt: Public canal following vegetation and algae clearance
+        - type: beforeAfter
+          before: ../../assets/images/canal-3-before.jpg
+          after: ../../assets/images/canal-3-after.jpg
+          beforeAlt: Overgrown public canal affected by invasive species, weeds and algae
+          afterAlt: Public canal following vegetation and algae clearance
       title: Maintaining an Overgrown Canal for the Canal and River Trust
       content: >-
         This disused section of canal in Powys requires regular maintenance to
@@ -51,11 +51,11 @@ overview:
         and continued to provide valuable refuge and habitat.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/canal.jpg
-        after: ../../assets/images/after/canal.jpg
-        beforeAlt: Overgrown public canal affected by invasive species, weeds and algae
-        afterAlt: Public canal following vegetation and algae clearance
+        - type: beforeAfter
+          before: ../../assets/images/before/canal.jpg
+          after: ../../assets/images/after/canal.jpg
+          beforeAlt: Overgrown public canal affected by invasive species, weeds and algae
+          afterAlt: Public canal following vegetation and algae clearance
     - gallery: false
       title: The Work Itself
       content: >-

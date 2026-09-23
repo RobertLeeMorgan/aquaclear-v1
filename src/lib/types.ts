@@ -120,7 +120,7 @@ export type MediaUnion =
 
 export interface MediaImageType {
   src: ImageMetadata;
-  alt: string;
+  alt?: string;
 }
 
 export interface MediaVideoType {
@@ -130,8 +130,8 @@ export interface MediaVideoType {
 export interface MediaBeforeAfterType {
   before: ImageMetadata;
   after: ImageMetadata;
-  beforeAlt: string;
-  afterAlt: string;
+  beforeAlt?: string;
+  afterAlt?: string;
 }
 
 export interface ReadMoreType {

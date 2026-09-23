@@ -25,9 +25,9 @@ overview:
         This provided a practical way to manage the removed silt on site without requiring large de-silting bags or extensive additional infrastructure.
       gallery: true
       media:
-        type: image
-        src: ../../assets/images/projects/northreserve1.webp
-        alt: Permeable membrane bund prepared alongside a small watercourse at a northern England nature reserve
+        - type: image
+          src: ../../assets/images/projects/northreserve1.webp
+          alt: Permeable membrane bund prepared alongside a small watercourse at a northern England nature reserve
     - title: Removing Accumulated Silt
       content: |
         Once the bund was prepared, the silt pump was used to transfer material from the watercourse into the contained area. As the bund filled, it was left to drain through the permeable membrane before the process was repeated.
@@ -36,7 +36,7 @@ overview:
 
         Following completion, the area was left to dry and naturally green over during the summer months, leaving the surrounding site to recover while the increased water depth helped maintain the open waterway.
       media:
-        type: image
-        src: ../../assets/images/projects/northreserve2.webp
-        alt: Silt pumping into a permeable membrane bund during watercourse restoration works
+        - type: image
+          src: ../../assets/images/projects/northreserve2.webp
+          alt: Silt pumping into a permeable membrane bund during watercourse restoration works
 ---

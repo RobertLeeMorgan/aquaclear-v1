@@ -24,7 +24,7 @@ overview:
 
         After the silt had dried and set, the membrane was removed and the material was left on site to green over during the warmer months.
       media:
-        type: image
-        src: ../../assets/images/projects/preston.webp
-        alt: Geotextile barrier containing silt pumped from a private pond in Preston
+        - type: image
+          src: ../../assets/images/projects/preston.webp
+          alt: Geotextile barrier containing silt pumped from a private pond in Preston
 ---

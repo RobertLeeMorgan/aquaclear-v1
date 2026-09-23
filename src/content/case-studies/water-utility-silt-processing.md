@@ -25,7 +25,7 @@ overview:
         The resulting material could be deposited into suitable containers, making it significantly easier to handle, transport and remove from site. This provided an efficient solution where leaving the silt to dry naturally was not practical or where complete removal was required.
       gallery: true
       media:
-        type: image
-        src: ../../assets/images/projects/siltcake.webp
-        alt: Silt being processed into manageable silt cake ready for removal from a water utility site
+        - type: image
+          src: ../../assets/images/projects/siltcake.webp
+          alt: Silt being processed into manageable silt cake ready for removal from a water utility site
 ---

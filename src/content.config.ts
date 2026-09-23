@@ -50,7 +50,7 @@ const iconEnumSchema = z.enum([
   "compass",
   "mountain",
   "users",
-  "castle"
+  "castle",
 ]);
 
 const responsiveProfileSchema = z.enum([
@@ -211,7 +211,7 @@ const mediaSchema = (image: () => any) =>
     z.object({
       type: z.literal("image"),
       src: image(),
-      alt: z.string(),
+      alt: z.string().optional(),
     }),
     z.object({
       type: z.literal("video"),
@@ -221,8 +221,8 @@ const mediaSchema = (image: () => any) =>
       type: z.literal("beforeAfter"),
       before: image(),
       after: image(),
-      beforeAlt: z.string(),
-      afterAlt: z.string(),
+      beforeAlt: z.string().optional(),
+      afterAlt: z.string().optional(),
     }),
   ]);
 
@@ -597,21 +597,18 @@ const caseStudies = defineCollection({
         services: z.array(serviceEnumSchema),
         sites: z.array(siteEnumSchema),
         summary: z.string(),
-        featured: z.boolean().optional().default(false)
+        featured: z.boolean().optional().default(false),
       }),
       overview: z.object({
-        eyebrow: z.string().optional(),
-        title: z.string().optional(),
-        description: z.string().optional(),
-          items: z.array(
-            z.object({
-              title: z.string(),
-              content: z.string(),
-              media: mediaSchema(image).optional(),
-              buttons: z.array(buttonSchema(image)).optional(),
-              gallery: z.boolean().default(false),
-            }),
-          ),
+        items: z.array(
+          z.object({
+            title: z.string(),
+            content: z.string(),
+            media: z.array(mediaSchema(image)).max(1).optional(),
+            buttons: z.array(buttonSchema(image)).optional(),
+            gallery: z.boolean().default(false),
+          }),
+        ),
         readMore: readMoreSchema(image).optional(),
       }),
     }),
@@ -746,5 +743,5 @@ export const collections = {
   caseStudiesIndex,
   clients,
   contact,
-  gallery
+  gallery,
 };

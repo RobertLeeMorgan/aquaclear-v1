@@ -25,9 +25,9 @@ overview:
         Ongoing management can help prevent the plants from becoming overly dominant and maintain a healthier balance across the waterbody.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/lilies3.jpg
-        after: ../../assets/images/after/lilies3.jpg
-        beforeAlt: Yellow water lily growth across a private lake
-        afterAlt: After yellow water lily removal across a private lake
+        - type: beforeAfter
+          before: ../../assets/images/before/lilies3.jpg
+          after: ../../assets/images/after/lilies3.jpg
+          beforeAlt: Yellow water lily growth across a private lake
+          afterAlt: After yellow water lily removal across a private lake
 ---

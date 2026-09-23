@@ -31,9 +31,9 @@ overview:
         The completed work created a more practical and attractive fishery while bringing the surrounding vegetation and aquatic environment under better control.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/excavation1.jpg
-        after: ../../assets/images/after/excavation1.jpg
-        beforeAlt: Small overgrown pond before clearance and excavation
-        afterAlt: Enlarged fishery following vegetation clearance and excavation
+        - type: beforeAfter
+          before: ../../assets/images/before/excavation1.jpg
+          after: ../../assets/images/after/excavation1.jpg
+          beforeAlt: Small overgrown pond before clearance and excavation
+          afterAlt: Enlarged fishery following vegetation clearance and excavation
 ---

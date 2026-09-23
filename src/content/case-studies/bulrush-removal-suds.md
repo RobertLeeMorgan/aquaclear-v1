@@ -25,11 +25,11 @@ overview:
         The works focused on clearing dense areas of bulrush from the waterbodies, opening up sections that had become heavily overgrown while retaining appropriate vegetation elsewhere.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/bulrush1.jpg
-        after: ../../assets/images/after/bulrush1.jpg
-        beforeAlt: Dense bulrush growth within a public SuDS waterbody
-        afterAlt: Cleared SuDS waterbody following bulrush removal
+        - type: beforeAfter
+          before: ../../assets/images/before/bulrush1.jpg
+          after: ../../assets/images/after/bulrush1.jpg
+          beforeAlt: Dense bulrush growth within a public SuDS waterbody
+          afterAlt: Cleared SuDS waterbody following bulrush removal
     - title: Restoring Open Water and Drainage Capacity
       content: |
         Removing the established bulrush restored areas of open water across the canal and pond, giving surface water more space to move through and collect within the drainage system.
@@ -39,9 +39,9 @@ overview:
         Regular vegetation management is an important part of maintaining SuDS features over their working life, helping to preserve their drainage function while keeping public ponds and waterways accessible and well maintained.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/bulrush2.jpg
-        after: ../../assets/images/after/bulrush2.jpg
-        beforeAlt: Overgrown canal and pond restricting areas of open water
-        afterAlt: Open water restored following bulrush management
+        - type: beforeAfter
+          before: ../../assets/images/before/bulrush2.jpg
+          after: ../../assets/images/after/bulrush2.jpg
+          beforeAlt: Overgrown canal and pond restricting areas of open water
+          afterAlt: Open water restored following bulrush management
 ---

@@ -45,9 +45,9 @@ overview:
         The completed restoration dramatically enhanced both the appearance and condition of the moat and the surrounding property, while reinstating its effectiveness as a drainage feature for the surrounding land.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/canal3.jpg
-        after: ../../assets/images/after/canal3.jpg
-        beforeAlt: Completely overgrown moat with restricted water flow
-        afterAlt: Restored moat with cleared vegetation and improved water flow
+        - type: beforeAfter
+          before: ../../assets/images/before/canal3.jpg
+          after: ../../assets/images/after/canal3.jpg
+          beforeAlt: Completely overgrown moat with restricted water flow
+          afterAlt: Restored moat with cleared vegetation and improved water flow
 ---

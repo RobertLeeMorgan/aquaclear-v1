@@ -25,9 +25,9 @@ overview:
         The growth was selectively cleared to open up the waterbody, improve its appearance and help maintain the capacity and function of the surrounding drainage system. Regular management helps prevent bulrush from becoming overly dominant while retaining suitable vegetation elsewhere.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/bulrush3.jpg
-        after: ../../assets/images/after/bulrush3.jpg
-        beforeAlt: Dense bulrush growth along a public waterbody in a residential area
-        afterAlt: Public waterbody following bulrush removal
+        - type: beforeAfter
+          before: ../../assets/images/before/bulrush3.jpg
+          after: ../../assets/images/after/bulrush3.jpg
+          beforeAlt: Dense bulrush growth along a public waterbody in a residential area
+          afterAlt: Public waterbody following bulrush removal
 ---

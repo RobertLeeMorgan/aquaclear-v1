@@ -26,9 +26,9 @@ overview:
         Aquaclear carried out targeted algae removal to clear the affected areas and restore a more open water surface, helping the fishery remain accessible and better managed.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/dartford.jpg
-        after: ../../assets/images/after/dartford.jpg
-        beforeAlt: Excessive algae growth across the surface of Dartford Fishery
-        afterAlt: Dartford Fishery following algae removal
+        - type: beforeAfter
+          before: ../../assets/images/before/dartford.jpg
+          after: ../../assets/images/after/dartford.jpg
+          beforeAlt: Excessive algae growth across the surface of Dartford Fishery
+          afterAlt: Dartford Fishery following algae removal
 ---

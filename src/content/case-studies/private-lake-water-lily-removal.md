@@ -28,9 +28,9 @@ overview:
         The work restored clearer areas of open water while bringing the lake's aquatic vegetation back under better control.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/lilies.jpg
-        after: ../../assets/images/after/lilies.jpg
-        beforeAlt: Dense water lily growth across a private lake before removal
-        afterAlt: Private lake following targeted water lily removal
+        - type: beforeAfter
+          before: ../../assets/images/before/lilies.jpg
+          after: ../../assets/images/after/lilies.jpg
+          beforeAlt: Dense water lily growth across a private lake before removal
+          afterAlt: Private lake following targeted water lily removal
 --- 

@@ -26,9 +26,9 @@ overview:
         Aquaclear carried out targeted removal of the water soldier, clearing the excessive growth and restoring open areas of water. The work helped bring the invasive plant under control while improving the appearance and usability of the surrounding course.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/footgolf.jpg
-        after: ../../assets/images/after/footgolf.jpg
-        beforeAlt: Dense water soldier growth at a footgolf course
-        afterAlt: Footgolf course waterbody following water soldier removal
+        - type: beforeAfter
+          before: ../../assets/images/before/footgolf.jpg
+          after: ../../assets/images/after/footgolf.jpg
+          beforeAlt: Dense water soldier growth at a footgolf course
+          afterAlt: Footgolf course waterbody following water soldier removal
 ---

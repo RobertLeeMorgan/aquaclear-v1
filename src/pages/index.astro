@@ -49,7 +49,7 @@ const featuredProjects = caseStudies
       .join(" · "),
     title: entry.data.metadata.title,
     content: entry.data.metadata.summary,
-    media: entry.data.overview.items[0]?.media,
+    media: entry.data.overview.items[0]?.media?.[0],
     buttons: [
       {
         title: "View Case Study",

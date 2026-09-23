@@ -29,11 +29,11 @@ overview:
         Aquaclear carried out excavation and clearance works to remove the accumulated material and excessive vegetation, opening up the restricted sections of the river and restoring greater depth and capacity.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/excavation5.jpg
-        after: ../../assets/images/after/excavation5.jpg
-        beforeAlt: Sediment and dense vegetation restricting a section of river
-        afterAlt: River section following sediment and vegetation clearance
+        - type: beforeAfter
+          before: ../../assets/images/before/excavation5.jpg
+          after: ../../assets/images/after/excavation5.jpg
+          beforeAlt: Sediment and dense vegetation restricting a section of river
+          afterAlt: River section following sediment and vegetation clearance
 
     - title: Restoring River Flow
       content: |
@@ -42,9 +42,9 @@ overview:
         The work also reduced the excessive vegetation encroachment, helping to maintain a more open river channel and reducing the conditions that had contributed to the restriction.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/excavation6.jpg
-        after: ../../assets/images/after/excavation6.jpg
-        beforeAlt: Overgrown shallow section of river before excavation
-        afterAlt: Cleared and deeper river channel following excavation
+        - type: beforeAfter
+          before: ../../assets/images/before/excavation6.jpg
+          after: ../../assets/images/after/excavation6.jpg
+          beforeAlt: Overgrown shallow section of river before excavation
+          afterAlt: Cleared and deeper river channel following excavation
 ---

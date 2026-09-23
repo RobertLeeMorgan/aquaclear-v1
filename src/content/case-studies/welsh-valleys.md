@@ -25,9 +25,9 @@ overview:
         Removing the built-up silt improved the appearance of the pond and helped restore a cleaner, more open waterbody for the surrounding area.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/projects/valleys1.webp
-        after: ../../assets/images/projects/valleys2.webp
-        beforeAlt: Public pond with accumulated silt around the margins
-        afterAlt: Public pond following removal of accumulated silt
+        - type: beforeAfter
+          before: ../../assets/images/projects/valleys1.webp
+          after: ../../assets/images/projects/valleys2.webp
+          beforeAlt: Public pond with accumulated silt around the margins
+          afterAlt: Public pond following removal of accumulated silt
 ---

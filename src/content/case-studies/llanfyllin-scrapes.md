@@ -25,11 +25,11 @@ overview:
         Creating a network of connected wet areas provided a more diverse habitat than the existing flood plain, while making use of the site's natural tendency to retain water.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/habitat.webp
-        after: ../../assets/images/after/habitat.webp
-        beforeAlt: Before habitat creation in Mill Pond
-        afterAlt: After habitat creation in Mill Pond
+        - type: beforeAfter
+          before: ../../assets/images/before/habitat.webp
+          after: ../../assets/images/after/habitat.webp
+          beforeAlt: Before habitat creation in Mill Pond
+          afterAlt: After habitat creation in Mill Pond
     - title: Creating Habitat for Wading Birds
       content: |
         The completed scrapes were designed to provide suitable feeding and resting areas for wading birds, while also creating new habitat for insects, amphibians and other water-based wildlife.
@@ -38,7 +38,7 @@ overview:
 
         The project demonstrates how targeted earthworks can turn otherwise underused flood plain into valuable wildlife habitat.
       media:
-        type: image
-        src: ../../assets/images/projects/habitat.jpg
-        alt: Newly created wetland scrapes providing habitat for wading birds and wildlife
+        - type: image
+          src: ../../assets/images/projects/habitat.jpg
+          alt: Newly created wetland scrapes providing habitat for wading birds and wildlife
 ---

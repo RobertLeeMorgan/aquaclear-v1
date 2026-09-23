@@ -26,9 +26,9 @@ overview:
         Aquaclear removed the established bulrush to clear the drainage channel and restore unobstructed water flow. The work helped maintain the capacity and functionality of the drainage system while preventing dense vegetation from becoming an ongoing obstruction.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/airport.jpg
-        after: ../../assets/images/after/airport.jpg
-        beforeAlt: Dense bulrush growth within airport drainage
-        afterAlt: Airport drainage following bulrush removal
+        - type: beforeAfter
+          before: ../../assets/images/before/airport.jpg
+          after: ../../assets/images/after/airport.jpg
+          beforeAlt: Dense bulrush growth within airport drainage
+          afterAlt: Airport drainage following bulrush removal
 ---

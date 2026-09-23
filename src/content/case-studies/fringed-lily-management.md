@@ -26,9 +26,9 @@ overview:
         The combined works helped restore a better balance between aquatic vegetation and open water while keeping the pond accessible and well maintained.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/lilies2.jpg
-        after: ../../assets/images/after/lilies2.jpg
-        beforeAlt: Excessive aquatic lily and weed growth covering a public pond
-        afterAlt: After removal of aquatic lily and weed growth covering a public pond
+        - type: beforeAfter
+          before: ../../assets/images/before/lilies2.jpg
+          after: ../../assets/images/after/lilies2.jpg
+          beforeAlt: Excessive aquatic lily and weed growth covering a public pond
+          afterAlt: After removal of aquatic lily and weed growth covering a public pond
 ---

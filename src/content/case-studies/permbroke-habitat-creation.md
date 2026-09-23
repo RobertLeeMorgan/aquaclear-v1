@@ -28,11 +28,11 @@ overview:
         Once the vegetation clearance was complete, the digging arm was attached and work could begin on the ditch and bund.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/millpond3.webp
-        after: ../../assets/images/after/millpond3.webp
-        beforeAlt: Before habitat creation in Mill Pond
-        afterAlt: After habitat creation in Mill Pond
+        - type: beforeAfter
+          before: ../../assets/images/before/millpond3.webp
+          after: ../../assets/images/after/millpond3.webp
+          beforeAlt: Before habitat creation in Mill Pond
+          afterAlt: After habitat creation in Mill Pond
     - title: Ditching and Bund Construction
       content: |
         The bund was constructed along a designated route extending several hundred metres through the overgrown area.
@@ -41,11 +41,11 @@ overview:
 
         The work required careful excavation through the cleared route while maintaining the surrounding landscape and existing habitat.
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/millpond2.webp
-        after: ../../assets/images/after/millpond2.webp
-        beforeAlt: Before habitat creation in Mill Pond
-        afterAlt: After habitat creation in Mill Pond
+        - type: beforeAfter
+          before: ../../assets/images/before/millpond2.webp
+          after: ../../assets/images/after/millpond2.webp
+          beforeAlt: Before habitat creation in Mill Pond
+          afterAlt: After habitat creation in Mill Pond
     - title: Restoring the Reed Bed
       content: |
         Once the ditching and bund construction was complete, the newly formed earthworks were left to settle and naturally green over during the warmer months.
@@ -54,9 +54,9 @@ overview:
 
         The project combined vegetation clearance, specialist ditching and earthworks to create a practical long-term solution for the drying reed bed.
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/millpond1.webp
-        after: ../../assets/images/after/millpond1.webp
-        beforeAlt: Before habitat creation in Mill Pond
-        afterAlt: After habitat creation in Mill Pond
+        - type: beforeAfter
+          before: ../../assets/images/before/millpond1.webp
+          after: ../../assets/images/after/millpond1.webp
+          beforeAlt: Before habitat creation in Mill Pond
+          afterAlt: After habitat creation in Mill Pond
 ---

@@ -27,11 +27,11 @@ overview:
         Aquaclear carried out extensive clearance to remove the established growth and reopen affected areas. Where appropriate, the work extended beyond surface clearance to include the removal of roots and rhizomes, helping address the underlying growth and reduce the potential for rapid regrowth.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/golf.jpg
-        after: ../../assets/images/after/golf.jpg
-        beforeAlt: Extensive broadleaf aquatic weed growth in a golf course pond
-        afterAlt: Golf course pond following broadleaf weed removal
+        - type: beforeAfter
+          before: ../../assets/images/before/golf.jpg
+          after: ../../assets/images/after/golf.jpg
+          beforeAlt: Extensive broadleaf aquatic weed growth in a golf course pond
+          afterAlt: Golf course pond following broadleaf weed removal
 
     - title: Restoring Open Water Across the Course
       content: |
@@ -40,9 +40,9 @@ overview:
         By combining large-scale vegetation removal with root and rhizome clearance where suitable, Aquaclear helped bring the aquatic growth back under control while improving the appearance and long-term management of these important features within the golf course landscape.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/featured3.jpg
-        after: ../../assets/images/after/featured3.jpg
-        beforeAlt: Dense broadleaf weed growth affecting a golf course lake
-        afterAlt: Restored open water following extensive aquatic weed removal
+        - type: beforeAfter
+          before: ../../assets/images/before/featured3.jpg
+          after: ../../assets/images/after/featured3.jpg
+          beforeAlt: Dense broadleaf weed growth affecting a golf course lake
+          afterAlt: Restored open water following extensive aquatic weed removal
 ---

@@ -28,11 +28,11 @@ overview:
         Aquaclear carried out targeted weed cutting and bulrush removal, opening up areas that had become densely vegetated while retaining suitable established growth elsewhere around the ponds.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/excavation2.jpg
-        after: ../../assets/images/after/excavation2.jpg
-        beforeAlt: Private pond affected by dense weed and bulrush growth
-        afterAlt: Private pond following weed cutting and bulrush removal
+        - type: beforeAfter
+          before: ../../assets/images/before/excavation2.jpg
+          after: ../../assets/images/after/excavation2.jpg
+          beforeAlt: Private pond affected by dense weed and bulrush growth
+          afterAlt: Private pond following weed cutting and bulrush removal
 
     - title: Creating Better Pond Habitat
       content: |
@@ -41,9 +41,9 @@ overview:
         The completed work provided a more diverse habitat across the ponds, with clearer areas of water alongside retained vegetation to support wildlife. The result was a healthier and more varied pond environment that could be managed more effectively over time.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/excavation4.jpg
-        after: ../../assets/images/after/excavation4.jpg
-        beforeAlt: Private pond before habitat creation and excavation
-        afterAlt: Private pond following excavation and habitat creation
+        - type: beforeAfter
+          before: ../../assets/images/before/excavation4.jpg
+          after: ../../assets/images/after/excavation4.jpg
+          beforeAlt: Private pond before habitat creation and excavation
+          afterAlt: Private pond following excavation and habitat creation
 ---

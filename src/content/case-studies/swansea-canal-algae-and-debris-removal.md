@@ -37,9 +37,9 @@ overview:
         Once completed, the works left a noticeably cleaner and more open waterway. As well as improving the function and condition of the canal, the clearance greatly enhanced its appearance, creating a more attractive environment for walkers, residents and other users to enjoy.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/swanseatrash.jpg
-        after: ../../assets/images/after/swanseatrash.jpg
-        beforeAlt: Algae and accumulated debris across Swansea Canal
-        afterAlt: Swansea Canal following algae and debris removal
+        - type: beforeAfter
+          before: ../../assets/images/before/swanseatrash.jpg
+          after: ../../assets/images/after/swanseatrash.jpg
+          beforeAlt: Algae and accumulated debris across Swansea Canal
+          afterAlt: Swansea Canal following algae and debris removal
 ---

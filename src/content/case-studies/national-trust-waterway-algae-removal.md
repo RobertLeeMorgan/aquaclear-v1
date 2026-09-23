@@ -26,11 +26,11 @@ overview:
         Aquaclear carried out targeted algae removal to clear the affected areas and restore the waterway's open-water character, improving both its appearance and the condition of the habitat.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/algae3.jpg
-        after: ../../assets/images/after/algae3.jpg
-        beforeAlt: Extensive algae growth across a National Trust public waterway
-        afterAlt: National Trust waterway following algae removal
+        - type: beforeAfter
+          before: ../../assets/images/before/algae3.jpg
+          after: ../../assets/images/after/algae3.jpg
+          beforeAlt: Extensive algae growth across a National Trust public waterway
+          afterAlt: National Trust waterway following algae removal
 
     - title: Restoring Wildlife Habitat
       content: |
@@ -39,9 +39,9 @@ overview:
         Following the work, wildlife was able to return to and make better use of the restored open water. The clearance therefore provided benefits beyond the immediate visual improvement, helping to restore a healthier and more diverse waterway environment.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/algae4.jpg
-        after: ../../assets/images/after/algae4.jpg
-        beforeAlt: Algae-covered section of the National Trust waterway
-        afterAlt: Restored open water following algae removal
+        - type: beforeAfter
+          before: ../../assets/images/before/algae4.jpg
+          after: ../../assets/images/after/algae4.jpg
+          beforeAlt: Algae-covered section of the National Trust waterway
+          afterAlt: Restored open water following algae removal
 ---

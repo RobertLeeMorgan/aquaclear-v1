@@ -24,11 +24,11 @@ overview:
 
         The works were carried out progressively over several days, gradually removing many tonnes of silt and restoring valuable open water within the reserve.
       media:
-          type: beforeAfter
-          before: ../../assets/images/projects/pembs1.webp
-          after: ../../assets/images/projects/pembs2.webp
-          beforeAlt: Before desilting pond to increase water depth
-          afterAlt: After desilting pond and water depth increased
+          - type: beforeAfter
+            before: ../../assets/images/projects/pembs1.webp
+            after: ../../assets/images/projects/pembs2.webp
+            beforeAlt: Before desilting pond to increase water depth
+            afterAlt: After desilting pond and water depth increased
     - title: Dewatering Many Tonnes of Silt
       content: |
         The dewatering bags were filled using the silt pump and then left to drain before further material was added.
@@ -37,9 +37,9 @@ overview:
 
         As the pumping progressed, the depth of the pond increased and areas of open water were restored.
       media:
-        type: image
-        src: ../../assets/images/projects/pembs3.webp
-        alt: Dewatering bags filled with silt during pond restoration works in Pembrokeshire
+        - type: image
+          src: ../../assets/images/projects/pembs3.webp
+          alt: Dewatering bags filled with silt during pond restoration works in Pembrokeshire
     - title: Reopening the Natural Brook
       content: |
         A grab bucket was also used to remove a 'silt island' that had accumulated in the middle of the watercourse.
@@ -49,7 +49,7 @@ overview:
         Combined with the silt pumping works, the clearance helped restore the pond's depth and improve the natural flow through the site.
       gallery: true
       media:
-        type: image
-        src: ../../assets/images/projects/pembs4.webp
-        alt: Grab bucket removing accumulated silt from a brook feeding into a restored pond
+        - type: image
+          src: ../../assets/images/projects/pembs4.webp
+          alt: Grab bucket removing accumulated silt from a brook feeding into a restored pond
 ---

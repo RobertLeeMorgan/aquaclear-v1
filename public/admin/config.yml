@@ -536,6 +536,7 @@ collections:
           - { label: "Client", name: "client", widget: "string" }
           - { label: "Location", name: "location", widget: "string" }
           - { label: "Date", name: "date", widget: "string" }
+          - { label: "Featured", name: "featured", widget: "boolean", default: false, required: false }
           - label: "Services"
             name: "services"
             widget: list
@@ -574,10 +575,6 @@ collections:
         name: "overview"
         widget: object
         fields:
-          - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
-          - { label: "Title", name: "title", widget: "string", required: false }
-          - { label: "Description", name: "description", widget: "string", required: false }
-
           - label: "Items"
             name: "items"
             widget: list
@@ -588,41 +585,40 @@ collections:
 
               - label: "Media"
                 name: "media"
-                widget: object
+                widget: "list"
                 required: false
-                fields:
-                  - label: "Type"
-                    name: "type"
-                    widget: select
-                    options:
-                      - "image"
-                      - "video"
-                      - "beforeAfter"
-
-                  - { label: "Src", name: "src", widget: "image", required: false }
-                  - { label: "Alt", name: "alt", widget: "string", required: false }
+                max: 1
+                types:
+                  - label: "Image"
+                    name: "image"
+                    widget: "object"
+                    fields:
+                      - { label: "Image", name: "src", widget: "image" }
+                      - { label: "Alt", name: "alt", widget: "string" }
 
                   - label: "Video"
                     name: "video"
-                    widget: object
-                    required: false
+                    widget: "object"
                     fields:
                       - label: "Provider"
-                        required: false
                         name: "provider"
-                        widget: select
+                        widget: "select"
                         options:
                           - "youtube"
                           - "vimeo"
                           - "html"
-                      - { label: "Id", name: "id", widget: "string", required: false }
-                      - { label: "Src", name: "src", widget: "string", required: false }
+                      - { label: "ID", name: "id", widget: "string", required: false }
+                      - { label: "Source", name: "src", widget: "string", required: false }
                       - { label: "Title", name: "title", widget: "string", required: false }
 
-                  - { label: "Before", name: "before", widget: "image", required: false }
-                  - { label: "After", name: "after", widget: "image", required: false }
-                  - { label: "Before Alt", name: "beforeAlt", widget: "string", required: false }
-                  - { label: "After Alt", name: "afterAlt", widget: "string", required: false }
+                  - label: "Before / After"
+                    name: "beforeAfter"
+                    widget: "object"
+                    fields:
+                      - { label: "Before", name: "before", widget: "image" }
+                      - { label: "Before Alt", name: "beforeAlt", widget: "string" }
+                      - { label: "After", name: "after", widget: "image" }
+                      - { label: "After Alt", name: "afterAlt", widget: "string" }
 
               - label: "Buttons"
                 name: "buttons"
@@ -1781,7 +1777,6 @@ collections:
                   - { label: "Client", name: "client", widget: "string" }
                   - { label: "Location", name: "location", widget: "string" }
                   - { label: "Date", name: "date", widget: "string" }
-                  - { label: "Featured", name: "featured", widget: "boolean", default: false, required: false }
                   - label: "Services"
                     name: "services"
                     widget: "list"

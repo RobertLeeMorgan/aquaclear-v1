@@ -25,11 +25,11 @@ overview:
         The scale of the works allowed several areas of the site to be addressed as part of one coordinated programme, while retaining areas of established reed where appropriate.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/clearingArea.jpg
-        after: ../../assets/images/after/clearingArea.jpg
-        beforeAlt: Dense reed growth restricting waterways and open water
-        afterAlt: Cleared reed bed reopening waterways and open water
+        - type: beforeAfter
+          before: ../../assets/images/before/clearingArea.jpg
+          after: ../../assets/images/after/clearingArea.jpg
+          beforeAlt: Dense reed growth restricting waterways and open water
+          afterAlt: Cleared reed bed reopening waterways and open water
     - title: Reconnecting Waterways and Open Water
       content: |
         As the reed growth was cleared, previously restricted waterways were reopened and areas of open water were restored.
@@ -39,9 +39,9 @@ overview:
         The completed works provided a more varied wetland landscape while helping maintain the natural function and character of the reserve.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/clearingLines.jpg
-        after: ../../assets/images/after/clearingLines.jpg
-        beforeAlt: Overgrown waterway and reed bed before management works
-        afterAlt: Reopened waterway and restored open water after reed clearance
+        - type: beforeAfter
+          before: ../../assets/images/before/clearingLines.jpg
+          after: ../../assets/images/after/clearingLines.jpg
+          beforeAlt: Overgrown waterway and reed bed before management works
+          afterAlt: Reopened waterway and restored open water after reed clearance
 ---

@@ -25,18 +25,25 @@ const galleryItems = [
 
   ...caseStudies.flatMap((caseStudy) =>
     caseStudy.data.overview.items
-      .filter((item) => item.gallery && item.media)
-      .map((item) => ({
-        metadata: {
-          client: caseStudy.data.metadata.client,
-          location: caseStudy.data.metadata.location,
-          date: caseStudy.data.metadata.date,
-          services: caseStudy.data.metadata.services,
-          sites: caseStudy.data.metadata.sites,
-        },
-        media: item.media,
-        href: `/case-studies/${caseStudy.id}`,
-      }))
+      .filter((item) => item.gallery && item.media?.[0])
+      .map((item) => {
+        const media = item.media?.[0];
+
+        if (!media) return null;
+
+        return {
+          metadata: {
+            client: caseStudy.data.metadata.client,
+            location: caseStudy.data.metadata.location,
+            date: caseStudy.data.metadata.date,
+            services: caseStudy.data.metadata.services,
+            sites: caseStudy.data.metadata.sites,
+          },
+          media,
+          href: `/case-studies/${caseStudy.id}`,
+        };
+      })
+      .filter((item): item is NonNullable<typeof item> => item !== null)
   ),
 ].sort(
   (a, b) =>

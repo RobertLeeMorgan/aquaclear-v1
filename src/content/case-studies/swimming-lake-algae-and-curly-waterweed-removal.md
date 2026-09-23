@@ -29,9 +29,9 @@ overview:
         Aquaclear carried out extensive removal of the algae and curly water weed, clearing the affected areas and restoring substantial areas of open water. The work transformed the appearance of the lake and helped return it to a cleaner, more usable condition for swimming, while bringing the excessive aquatic growth under control.
       gallery: true
       media:
-        type: beforeAfter
-        before: ../../assets/images/before/featured4.jpg
-        after: ../../assets/images/after/featured4.jpg
-        beforeAlt: Algae and curly water weed affecting a swimming lake
-        afterAlt: Swimming lake following algae and curly water weed removal
+        - type: beforeAfter
+          before: ../../assets/images/before/featured4.jpg
+          after: ../../assets/images/after/featured4.jpg
+          beforeAlt: Algae and curly water weed affecting a swimming lake
+          afterAlt: Swimming lake following algae and curly water weed removal
 ---
