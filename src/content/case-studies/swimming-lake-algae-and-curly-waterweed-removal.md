@@ -41,16 +41,18 @@ overview:
     - title: Swimming Lake Clearance
       content: >-
         This swimming lake had become heavily affected by excessive algae and
-        curly waterweed, with dense growth spreading throughout large areas of
-        the waterbody. As conditions deteriorated, access to clear open water
-        became increasingly difficult and the lake was no longer suitable for
-        its intended recreational use.
+        curly waterweed, with dense growth spreading across large areas of the
+        waterbody. As conditions deteriorated, access to clear open water became
+        increasingly difficult, leaving the lake unsuitable for its intended
+        recreational use. The lake was used by both the property owners and
+        guests staying in holiday accommodation around the site, making it an
+        important part of the visitor experience. The timing of the works was
+        therefore carefully considered to manage the vegetation at an
+        appropriate point in its growth cycle while returning the lake to use
+        when it was needed most.
 
 
-        The lake was used not only by the property owners but also by guests staying in holiday accommodation around the site, making it an important part of the visitor experience. The timing of the works was therefore carefully considered, allowing the vegetation to be managed at an appropriate point in its growth cycle while ensuring the lake could be returned to use when it was needed most.
-
-
-        Aquaclear carried out extensive cutting, collection and removal of the curly waterweed alongside clearance of the accumulated algae. Large quantities of aquatic growth were removed from the waterbody, reopening substantial areas of clear water and dramatically improving the appearance and accessibility of the lake.
+        Aquaclear carried out extensive cutting, collection and removal of curly waterweed alongside clearance of accumulated algae. Large quantities of aquatic vegetation were removed from the waterbody, reopening substantial areas of clear water and significantly improving the appearance, accessibility and recreational use of the lake.
       gallery: true
       media:
         - type: beforeAfter
