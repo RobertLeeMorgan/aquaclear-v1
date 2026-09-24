@@ -42,10 +42,7 @@ overview:
         open water and left sections increasingly congested.
 
 
-        Targeted clearance was carried out to bring the established lily and reed growth back under control and reopen substantial areas of the pond. Additional aquatic weed cutting was completed at the same time, allowing several types of unwanted vegetation to be managed as part of a single programme of works. Selected areas of established growth were retained to preserve valuable habitat and maintain a varied structure around the waterbody.
-
-
-        The completed works restored a healthier balance between open water and aquatic vegetation, significantly improving the appearance and accessibility of the pond while retaining suitable areas of habitat for wildlife.
+        Targeted clearance was carried out to bring the established lily and reed growth back under control and reopen substantial areas of the pond. Additional aquatic weed cutting was completed at the same time, allowing several types of unwanted vegetation to be managed as part of a single programme of works. Selected areas of established growth were retained to preserve valuable habitat and maintain a varied structure around the waterbody. The completed works restored a healthier balance between open water and aquatic vegetation, significantly improving the appearance and accessibility of the pond while retaining suitable areas of habitat for wildlife.
       gallery: true
       media:
         - type: beforeAfter
