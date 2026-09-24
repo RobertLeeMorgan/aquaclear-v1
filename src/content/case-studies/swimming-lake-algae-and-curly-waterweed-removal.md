@@ -26,7 +26,7 @@ overview:
     - gallery: false
       title: Curly Waterweed in UK Waters
       content: >-
-        Curly waterweed (*Lagarosiphon major*) is a non-native invasive aquatic
+        Curly waterweed (Lagarosiphon major) is a non-native invasive aquatic
         plant that can cause significant problems in UK ponds, lakes and
         slow-moving waterways. Its dense submerged growth can dominate large
         areas of a waterbody, crowding out native plants, restricting water
