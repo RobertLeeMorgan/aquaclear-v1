@@ -35,21 +35,14 @@ overview:
 
 
         Invasive and excessive aquatic weed can quickly spread across a waterbody of this size, restricting recreational use and making future management increasingly difficult. Aquaclear carries out carefully timed cutting and removal to keep this growth under control, with each visit planned around the growth cycle of the target species and the seasonal use of the lake.
-    - title: Managing Yellow Water Lily Growth
-      content: >-
-        By removing cut vegetation completely from the water and carrying out
+    - title: Managing Fringed Water Lily Growth
+      content: By removing cut vegetation completely from the water and carrying out
         works at the most appropriate point in the growing season, each
         clearance can be made as effective as possible and the period before
         further management is required can be extended. Removing the material
         also prevents large quantities of cut weed from remaining within the
         lake, where it could interfere with recreational use, decompose or allow
         fragments to spread into other areas.
-
-
-        Timing is particularly important on a lake with several different seasonal uses. Clearance can be planned to ensure areas of open water are available for swimming and paddleboarding during the summer, while also taking into account the lake’s winter use and any ecological constraints throughout the year. Rather than simply reacting once vegetation has become unmanageable, this planned approach allows growth to be controlled at the most appropriate stage.
-
-
-        Regular, well-timed management keeps the lake practical, attractive and usable throughout the year, while avoiding the need for unnecessary or overly intensive intervention.
       gallery: true
       media:
         - type: beforeAfter
@@ -57,4 +50,17 @@ overview:
           after: ../../assets/images/after/lilies3.jpg
           beforeAlt: Yellow water lily growth across a private lake
           afterAlt: After yellow water lily removal across a private lake
+    - gallery: false
+      content: >-
+        Timing is particularly important on a lake with several different
+        seasonal uses. Clearance can be planned to ensure areas of open water
+        are available for swimming and paddleboarding during the summer, while
+        also taking into account the lake’s winter use and any ecological
+        constraints throughout the year. Rather than simply reacting once
+        vegetation has become unmanageable, this planned approach allows growth
+        to be controlled at the most appropriate stage.
+
+
+        Regular, well-timed management keeps the lake practical, attractive and usable throughout the year, while avoiding the need for unnecessary or overly intensive intervention.
+      title: Timing the Clearance
 ---
