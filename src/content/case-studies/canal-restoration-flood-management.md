@@ -34,15 +34,6 @@ overview:
 
 
         In just a few days, the Aquaclear team transformed the overgrown moat, clearing dense vegetation and carrying out targeted tree work to restore the waterway.
-
-
-        Using grab buckets, we removed extensive reed rhizomes, uprooted willow saplings, and cleared accumulated silt and debris from the channel. Larger overhanging willows were carefully lifted, while both the inlet and outlet were cleared to restore water flow and improve drainage.
-
-
-        Our lightweight and highly maneuverable Truxors (coupled with careful operation) were particularly well suited to working around the moat’s old bridges and historic structures. It's low ground pressure and minimal impact on the surrounding banks allowed vegetation and debris to be removed from areas where heavier conventional machinery would have been unsuitable. Working carefully around these sensitive features, the Truxor could access confined sections of the moat and carry out the required clearance while minimising the risk of disturbance or damage to the existing structures and surrounding landscape.
-
-
-        The completed restoration dramatically enhanced both the appearance and condition of the moat and the surrounding property, while reinstating its effectiveness as a drainage feature for the surrounding land.
       gallery: true
       media:
         - type: beforeAfter
