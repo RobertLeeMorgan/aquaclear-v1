@@ -1,6 +1,6 @@
 ---
 seo:
-  title: Aquaclear Gallery | Waterway Management Projects
+  title: Waterway Management Project Gallery
   description: Explore Aquaclear's waterway management projects across the UK.
   image: ../../assets/images/after/canal2.jpg
 

@@ -1,7 +1,7 @@
 ---
 title: Home
 seo:
-  title: Aquaclear Water Management | UK Waterway Management
+  title: UK Waterway Management Specialists
   description: Aquaclear provides specialist waterway, reed bed and wetland management services across the UK, with over 20 years of experience in aquatic vegetation control, silt removal and on-water works.
   image: ../../assets/images/after/cutting.jpg
 hero:

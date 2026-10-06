@@ -1,7 +1,7 @@
 ---
 title: Clients
 seo:
-  title: Aquaclear Water Management | Our Clients
+  title: Our Clients
   description: Aquaclear has worked with environmental organisations, local authorities, sporting venues and private clients across the UK, delivering specialist waterway management services.
   image: ../../assets/images/hero/placeholder.jpeg
 hero:
