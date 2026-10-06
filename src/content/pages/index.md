@@ -6,7 +6,7 @@ seo:
   image: ../../assets/images/after/cutting.jpg
 hero:
   title: Clear Water. Healthy Habitats. Expert Care
-  description: Aquaclear provides specialist waterway, reed bed and wetland management services across the UK, helping to restore, maintain and manage watercourses of all shapes and sizes.
+  description: Specialist waterway, reed bed and wetland management across the UK, restoring and maintaining watercourses of all sizes.
   image: ../../assets/images/after/cutting1.jpg
   alt: Aquaclear Water Management
   buttons:

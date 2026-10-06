@@ -7,7 +7,7 @@ seo:
 overview:
   - type: hero
     title: Blanket Weed and Algae Removal
-    description: Specialist blanket weed and algae removal services across the UK, helping to restore clear, open water in lakes, ponds, and other inland watercourses. Our mechanical removal methods allow excessive algae to be collected and removed while minimising disturbance to the aquatic environment.
+    description: Specialist blanket weed and algae removal across the UK, helping restore clear, open water with minimal environmental disturbance.
     image: ../../assets/images/after/algae3.jpg
     alt: Blanket weed and algae removal
     buttons:

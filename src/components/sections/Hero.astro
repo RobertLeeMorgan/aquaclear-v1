@@ -35,7 +35,7 @@ const {
 
 const heightClass = {
   sm: "h-[80vh]",
-  md: "h-[85vh]",
+  md: "h-[75vh]",
   lg: "h-[100vh]",
 }[height];
 
@@ -56,7 +56,7 @@ const overlayClass = {
 }[overlay];
 ---
 
-<section class:list={["relative overflow-hidden bg-dark", heightClass]}>
+<section class:list={["hero-section relative overflow-hidden bg-dark", heightClass]}>
 
   <AppImage
     src={image}
@@ -83,7 +83,7 @@ const overlayClass = {
       </h1>
 
       {description && (
-        <p class="text-lg sm:text-xl md:text-2xl mt-lg text-inverse-muted">
+        <p class="text-lg sm:text-xl md:text-xl mt-lg text-inverse-muted">
           {description}
         </p>
       )}
@@ -91,7 +91,7 @@ const overlayClass = {
       {buttons && (
         <div
           class:list={[
-            "cluster-md mt-2xl",
+            "cluster-md mt-xl",
             align === "right"
               ? "justify-start sm:justify-end"
               : "justify-start",

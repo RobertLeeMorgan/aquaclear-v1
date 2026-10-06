@@ -6,7 +6,7 @@ seo:
   image: ../../assets/images/weeds/waterlily.webp
 overview:
   - type: hero
-    title: Water Lily Maintenance & Control
+    title: Water Lily Management
     description: Aquaclear provides specialist water lily cutting and removal services, helping to control excessive growth while maintaining a healthy balance of open water and aquatic vegetation.
     image: ../../assets/images/weeds/waterlily.webp
     alt: Water lilies growing across a lake or pond

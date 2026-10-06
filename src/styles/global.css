@@ -68,3 +68,7 @@ body {
 .text-md {
   font-size: var(--text-md);
 }
+
+.hero-section + .section {
+  @apply pt-10 sm:pt-16;
+}
