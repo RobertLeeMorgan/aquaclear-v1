@@ -7,7 +7,7 @@ seo:
   image: ../../assets/images/projects/reed1.webp
 metadata:
   title: Creating Wading Pools Within a Reed Bed
-  client: National Trust, RSPB
+  client: Nature Reserves Across the UK
   location: UK
   date: 14th October, 2025
   services:
