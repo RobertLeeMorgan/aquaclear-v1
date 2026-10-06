@@ -5,8 +5,8 @@ backend:
   name: github
   repo: RobertLeeMorgan/aquaclear-v1
   branch: main
-  site_domain: https://aquaclear.pages.dev
-  base_url: https://aquaclear.pages.dev
+  site_domain: https://aquaclearwatermanagement.com
+  base_url: https://aquaclearwatermanagement.com
   auth_endpoint: /api/auth
   squash_merges: true
 

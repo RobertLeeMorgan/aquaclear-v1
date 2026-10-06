@@ -8,14 +8,8 @@ export const navigation = [
   },
   {
     page: "caseStudies",
-    label: "Case Studies",
+    label: "Projects",
     href: "/case-studies",
-    filters: [
-      { label: "Aquatic Weed & Vegetation", filter: "weed" },
-      { label: "Reed Beds & Bulrush", filter: "reed" },
-      { label: "Silt & Sediment", filter: "silt" },
-      { label: "Excavation & Habitat", filter: "excavation" },
-    ],
   },
   { page: "gallery", label: "Gallery", href: "/gallery" },
   { page: "clients", label: "Clients", href: "/clients" },
